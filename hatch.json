@@ -20,5 +20,10 @@
     "smm_store": false,
     "cr50_capability": [
         "ec_hibernate_breaks_rdd"
-    ]
+    ],
+    "models": {
+        "kled": {
+            "usbc_input_voltage_limit": 15
+        }
+    }
 }
