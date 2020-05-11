@@ -1,5 +1,6 @@
 {
     "platform": "puff",
+    "intel_cse_lite": true,
     "firmware_screen": 15,
     "has_lid": false,
     "has_keyboard": false,

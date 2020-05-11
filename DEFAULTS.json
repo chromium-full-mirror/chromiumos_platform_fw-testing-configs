@@ -122,6 +122,9 @@
     "smm_store": true,
             "smm_store.DOC": "Check SMMSTORE exists in FMap for x86 boards",
 
+    "intel_cse_lite": false,
+            "intel_cse_lite.DOC": "Check if platform uses Intel CSE Lite firmware",
+
     "lid_wake_from_power_off": true,
             "lid_wake_from_power_off.DOC": "True if the lid can wake the system from a powered off state",
 
