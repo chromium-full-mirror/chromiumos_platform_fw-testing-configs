@@ -2,6 +2,7 @@
     "platform": "drallion",
     "firmware_screen": 15,
     "delay_reboot_to_ping": 40,
+    "hold_pwr_button_poweroff": 10,
     "hold_pwr_button_poweron": 1.2,
     "has_lid": true,
     "spi_voltage": "pp3300",
