@@ -1,5 +1,6 @@
 {
     "platform": "puff",
+    "mode_switcher_type": "menu_switcher",
     "firmware_screen": 15,
     "has_lid": false,
     "has_keyboard": false,
