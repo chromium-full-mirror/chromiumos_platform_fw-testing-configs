@@ -1,5 +1,4 @@
 {
     "platform": "coral",
-    "parent": "reef",
-    "firmware_screen": 35
+    "parent": "reef"
 }
