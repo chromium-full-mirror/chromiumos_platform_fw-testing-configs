@@ -2,6 +2,7 @@
     "platform": "sarien",
     "firmware_screen": 15,
     "delay_reboot_to_ping": 40,
+    "hold_pwr_button_poweroff": 10,
     "hold_pwr_button_poweron": 1.2,
     "has_lid": true,
     "lid_wake_from_power_off": false,
