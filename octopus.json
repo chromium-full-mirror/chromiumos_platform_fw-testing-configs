@@ -12,6 +12,9 @@
         "smart_usb_charge",
         "cbi"
     ],
+    "cr50_capability": [
+	"rdd_leakage"
+    ],
     "firmware_screen": 30,
     "usb_plug": 45,
     "spi_voltage": "pp1800",
