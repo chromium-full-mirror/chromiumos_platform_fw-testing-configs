@@ -1,6 +1,7 @@
 {
     "platform": "cheza",
     "mode_switcher_type": "tablet_detachable_switcher",
+    "is_detachable": true,
     "has_lid": true,
     "has_keyboard": false,
     "chrome_ec": true,

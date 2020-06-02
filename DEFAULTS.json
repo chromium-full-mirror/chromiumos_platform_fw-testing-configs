@@ -11,6 +11,9 @@
     "mode_switcher_type": "keyboard_dev_switcher",
     "mode_switcher_type.DOC": "Version of mode-switcher used for mode-aware reboot",
 
+    "is_detachable": false,
+    "is_detachable.DOC": "Whether the device is a detachable",
+
     "chrome_ec": false,
     "chrome_ec.DOC": "Whether the platform has an EC",
 

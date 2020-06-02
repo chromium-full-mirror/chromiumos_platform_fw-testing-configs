@@ -9,4 +9,5 @@
         "charging"
     ],
     "mode_switcher_type": "tablet_detachable_switcher"
+    "is_detachable": true,
 }

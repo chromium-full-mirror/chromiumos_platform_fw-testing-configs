@@ -1,6 +1,7 @@
 {
     "platform": "poppy",
     "mode_switcher_type": "tablet_detachable_switcher",
+    "is_detachable": true,
     "confirm_screen": 1,
     "firmware_screen": 15,
     "has_lid": true,
