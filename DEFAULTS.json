@@ -141,5 +141,8 @@
     "serial_number_length.DOC": "Length of serial number that can be set in firmware; if serial number cannot be set then 0",
 
     "has_diagnostics_image": false,
-    "has_diagnostics_image.DOC": "True if altfw/diag is build into RW_LEGACY"
+    "has_diagnostics_image.DOC": "True if altfw/diag is build into RW_LEGACY",
+
+    "clear_dev_on_rec": false,
+    "clear_dev_on_rec.DOC": "True if dev mode get cleared upon entering rec mode"
 }
