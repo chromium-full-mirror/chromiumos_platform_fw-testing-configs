@@ -11,7 +11,8 @@
         "usb",
         "smart_usb_charge"
     ],
-    "firmware_screen": 15,
+    "confirm_screen": 20,
+    "firmware_screen": 30,
     "spi_voltage": "pp3300",
     "custom_usb_enable_names": [
         "EN_PP5000_USBA"
