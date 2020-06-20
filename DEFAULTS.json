@@ -144,5 +144,8 @@
     "has_diagnostics_image.DOC": "True if altfw/diag is build into RW_LEGACY",
 
     "clear_dev_on_rec": false,
-    "clear_dev_on_rec.DOC": "True if dev mode get cleared upon entering rec mode"
+    "clear_dev_on_rec.DOC": "True if dev mode get cleared upon entering rec mode",
+
+    "rma_entered_automatically": true,
+    "rma_entered_automatically.DOC": "True if the will go into serial number screen automatically"
 }
