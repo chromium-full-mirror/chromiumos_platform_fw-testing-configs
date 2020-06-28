@@ -18,5 +18,6 @@
         "EN_PP5000_USBA"
     ],
     "dark_resume_capable": true,
-    "smm_store": false
+    "smm_store": false,
+    "hold_pwr_button_nopowerd_shutdown": 14
 }

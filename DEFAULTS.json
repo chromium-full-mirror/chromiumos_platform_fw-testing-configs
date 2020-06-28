@@ -104,6 +104,9 @@
     "hold_pwr_button_poweroff": 5,
     "hold_pwr_button_poweroff.DOC": "Duration of holding power button to power off DUT normally",
 
+    "hold_pwr_button_nopowerd_shutdown": 11,
+    "hold_pwr_button_nopowerd_shutdown.DOC": "Duration of holding down power button to shut down without powerd",
+
     "hold_pwr_button_poweron": 0.2,
     "hold_pwr_button_poweron.DOC": "Duration of holding power button to power on DUT normally (also known as SHORT_DELAY in hdctools)",
 
