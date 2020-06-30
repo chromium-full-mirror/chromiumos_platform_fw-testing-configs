@@ -1,5 +1,6 @@
 {
     "platform": "jacuzzi",
+    "parent": "kukui",
     "has_keyboard": true,
     "chrome_ec": true,
     "ec_capability": [
