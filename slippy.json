@@ -1,5 +1,6 @@
 {
     "platform": "slippy",
+    "mode_switcher_type": "keyboard_dev_switcher",
     "ec_boot_to_console": 0.6,
     "chrome_ec": true,
     "dark_resume_capable": true,

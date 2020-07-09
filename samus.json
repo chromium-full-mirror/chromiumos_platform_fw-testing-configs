@@ -1,5 +1,6 @@
 {
     "platform": "samus",
+    "mode_switcher_type": "keyboard_dev_switcher",
     "ec_boot_to_console": 0.6,
     "chrome_ec": true,
     "chrome_usbpd": true,

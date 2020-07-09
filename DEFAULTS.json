@@ -8,7 +8,7 @@
     "models": {},
     "models.DOC": "Model-specific attribute overrides for this platform. This field should not be used in a parent config.",
 
-    "mode_switcher_type": "keyboard_dev_switcher",
+    "mode_switcher_type": "menu_switcher",
     "mode_switcher_type.DOC": "Version of mode-switcher used for mode-aware reboot",
 
     "is_detachable": false,

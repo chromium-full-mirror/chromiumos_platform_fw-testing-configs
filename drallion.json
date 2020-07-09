@@ -1,5 +1,6 @@
 {
     "platform": "drallion",
+    "mode_switcher_type": "keyboard_dev_switcher",
     "firmware_screen": 15,
     "delay_reboot_to_ping": 40,
     "hold_pwr_button_poweroff": 10,

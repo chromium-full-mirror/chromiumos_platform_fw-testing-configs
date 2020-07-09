@@ -1,5 +1,6 @@
 {
     "platform": "atlas",
+    "mode_switcher_type": "keyboard_dev_switcher",
     "chrome_ec": true,
     "ec_capability": [
         "battery",
