@@ -11,6 +11,7 @@
         "usb",
         "x86"
     ],
+    "ec_forwards_short_pp_press": true,
     "delay_reboot_to_ping": 40,
     "custom_usb_enable_names": [
         "EN_PP5000_USB_VBUS"
