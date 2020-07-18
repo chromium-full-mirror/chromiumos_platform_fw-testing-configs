@@ -13,6 +13,7 @@
         "x86"
     ],
     "ec_forwards_short_pp_press": true,
+    "ec_has_hibernate_cmd": false,
     "delay_reboot_to_ping": 40,
     "custom_usb_enable_names": [
         "EN_PP5000_USB_VBUS"

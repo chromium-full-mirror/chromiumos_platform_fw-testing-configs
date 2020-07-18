@@ -89,6 +89,9 @@
     "ec_boot_to_pwr_button": 0.5,
     "ec_boot_to_pwr_button.DOC": "Delay between EC boot and pressing power button",
 
+    "ec_has_hibernate_cmd": true,
+    "ec_has_hibernate_cmd.DOC": "EC, if present, supports 'hibernate' console command",
+
     "ec_has_powerbtn_cmd": true,
     "ec_has_powerbtn_cmd.DOC": "EC, if present, supports 'powerbtn' console command",
 
