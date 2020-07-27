@@ -51,6 +51,10 @@ In Autotest, configs are loaded during `FirmwareTest.initialize`. Config values 
 
 In Tast, configs can be created via `firmware.NewConfig`. In order to conform with Go’s style, attribute names are modified to MixedCaps. Config values can be accessed via `cfg[${ATTRIBUTE}]`, such as `cfg[ChromeEC]`.
 
+# Registering New Configs
+
+When you create a new config for a new board, you should also register it in `tast-tests/src/chromiumos/tast/remote/firmware/config.go`'s [configPlatforms](https://source.corp.google.com/chromeos_public/src/platform/tast-tests/src/chromiumos/tast/remote/firmware/config.go;l=38). This is because datafiles used by Tast tests need to be [explicitly declared](https://chromium.googlesource.com/chromiumos/platform/tast/+/HEAD/docs/writing_tests.md#Using-data-files-in-tests). [b/162253821](https://b.corp.google.com/issues/162253821) tracks finding a way to automate that.
+
 # Modifying Tests and Configs
 
 Configs are now in a separate repository from Autotest or tast-tests. Thus, config edits now require a separate CL from Autotest/tast-tests edits. If you are accustomed to working with config files directly in Autotest, this is a slightly different workflow.
