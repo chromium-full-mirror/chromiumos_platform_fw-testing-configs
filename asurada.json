@@ -1,0 +1,14 @@
+{
+    "platform": "asurada",
+    "mode_switcher_type": "menu_switcher",
+    "chrome_ec": true,
+    "ec_capability": [
+        "arm",
+        "battery",
+        "charging",
+        "keyboard",
+        "lid"
+    ],
+    "firmware_screen": 20,
+    "ec_reboot_to_g3_delay": 10
+}
