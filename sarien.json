@@ -17,6 +17,7 @@
     "confirm_screen": 11,
     "rec_force_mrc": false,
     "ap_up_after_cr50_reboot": false,
+    "gsc_update_wait_for_reboot": 25,
     "ec_forwards_short_pp_press": true,
     "serial_number_length": 7,
     "has_diagnostics_image": true,

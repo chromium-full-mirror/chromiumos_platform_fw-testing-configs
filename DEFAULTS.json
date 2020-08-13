@@ -143,6 +143,9 @@
     "ap_up_after_cr50_reboot": true,
     "ap_up_after_cr50_reboot.DOC": "True if AP is normally expected to be powered on after the Cr50 reboots (when AC power is connected)",
 
+    "gsc_update_wait_for_reboot": 10,
+    "gsc_update_wait_for_reboot.DOC": "Number of seconds to wait for a gsc reboot after update",
+
     "ec_forwards_short_pp_press": false,
     "ec_forwards_short_pp_press.DOC": "True if the EC will send short power button presses, such as those expected during CCD open, to the AP",
 
