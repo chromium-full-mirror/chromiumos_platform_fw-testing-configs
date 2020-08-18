@@ -62,6 +62,9 @@
     "firmware_screen": 10,
     "firmware_screen.DOC": "Delay between power-on and firmware screen",
 
+    "delay_powerinfo_stable": 0,
+    "delay_powerinfo_stable.DOC": "Delay between AP power-on and when powerinfo is stable. Some CPUs have an internal reset that transitions through different power states.",
+
     "delay_reboot_to_ping": 30,
     "delay_reboot_to_ping.DOC": "Delay between reboot and first ping response from the DUT. When this times out, it indicates we're stuck at a firmware screen. Hence, bypass action has to be taken if we want to proceed.",
 
