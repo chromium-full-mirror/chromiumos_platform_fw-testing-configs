@@ -1,6 +1,6 @@
 {
     "platform": "trogdor",
-    "mode_switcher_type": "keyboard_dev_switcher",
+    "mode_switcher_type": "menu_switcher",
     "chrome_ec": true,
     "ec_capability": [
         "arm",
