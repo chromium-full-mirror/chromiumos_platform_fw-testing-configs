@@ -15,5 +15,6 @@
     "servo_prog_state_delay": 1.0,
     "smm_store": false,
     "firmware_screen": 15,
-    "usb_image_boot_timeout": 240
+    "usb_image_boot_timeout": 240,
+    "delay_powerinfo_stable": 5
 }
