@@ -1,6 +1,7 @@
 {
     "platform": "scarlet",
     "parent": "gru",
+    "mode_switcher_type": "tablet_detachable_switcher",
     "has_lid": false,
     "has_keyboard": false,
     "ec_capability": [
@@ -9,6 +10,5 @@
         "charging"
     ],
     "ec_has_hibernate_cmd": false,
-    "mode_switcher_type": "tablet_detachable_switcher",
     "is_detachable": true
 }

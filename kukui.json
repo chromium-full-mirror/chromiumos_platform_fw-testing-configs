@@ -1,5 +1,6 @@
 {
     "platform": "kukui",
+    "mode_switcher_type": "tablet_detachable_switcher",
     "has_keyboard": false,
     "chrome_ec": true,
     "ec_capability": [
@@ -8,7 +9,6 @@
         "charging",
         "lid"
     ],
-    "mode_switcher_type": "tablet_detachable_switcher",
     "is_detachable": true,
     "hold_pwr_button_poweron": 1.2,
     "ec_has_hibernate_cmd": false,
