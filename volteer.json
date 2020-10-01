@@ -9,8 +9,7 @@
         "keyboard",
         "lid",
         "x86",
-        "usb",
-        "smart_usb_charge"
+        "usb"
     ],
     "confirm_screen": 20,
     "firmware_screen": 30,
