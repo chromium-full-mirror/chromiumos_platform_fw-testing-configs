@@ -30,6 +30,11 @@ def VerifyJson(input_api, output_api):
 def CommonCheck(input_api, output_api):
   results = []
   results.extend(VerifyJson(input_api, output_api))
+  results.extend(input_api.canned_checks.RunUnitTests(
+      input_api, output_api,
+      [input_api.os_path.join(
+          input_api.PresubmitLocalPath(), 'consolidate_unittest.py')],
+      run_on_python2=False))
   return results
 
 
