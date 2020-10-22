@@ -1,0 +1,17 @@
+{
+    "platform": "strongbad",
+    "mode_switcher_type": "tablet_detachable_switcher",
+    "is_detachable": true,
+    "has_keyboard": false,
+    "chrome_ec": true,
+    "ec_capability": [
+        "arm",
+        "battery",
+        "charging",
+        "lid",
+        "usb"
+    ],
+    "custom_usb_enable_names": [
+        "EN_USB_A_5V"
+    ]
+}
