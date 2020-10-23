@@ -2,6 +2,7 @@
     "platform": "glados",
     "mode_switcher_type": "keyboard_dev_switcher",
     "chrome_ec": true,
+    "ec_ro_vbus_bug": true,
     "chrome_usbpd": true,
     "dark_resume_capable": true,
     "ec_capability": [

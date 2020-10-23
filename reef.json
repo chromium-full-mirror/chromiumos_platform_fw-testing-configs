@@ -2,6 +2,7 @@
     "platform": "reef",
     "mode_switcher_type": "keyboard_dev_switcher",
     "chrome_ec": true,
+    "ec_ro_vbus_bug": true,
     "ec_boot_to_console": 0.3,
     "ec_capability": [
         "battery",

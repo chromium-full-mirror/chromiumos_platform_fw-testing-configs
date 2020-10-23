@@ -3,6 +3,7 @@
     "mode_switcher_type": "keyboard_dev_switcher",
     "software_sync_update": 6,
     "chrome_ec": true,
+    "ec_ro_vbus_bug": true,
     "ec_capability": [
         "battery",
         "charging",

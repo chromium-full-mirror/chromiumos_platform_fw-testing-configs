@@ -1,4 +1,5 @@
 {
     "platform": "elm",
-    "parent": "oak"
+    "parent": "oak",
+    "ec_ro_vbus_bug": true
 }

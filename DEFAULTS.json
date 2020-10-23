@@ -17,6 +17,9 @@
     "chrome_ec": false,
     "chrome_ec.DOC": "Whether the platform has an EC",
 
+    "ec_ro_vbus_bug": false,
+    "ec_ro_vbus_bug.DOC": "Whether The EC RO firmware has a bug that causes Vbus is not supplied in SRC.ACCESORY state",
+
     "chrome_usbpd": false,
     "chrome_usbpd.DOC": "Whether the platform supports USB power delivery",
 

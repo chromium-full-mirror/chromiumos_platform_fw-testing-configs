@@ -2,6 +2,7 @@
     "platform": "kunimitsu",
     "mode_switcher_type": "keyboard_dev_switcher",
     "chrome_ec": true,
+    "ec_ro_vbus_bug": true,
     "dark_resume_capable": true,
     "spi_voltage": "pp3300",
     "ec_boot_to_console": 0.2,

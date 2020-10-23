@@ -2,6 +2,7 @@
     "platform": "nyan",
     "mode_switcher_type": "keyboard_dev_switcher",
     "software_sync_update": 6,
+    "ec_ro_vbus_bug": true,
     "chrome_ec": true,
     "ec_capability": [
         "battery",
