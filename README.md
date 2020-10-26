@@ -19,7 +19,7 @@ All the config files are located at the top directory of the fw-testing-configs 
 
 The fw-testing-configs repository currently has two checkouts in the ChromeOS manifest: one inside of Autotest, and one inside of tast-tests.
 
-There is one config file for each platform, named as `${PLATFORM}.json`: for example, `octopus.json`. There is also one special config file, `DEFAULTS.json`, which contains default values and documentation for each attribute. (For now, platform names are defined according to `mosys platform name`.)
+There is one config file for each platform, named as `${PLATFORM}.json`: for example, `octopus.json`. There are also one special config file, `DEFAULTS.json` and `CONSOLIDATED.json`. `DEFAULTS.json` contains default values and documentation for each attribute. `CONSOLIDATED.json` is a generated file, containing the config data from all the other JSON files.
 
 ## File Contents
 
@@ -45,22 +45,28 @@ For each attribute that exists in `DEFAULTS.json` (besides the documentation att
 * Parent configurations can specify parents as well, and the inheritance recurses until a config file does not have a `parent` attribute.
 * Finally, for any attribute which was not otherwise given a value, the value from `DEFAULTS.json` is used.
 
-## Accessing Configs
+# Workflows
 
-In Autotest, configs are loaded during `FirmwareTest.initialize`. Config values can be accessed via `self.faft_config.${ATTRIBUTE}`, such as [`self.faft_config.chrome_ec`](https://source.corp.google.com/chromeos_public/src/third_party/autotest/files/server/cros/faft/firmware_test.py;rcl=b602ca9b2516613458bccc6009ffd342130f528b;l=149).
+## Consolidate before uploading
 
-In Tast, configs can be created via `firmware.NewConfig`. In order to conform with Go’s style, attribute names are modified to MixedCaps. Config values can be accessed via `cfg[${ATTRIBUTE}]`, such as `cfg[ChromeEC]`.
+`CONSOLIDATED.json` is a generated script containing the data from all other JSON files. This allows Tast tests to access the config data. Thus, it is important to keep `CONSOLIDATED.json` up-to-date.
 
-# Registering New Configs
+When you make a change to fw-testing-configs JSON, before you upload, be sure to run `./consolidate.py` (with no command-line args). This will update `CONSOLIDATED.json`. Amend your change to include the update `CONSOLIDATED.json`, and then re-upload.
 
-When you create a new config for a new board, you should also register it in `tast-tests/src/chromiumos/tast/remote/firmware/config.go`'s [configPlatforms](https://source.corp.google.com/chromeos_public/src/platform/tast-tests/src/chromiumos/tast/remote/firmware/config.go;l=38). This is because datafiles used by Tast tests need to be [explicitly declared](https://chromium.googlesource.com/chromiumos/platform/tast/+/HEAD/docs/writing_tests.md#Using-data-files-in-tests). [b/162253821](https://b.corp.google.com/issues/162253821) tracks finding a way to automate that.
+A preupload hook will verify that your `CONSOLIDATED.json` is up-to-date.
 
-# Modifying Tests and Configs
+## Modifying Tests and Configs
 
-Configs are now in a separate repository from Autotest or tast-tests. Thus, config edits now require a separate CL from Autotest/tast-tests edits. If you are accustomed to working with config files directly in Autotest, this is a slightly different workflow.
+fw-testing-configs is a separate repository from both Autotest and tast-tests. Thus, edits to fw-testing-configs require a separate CL from edits to Autotest and tast-tests. If you are accustomed to working with config files directly in Autotest, this is a slightly different workflow.
 
 When you are editing config files, please be sure to run git commands from within the fw-testing-configs checkout. If you run `git add .` or `repo upload --cbr .` from within `autotest/server/cros/faft/`, then your changes to the config files will not be captured.
 
 If you are modifying both test files and config files, then you will need at least two CL’s: one for the test change, and one for the fw-testing-configs change. Consider also whether your change will impact the other testing repositories (Autotest, Tast, SerialTest): you might need to run tests or make changes there, too.
 
 When submitting multiple CL’s like that, please use the [Cq-Depend](https://chromium.googlesource.com/chromiumos/docs/+/refs/heads/master/contributing.md#CQ-DEPEND) syntax as appropriate. If you don't use Cq-Depend, you risk the name of a config attribute changing while tests are still looking for the old name, and then tests will break. The reverse is a risk, too. You might need both CL’s to depend on each other. Note that this while this precaution mitigates risk, it does not fully eliminate risk: only one of the CL's might get uploaded to the lab machines running Autotest/Tast, or one CL may be reverted without the other.
+
+## Accessing Configs During Tests
+
+In Autotest, configs are loaded during `FirmwareTest.initialize`. Config values can be accessed via `self.faft_config.${ATTRIBUTE}`, such as [`self.faft_config.chrome_ec`](https://source.corp.google.com/chromeos_public/src/third_party/autotest/files/server/cros/faft/firmware_test.py;rcl=b602ca9b2516613458bccc6009ffd342130f528b;l=149).
+
+In Tast, configs can be created via `firmware.NewConfig`. In order to conform with Go’s style, attribute names are modified to MixedCaps. Config values can be accessed via `cfg[${ATTRIBUTE}]`, such as `cfg[ChromeEC]`.
