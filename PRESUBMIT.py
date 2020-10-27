@@ -56,6 +56,25 @@ def VerifyConsolidated(input_api, output_api):
         msg = ('Error: Running %s produced a diff. Please run the script, '
                'amend your changes, and try again.') % script_basename
         results.append(output_api.PresubmitError(msg))
+    elif input_api.subprocess.call(['git',
+                                    'diff',
+                                    '--exit-code',
+                                    json_fullpath],
+                                   stdout=input_api.subprocess.PIPE,
+                                   stderr=input_api.subprocess.PIPE):
+        msg = ('Error: %s has unstaged changes. Please amend your commit and '
+               'try again.') % json_fullpath
+        results.append(output_api.PresubmitError(msg))
+    elif input_api.subprocess.call(['git',
+                                    'diff',
+                                    '--exit-code',
+                                    '--staged',
+                                    json_fullpath],
+                                   stdout=input_api.subprocess.PIPE,
+                                   stderr=input_api.subprocess.PIPE):
+        msg = ('Error: %s has uncommitted changes. Please commit your staged '
+               'changes and try again.') % json_fullpath
+        results.append(output_api.PresubmitError(msg))
     if input_api.os_path.isfile(tmp_json):
         input_api.subprocess.call(['rm', '-f', tmp_json],
                                   stdout=input_api.subprocess.PIPE,
