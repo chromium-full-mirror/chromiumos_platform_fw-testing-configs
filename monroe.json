@@ -1,8 +1,0 @@
-{
-    "platform": "monroe",
-    "mode_switcher_type": "keyboard_dev_switcher",
-    "has_lid": false,
-    "has_keyboard": false,
-    "rec_button_dev_switch": true,
-    "smm_store": false
-}
