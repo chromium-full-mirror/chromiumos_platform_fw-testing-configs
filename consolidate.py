@@ -103,7 +103,7 @@ def write_output(consolidated_json, output_path):
     if os.path.isfile(output_path):
         os.remove(output_path)
     with open(output_path, 'w') as output_file:
-        json.dump(consolidated_json, output_file)
+        json.dump(consolidated_json, output_file, indent='\t')
     os.chmod(output_path, stat.S_IRUSR | stat.S_IRGRP | stat.S_IROTH)
 
 
