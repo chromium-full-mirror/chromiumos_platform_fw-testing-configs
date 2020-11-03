@@ -14,6 +14,7 @@
     "ec_has_hibernate_cmd": false,
     "ec_reboot_to_g3_delay": 10,
     "ec_boot_to_console": 2,
+    "ec_boot_to_wp_en": 2,
     "usbc_input_voltage_limit": 12,
     "charger_profile_override": true
 }
