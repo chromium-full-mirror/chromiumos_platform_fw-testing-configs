@@ -27,6 +27,9 @@
     "models": {
         "bobba360": {
             "usbc_input_voltage_limit": 15
+        },
+        "casta": {
+            "usbc_input_voltage_limit": 15
         }
     }
 }
