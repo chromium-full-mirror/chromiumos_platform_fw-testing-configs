@@ -96,7 +96,7 @@
     "ec_boot_to_pwr_button.DOC": "Delay between EC boot and pressing power button",
 
     "ec_boot_to_wp_en": 0,
-    "ec_boot_to_wp_en.DOC": "Delay for depthcharge initiating an EC reboot in order to enable EC WP",
+    "ec_boot_to_wp_en.DOC": "Delay for AP initiating an EC reboot in order to enable EC WP",
 
     "ec_has_hibernate_cmd": true,
     "ec_has_hibernate_cmd.DOC": "EC, if present, supports 'hibernate' console command",
