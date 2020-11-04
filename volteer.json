@@ -14,8 +14,11 @@
     "confirm_screen": 20,
     "firmware_screen": 30,
     "spi_voltage": "pp3300",
-    "custom_usb_enable_names": [
-        "EN_PP5000_USBA"
+    "custom_usb_enable_pins": [
+        {
+            "name": "EN_PP5000_USBA",
+            "ioex": false
+        }
     ],
     "dark_resume_capable": true,
     "smm_store": false,

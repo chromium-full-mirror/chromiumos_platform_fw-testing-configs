@@ -32,8 +32,8 @@
 		"ec_capability.DOC": "List of capabilities of the Chrome EC",
 		"cr50_capability": [],
 		"cr50_capability.DOC": "List of capabilities of the CR50",
-		"custom_usb_enable_names": [],
-		"custom_usb_enable_names.DOC": "List of USB-A control GPIOs",
+		"custom_usb_enable_pins": [],
+		"custom_usb_enable_pins.DOC": "List of USB-A enable GPIO pins, including a flag for GPIO pins behind an io expander.",
 		"spi_voltage": "pp1800",
 		"spi_voltage.DOC": "The voltage level to set on the servo's spi2_vref",
 		"usbc_input_voltage_limit": 20,
@@ -317,8 +317,11 @@
 		"spi_voltage": "pp3300",
 		"servo_prog_state_delay": 10,
 		"dark_resume_capable": true,
-		"custom_usb_enable_names": [
-			"EN_USB_A_5V"
+		"custom_usb_enable_pins": [
+			{
+				"name": "EN_USB_A_5V",
+				"ioex": false
+			}
 		],
 		"smm_store": false
 	},
@@ -513,8 +516,11 @@
 		"firmware_screen": 15,
 		"spi_voltage": "pp3300",
 		"dark_resume_capable": true,
-		"custom_usb_enable_names": [
-			"EN_USB_A_5V"
+		"custom_usb_enable_pins": [
+			{
+				"name": "EN_USB_A_5V",
+				"ioex": false
+			}
 		],
 		"smm_store": false,
 		"cr50_capability": [
@@ -762,9 +768,15 @@
 		"firmware_screen": 30,
 		"usb_plug": 45,
 		"spi_voltage": "pp1800",
-		"custom_usb_enable_names": [
-			"EN_USB_A0_5V",
-			"EN_USB_A1_5V"
+		"custom_usb_enable_pins": [
+			{
+				"name": "EN_USB_A0_5V",
+				"ioex": false
+			},
+			{
+				"name": "EN_USB_A1_5V",
+				"ioex": false
+			}
 		],
 		"smm_store": false,
 		"models": {
@@ -834,8 +846,11 @@
 		"ec_has_hibernate_cmd": false,
 		"delay_powerinfo_stable": 6,
 		"delay_reboot_to_ping": 40,
-		"custom_usb_enable_names": [
-			"EN_PP5000_USB_VBUS"
+		"custom_usb_enable_pins": [
+			{
+				"name": "EN_PP5000_USB_VBUS",
+				"ioex": false
+			}
 		],
 		"smm_store": false
 	},
@@ -1059,8 +1074,11 @@
 			"lid",
 			"usb"
 		],
-		"custom_usb_enable_names": [
-			"EN_USB_A_5V"
+		"custom_usb_enable_pins": [
+			{
+				"name": "EN_USB_A_5V",
+				"ioex": false
+			}
 		]
 	},
 	"sumo": {
@@ -1105,8 +1123,11 @@
 			"lid",
 			"usb"
 		],
-		"custom_usb_enable_names": [
-			"EN_USB_A_5V"
+		"custom_usb_enable_pins": [
+			{
+				"name": "EN_USB_A_5V",
+				"ioex": false
+			}
 		]
 	},
 	"ultima": {
@@ -1137,8 +1158,11 @@
 		"confirm_screen": 20,
 		"firmware_screen": 30,
 		"spi_voltage": "pp3300",
-		"custom_usb_enable_names": [
-			"EN_PP5000_USBA"
+		"custom_usb_enable_pins": [
+			{
+				"name": "EN_PP5000_USBA",
+				"ioex": false
+			}
 		],
 		"dark_resume_capable": true,
 		"smm_store": false,
@@ -1178,6 +1202,16 @@
 		"smm_store": false,
 		"firmware_screen": 15,
 		"usb_image_boot_timeout": 240,
-		"delay_powerinfo_stable": 5
+		"delay_powerinfo_stable": 5,
+		"custom_usb_enable_pins": [
+			{
+				"name": "EN_USB_A0_5V",
+				"ioex": true
+			},
+			{
+				"name": "EN_USB_A1_5V_DB",
+				"ioex": true
+			}
+		]
 	}
 }

@@ -15,8 +15,11 @@
     "spi_voltage": "pp3300",
     "servo_prog_state_delay": 10,
     "dark_resume_capable": true,
-    "custom_usb_enable_names": [
-        "EN_USB_A_5V"
+    "custom_usb_enable_pins": [
+        {
+            "name": "EN_USB_A_5V",
+            "ioex": false
+        }
     ],
     "smm_store": false
 }

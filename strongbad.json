@@ -11,7 +11,10 @@
         "lid",
         "usb"
     ],
-    "custom_usb_enable_names": [
-        "EN_USB_A_5V"
+    "custom_usb_enable_pins": [
+        {
+            "name": "EN_USB_A_5V",
+            "ioex": false
+        }
     ]
 }

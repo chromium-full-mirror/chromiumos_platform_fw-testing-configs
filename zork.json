@@ -16,5 +16,15 @@
     "smm_store": false,
     "firmware_screen": 15,
     "usb_image_boot_timeout": 240,
-    "delay_powerinfo_stable": 5
+    "delay_powerinfo_stable": 5,
+    "custom_usb_enable_pins": [
+        {
+            "name": "EN_USB_A0_5V",
+            "ioex": true
+        },
+        {
+            "name": "EN_USB_A1_5V_DB",
+            "ioex": true
+        }
+    ]
 }

@@ -17,8 +17,11 @@
     "ec_has_hibernate_cmd": false,
     "delay_powerinfo_stable": 6,
     "delay_reboot_to_ping": 40,
-    "custom_usb_enable_names": [
-        "EN_PP5000_USB_VBUS"
+    "custom_usb_enable_pins": [
+        {
+            "name": "EN_PP5000_USB_VBUS",
+            "ioex": false
+        }
     ],
     "smm_store": false
 }
