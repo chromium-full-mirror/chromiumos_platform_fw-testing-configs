@@ -25,6 +25,9 @@
     ],
     "smm_store": false,
     "models": {
+        "bluebird": {
+            "usbc_input_voltage_limit": 15
+        },
         "bobba360": {
             "usbc_input_voltage_limit": 15
         },
