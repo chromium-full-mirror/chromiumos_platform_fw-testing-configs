@@ -33,7 +33,7 @@
 		"cr50_capability": [],
 		"cr50_capability.DOC": "List of capabilities of the CR50",
 		"custom_usb_enable_pins": [],
-		"custom_usb_enable_pins.DOC": "List of USB-A enable GPIO pins, including a flag for GPIO pins behind an io expander.",
+		"custom_usb_enable_pins.DOC": "List of USB-A enable GPIO pin names with optional io expander flags",
 		"spi_voltage": "pp1800",
 		"spi_voltage.DOC": "The voltage level to set on the servo's spi2_vref",
 		"usbc_input_voltage_limit": 20,
@@ -780,7 +780,13 @@
 		],
 		"smm_store": false,
 		"models": {
+			"bluebird": {
+				"usbc_input_voltage_limit": 15
+			},
 			"bobba360": {
+				"usbc_input_voltage_limit": 15
+			},
+			"casta": {
 				"usbc_input_voltage_limit": 15
 			}
 		}
