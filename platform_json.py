@@ -41,6 +41,10 @@ class PlatformNotFoundError(AttributeError):
     pass
 
 
+class FieldNotFoundError(AttributeError):
+    """Error class for when the requested field name is not found."""
+
+
 def parse_args(argv):
     """Determine input dir and output file from command-line args.
 
@@ -53,6 +57,7 @@ def parse_args(argv):
             condense_output: A bool determining whether to remove pretty
                 whitespace from the script's final output.
             consolidated: The filepath to CONSOLIDATED.json
+            field: If specified, then only this field's value will be printed.
             platform: The name of the board whose config should be calculated
             model: The name of the model for the board
 
@@ -66,6 +71,8 @@ def parse_args(argv):
     parser.add_argument('-m', '--model', default=None,
                         help='The model name of the board. If not specified, '
                              'then no model overrides will be used.')
+    parser.add_argument('-f', '--field', default=None,
+                        help="If specified, only print this field's value.")
     parser.add_argument('-c', '--consolidated', default='CONSOLIDATED.json',
                         help='The filepath to CONSOLIDATED.json')
     parser.add_argument('--condense-output', action='store_true',
@@ -138,11 +145,18 @@ def main(argv):
               Typically, this should be set to sys.argv[1:].
     """
     args = parse_args(argv)
-    j = calculate_platform_json(args.platform, args.model, args.consolidated)
-    if args.condense_output:
-        print(json.dumps(j), end='')
+    config_json = calculate_platform_json(args.platform, args.model,
+                                          args.consolidated)
+    if args.field is None:
+        # indent=None means no newlines/indents in stringified JSON.
+        # indent=4 means 4-space indents.
+        indent = None if args.condense_output else 4
+        output = json.dumps(config_json, indent=indent)
+    elif args.field not in config_json:
+        raise FieldNotFoundError(args.field)
     else:
-        print(json.dumps(j, indent=4))
+        output = config_json[args.field]
+    print(output, end='' if args.condense_output else '\n')
 
 
 if __name__ == '__main__':

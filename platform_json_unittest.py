@@ -8,7 +8,11 @@ Unit tests for platform_json.py
 
 """
 
+import collections
+import io
+import json
 import os
+import sys
 import tempfile
 import unittest
 
@@ -48,14 +52,36 @@ MOCK_CONSOLIDATED_JSON_CONTENTS = \
     }
 }'''
 
-class InheritanceTestCase(unittest.TestCase):
-    """Ensure that all levels of inheritance are handled correctly"""
 
-    def setUp(self):
+def _run_main(argv):
+    """Run platform_json.main(argv), capturing and returning stdout."""
+    original_stdout = sys.stdout
+    capture_io = io.StringIO()
+    sys.stdout = capture_io
+    try:
+        platform_json.main(argv)
+        return capture_io.getvalue()
+    finally:
+        capture_io.close()
+        sys.stdout = original_stdout
+
+
+class _AbstractMockConfigTestCase(object):
+    """Parent class to handle setup and teardown of mock configs."""
+
+    def setUp(self):  # pylint:disable=invalid-name
         """Write mock JSON to a temporary file"""
         _, self.mock_filepath = tempfile.mkstemp()
         with open(self.mock_filepath, 'w') as mock_file:
             mock_file.write(MOCK_CONSOLIDATED_JSON_CONTENTS)
+
+    def tearDown(self):  # pylint:disable=invalid-name
+        """Destroy the mock JSON file"""
+        os.remove(self.mock_filepath)
+
+
+class InheritanceTestCase(_AbstractMockConfigTestCase, unittest.TestCase):
+    """Ensure that all levels of inheritance are handled correctly"""
 
     def runTest(self):  # pylint:disable=invalid-name
         """Load platform config and check that it looks correct"""
@@ -75,9 +101,52 @@ class InheritanceTestCase(unittest.TestCase):
         self.assertEqual(my_model['field4'], 5)
 
 
-    def tearDown(self):
-        """Dsetroy the mock JSON file"""
-        os.remove(self.mock_filepath)
+class EndToEndPlatformTestCase(_AbstractMockConfigTestCase, unittest.TestCase):
+    """End-to-end testing for specifying the platform name."""
+
+    def runTest(self):  #pylint: disable=invalid-name
+        """Main test logic"""
+        # Basic platform specification
+        argv = ['my_platform', '-c', self.mock_filepath]
+        expected_json = collections.OrderedDict({
+            'platform': 'my_platform',
+            'parent': 'my_parent',
+            'field1': 1,
+            'field2': 2,
+            'field3': 3,
+            'field4': 5
+        })
+        expected_output = json.dumps(expected_json, indent=4) + '\n'
+        self.assertEqual(_run_main(argv), expected_output)
+
+        # Condensed output
+        argv.append('--condense-output')
+        expected_output = json.dumps(expected_json, indent=None)
+        self.assertEqual(_run_main(argv), expected_output)
+
+        # Non-existent platform should raise an error
+        argv = ['fake_platform', '-c', self.mock_filepath]
+        with self.assertRaises(platform_json.PlatformNotFoundError):
+            _run_main(argv)
+
+
+class EndToEndFieldTestCase(_AbstractMockConfigTestCase, unittest.TestCase):
+    """End-to-end testing for specifying the field name."""
+
+    def runTest(self):  # pylint: disable=invalid-name
+        """Main test logic"""
+        # Basic field specification
+        argv = ['my_platform', '-f', 'field1', '-c', self.mock_filepath]
+        self.assertEqual(_run_main(argv), '1\n')
+
+        # Condensed output should yield no newline
+        argv.append('--condense-output')
+        self.assertEqual(_run_main(argv), '1')
+
+        # Non-existent field should raise an error
+        argv = ['my_platform', '-f', 'fake_field', '-c', self.mock_filepath]
+        with self.assertRaises(platform_json.FieldNotFoundError):
+            _run_main(argv)
 
 
 if __name__ == '__main__':
