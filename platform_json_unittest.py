@@ -35,6 +35,9 @@ MOCK_CONSOLIDATED_JSON_CONTENTS = \
         "models": {
             "my_model": {
                 "field1": 4
+            },
+            "my_model2": {
+                "field2": 4
             }
         }
     },
@@ -66,7 +69,7 @@ def _run_main(argv):
         sys.stdout = original_stdout
 
 
-class _AbstractMockConfigTestCase(object):
+class AbstractMockConfigTestCase(object):
     """Parent class to handle setup and teardown of mock configs."""
 
     def setUp(self):  # pylint:disable=invalid-name
@@ -80,31 +83,33 @@ class _AbstractMockConfigTestCase(object):
         os.remove(self.mock_filepath)
 
 
-class InheritanceTestCase(_AbstractMockConfigTestCase, unittest.TestCase):
+class InheritanceTestCase(AbstractMockConfigTestCase, unittest.TestCase):
     """Ensure that all levels of inheritance are handled correctly"""
 
     def runTest(self):  # pylint:disable=invalid-name
         """Load platform config and check that it looks correct"""
-        my_platform = platform_json.calculate_platform_json('my_platform',
-                                                            None,
-                                                            self.mock_filepath)
+        consolidated_json = platform_json.load_consolidated_json(
+            self.mock_filepath)
+        my_platform = platform_json.calculate_config('my_platform',
+                                                     None,
+                                                     consolidated_json)
         self.assertEqual(my_platform['field1'], 1) # No inheritance
         self.assertEqual(my_platform['field2'], 2) # Direct inheritance
         self.assertEqual(my_platform['field3'], 3) # Recursive inheritance
         self.assertEqual(my_platform['field4'], 5) # Inherit from DEFAULTS
-        my_model = platform_json.calculate_platform_json('my_platform',
-                                                         'my_model',
-                                                         self.mock_filepath)
+        my_model = platform_json.calculate_config('my_platform',
+                                                  'my_model',
+                                                  consolidated_json)
         self.assertEqual(my_model['field1'], 4) # Model override
         self.assertEqual(my_model['field2'], 2) # Everything else is the same
         self.assertEqual(my_model['field3'], 3)
         self.assertEqual(my_model['field4'], 5)
 
 
-class EndToEndPlatformTestCase(_AbstractMockConfigTestCase, unittest.TestCase):
+class EndToEndPlatformTestCase(AbstractMockConfigTestCase, unittest.TestCase):
     """End-to-end testing for specifying the platform name."""
 
-    def runTest(self):  #pylint: disable=invalid-name
+    def runTest(self):  # pylint: disable=invalid-name
         """Main test logic"""
         # Basic platform specification
         argv = ['my_platform', '-c', self.mock_filepath]
@@ -130,7 +135,7 @@ class EndToEndPlatformTestCase(_AbstractMockConfigTestCase, unittest.TestCase):
             _run_main(argv)
 
 
-class EndToEndFieldTestCase(_AbstractMockConfigTestCase, unittest.TestCase):
+class EndToEndFieldTestCase(AbstractMockConfigTestCase, unittest.TestCase):
     """End-to-end testing for specifying the field name."""
 
     def runTest(self):  # pylint: disable=invalid-name

@@ -1,0 +1,90 @@
+#!/usr/bin/env python3
+# Copyright 2020 The Chromium OS Authors. All rights reserved.
+# Use of this source code is governed by a BSD-style license that can be
+# found in the LICENSE file.
+
+"""
+Unit tests for query_by_field.py
+
+"""
+
+import io
+import sys
+import unittest
+
+import platform_json_unittest
+import query_by_field
+
+
+def _run_main(argv):
+    """Run platform_json.main(argv), capturing and returning stdout."""
+    original_stdout = sys.stdout
+    capture_io = io.StringIO()
+    sys.stdout = capture_io
+    try:
+        query_by_field.main(argv)
+        return capture_io.getvalue()
+    finally:
+        capture_io.close()
+        sys.stdout = original_stdout
+
+
+class SingleOperatorTestCase(platform_json_unittest.AbstractMockConfigTestCase,
+                             unittest.TestCase):
+    """Test-case for using a single operator of each type."""
+    def runTest(self):  # pylint: disable=invalid-name
+        """Test each operator in isolation."""
+        # Equality operator ('=')
+        argv = ['field1=5', '-c', self.mock_filepath]
+        expected = 'DEFAULTS\n'
+        self.assertEqual(_run_main(argv), expected)
+
+        # Inequality operator ('!=')
+        argv = ['field1!=5', '-c', self.mock_filepath]
+        expected = 'my_platform\nmy_parent\nmy_grandparent\n'
+        self.assertEqual(_run_main(argv), expected)
+
+
+class MultipleOperatorsTestCase(platform_json_unittest.AbstractMockConfigTestCase,
+                                unittest.TestCase):
+    """Test-case for using multiple operators."""
+    def runTest(self):  # pylint: disable=invalid-name
+        """Test using multiple operators."""
+        argv = ['field1!=1', 'field1!=4', '-c', self.mock_filepath]
+        expected = 'DEFAULTS\nmy_parent\nmy_grandparent\n'
+        self.assertEqual(_run_main(argv), expected)
+
+
+class ModelExceptionsTestCase(platform_json_unittest.AbstractMockConfigTestCase,
+                              unittest.TestCase):
+    """Test-case for when model overrides change whether a platform matches."""
+    def runTest(self):  # pylint: disable=invalid-name
+        """Test all variants of model exceptions."""
+        # Check for when a platform does not match, except for one model
+        argv = ['field1=4', '-c', self.mock_filepath]
+        expected = 'my_platform (only my_model)\n'
+        self.assertEqual(_run_main(argv), expected)
+
+        # Check for when a platform matches, except for one model
+        argv = ['field1=1', '-c', self.mock_filepath]
+        expected = 'my_platform (except my_model)\n'
+        self.assertEqual(_run_main(argv), expected)
+
+        # Check for multiple model exceptions
+        argv = ['field1=1', 'field2=2', '-c', self.mock_filepath]
+        expected = 'my_platform (except my_model, my_model2)\n'
+        self.assertEqual(_run_main(argv), expected)
+
+
+class NoMatchesTestCase(platform_json_unittest.AbstractMockConfigTestCase,
+                        unittest.TestCase):
+    """Test-case for when no platforms match the query."""
+    def runTest(self):  #pylint: disable=invalid-name
+        """Run script with a bogus query."""
+        argv = ['field1=1337', '-c', self.mock_filepath]
+        expected = 'No platforms matched.\n'
+        self.assertEqual(_run_main(argv), expected)
+
+
+if __name__ == '__main__':
+    unittest.main()

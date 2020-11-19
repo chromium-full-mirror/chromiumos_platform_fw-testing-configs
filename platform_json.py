@@ -3,7 +3,7 @@
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
-"""Print one platform's full config data to stdout.
+"""Print one fully-calculated fw-testing-config to stdout.
 
 This script takes one platform name (and optionally a model name) as inputs,
 calculates the full config for that platform, and prints the results as
@@ -116,17 +116,21 @@ def calculate_field_value(consolidated_json, field, platform, model=None):
     return calculate_field_value(consolidated_json, field, parent, model)
 
 
-def calculate_platform_json(platform, model, consolidated_fp):
+def load_consolidated_json(consolidated_fp):
+    """Return the contents of consolidated_fp as a Python object."""
+    if not os.path.isfile(consolidated_fp):
+        raise FileNotFoundError(consolidated_fp)
+    with open(consolidated_fp) as consolidated_file:
+        return json.load(consolidated_file)
+
+
+def calculate_config(platform, model, consolidated_json):
     """Calculate a platform's ultimate config values for all fields.
 
     Args:
         platform: The name of the platform to calculate values for.
         model: The name of the model to check for overrides.
     """
-    if not os.path.isfile(consolidated_fp):
-        raise FileNotFoundError(consolidated_fp)
-    with open(consolidated_fp) as consolidated_file:
-        consolidated_json = json.load(consolidated_file)
     final_json = collections.OrderedDict()
     for field in consolidated_json['DEFAULTS']:
         if any(regex.search(field) for regex in META_FIELD_REGEXES):
@@ -145,8 +149,9 @@ def main(argv):
               Typically, this should be set to sys.argv[1:].
     """
     args = parse_args(argv)
-    config_json = calculate_platform_json(args.platform, args.model,
-                                          args.consolidated)
+    consolidated_json = load_consolidated_json(args.consolidated)
+    config_json = calculate_config(args.platform, args.model,
+                                   consolidated_json)
     if args.field is None:
         # indent=None means no newlines/indents in stringified JSON.
         # indent=4 means 4-space indents.
