@@ -1,6 +1,7 @@
 {
     "platform": "volteer",
     "mode_switcher_type": "menu_switcher",
+    "intel_cse_lite": true,
     "chrome_ec": true,
     "ec_capability": [
         "battery",
