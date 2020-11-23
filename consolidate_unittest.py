@@ -141,7 +141,11 @@ class TestWriteOutput(unittest.TestCase):
         # Verify file contents
         with open(TestWriteOutput.output_fp) as output_file:
             output_contents = output_file.readlines()
-        self.assertEqual(output_contents, ['{"foo": "bar", "bar": "baz"}'])
+        expected = ['{\n',
+                    '\t"foo": "bar",\n',
+                    '\t"bar": "baz"\n',
+                    '}']
+        self.assertEqual(output_contents, expected)
 
         # Verify that file is read-only
         with self.assertRaises(PermissionError):
@@ -184,11 +188,26 @@ class TestMain(unittest.TestCase):
 
     def test_main(self):
         """Verify that the whole script works, end-to-end."""
-        expected_output = '{"DEFAULTS": {"platform": null, "platform_DOC": ' + \
-                          '"foo", "ec_capability": []}, "a": {"platform": ' + \
-                          '"a", "firmware_screen": 0.5, "ec_capability": ' + \
-                          '["usb", "x86"]}, "z": {"platform": "z", ' + \
-                          '"parent": "a", "firmware_screen": 10}}'
+        expected_output = ['{\n',
+                           '\t"DEFAULTS": {\n',
+                           '\t\t"platform": null,\n',
+                           '\t\t"platform_DOC": "foo",\n',
+                           '\t\t"ec_capability": []\n',
+                           '\t},\n',
+                           '\t"a": {\n',
+                           '\t\t"platform": "a",\n',
+                           '\t\t"firmware_screen": 0.5,\n',
+                           '\t\t"ec_capability": [\n',
+                           '\t\t\t"usb",\n',
+                           '\t\t\t"x86"\n',
+                           '\t\t]\n',
+                           '\t},\n',
+                           '\t"z": {\n',
+                           '\t\t"platform": "z",\n',
+                           '\t\t"parent": "a",\n',
+                           '\t\t"firmware_screen": 10\n',
+                           '\t}\n',
+                           '}']
 
         # Run the script twice to verify idempotency.
         for _ in range(2):
@@ -198,7 +217,7 @@ class TestMain(unittest.TestCase):
 
             # Verify the output.
             with open(TestMain.output_fp) as output_file:
-                output_contents = '\n'.join(output_file.readlines())
+                output_contents = output_file.readlines()
             self.assertEqual(output_contents, expected_output)
 
         # Verify the final output is read-only.
