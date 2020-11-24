@@ -44,6 +44,29 @@ class SingleOperatorTestCase(platform_json_unittest.AbstractMockConfigTestCase,
         expected = 'my_platform\nmy_parent\nmy_grandparent\n'
         self.assertEqual(_run_main(argv), expected)
 
+        # Array membership operator (':')
+        argv = ['fieldArray:elem2', '-c', self.mock_filepath]
+        expected = 'my_platform\n'
+        self.assertEqual(_run_main(argv), expected)
+
+        # Array non-membership operator ('!:)
+        argv = ['fieldArray!:elem5', '-c', self.mock_filepath]
+        expected = 'my_platform\n'
+        self.assertEqual(_run_main(argv), expected)
+
+
+class OperatorTypeMismatchTestCase(platform_json_unittest.AbstractMockConfigTestCase,
+                                   unittest.TestCase):
+    """Test-case for exceptions being raised for operator-type mismatches."""
+    def runTest(self):  # pylint: disable=invalid-name
+        """Test each operator which can have invalid types."""
+        # Array operators only make sense with array fields.
+        for operator in (':', '!:'):
+            query = 'field1%s1' % operator
+            argv = [query, '-c', self.mock_filepath]
+            with self.assertRaises(query_by_field.NotIterableError):
+                _run_main(argv)
+
 
 class MultipleOperatorsTestCase(platform_json_unittest.AbstractMockConfigTestCase,
                                 unittest.TestCase):

@@ -26,12 +26,19 @@ MOCK_CONSOLIDATED_JSON_CONTENTS = \
         "field1": 5,
         "field2": 5,
         "field3": 5,
-        "field4": 5
+        "field4": 5,
+        "fieldArray": [
+            "elem5"
+        ]
     },
     "my_platform": {
         "platform": "my_platform",
         "parent": "my_parent",
         "field1": 1,
+        "fieldArray": [
+            "elem1",
+            "elem2"
+        ],
         "models": {
             "my_model": {
                 "field1": 4
@@ -119,7 +126,11 @@ class EndToEndPlatformTestCase(AbstractMockConfigTestCase, unittest.TestCase):
             'field1': 1,
             'field2': 2,
             'field3': 3,
-            'field4': 5
+            'field4': 5,
+            'fieldArray': [
+                'elem1',
+                'elem2',
+            ],
         })
         expected_output = json.dumps(expected_json, indent=4) + '\n'
         self.assertEqual(_run_main(argv), expected_output)

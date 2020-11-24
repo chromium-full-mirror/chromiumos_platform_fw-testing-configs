@@ -8,13 +8,18 @@
 Each condition passed in as a command-line arg must be formatted as
 ${FIELD}${OPERATOR}${VALUE}, where:
     ${FIELD} is the name of the field being matched
-    ${OPERATOR} is either '=' or '!='
+    ${OPERATOR} can be any of the following:
+        =  | field equals
+        != | field does not equal
+        :  | array contains
+        !: | array does not contain
     ${VALUE} is the field-value being compared against
 
-TODO(gredelston): Add support for more operators:
-    :            | array contains
-    !:           | array does not contain
-    <, >, <=, >= | numeric field comparisons
+Note that Bash tends to misinterpret '!', so users are advised to wrap
+conditions in quotes, as in the following example:
+    ./query_by_field.py 'ec_capability!:x86'
+
+TODO(gredelston): Add numeric comparison operators: <, >, <=, >=
 """
 
 import argparse
@@ -24,7 +29,7 @@ import sys
 import platform_json
 
 
-RE_CONDITION = re.compile(r'^(\w+)(=|!=)(\w+)$')
+RE_CONDITION = re.compile(r'^(\w+)(=|!=|:|!:)(\w+)$')
 
 
 class ConditionError(ValueError):
@@ -34,6 +39,11 @@ class ConditionError(ValueError):
 
 class UnrecognizedOperatorError(ValueError):
     """Error class for when a query contains an unexpected operator."""
+
+
+class NotIterableError(ValueError):
+    """Error class for querying for a member of a non-iterable field."""
+    pass
 
 
 class Condition(object):
@@ -53,13 +63,27 @@ class Condition(object):
         if self.field not in config_dict:
             raise platform_json.FieldNotFoundError('%s (platform=%s)' % (
                 self.field, config_dict['platform']))
-        actual_value = str(config_dict[self.field]).lower()
+        actual_value = config_dict[self.field]
         if self.operator == '=':
-            return actual_value == self.value
+            return str(actual_value).lower() == self.value
         elif self.operator == '!=':
-            return actual_value != self.value
+            return str(actual_value).lower() != self.value
+        elif self.operator == ':':
+            if not isinstance(actual_value, list):
+                raise NotIterableError(actual_value)
+            for elem in actual_value:
+                if str(elem).lower() == self.value:
+                    return True
+            return False
+        elif self.operator == '!:':
+            if not isinstance(actual_value, list):
+                raise NotIterableError(actual_value)
+            for elem in actual_value:
+                if str(elem).lower() == self.value:
+                    return False
+            return True
         else:
-            raise UnrecognizedOperatorError('%s (expect either = or !=)' %
+            raise UnrecognizedOperatorError('%s (expect =/!=/:/!:)' %
                                             self.operator)
 
     def __repr__(self):
