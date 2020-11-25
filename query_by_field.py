@@ -13,13 +13,15 @@ ${FIELD}${OPERATOR}${VALUE}, where:
         != | field does not equal
         :  | array contains
         !: | array does not contain
+        <  | number is less than
+        <= | number is less than or equal to
+        >  | number is greater than
+        >= | number is greater than or equal to
     ${VALUE} is the field-value being compared against
 
 Note that Bash tends to misinterpret '!', so users are advised to wrap
 conditions in quotes, as in the following example:
     ./query_by_field.py 'ec_capability!:x86'
-
-TODO(gredelston): Add numeric comparison operators: <, >, <=, >=
 """
 
 import argparse
@@ -29,7 +31,8 @@ import sys
 import platform_json
 
 
-RE_CONDITION = re.compile(r'^(\w+)(=|!=|:|!:)(\w+)$')
+# Regex to match an entire condition: field name, operator, expected value.
+RE_CONDITION = re.compile(r'^(\w+)(!?[=:]|[<>]=?)(\w+)$')
 
 
 class ConditionError(ValueError):
@@ -44,6 +47,10 @@ class UnrecognizedOperatorError(ValueError):
 class NotIterableError(ValueError):
     """Error class for querying for a member of a non-iterable field."""
     pass
+
+
+class NotNumericError(ValueError):
+    """Error class for when a non-number is used for numeric comparison."""
 
 
 class Condition(object):
@@ -68,23 +75,44 @@ class Condition(object):
             return str(actual_value).lower() == self.value
         elif self.operator == '!=':
             return str(actual_value).lower() != self.value
-        elif self.operator == ':':
-            if not isinstance(actual_value, list):
-                raise NotIterableError(actual_value)
-            for elem in actual_value:
-                if str(elem).lower() == self.value:
-                    return True
-            return False
-        elif self.operator == '!:':
-            if not isinstance(actual_value, list):
-                raise NotIterableError(actual_value)
-            for elem in actual_value:
-                if str(elem).lower() == self.value:
-                    return False
-            return True
+        elif self.operator in (':', '!:'):
+            return self._evaluate_array_membership(actual_value)
+        elif self.operator in ('<', '>', '<=', '>='):
+            return self._evaluate_numeric(actual_value)
         else:
-            raise UnrecognizedOperatorError('%s (expect =/!=/:/!:)' %
+            raise UnrecognizedOperatorError('%s (expect =/!=/:/!:/</<=/>/>=)' %
                                             self.operator)
+
+    def _evaluate_array_membership(self, actual_value):
+        """Handler for operators that expect array-type config values."""
+        if not isinstance(actual_value, list):
+            msg = 'field %s, actual value %s' % (self.field, actual_value)
+            raise NotIterableError(msg)
+        array_contains_expected_element = False
+        for elem in actual_value:
+            if str(elem).lower() == self.value:
+                array_contains_expected_element = True
+                break
+        if self.operator == ':':
+            return array_contains_expected_element
+        elif self.operator == '!:':
+            return not array_contains_expected_element
+        raise UnrecognizedOperatorError(self.operator)
+
+    def _evaluate_numeric(self, actual_value):
+        """Handler for operators that expect numeric config values."""
+        try:
+            actual_value = float(actual_value)
+        except (ValueError, TypeError):
+            msg = 'field %s, actual value %s' % (self.field, actual_value)
+            raise NotNumericError(msg)
+        try:
+            expected_value = float(self.value)
+        except ValueError:
+            msg = 'field %s, expected value %s' % (self.field, self.value)
+            raise NotNumericError(msg)
+        return eval('%s %s %s' % (actual_value, self.operator, expected_value))
+
 
     def __repr__(self):
         """Represent this condition as a string."""

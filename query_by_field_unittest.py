@@ -49,9 +49,29 @@ class SingleOperatorTestCase(platform_json_unittest.AbstractMockConfigTestCase,
         expected = 'my_platform\n'
         self.assertEqual(_run_main(argv), expected)
 
-        # Array non-membership operator ('!:)
+        # Array non-membership operator ('!:')
         argv = ['fieldArray!:elem5', '-c', self.mock_filepath]
         expected = 'my_platform\n'
+        self.assertEqual(_run_main(argv), expected)
+
+        # Numeric less-than operator ('<')
+        argv = ['field1<2', '-c', self.mock_filepath]
+        expected = 'my_platform (except my_model)\n'
+        self.assertEqual(_run_main(argv), expected)
+
+        # Numeric less-than-or-equal operator ('<=')
+        argv = ['field1<=2', '-c', self.mock_filepath]
+        expected = 'my_platform (except my_model)\nmy_parent\n'
+        self.assertEqual(_run_main(argv), expected)
+
+        # Numeric greater-than operator ('>')
+        argv = ['field1>4', '-c', self.mock_filepath]
+        expected = 'DEFAULTS\n'
+        self.assertEqual(_run_main(argv), expected)
+
+        # Numeric greater-than-or-equal operator ('>=')
+        argv = ['field1>=4', '-c', self.mock_filepath]
+        expected = 'DEFAULTS\nmy_platform (only my_model)\n'
         self.assertEqual(_run_main(argv), expected)
 
 
@@ -66,6 +86,18 @@ class OperatorTypeMismatchTestCase(platform_json_unittest.AbstractMockConfigTest
             argv = [query, '-c', self.mock_filepath]
             with self.assertRaises(query_by_field.NotIterableError):
                 _run_main(argv)
+
+        # Numeric operators only make sense with numeric fields.
+        for operator in ('<', '<=', '>', '>='):
+            config_value_is_array = 'fieldArray%s1'
+            config_value_is_string = 'platform%s1'
+            expected_value_is_string = 'field1%sfoo'
+            for fmt in (config_value_is_array, config_value_is_string,
+                        expected_value_is_string):
+                query = fmt % operator
+                argv = [query, '-c', self.mock_filepath]
+                with self.assertRaises(query_by_field.NotNumericError):
+                    _run_main(argv)
 
 
 class MultipleOperatorsTestCase(platform_json_unittest.AbstractMockConfigTestCase,
