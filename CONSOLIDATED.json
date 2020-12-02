@@ -283,6 +283,7 @@
 	"dedede": {
 		"platform": "dedede",
 		"mode_switcher_type": "menu_switcher",
+		"intel_cse_lite": true,
 		"chrome_ec": true,
 		"ec_capability": [
 			"battery",
@@ -1079,12 +1080,6 @@
 			"charging",
 			"lid",
 			"usb"
-		],
-		"custom_usb_enable_pins": [
-			{
-				"name": "EN_USB_A_5V",
-				"ioex": false
-			}
 		]
 	},
 	"sumo": {
@@ -1151,6 +1146,7 @@
 	"volteer": {
 		"platform": "volteer",
 		"mode_switcher_type": "menu_switcher",
+		"intel_cse_lite": true,
 		"chrome_ec": true,
 		"ec_capability": [
 			"battery",
