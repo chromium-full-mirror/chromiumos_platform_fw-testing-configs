@@ -1129,6 +1129,7 @@
 		],
 		"models": {
 			"lazor": {
+				"charger_profile_override": true,
 				"usbc_input_voltage_limit": 15
 			}
 		}
