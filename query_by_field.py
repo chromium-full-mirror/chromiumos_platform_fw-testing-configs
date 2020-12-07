@@ -124,8 +124,10 @@ def parse_args(argv):
     parser = argparse.ArgumentParser()
     parser.add_argument('conditions', nargs='+',
                         help='Field-matching requirements, each of the form '
-                             '${FIELD}${OPERATOR}${VALUE}, where OPERATOR is '
-                             'either "=" (match) or "!=" (no match). String '
+                             '${FIELD}${OPERATOR}${VALUE}. Valid operators '
+                             'are: = (match), != (not match), : (array '
+                             'contains), !: (array does not contain), and '
+                             'numeric comparions <, >, <=, >=. Note: String '
                              'comparisons are always case-insensitive.')
     parser.add_argument('-c', '--consolidated', default='CONSOLIDATED.json',
                         help='The filepath to CONSOLIDATED.json')

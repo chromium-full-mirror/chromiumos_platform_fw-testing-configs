@@ -70,3 +70,32 @@ When submitting multiple CL’s like that, please use the [Cq-Depend](https://ch
 In Autotest, configs are loaded during `FirmwareTest.initialize`. Config values can be accessed via `self.faft_config.${ATTRIBUTE}`, such as [`self.faft_config.chrome_ec`](https://source.corp.google.com/chromeos_public/src/third_party/autotest/files/server/cros/faft/firmware_test.py;rcl=b602ca9b2516613458bccc6009ffd342130f528b;l=149).
 
 In Tast, configs can be created via `firmware.NewConfig`. In order to conform with Go’s style, attribute names are modified to MixedCaps. Config values can be accessed via `cfg[${ATTRIBUTE}]`, such as `cfg[ChromeEC]`.
+
+# Utility Scripts
+
+This repo offers a few handy-dandy utility scripts.
+
+`consolidate.py`, as described above, combines all the individual `${PLATFORM}.json` files into one file, `CONSOLIDATED.json`:
+
+```
+> consolidate.py
+```
+
+`platform_json.py` outputs the final configuration for a single platform. `--model` or `-m` will include a model-specific override. `--field` or `-f` will only print a single field value. `--condense-output` will trim unnecessary whitespace, making it easier to consume via other scripts.
+
+```
+> platform_json.py octopus
+> platform_json.py octopus -m robo360
+> platform_json.py octopus -f has_lid
+> platform_json.py octopus -m robo360 -f has_lid --condense-output
+```
+
+`query_by_field.py` reports a list of all platforms and models matching certain field conditions. Multiple conditions can be specified. See usage info (`query_by_field.py -h`) for details about supported operators. Note that you might need to escape some of the operators (like `\!`) for Bash to parse them.
+
+```
+> query_by_field.py has_lid=false
+> query_by_field.py "firmware_screen<=8"
+> query_by_field.py chrome_ec=true ec_capability\!:x86
+```
+
+Each of these scripts also supports `--help` (or `-h`) for usage info.
