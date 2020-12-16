@@ -129,7 +129,9 @@
 		"ap_flash_ccd_pre_commands": [],
 		"ap_flash_ccd_pre_commands.DOC": "A list of dut-control commands to execute before flashing AP firmware over ccd",
 		"ap_flash_ccd_post_commands": [],
-		"ap_flash_ccd_post_commands.DOC": "A list of dut-control commands to execute after flashing AP firmware over ccd"
+		"ap_flash_ccd_post_commands.DOC": "A list of dut-control commands to execute after flashing AP firmware over ccd",
+		"minidiag_enabled": true,
+		"minidiag_enabled.DOC": "Whether minidiag is enabled"
 	},
 	"arkham": {
 		"platform": "arkham",
@@ -190,7 +192,8 @@
 		"cr50_capability": [
 			"rdd_leakage",
 			"wp_on_in_g3"
-		]
+		],
+		"minidiag_enabled": false
 	},
 	"auron": {
 		"platform": "auron",
@@ -212,7 +215,8 @@
 		"spi_voltage": "pp3300",
 		"smm_store": false,
 		"usb_a_port_count": -1,
-		"cr50_capability": []
+		"cr50_capability": [],
+		"minidiag_enabled": false
 	},
 	"banjo": {
 		"platform": "banjo",
@@ -350,7 +354,8 @@
 			"charging",
 			"lid"
 		],
-		"cr50_capability": []
+		"cr50_capability": [],
+		"minidiag_enabled": false
 	},
 	"coral": {
 		"platform": "coral",
@@ -378,7 +383,8 @@
 		"usb_a_port_count": -1,
 		"spi_voltage": "pp1800",
 		"smm_store": false,
-		"cr50_capability": []
+		"cr50_capability": [],
+		"minidiag_enabled": false
 	},
 	"dedede": {
 		"platform": "dedede",
@@ -592,7 +598,8 @@
 		],
 		"smm_store": false,
 		"max_charging_power": 45.0,
-		"cr50_capability": []
+		"cr50_capability": [],
+		"minidiag_enabled": false
 	},
 	"drallion": {
 		"platform": "drallion",
@@ -616,7 +623,8 @@
 		"serial_number_length": 7,
 		"has_diagnostics_image": true,
 		"usb_a_port_count": -1,
-		"cr50_capability": []
+		"cr50_capability": [],
+		"minidiag_enabled": false
 	},
 	"edgar": {
 		"platform": "edgar",
@@ -671,7 +679,8 @@
 		"dut_can_source_power_in_suspend": false,
 		"max_charging_power": 45.0,
 		"usb_a_port_count": -1,
-		"ap_flash_ccd_programmer": "raiden_debug_spi:target=AP,serial=%s"
+		"ap_flash_ccd_programmer": "raiden_debug_spi:target=AP,serial=%s",
+		"minidiag_enabled": false
 	},
 	"expresso": {
 		"platform": "expresso",
@@ -704,7 +713,8 @@
 		"smm_store": false,
 		"max_charging_power": 100.0,
 		"usb_a_port_count": -1,
-		"cr50_capability": []
+		"cr50_capability": [],
+		"minidiag_enabled": false
 	},
 	"gale": {
 		"platform": "gale",
@@ -750,7 +760,8 @@
 		"servo_prog_state_delay": 10,
 		"smm_store": false,
 		"usb_a_port_count": -1,
-		"cr50_capability": []
+		"cr50_capability": [],
+		"minidiag_enabled": false
 	},
 	"gnawty": {
 		"platform": "gnawty",
@@ -776,7 +787,8 @@
 		"firmware_screen": 7,
 		"usb_hid_wake_enabled": false,
 		"usb_a_port_count": -1,
-		"cr50_capability": []
+		"cr50_capability": [],
+		"minidiag_enabled": false
 	},
 	"grunt": {
 		"platform": "grunt",
@@ -802,7 +814,8 @@
 				"usbc_voltage_on_shutdown_and_full_batt": 5
 			}
 		},
-		"cr50_capability": []
+		"cr50_capability": [],
+		"minidiag_enabled": false
 	},
 	"guado": {
 		"platform": "guado",
@@ -897,7 +910,8 @@
 			"mushu": {
 				"max_charging_power": 100.0
 			}
-		}
+		},
+		"minidiag_enabled": false
 	},
 	"heli": {
 		"platform": "heli",
@@ -935,7 +949,8 @@
 		"smm_store": false,
 		"usb_a_port_count": -1,
 		"ec_capability": [],
-		"cr50_capability": []
+		"cr50_capability": [],
+		"minidiag_enabled": false
 	},
 	"jetstream": {
 		"platform": "jetstream",
@@ -946,7 +961,8 @@
 		"rec_button_dev_switch": true,
 		"smm_store": false,
 		"ec_capability": [],
-		"cr50_capability": []
+		"cr50_capability": [],
+		"minidiag_enabled": false
 	},
 	"kalista": {
 		"platform": "kalista",
@@ -1040,7 +1056,8 @@
 		"max_charging_power": 45.0,
 		"usb_a_port_count": -1,
 		"cr50_capability": [],
-		"ap_flash_ccd_programmer": "raiden_debug_spi:target=AP,serial=%s"
+		"ap_flash_ccd_programmer": "raiden_debug_spi:target=AP,serial=%s",
+		"minidiag_enabled": false
 	},
 	"kunimitsu": {
 		"platform": "kunimitsu",
@@ -1062,7 +1079,8 @@
 		],
 		"smm_store": false,
 		"usb_a_port_count": -1,
-		"cr50_capability": []
+		"cr50_capability": [],
+		"minidiag_enabled": false
 	},
 	"lars": {
 		"platform": "lars",
@@ -1115,7 +1133,8 @@
 			"rdd_leakage"
 		],
 		"max_charging_power": 70.0,
-		"usb_a_port_count": -1
+		"usb_a_port_count": -1,
+		"minidiag_enabled": false
 	},
 	"nasher": {
 		"platform": "nasher",
@@ -1142,7 +1161,8 @@
 		"smm_store": false,
 		"max_charging_power": 45.0,
 		"usb_a_port_count": -1,
-		"cr50_capability": []
+		"cr50_capability": [],
+		"minidiag_enabled": false
 	},
 	"ninja": {
 		"platform": "ninja",
@@ -1180,7 +1200,8 @@
 		],
 		"max_charging_power": 45.0,
 		"usbc_voltage_on_shutdown_and_full_batt": 9,
-		"usb_a_port_count": -1
+		"usb_a_port_count": -1,
+		"minidiag_enabled": false
 	},
 	"oak": {
 		"platform": "oak",
@@ -1195,7 +1216,8 @@
 		],
 		"ec_has_powerbtn_cmd": false,
 		"usb_a_port_count": -1,
-		"cr50_capability": []
+		"cr50_capability": [],
+		"minidiag_enabled": false
 	},
 	"octopus": {
 		"platform": "octopus",
@@ -1246,7 +1268,8 @@
 				"usbc_input_voltage_limit": 15
 			}
 		},
-		"max_charging_power": 45.0
+		"max_charging_power": 45.0,
+		"minidiag_enabled": false
 	},
 	"orco": {
 		"platform": "orco",
@@ -1297,7 +1320,8 @@
 		"smm_store": false,
 		"max_charging_power": 45.0,
 		"usb_a_port_count": -1,
-		"cr50_capability": []
+		"cr50_capability": [],
+		"minidiag_enabled": false
 	},
 	"puff": {
 		"platform": "puff",
@@ -1329,7 +1353,8 @@
 		"ap_flash_ccd_programmer": "raiden_debug_spi:target=AP,serial=%s",
 		"ap_flash_ccd_pre_commands": [],
 		"ap_flash_ccd_post_commands": [],
-		"cr50_capability": []
+		"cr50_capability": [],
+		"minidiag_enabled": false
 	},
 	"pyro": {
 		"platform": "pyro",
@@ -1357,7 +1382,8 @@
 		"smm_store": false,
 		"delay_reboot_to_ping": 60,
 		"usb_a_port_count": -1,
-		"cr50_capability": []
+		"cr50_capability": [],
+		"minidiag_enabled": false
 	},
 	"rammus": {
 		"platform": "rammus",
@@ -1380,7 +1406,8 @@
 		"ap_flash_ccd_programmer": "raiden_debug_spi:target=AP,serial=%s",
 		"ap_flash_ccd_pre_commands": [],
 		"ap_flash_ccd_post_commands": [],
-		"cr50_capability": []
+		"cr50_capability": [],
+		"minidiag_enabled": false
 	},
 	"reef": {
 		"platform": "reef",
@@ -1403,7 +1430,8 @@
 		"smm_store": false,
 		"max_charging_power": 45.0,
 		"usb_a_port_count": -1,
-		"cr50_capability": []
+		"cr50_capability": [],
+		"minidiag_enabled": false
 	},
 	"reef_uni": {
 		"platform": "reef_uni",
@@ -1454,7 +1482,8 @@
 		"servo_prog_state_delay": 10,
 		"smm_store": false,
 		"usb_a_port_count": -1,
-		"cr50_capability": []
+		"cr50_capability": [],
+		"minidiag_enabled": false
 	},
 	"sand": {
 		"platform": "sand",
@@ -1487,7 +1516,8 @@
 		"has_diagnostics_image": true,
 		"rma_entered_automatically": false,
 		"usb_a_port_count": -1,
-		"cr50_capability": []
+		"cr50_capability": [],
+		"minidiag_enabled": false
 	},
 	"scarlet": {
 		"platform": "scarlet",
@@ -1539,7 +1569,8 @@
 		"spi_voltage": "pp3300",
 		"smm_store": false,
 		"usb_a_port_count": -1,
-		"cr50_capability": []
+		"cr50_capability": [],
+		"minidiag_enabled": false
 	},
 	"snappy": {
 		"platform": "snappy",
@@ -1580,7 +1611,8 @@
 		"spi_voltage": "pp1800",
 		"smm_store": false,
 		"usb_a_port_count": -1,
-		"cr50_capability": []
+		"cr50_capability": [],
+		"minidiag_enabled": false
 	},
 	"strongbad": {
 		"platform": "strongbad",
@@ -1684,7 +1716,8 @@
 		"has_eventlog": false,
 		"usb_a_port_count": -1,
 		"ec_capability": [],
-		"cr50_capability": []
+		"cr50_capability": [],
+		"minidiag_enabled": false
 	},
 	"volteer": {
 		"platform": "volteer",

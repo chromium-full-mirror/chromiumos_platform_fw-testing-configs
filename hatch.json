@@ -50,5 +50,6 @@
         "mushu": {
             "max_charging_power": 100.0
         }
-    }
+    },
+    "minidiag_enabled": false
 }

@@ -212,5 +212,8 @@
     "ap_flash_ccd_pre_commands.DOC": "A list of dut-control commands to execute before flashing AP firmware over ccd",
 
     "ap_flash_ccd_post_commands": [],
-    "ap_flash_ccd_post_commands.DOC": "A list of dut-control commands to execute after flashing AP firmware over ccd"
+    "ap_flash_ccd_post_commands.DOC": "A list of dut-control commands to execute after flashing AP firmware over ccd",
+
+    "minidiag_enabled": true,
+    "minidiag_enabled.DOC": "Whether minidiag is enabled"
 }

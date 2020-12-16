@@ -28,5 +28,6 @@
         "wp_on_in_g3": true,
         "rdd_off_in_g3": false,
         "rdd_leakage": true
-    }
+    },
+    "minidiag_enabled": false
 }

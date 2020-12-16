@@ -56,5 +56,6 @@
             "usbc_input_voltage_limit": 15
         }
     },
-    "max_charging_power": 45.0
+    "max_charging_power": 45.0,
+    "minidiag_enabled": false
 }
