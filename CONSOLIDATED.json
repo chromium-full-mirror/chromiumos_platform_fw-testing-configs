@@ -1127,9 +1127,9 @@
 		"custom_usb_enable_names": [
 			"EN_USB_A_5V"
 		],
+		"charger_profile_override": true,
 		"models": {
 			"lazor": {
-				"charger_profile_override": true,
 				"usbc_input_voltage_limit": 15
 			}
 		}
