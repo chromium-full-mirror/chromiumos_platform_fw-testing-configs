@@ -17,5 +17,6 @@
     "spi_voltage": "pp3300",
     "dark_resume_capable": true,
     "smm_store": false,
-    "hold_pwr_button_nopowerd_shutdown": 14
+    "hold_pwr_button_nopowerd_shutdown": 14,
+    "usbc_input_voltage_limit": 15
 }
