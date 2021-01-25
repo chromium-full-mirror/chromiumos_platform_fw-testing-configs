@@ -497,6 +497,35 @@
 		"platform": "guado",
 		"parent": "jecht"
 	},
+	"guybrush": {
+		"platform": "guybrush",
+		"mode_switcher_type": "menu_switcher",
+		"chrome_ec": true,
+		"ec_capability": [
+			"battery",
+			"cbi",
+			"charging",
+			"keyboard",
+			"lid",
+			"smart_usb_charge",
+			"usb",
+			"x86"
+		],
+		"servo_prog_state_delay": 1.0,
+		"smm_store": false,
+		"firmware_screen": 15,
+		"delay_powerinfo_stable": 5,
+		"custom_usb_enable_pins": [
+			{
+				"name": "EN_PP5000_USB_A0_VBUS",
+				"ioex": true
+			},
+			{
+				"name": "EN_PP5000_USB_A1_VBUS_DB",
+				"ioex": true
+			}
+		]
+	},
 	"hana": {
 		"platform": "hana",
 		"parent": "oak"
