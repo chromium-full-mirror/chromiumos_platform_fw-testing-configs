@@ -10,5 +10,6 @@
         "charging"
     ],
     "ec_has_hibernate_cmd": false,
+    "hibernate": false,
     "is_detachable": true
 }

@@ -68,6 +68,8 @@
 		"ec_boot_to_wp_en.DOC": "Delay for AP initiating an EC reboot in order to enable EC WP",
 		"ec_has_hibernate_cmd": true,
 		"ec_has_hibernate_cmd.DOC": "EC, if present, supports 'hibernate' console command",
+		"hibernate": true,
+		"hibernate.DOC": "True if the device supports hibernation",
 		"ec_has_powerbtn_cmd": true,
 		"ec_has_powerbtn_cmd.DOC": "EC, if present, supports 'powerbtn' console command",
 		"ec_reboot_to_g3_delay": 0,
@@ -406,6 +408,7 @@
 		"firmware_screen": 15,
 		"has_lid": false,
 		"has_keyboard": false,
+		"hibernate": false,
 		"rec_button_dev_switch": true,
 		"spi_voltage": "pp3300",
 		"chrome_ec": true,
@@ -641,6 +644,7 @@
 		"is_detachable": true,
 		"hold_pwr_button_poweron": 1.2,
 		"ec_has_hibernate_cmd": false,
+		"hibernate": false,
 		"ec_reboot_to_g3_delay": 10,
 		"ec_boot_to_console": 2,
 		"ec_boot_to_wp_en": 2,
@@ -881,6 +885,7 @@
 		],
 		"ec_forwards_short_pp_press": true,
 		"ec_has_hibernate_cmd": false,
+		"hibernate": false,
 		"delay_powerinfo_stable": 6,
 		"delay_reboot_to_ping": 40,
 		"custom_usb_enable_pins": [
@@ -1034,6 +1039,7 @@
 			"charging"
 		],
 		"ec_has_hibernate_cmd": false,
+		"hibernate": false,
 		"is_detachable": true
 	},
 	"sentry": {

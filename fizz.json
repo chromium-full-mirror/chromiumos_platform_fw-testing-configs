@@ -4,6 +4,7 @@
     "firmware_screen": 15,
     "has_lid": false,
     "has_keyboard": false,
+    "hibernate": false,
     "rec_button_dev_switch": true,
     "spi_voltage": "pp3300",
     "chrome_ec": true,
