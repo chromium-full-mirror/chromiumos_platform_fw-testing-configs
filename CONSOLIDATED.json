@@ -1110,7 +1110,13 @@
 			"charging",
 			"lid",
 			"usb"
-		]
+		],
+		"charger_profile_override": true,
+		"models": {
+			"coachz": {
+				"usbc_input_voltage_limit": 15
+			}
+		}
 	},
 	"sumo": {
 		"platform": "sumo",
