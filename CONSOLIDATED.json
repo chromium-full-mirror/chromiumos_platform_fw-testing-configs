@@ -66,8 +66,6 @@
 		"ec_boot_to_pwr_button.DOC": "Delay between EC boot and pressing power button",
 		"ec_boot_to_wp_en": 0,
 		"ec_boot_to_wp_en.DOC": "Delay for AP initiating an EC reboot in order to enable EC WP",
-		"ec_has_hibernate_cmd": true,
-		"ec_has_hibernate_cmd.DOC": "EC, if present, supports 'hibernate' console command",
 		"hibernate": true,
 		"hibernate.DOC": "True if the device supports hibernation",
 		"ec_has_powerbtn_cmd": true,
@@ -643,7 +641,6 @@
 		],
 		"is_detachable": true,
 		"hold_pwr_button_poweron": 1.2,
-		"ec_has_hibernate_cmd": false,
 		"hibernate": false,
 		"ec_reboot_to_g3_delay": 10,
 		"ec_boot_to_console": 2,
@@ -884,7 +881,6 @@
 			"x86"
 		],
 		"ec_forwards_short_pp_press": true,
-		"ec_has_hibernate_cmd": false,
 		"hibernate": false,
 		"delay_powerinfo_stable": 6,
 		"delay_reboot_to_ping": 40,
@@ -1038,7 +1034,6 @@
 			"battery",
 			"charging"
 		],
-		"ec_has_hibernate_cmd": false,
 		"hibernate": false,
 		"is_detachable": true
 	},

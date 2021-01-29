@@ -14,7 +14,6 @@
         "x86"
     ],
     "ec_forwards_short_pp_press": true,
-    "ec_has_hibernate_cmd": false,
     "hibernate": false,
     "delay_powerinfo_stable": 6,
     "delay_reboot_to_ping": 40,
