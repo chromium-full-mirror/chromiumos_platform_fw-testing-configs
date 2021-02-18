@@ -13,5 +13,6 @@
     "spi_voltage": "pp3300",
     "servo_prog_state_delay": 10,
     "dark_resume_capable": true,
-    "smm_store": false
+    "smm_store": false,
+    "max_charging_power": 45.0
 }

@@ -26,5 +26,6 @@
             "name": "EN_USB_A1_5V_DB",
             "ioex": true
         }
-    ]
+    ],
+    "max_charging_power": 65.0
 }

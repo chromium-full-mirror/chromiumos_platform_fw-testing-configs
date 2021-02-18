@@ -117,7 +117,9 @@
 		"dut_can_source_power_in_suspend": true,
 		"dut_can_source_power_in_suspend.DOC": "True if DUT will keep providing power to devices connected via USB-C when going to suspend",
 		"usb_hid_wake_enabled": true,
-		"usb_hid_wake_enabled.DOC": "True if wake from USB HID is supported"
+		"usb_hid_wake_enabled.DOC": "True if wake from USB HID is supported",
+		"max_charging_power": 60.0,
+		"max_charging_power.DOC": "Max charging power for DUT in watts"
 	},
 	"arkham": {
 		"platform": "arkham",
@@ -300,7 +302,8 @@
 		"dark_resume_capable": true,
 		"smm_store": false,
 		"hold_pwr_button_nopowerd_shutdown": 14,
-		"usbc_input_voltage_limit": 15
+		"usbc_input_voltage_limit": 15,
+		"max_charging_power": 45.0
 	},
 	"dragonegg": {
 		"platform": "dragonegg",
@@ -325,7 +328,8 @@
 				"ioex": false
 			}
 		],
-		"smm_store": false
+		"smm_store": false,
+		"max_charging_power": 45.0
 	},
 	"drallion": {
 		"platform": "drallion",
@@ -356,7 +360,8 @@
 	"elm": {
 		"platform": "elm",
 		"parent": "oak",
-		"ec_ro_vbus_bug": true
+		"ec_ro_vbus_bug": true,
+		"max_charging_power": 45.0
 	},
 	"endeavour": {
 		"platform": "endeavour",
@@ -389,7 +394,8 @@
 			"rdd_leakage",
 			"wp_on_in_g3"
 		],
-		"dut_can_source_power_in_suspend": false
+		"dut_can_source_power_in_suspend": false,
+		"max_charging_power": 45.0
 	},
 	"expresso": {
 		"platform": "expresso",
@@ -415,7 +421,8 @@
 			"x86"
 		],
 		"delay_reboot_to_ping": 40,
-		"smm_store": false
+		"smm_store": false,
+		"max_charging_power": 100.0
 	},
 	"gale": {
 		"platform": "gale",
@@ -492,7 +499,8 @@
 		],
 		"servo_prog_state_delay": 10,
 		"smm_store": false,
-		"gsc_can_wake_ec_with_reset": false
+		"gsc_can_wake_ec_with_reset": false,
+		"max_charging_power": 45.0
 	},
 	"guado": {
 		"platform": "guado",
@@ -525,7 +533,8 @@
 				"name": "EN_PP5000_USB_A1_VBUS_DB",
 				"ioex": true
 			}
-		]
+		],
+		"max_charging_power": 65.0
 	},
 	"hana": {
 		"platform": "hana",
@@ -561,6 +570,9 @@
 		"models": {
 			"kled": {
 				"usbc_input_voltage_limit": 15
+			},
+			"mushu": {
+				"max_charging_power": 100.0
 			}
 		}
 	},
@@ -646,7 +658,8 @@
 		"ec_boot_to_console": 2,
 		"ec_boot_to_wp_en": 2,
 		"usbc_input_voltage_limit": 12,
-		"charger_profile_override": true
+		"charger_profile_override": true,
+		"max_charging_power": 45.0
 	},
 	"kunimitsu": {
 		"platform": "kunimitsu",
@@ -709,7 +722,8 @@
 		"gsc_can_wake_ec_with_reset": false,
 		"cr50_capability": [
 			"rdd_leakage"
-		]
+		],
+		"max_charging_power": 70.0
 	},
 	"nasher": {
 		"platform": "nasher",
@@ -731,7 +745,8 @@
 		"servo_prog_state_delay": 10,
 		"delay_reboot_to_ping": 40,
 		"dark_resume_capable": true,
-		"smm_store": false
+		"smm_store": false,
+		"max_charging_power": 45.0
 	},
 	"ninja": {
 		"platform": "ninja",
@@ -764,7 +779,8 @@
 		"cr50_capability": [
 			"wp_on_in_g3",
 			"rdd_off_in_g3"
-		]
+		],
+		"max_charging_power": 45.0
 	},
 	"oak": {
 		"platform": "oak",
@@ -821,7 +837,8 @@
 			"casta": {
 				"usbc_input_voltage_limit": 15
 			}
-		}
+		},
+		"max_charging_power": 45.0
 	},
 	"orco": {
 		"platform": "orco",
@@ -863,7 +880,8 @@
 			"charging",
 			"lid"
 		],
-		"smm_store": false
+		"smm_store": false,
+		"max_charging_power": 45.0
 	},
 	"puff": {
 		"platform": "puff",
@@ -890,7 +908,8 @@
 				"ioex": false
 			}
 		],
-		"smm_store": false
+		"smm_store": false,
+		"max_charging_power": 100.0
 	},
 	"pyro": {
 		"platform": "pyro",
@@ -931,7 +950,8 @@
 		"spi_voltage": "pp3300",
 		"servo_prog_state_delay": 10,
 		"dark_resume_capable": true,
-		"smm_store": false
+		"smm_store": false,
+		"max_charging_power": 45.0
 	},
 	"reef": {
 		"platform": "reef",
@@ -951,7 +971,8 @@
 		"firmware_screen": 25,
 		"usb_plug": 45,
 		"spi_voltage": "pp1800",
-		"smm_store": false
+		"smm_store": false,
+		"max_charging_power": 45.0
 	},
 	"reef_uni": {
 		"platform": "reef_uni",
@@ -1035,7 +1056,8 @@
 			"charging"
 		],
 		"hibernate": false,
-		"is_detachable": true
+		"is_detachable": true,
+		"max_charging_power": 38.55
 	},
 	"sentry": {
 		"platform": "sentry",
@@ -1207,7 +1229,15 @@
 		],
 		"dark_resume_capable": true,
 		"smm_store": false,
-		"hold_pwr_button_nopowerd_shutdown": 14
+		"hold_pwr_button_nopowerd_shutdown": 14,
+		"models": {
+			"halvor": {
+				"max_charging_power": 65.0
+			},
+			"voema": {
+				"max_charging_power": 65.0
+			}
+		}
 	},
 	"whirlwind": {
 		"platform": "whirlwind",
@@ -1253,6 +1283,7 @@
 				"name": "EN_USB_A1_5V_DB",
 				"ioex": true
 			}
-		]
+		],
+		"max_charging_power": 65.0
 	}
 }

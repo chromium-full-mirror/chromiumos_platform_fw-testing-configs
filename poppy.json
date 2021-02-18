@@ -14,5 +14,6 @@
         "charging",
         "lid"
     ],
-    "smm_store": false
+    "smm_store": false,
+    "max_charging_power": 45.0
 }

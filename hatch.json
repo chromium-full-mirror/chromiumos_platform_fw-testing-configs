@@ -28,6 +28,9 @@
     "models": {
         "kled": {
             "usbc_input_voltage_limit": 15
-        }
+        },
+	"mushu": {
+	    "max_charging_power": 100.0
+	}
     }
 }

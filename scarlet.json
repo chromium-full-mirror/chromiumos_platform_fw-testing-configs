@@ -10,5 +10,6 @@
         "charging"
     ],
     "hibernate": false,
-    "is_detachable": true
+    "is_detachable": true,
+    "max_charging_power": 38.55
 }

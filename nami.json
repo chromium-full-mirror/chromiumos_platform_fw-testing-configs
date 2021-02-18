@@ -17,5 +17,6 @@
     "gsc_can_wake_ec_with_reset": false,
     "cr50_capability": [
         "rdd_leakage"
-    ]
+    ],
+    "max_charging_power": 70.0
 }

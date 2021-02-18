@@ -23,5 +23,13 @@
     ],
     "dark_resume_capable": true,
     "smm_store": false,
-    "hold_pwr_button_nopowerd_shutdown": 14
+    "hold_pwr_button_nopowerd_shutdown": 14,
+    "models": {
+	"halvor": {
+	    "max_charging_power": 65.0
+	},
+	"voema": {
+	    "max_charging_power": 65.0
+	}
+    }
 }

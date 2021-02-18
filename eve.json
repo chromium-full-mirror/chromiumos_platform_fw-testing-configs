@@ -21,5 +21,6 @@
         "rdd_leakage",
 	"wp_on_in_g3"
     ],
-    "dut_can_source_power_in_suspend": false
+    "dut_can_source_power_in_suspend": false,
+    "max_charging_power": 45.0
 }

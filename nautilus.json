@@ -14,5 +14,6 @@
     "servo_prog_state_delay": 10,
     "delay_reboot_to_ping": 40,
     "dark_resume_capable": true,
-    "smm_store": false
+    "smm_store": false,
+    "max_charging_power": 45.0
 }

@@ -174,5 +174,8 @@
     "dut_can_source_power_in_suspend.DOC": "True if DUT will keep providing power to devices connected via USB-C when going to suspend",
 
     "usb_hid_wake_enabled": true,
-    "usb_hid_wake_enabled.DOC": "True if wake from USB HID is supported"
+    "usb_hid_wake_enabled.DOC": "True if wake from USB HID is supported",
+
+    "max_charging_power": 60.0,
+    "max_charging_power.DOC": "Max charging power for DUT in watts"
 }

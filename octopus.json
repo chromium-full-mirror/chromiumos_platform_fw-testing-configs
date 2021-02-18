@@ -40,5 +40,6 @@
         "casta": {
             "usbc_input_voltage_limit": 15
         }
-    }
+    },
+    "max_charging_power": 45.0
 }
