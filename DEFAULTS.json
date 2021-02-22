@@ -71,8 +71,8 @@
     "delay_reboot_to_ping": 30,
     "delay_reboot_to_ping.DOC": "Delay between reboot and first ping response from the DUT. When this times out, it indicates we're stuck at a firmware screen. Hence, bypass action has to be taken if we want to proceed.",
 
-    "confirm_screen": 3,
-    "confirm_screen.DOC": "Delay between keypresses in firmware screen",
+    "keypress_delay": 3,
+    "keypress_delay.DOC": "Delay between keypresses in firmware screen",
 
     "dev_screen_timeout": 30,
     "dev_screen_timeout.DOC": "The developer screen timeout fits our spec",

@@ -10,5 +10,5 @@
     "has_keyboard": false,
     "rec_button_dev_switch": true,
     "firmware_screen": 10,
-    "confirm_screen": 6
+    "keypress_delay": 6
 }

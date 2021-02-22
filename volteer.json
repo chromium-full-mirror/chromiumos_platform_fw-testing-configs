@@ -12,7 +12,7 @@
         "x86",
         "usb"
     ],
-    "confirm_screen": 20,
+    "keypress_delay": 20,
     "firmware_screen": 30,
     "spi_voltage": "pp3300",
     "custom_usb_enable_pins": [

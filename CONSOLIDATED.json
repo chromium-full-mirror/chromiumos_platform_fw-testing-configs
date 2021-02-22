@@ -48,8 +48,8 @@
 		"delay_powerinfo_stable.DOC": "Delay between AP power-on and when powerinfo is stable. Some CPUs have an internal reset that transitions through different power states.",
 		"delay_reboot_to_ping": 30,
 		"delay_reboot_to_ping.DOC": "Delay between reboot and first ping response from the DUT. When this times out, it indicates we're stuck at a firmware screen. Hence, bypass action has to be taken if we want to proceed.",
-		"confirm_screen": 3,
-		"confirm_screen.DOC": "Delay between keypresses in firmware screen",
+		"keypress_delay": 3,
+		"keypress_delay.DOC": "Delay between keypresses in firmware screen",
 		"dev_screen_timeout": 30,
 		"dev_screen_timeout.DOC": "The developer screen timeout fits our spec",
 		"usb_plug": 10,
@@ -342,7 +342,7 @@
 		"power_button_dev_switch": true,
 		"smm_store": false,
 		"ap_access_ec_flash": false,
-		"confirm_screen": 11,
+		"keypress_delay": 11,
 		"rec_force_mrc": false,
 		"ap_up_after_cr50_reboot": false,
 		"ec_forwards_short_pp_press": true,
@@ -750,7 +750,7 @@
 		"platform": "nocturne",
 		"mode_switcher_type": "tablet_detachable_switcher",
 		"is_detachable": true,
-		"confirm_screen": 1,
+		"keypress_delay": 1,
 		"has_lid": true,
 		"usb_image_boot_timeout": 60,
 		"has_keyboard": false,
@@ -851,7 +851,7 @@
 		"platform": "poppy",
 		"mode_switcher_type": "tablet_detachable_switcher",
 		"is_detachable": true,
-		"confirm_screen": 1,
+		"keypress_delay": 1,
 		"firmware_screen": 15,
 		"has_lid": true,
 		"usb_image_boot_timeout": 60,
@@ -1014,7 +1014,7 @@
 		"power_button_dev_switch": true,
 		"smm_store": false,
 		"ap_access_ec_flash": false,
-		"confirm_screen": 11,
+		"keypress_delay": 11,
 		"rec_force_mrc": false,
 		"ap_up_after_cr50_reboot": false,
 		"gsc_update_wait_for_reboot": 25,
@@ -1130,7 +1130,7 @@
 		"has_keyboard": false,
 		"rec_button_dev_switch": true,
 		"firmware_screen": 10,
-		"confirm_screen": 6
+		"keypress_delay": 6
 	},
 	"swanky": {
 		"platform": "swanky",
@@ -1178,7 +1178,7 @@
 		"platform": "veyron",
 		"mode_switcher_type": "keyboard_dev_switcher",
 		"spi_voltage": "pp3300",
-		"confirm_screen": 6,
+		"keypress_delay": 6,
 		"delay_reboot_to_ping": 60,
 		"has_eventlog": false
 	},
@@ -1196,7 +1196,7 @@
 			"x86",
 			"usb"
 		],
-		"confirm_screen": 20,
+		"keypress_delay": 20,
 		"firmware_screen": 30,
 		"spi_voltage": "pp3300",
 		"custom_usb_enable_pins": [
