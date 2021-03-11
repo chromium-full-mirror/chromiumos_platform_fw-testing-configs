@@ -31,6 +31,9 @@
     ],
     "smm_store": false,
     "models": {
+        "ampton": {
+            "usbc_voltage_on_shutdown_and_full_batt": 5
+        },
         "bluebird": {
             "usbc_input_voltage_limit": 15
         },

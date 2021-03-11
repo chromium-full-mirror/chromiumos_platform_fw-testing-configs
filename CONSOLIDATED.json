@@ -119,7 +119,9 @@
 		"usb_hid_wake_enabled": true,
 		"usb_hid_wake_enabled.DOC": "True if wake from USB HID is supported",
 		"max_charging_power": 60.0,
-		"max_charging_power.DOC": "Max charging power for DUT in watts"
+		"max_charging_power.DOC": "Max charging power for DUT in watts",
+		"usbc_voltage_on_shutdown_and_full_batt": 20,
+		"usbc_voltage_on_shutdown_and_full_batt.DOC": "Input voltage limit applied by DUT when it is in G3/S5 and battery is full. 20 volts means there is no limit"
 	},
 	"arkham": {
 		"platform": "arkham",
@@ -141,7 +143,8 @@
 			"lid"
 		],
 		"firmware_screen": 20,
-		"ec_reboot_to_g3_delay": 10
+		"ec_reboot_to_g3_delay": 10,
+		"usbc_voltage_on_shutdown_and_full_batt": 9
 	},
 	"atlas": {
 		"platform": "atlas",
@@ -500,7 +503,12 @@
 		"servo_prog_state_delay": 10,
 		"smm_store": false,
 		"gsc_can_wake_ec_with_reset": false,
-		"max_charging_power": 45.0
+		"max_charging_power": 45.0,
+		"models": {
+			"liara": {
+				"usbc_voltage_on_shutdown_and_full_batt": 5
+			}
+		}
 	},
 	"guado": {
 		"platform": "guado",
@@ -568,6 +576,12 @@
 			"ec_hibernate_breaks_rdd"
 		],
 		"models": {
+			"dratini": {
+				"usbc_voltage_on_shutdown_and_full_batt": 5
+			},
+			"jinlon": {
+				"usbc_voltage_on_shutdown_and_full_batt": 5
+			},
 			"kled": {
 				"usbc_input_voltage_limit": 15
 			},
@@ -780,7 +794,8 @@
 			"wp_on_in_g3",
 			"rdd_off_in_g3"
 		],
-		"max_charging_power": 45.0
+		"max_charging_power": 45.0,
+		"usbc_voltage_on_shutdown_and_full_batt": 9
 	},
 	"oak": {
 		"platform": "oak",
@@ -828,6 +843,9 @@
 		],
 		"smm_store": false,
 		"models": {
+			"ampton": {
+				"usbc_voltage_on_shutdown_and_full_batt": 5
+			},
 			"bluebird": {
 				"usbc_input_voltage_limit": 15
 			},
