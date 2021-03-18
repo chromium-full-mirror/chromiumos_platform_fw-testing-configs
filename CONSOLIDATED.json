@@ -306,7 +306,51 @@
 		"smm_store": false,
 		"hold_pwr_button_nopowerd_shutdown": 14,
 		"usbc_input_voltage_limit": 15,
-		"max_charging_power": 45.0
+		"max_charging_power": 45.0,
+		"custom_usb_enable_pins": [
+			{
+				"name": "EN_USB_A0_VBUS",
+				"ioex": false
+			},
+			{
+				"name": "EN_USB_A1_VBUS",
+				"ioex": false
+			}
+		],
+		"models": {
+			"drawcia": {
+				"custom_usb_enable_pins": [
+					{
+						"name": "EN_USB_A_5V",
+						"ioex": false
+					}
+				]
+			},
+			"drawlat": {
+				"custom_usb_enable_pins": [
+					{
+						"name": "EN_USB_A_5V",
+						"ioex": false
+					}
+				]
+			},
+			"drawman": {
+				"custom_usb_enable_pins": [
+					{
+						"name": "EN_USB_A_5V",
+						"ioex": false
+					}
+				]
+			},
+			"lantis": {
+				"custom_usb_enable_pins": [
+					{
+						"name": "EN_USB_A_5V",
+						"ioex": false
+					}
+				]
+			}
+		}
 	},
 	"dragonegg": {
 		"platform": "dragonegg",
