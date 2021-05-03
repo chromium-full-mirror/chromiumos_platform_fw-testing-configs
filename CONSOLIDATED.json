@@ -169,6 +169,7 @@
 		"spi_voltage": "pp3300",
 		"servo_prog_state_delay": 10,
 		"dark_resume_capable": true,
+		"usb_a_port_count": -1,
 		"cr50_capability": [
 			"rdd_leakage",
 			"wp_on_in_g3"
@@ -192,7 +193,8 @@
 			"peci"
 		],
 		"spi_voltage": "pp3300",
-		"smm_store": false
+		"smm_store": false,
+		"usb_a_port_count": -1
 	},
 	"banjo": {
 		"platform": "banjo",
@@ -219,7 +221,8 @@
 		"rec_button_dev_switch": true,
 		"hold_pwr_button_poweroff": 7,
 		"hold_pwr_button_poweron": 0.7,
-		"powerup_ready": 15
+		"powerup_ready": 15,
+		"usb_a_port_count": -1
 	},
 	"buddy": {
 		"platform": "buddy",
@@ -232,7 +235,8 @@
 		],
 		"has_lid": false,
 		"has_keyboard": false,
-		"rec_button_dev_switch": true
+		"rec_button_dev_switch": true,
+		"usb_a_port_count": -1
 	},
 	"candy": {
 		"platform": "candy",
@@ -262,6 +266,7 @@
 		"has_lid": true,
 		"has_keyboard": false,
 		"chrome_ec": true,
+		"usb_a_port_count": -1,
 		"ec_capability": [
 			"arm",
 			"battery",
@@ -290,6 +295,7 @@
 		],
 		"firmware_screen": 28,
 		"usb_plug": 28,
+		"usb_a_port_count": -1,
 		"spi_voltage": "pp1800",
 		"smm_store": false
 	},
@@ -418,7 +424,8 @@
 		"ap_up_after_cr50_reboot": false,
 		"ec_forwards_short_pp_press": true,
 		"serial_number_length": 7,
-		"has_diagnostics_image": true
+		"has_diagnostics_image": true,
+		"usb_a_port_count": -1
 	},
 	"edgar": {
 		"platform": "edgar",
@@ -428,7 +435,8 @@
 		"platform": "elm",
 		"parent": "oak",
 		"ec_ro_vbus_bug": true,
-		"max_charging_power": 45.0
+		"max_charging_power": 45.0,
+		"usb_a_port_count": -1
 	},
 	"endeavour": {
 		"platform": "endeavour",
@@ -462,7 +470,8 @@
 			"wp_on_in_g3"
 		],
 		"dut_can_source_power_in_suspend": false,
-		"max_charging_power": 45.0
+		"max_charging_power": 45.0,
+		"usb_a_port_count": -1
 	},
 	"expresso": {
 		"platform": "expresso",
@@ -489,7 +498,8 @@
 		],
 		"delay_reboot_to_ping": 40,
 		"smm_store": false,
-		"max_charging_power": 100.0
+		"max_charging_power": 100.0,
+		"usb_a_port_count": -1
 	},
 	"gale": {
 		"platform": "gale",
@@ -509,7 +519,8 @@
 			"usb",
 			"peci",
 			"smart_usb_charge"
-		]
+		],
+		"usb_a_port_count": -1
 	},
 	"glados": {
 		"platform": "glados",
@@ -529,7 +540,8 @@
 		],
 		"spi_voltage": "pp3300",
 		"servo_prog_state_delay": 10,
-		"smm_store": false
+		"smm_store": false,
+		"usb_a_port_count": -1
 	},
 	"gnawty": {
 		"platform": "gnawty",
@@ -551,7 +563,8 @@
 		],
 		"ec_boot_to_console": 0.2,
 		"firmware_screen": 7,
-		"usb_hid_wake_enabled": false
+		"usb_hid_wake_enabled": false,
+		"usb_a_port_count": -1
 	},
 	"grunt": {
 		"platform": "grunt",
@@ -571,6 +584,7 @@
 		"ap_flash_ccd_programmer": "raiden_debug_spi:target=AP,serial=%s",
 		"ap_flash_ccd_pre_commands": [],
 		"ap_flash_ccd_post_commands": [],
+		"usb_a_port_count": -1,
 		"models": {
 			"liara": {
 				"usbc_voltage_on_shutdown_and_full_batt": 5
@@ -688,7 +702,8 @@
 		"ec_boot_to_console": 2,
 		"ec_reboot_to_g3_delay": 10,
 		"usbc_input_voltage_limit": 20,
-		"charger_profile_override": true
+		"charger_profile_override": true,
+		"usb_a_port_count": -1
 	},
 	"jecht": {
 		"platform": "jecht",
@@ -697,7 +712,8 @@
 		"has_keyboard": false,
 		"rec_button_dev_switch": true,
 		"spi_voltage": "pp3300",
-		"smm_store": false
+		"smm_store": false,
+		"usb_a_port_count": -1
 	},
 	"jetstream": {
 		"platform": "jetstream",
@@ -751,7 +767,8 @@
 		"ec_boot_to_wp_en": 2,
 		"usbc_input_voltage_limit": 12,
 		"charger_profile_override": true,
-		"max_charging_power": 45.0
+		"max_charging_power": 45.0,
+		"usb_a_port_count": -1
 	},
 	"kunimitsu": {
 		"platform": "kunimitsu",
@@ -771,7 +788,8 @@
 			"usb",
 			"usbpd_uart"
 		],
-		"smm_store": false
+		"smm_store": false,
+		"usb_a_port_count": -1
 	},
 	"lars": {
 		"platform": "lars",
@@ -815,7 +833,8 @@
 		"cr50_capability": [
 			"rdd_leakage"
 		],
-		"max_charging_power": 70.0
+		"max_charging_power": 70.0,
+		"usb_a_port_count": -1
 	},
 	"nasher": {
 		"platform": "nasher",
@@ -838,7 +857,8 @@
 		"delay_reboot_to_ping": 40,
 		"dark_resume_capable": true,
 		"smm_store": false,
-		"max_charging_power": 45.0
+		"max_charging_power": 45.0,
+		"usb_a_port_count": -1
 	},
 	"ninja": {
 		"platform": "ninja",
@@ -851,7 +871,8 @@
 		"has_lid": false,
 		"has_keyboard": false,
 		"rec_button_dev_switch": true,
-		"spi_voltage": "pp3300"
+		"spi_voltage": "pp3300",
+		"usb_a_port_count": -1
 	},
 	"nocturne": {
 		"platform": "nocturne",
@@ -873,7 +894,8 @@
 			"rdd_off_in_g3"
 		],
 		"max_charging_power": 45.0,
-		"usbc_voltage_on_shutdown_and_full_batt": 9
+		"usbc_voltage_on_shutdown_and_full_batt": 9,
+		"usb_a_port_count": -1
 	},
 	"oak": {
 		"platform": "oak",
@@ -886,7 +908,8 @@
 			"arm",
 			"lid"
 		],
-		"ec_has_powerbtn_cmd": false
+		"ec_has_powerbtn_cmd": false,
+		"usb_a_port_count": -1
 	},
 	"octopus": {
 		"platform": "octopus",
@@ -961,7 +984,8 @@
 		],
 		"ec_boot_to_console": 1.1,
 		"ec_has_powerbtn_cmd": false,
-		"software_sync_update": 6
+		"software_sync_update": 6,
+		"usb_a_port_count": -1
 	},
 	"poppy": {
 		"platform": "poppy",
@@ -980,7 +1004,8 @@
 			"lid"
 		],
 		"smm_store": false,
-		"max_charging_power": 45.0
+		"max_charging_power": 45.0,
+		"usb_a_port_count": -1
 	},
 	"puff": {
 		"platform": "puff",
@@ -1035,7 +1060,8 @@
 		"firmware_screen": 7,
 		"spi_voltage": "pp1800",
 		"smm_store": false,
-		"delay_reboot_to_ping": 60
+		"delay_reboot_to_ping": 60,
+		"usb_a_port_count": -1
 	},
 	"rammus": {
 		"platform": "rammus",
@@ -1053,7 +1079,8 @@
 		"servo_prog_state_delay": 10,
 		"dark_resume_capable": true,
 		"smm_store": false,
-		"max_charging_power": 45.0
+		"max_charging_power": 45.0,
+		"usb_a_port_count": -1
 	},
 	"reef": {
 		"platform": "reef",
@@ -1074,7 +1101,8 @@
 		"usb_plug": 45,
 		"spi_voltage": "pp1800",
 		"smm_store": false,
-		"max_charging_power": 45.0
+		"max_charging_power": 45.0,
+		"usb_a_port_count": -1
 	},
 	"reef_uni": {
 		"platform": "reef_uni",
@@ -1115,7 +1143,8 @@
 		"firmware_screen": 15,
 		"spi_voltage": "pp3300",
 		"servo_prog_state_delay": 10,
-		"smm_store": false
+		"smm_store": false,
+		"usb_a_port_count": -1
 	},
 	"sand": {
 		"platform": "sand",
@@ -1144,7 +1173,8 @@
 		"ec_forwards_short_pp_press": true,
 		"serial_number_length": 7,
 		"has_diagnostics_image": true,
-		"rma_entered_automatically": false
+		"rma_entered_automatically": false,
+		"usb_a_port_count": -1
 	},
 	"scarlet": {
 		"platform": "scarlet",
@@ -1159,7 +1189,8 @@
 		],
 		"hibernate": false,
 		"is_detachable": true,
-		"max_charging_power": 38.55
+		"max_charging_power": 38.55,
+		"usb_a_port_count": -1
 	},
 	"sentry": {
 		"platform": "sentry",
@@ -1188,7 +1219,8 @@
 			"peci"
 		],
 		"spi_voltage": "pp3300",
-		"smm_store": false
+		"smm_store": false,
+		"usb_a_port_count": -1
 	},
 	"snappy": {
 		"platform": "snappy",
@@ -1221,7 +1253,8 @@
 		"firmware_screen": 25,
 		"usb_plug": 45,
 		"spi_voltage": "pp1800",
-		"smm_store": false
+		"smm_store": false,
+		"usb_a_port_count": -1
 	},
 	"strongbad": {
 		"platform": "strongbad",
@@ -1236,6 +1269,7 @@
 			"usb"
 		],
 		"charger_profile_override": true,
+		"usb_a_port_count": -1,
 		"models": {
 			"coachz": {
 				"usbc_input_voltage_limit": 15
@@ -1254,7 +1288,8 @@
 		"has_keyboard": false,
 		"rec_button_dev_switch": true,
 		"firmware_screen": 10,
-		"keypress_delay": 6
+		"keypress_delay": 6,
+		"usb_a_port_count": -1
 	},
 	"swanky": {
 		"platform": "swanky",
@@ -1304,7 +1339,8 @@
 		"spi_voltage": "pp3300",
 		"keypress_delay": 6,
 		"delay_reboot_to_ping": 60,
-		"has_eventlog": false
+		"has_eventlog": false,
+		"usb_a_port_count": -1
 	},
 	"volteer": {
 		"platform": "volteer",

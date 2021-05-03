@@ -9,5 +9,6 @@
     "has_lid": false,
     "has_keyboard": false,
     "rec_button_dev_switch": true,
-    "spi_voltage": "pp3300"
+    "spi_voltage": "pp3300",
+    "usb_a_port_count": -1
 }

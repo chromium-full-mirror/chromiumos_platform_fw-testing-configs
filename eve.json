@@ -22,5 +22,6 @@
 	"wp_on_in_g3"
     ],
     "dut_can_source_power_in_suspend": false,
-    "max_charging_power": 45.0
+    "max_charging_power": 45.0,
+    "usb_a_port_count": -1
 }

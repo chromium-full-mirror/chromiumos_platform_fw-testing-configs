@@ -17,5 +17,6 @@
     "usb_plug": 45,
     "spi_voltage": "pp1800",
     "smm_store": false,
-    "max_charging_power": 45.0
+    "max_charging_power": 45.0,
+    "usb_a_port_count": -1
 }

@@ -15,5 +15,6 @@
     "delay_reboot_to_ping": 40,
     "dark_resume_capable": true,
     "smm_store": false,
-    "max_charging_power": 45.0
+    "max_charging_power": 45.0,
+    "usb_a_port_count": -1
 }

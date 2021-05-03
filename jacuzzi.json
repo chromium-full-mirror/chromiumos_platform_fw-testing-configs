@@ -14,5 +14,6 @@
     "ec_boot_to_console": 2,
     "ec_reboot_to_g3_delay": 10,
     "usbc_input_voltage_limit": 20,
-    "charger_profile_override": true
+    "charger_profile_override": true,
+    "usb_a_port_count": -1
 }

@@ -9,5 +9,6 @@
         "arm",
         "lid"
     ],
-    "ec_has_powerbtn_cmd": false
+    "ec_has_powerbtn_cmd": false,
+    "usb_a_port_count": -1
 }

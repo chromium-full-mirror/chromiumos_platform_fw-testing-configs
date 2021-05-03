@@ -17,5 +17,6 @@
     "ec_boot_to_wp_en": 2,
     "usbc_input_voltage_limit": 12,
     "charger_profile_override": true,
-    "max_charging_power": 45.0
+    "max_charging_power": 45.0,
+    "usb_a_port_count": -1
 }

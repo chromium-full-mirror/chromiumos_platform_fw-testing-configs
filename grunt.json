@@ -16,6 +16,7 @@
     "ap_flash_ccd_programmer": "raiden_debug_spi:target=AP,serial=%s",
     "ap_flash_ccd_pre_commands": [],
     "ap_flash_ccd_post_commands": [],
+    "usb_a_port_count": -1,
     "models": {
         "liara": {
             "usbc_voltage_on_shutdown_and_full_batt": 5

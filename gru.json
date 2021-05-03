@@ -13,5 +13,6 @@
     ],
     "ec_boot_to_console": 0.2,
     "firmware_screen": 7,
-    "usb_hid_wake_enabled": false
+    "usb_hid_wake_enabled": false,
+    "usb_a_port_count": -1
 }

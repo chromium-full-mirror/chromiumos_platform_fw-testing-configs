@@ -16,5 +16,6 @@
     "firmware_screen": 7,
     "spi_voltage": "pp1800",
     "smm_store": false,
-    "delay_reboot_to_ping": 60
+    "delay_reboot_to_ping": 60,
+    "usb_a_port_count": -1
 }

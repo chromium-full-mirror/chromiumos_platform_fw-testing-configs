@@ -2,5 +2,6 @@
     "platform": "elm",
     "parent": "oak",
     "ec_ro_vbus_bug": true,
-    "max_charging_power": 45.0
+    "max_charging_power": 45.0,
+    "usb_a_port_count": -1
 }

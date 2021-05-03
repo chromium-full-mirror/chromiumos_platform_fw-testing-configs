@@ -11,5 +11,6 @@
         "usb",
         "peci",
         "smart_usb_charge"
-    ]
+    ],
+    "usb_a_port_count": -1
 }

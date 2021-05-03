@@ -15,6 +15,7 @@
     ],
     "firmware_screen": 28,
     "usb_plug": 28,
+    "usb_a_port_count": -1,
     "spi_voltage": "pp1800",
     "smm_store": false
 }

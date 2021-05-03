@@ -21,5 +21,6 @@
     "ec_forwards_short_pp_press": true,
     "serial_number_length": 7,
     "has_diagnostics_image": true,
-    "rma_entered_automatically": false
+    "rma_entered_automatically": false,
+    "usb_a_port_count": -1
 }

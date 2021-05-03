@@ -11,5 +11,6 @@
     ],
     "hibernate": false,
     "is_detachable": true,
-    "max_charging_power": 38.55
+    "max_charging_power": 38.55,
+    "usb_a_port_count": -1
 }

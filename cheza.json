@@ -5,6 +5,7 @@
     "has_lid": true,
     "has_keyboard": false,
     "chrome_ec": true,
+    "usb_a_port_count": -1,
     "ec_capability": [
         "arm",
         "battery",

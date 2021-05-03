@@ -12,5 +12,6 @@
     ],
     "ec_boot_to_console": 1.1,
     "ec_has_powerbtn_cmd": false,
-    "software_sync_update": 6
+    "software_sync_update": 6,
+    "usb_a_port_count": -1
 }

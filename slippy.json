@@ -17,5 +17,6 @@
         "peci"
     ],
     "spi_voltage": "pp3300",
-    "smm_store": false
+    "smm_store": false,
+    "usb_a_port_count": -1
 }

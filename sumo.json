@@ -10,5 +10,6 @@
     "has_keyboard": false,
     "rec_button_dev_switch": true,
     "firmware_screen": 10,
-    "keypress_delay": 6
+    "keypress_delay": 6,
+    "usb_a_port_count": -1
 }

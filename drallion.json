@@ -18,5 +18,6 @@
     "ap_up_after_cr50_reboot": false,
     "ec_forwards_short_pp_press": true,
     "serial_number_length": 7,
-    "has_diagnostics_image": true
+    "has_diagnostics_image": true,
+    "usb_a_port_count": -1
 }
