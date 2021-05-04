@@ -14,13 +14,9 @@ import importlib
 import logging
 import os
 import sys
-
-from chromite.lib.firmware import ap_firmware_config, servo_lib
+from pathlib import Path
 
 import platform_json
-
-CONFIG_FILE_PATTERN = os.path.join(
-    os.path.dirname(ap_firmware_config.__file__), '[!_]*.py')
 
 
 class _ServoStatus:
@@ -65,6 +61,18 @@ def main(argv):
     logging.basicConfig(level=logging.INFO)
     args = parse_args(argv)
     consolidated_json = platform_json.load_consolidated_json(args.consolidated)
+    path = Path(args.consolidated).resolve()
+    while path and path != path.root:
+        if path.joinpath('chromite/lib/firmware').is_dir():
+            sys.path.append(str(path))
+            break
+        path = path.parent
+    else:
+        raise Exception("Could not find chromite directory")
+
+    from chromite.lib.firmware import ap_firmware_config, servo_lib
+    CONFIG_FILE_PATTERN = os.path.join(
+        os.path.dirname(ap_firmware_config.__file__), '[!_]*.py')
 
     servo_status = _ServoStatus()
     for f in glob.glob(CONFIG_FILE_PATTERN):
