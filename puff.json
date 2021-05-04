@@ -24,5 +24,8 @@
         }
     ],
     "smm_store": false,
-    "max_charging_power": 100.0
+    "max_charging_power": 100.0,
+    "ap_flash_ccd_programmer": "raiden_debug_spi:target=AP,serial=%s",
+    "ap_flash_ccd_pre_commands": [],
+    "ap_flash_ccd_post_commands": []
 }

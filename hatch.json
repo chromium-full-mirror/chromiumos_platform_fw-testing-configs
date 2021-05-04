@@ -25,18 +25,21 @@
     "cr50_capability": [
         "ec_hibernate_breaks_rdd"
     ],
+    "ap_flash_ccd_programmer": "raiden_debug_spi:target=AP,serial=%s",
+    "ap_flash_ccd_pre_commands": [],
+    "ap_flash_ccd_post_commands": [],
     "models": {
         "dratini": {
-	    "usbc_voltage_on_shutdown_and_full_batt": 5
-	},
+            "usbc_voltage_on_shutdown_and_full_batt": 5
+        },
         "jinlon": {
-	    "usbc_voltage_on_shutdown_and_full_batt": 5
-	},
+            "usbc_voltage_on_shutdown_and_full_batt": 5
+        },
         "kled": {
             "usbc_input_voltage_limit": 15
         },
-	"mushu": {
-	    "max_charging_power": 100.0
-	}
+        "mushu": {
+            "max_charging_power": 100.0
+        }
     }
 }
