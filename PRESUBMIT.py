@@ -5,6 +5,8 @@
 
 import json
 
+USE_PYTHON3 = True
+
 
 def VerifyJson(input_api, output_api):
   """Verify that the json files contain valid JSON."""
