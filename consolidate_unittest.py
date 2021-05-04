@@ -46,7 +46,7 @@ class TestParseArgs(unittest.TestCase):
 
     def test_defaults(self):
         """Test with no command-line args."""
-        args = consolidate.parse_args()
+        args = consolidate.parse_args([])
         self.assertEqual(args.output, consolidate.DEFAULT_OUTPUT_FILEPATH)
         # Note: This assertion is not hermetic!
         self.assertTrue('fw-testing-configs' in args.input_dir)
