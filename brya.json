@@ -1,0 +1,29 @@
+{
+    "platform": "brya",
+    "mode_switcher_type": "menu_switcher",
+    "intel_cse_lite": true,
+    "chrome_ec": true,
+    "ec_capability": [
+        "battery",
+        "cbi",
+        "charging",
+        "keyboard",
+        "lid",
+        "x86",
+        "usb"
+    ],
+    "keypress_delay": 20,
+    "firmware_screen": 30,
+    "spi_voltage": "pp3300",
+    "custom_usb_enable_pins": [
+        {
+            "name": "EN_PP5000_USBA_R",
+            "ioex": false
+        }
+    ],
+    "dark_resume_capable": true,
+    "smm_store": false,
+    "hold_pwr_button_nopowerd_shutdown": 14,
+    "hold_pwr_button_poweron": 3,
+    "max_charging_power": 65.0
+}
