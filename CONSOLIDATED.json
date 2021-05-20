@@ -251,7 +251,15 @@
 		"smm_store": false,
 		"hold_pwr_button_nopowerd_shutdown": 14,
 		"hold_pwr_button_poweron": 3,
-		"max_charging_power": 65.0
+		"max_charging_power": 65.0,
+		"ap_flash_ccd_programmer": "raiden_debug_spi:target=AP,custom_rst=True,serial=%s",
+		"ap_flash_ccd_pre_commands": [
+			"ec_uart_cmd:apshutdown",
+			"sleep:5"
+		],
+		"ap_flash_ccd_post_commands": [
+			"power_state:reset"
+		]
 	},
 	"buddy": {
 		"platform": "buddy",
@@ -500,7 +508,8 @@
 		],
 		"dut_can_source_power_in_suspend": false,
 		"max_charging_power": 45.0,
-		"usb_a_port_count": -1
+		"usb_a_port_count": -1,
+		"ap_flash_ccd_programmer": "raiden_debug_spi:target=AP,serial=%s"
 	},
 	"expresso": {
 		"platform": "expresso",
