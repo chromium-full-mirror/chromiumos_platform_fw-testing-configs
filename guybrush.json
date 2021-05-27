@@ -14,7 +14,7 @@
     ],
     "servo_prog_state_delay": 1.0,
     "smm_store": false,
-    "firmware_screen": 15,
+    "firmware_screen": 33,
     "delay_powerinfo_stable": 5,
     "custom_usb_enable_pins": [
         {
@@ -26,7 +26,7 @@
             "ioex": true
         }
     ],
-    "max_charging_power": 65.0,
+    "max_charging_power": 100.0,
     "ap_flash_ccd_programmer": "raiden_debug_spi:target=AP,custom_rst=True,serial=%s",
     "ap_flash_ccd_pre_commands": ["ec_uart_cmd:apshutdown", "sleep:5"],
     "ap_flash_ccd_post_commands": ["power_state:reset"]
