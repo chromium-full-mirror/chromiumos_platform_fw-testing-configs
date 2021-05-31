@@ -436,6 +436,22 @@
 						"ioex": false
 					}
 				]
+			},
+			"cret": {
+				"custom_usb_enable_pins": [
+					{
+						"name": "EN_USB_A0_VBUS",
+						"ioex": false
+					}
+				]
+			},
+			"cret360": {
+				"custom_usb_enable_pins": [
+					{
+						"name": "EN_USB_A0_VBUS",
+						"ioex": false
+					}
+				]
 			}
 		}
 	},
