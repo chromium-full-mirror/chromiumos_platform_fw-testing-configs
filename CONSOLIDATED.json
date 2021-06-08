@@ -1495,6 +1495,9 @@
 			},
 			"voema": {
 				"max_charging_power": 65.0
+			},
+			"volta": {
+				"max_charging_power": 45.0
 			}
 		}
 	},
