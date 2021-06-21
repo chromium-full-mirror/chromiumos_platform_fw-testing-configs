@@ -1490,6 +1490,9 @@
 			"cpu_fw_spi:off"
 		],
 		"models": {
+			"copano": {
+				"max_charging_power": 45.0
+			},
 			"halvor": {
 				"max_charging_power": 65.0
 			},
