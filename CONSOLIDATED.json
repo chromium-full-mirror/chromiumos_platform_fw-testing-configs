@@ -689,6 +689,7 @@
 		],
 		"servo_prog_state_delay": 1.0,
 		"smm_store": false,
+		"delay_reboot_to_ping": 120,
 		"firmware_screen": 33,
 		"delay_powerinfo_stable": 5,
 		"custom_usb_enable_pins": [
