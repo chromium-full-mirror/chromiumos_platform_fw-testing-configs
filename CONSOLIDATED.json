@@ -473,6 +473,9 @@
 						"ioex": false
 					}
 				]
+			},
+			"madoo": {
+				"usb_a_port_count": -1
 			}
 		}
 	},
