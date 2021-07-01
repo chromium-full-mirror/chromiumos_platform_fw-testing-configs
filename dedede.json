@@ -122,6 +122,14 @@
                     "ioex": false
                 }
             ]
+        },
+        "sasukette": {
+            "custom_usb_enable_pins": [
+                {
+                    "name": "EN_USB_A0_VBUS",
+                    "ioex": false
+                }
+            ]
         }
     }
 }
