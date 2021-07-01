@@ -53,6 +53,8 @@ def _compare_lists(ap_list, json_list):
         json_val = json_list[i]
         if ap_val != json_val:
             return False
+        if ap_val == 'cpu_fw_spi:on' or ap_val == 'cpu_fw_spi:off':
+            raise Exception("cpu_fw_spi is no-op on CCD, remove")
         i += 1
     return True
 

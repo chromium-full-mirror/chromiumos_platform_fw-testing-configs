@@ -1200,7 +1200,10 @@
 		"dark_resume_capable": true,
 		"smm_store": false,
 		"max_charging_power": 45.0,
-		"usb_a_port_count": -1
+		"usb_a_port_count": -1,
+		"ap_flash_ccd_programmer": "raiden_debug_spi:target=AP,serial=%s",
+		"ap_flash_ccd_pre_commands": [],
+		"ap_flash_ccd_post_commands": []
 	},
 	"reef": {
 		"platform": "reef",
@@ -1492,12 +1495,8 @@
 		"smm_store": false,
 		"hold_pwr_button_nopowerd_shutdown": 14,
 		"ap_flash_ccd_programmer": "raiden_debug_spi:target=AP,serial=%s",
-		"ap_flash_ccd_pre_commands": [
-			"cpu_fw_spi:on"
-		],
-		"ap_flash_ccd_post_commands": [
-			"cpu_fw_spi:off"
-		],
+		"ap_flash_ccd_pre_commands": [],
+		"ap_flash_ccd_post_commands": [],
 		"models": {
 			"copano": {
 				"max_charging_power": 45.0
