@@ -1,7 +1,14 @@
 {
-    "platform": "elm",
-    "parent": "oak",
-    "ec_ro_vbus_bug": true,
-    "max_charging_power": 45.0,
-    "usb_a_port_count": -1
+	"platform": "elm",
+	"parent": "oak",
+	"ec_ro_vbus_bug": true,
+	"max_charging_power": 45.0,
+	"usb_a_port_count": -1,
+	"ec_capability": {
+		"arm": false,
+		"battery": false,
+		"charging": false,
+		"keyboard": false,
+		"lid": false
+	}
 }

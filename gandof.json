@@ -1,16 +1,8 @@
 {
     "platform": "gandof",
     "parent": "auron",
-    "ec_capability": [
-        "adc_ectemp",
-        "battery",
-        "charging",
-        "keyboard",
-        "lid",
-        "x86",
-        "usb",
-        "peci",
-        "smart_usb_charge"
-    ],
+    "ec_capability": {
+        "smart_usb_charge": true
+    },
     "usb_a_port_count": -1
 }

@@ -1,4 +1,13 @@
 {
-    "platform": "snappy",
-    "parent": "reef"
+	"platform": "snappy",
+	"parent": "reef",
+	"ec_capability": {
+		"battery": false,
+		"charging": false,
+		"keyboard": false,
+		"lid": false,
+		"smart_usb_charge": false,
+		"usb": false,
+		"x86": false
+	}
 }

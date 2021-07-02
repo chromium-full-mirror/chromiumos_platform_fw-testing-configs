@@ -5,17 +5,22 @@
     "chrome_ec": true,
     "ec_ro_vbus_bug": true,
     "dark_resume_capable": true,
-    "ec_capability": [
-        "adc_ectemp",
-        "battery",
-        "charging",
-        "keyboard",
-        "lid",
-        "x86",
-        "thermal",
-        "usb",
-        "peci"
-    ],
+    "ec_capability": {
+        "adc_ectemp": true,
+        "arm": false,
+        "battery": true,
+        "cbi": false,
+        "charging": true,
+        "doubleboot": false,
+        "keyboard": true,
+        "lid": true,
+        "peci": true,
+        "smart_usb_charge": false,
+        "thermal": true,
+        "usb": true,
+        "usbpd_uart": false,
+        "x86": true
+    },
     "spi_voltage": "pp3300",
     "smm_store": false,
     "usb_a_port_count": -1

@@ -4,11 +4,10 @@
     "mode_switcher_type": "tablet_detachable_switcher",
     "has_lid": false,
     "has_keyboard": false,
-    "ec_capability": [
-        "arm",
-        "battery",
-        "charging"
-    ],
+    "ec_capability": {
+        "keyboard": false,
+        "lid": false
+    },
     "hibernate": false,
     "is_detachable": true,
     "max_charging_power": 38.55,

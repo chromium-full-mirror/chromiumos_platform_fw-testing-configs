@@ -6,5 +6,21 @@
     "rec_button_dev_switch": true,
     "spi_voltage": "pp3300",
     "smm_store": false,
-    "usb_a_port_count": -1
+    "usb_a_port_count": -1,
+    "ec_capability": {
+        "adc_ectemp": false,
+        "arm": false,
+        "battery": false,
+        "cbi": false,
+        "charging": false,
+        "doubleboot": false,
+        "keyboard": false,
+        "lid": false,
+        "peci": false,
+        "smart_usb_charge": false,
+        "thermal": false,
+        "usb": false,
+        "usbpd_uart": false,
+        "x86": false
+    }
 }

@@ -3,12 +3,22 @@
     "mode_switcher_type": "tablet_detachable_switcher",
     "has_keyboard": false,
     "chrome_ec": true,
-    "ec_capability": [
-        "arm",
-        "battery",
-        "charging",
-        "lid"
-    ],
+    "ec_capability": {
+        "adc_ectemp": false,
+        "arm": true,
+        "battery": true,
+        "cbi": false,
+        "charging": true,
+        "doubleboot": false,
+        "keyboard": false,
+        "lid": true,
+        "peci": false,
+        "smart_usb_charge": false,
+        "thermal": false,
+        "usb": false,
+        "usbpd_uart": false,
+        "x86": false
+    },
     "is_detachable": true,
     "hold_pwr_button_poweron": 1.2,
     "hibernate": false,

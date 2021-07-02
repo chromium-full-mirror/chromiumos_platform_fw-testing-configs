@@ -1,11 +1,12 @@
 {
     "platform": "sumo",
     "parent": "rambi",
-    "ec_capability": [
-        "x86",
-        "usb",
-        "smart_usb_charge"
-    ],
+    "ec_capability": {
+        "battery": false,
+        "charging": false,
+        "keyboard": false,
+        "lid": false
+    },
     "has_lid": false,
     "has_keyboard": false,
     "rec_button_dev_switch": true,

@@ -29,7 +29,7 @@
 		"rec_button_dev_switch": false,
 		"rec_button_dev_switch.DOC": "Whether the recovery button switches to dev mode",
 		"ec_capability": [],
-		"ec_capability.DOC": "List of capabilities of the Chrome EC",
+		"ec_capability.DOC": "Map of capabilities of the Chrome EC",
 		"cr50_capability": [],
 		"cr50_capability.DOC": "List of capabilities of the CR50",
 		"custom_usb_enable_pins": [],
@@ -133,11 +133,13 @@
 	},
 	"arkham": {
 		"platform": "arkham",
-		"parent": "jetstream"
+		"parent": "jetstream",
+		"ec_capability": []
 	},
 	"asuka": {
 		"platform": "asuka",
-		"parent": "kunimitsu"
+		"parent": "kunimitsu",
+		"ec_capability": []
 	},
 	"asurada": {
 		"platform": "asurada",
@@ -200,9 +202,9 @@
 			"charging",
 			"keyboard",
 			"lid",
-			"x86",
+			"peci",
 			"usb",
-			"peci"
+			"x86"
 		],
 		"spi_voltage": "pp3300",
 		"smm_store": false,
@@ -211,19 +213,23 @@
 	"banjo": {
 		"platform": "banjo",
 		"parent": "rambi",
-		"spi_voltage": "pp3300"
+		"spi_voltage": "pp3300",
+		"ec_capability": []
 	},
 	"banon": {
 		"platform": "banon",
-		"parent": "strago"
+		"parent": "strago",
+		"ec_capability": []
 	},
 	"betty": {
 		"platform": "betty",
-		"parent": "auron"
+		"parent": "auron",
+		"ec_capability": []
 	},
 	"bob": {
 		"platform": "bob",
-		"parent": "gru"
+		"parent": "gru",
+		"ec_capability": []
 	},
 	"brain": {
 		"platform": "brain",
@@ -234,7 +240,8 @@
 		"hold_pwr_button_poweroff": 7,
 		"hold_pwr_button_poweron": 0.7,
 		"powerup_ready": 15,
-		"usb_a_port_count": -1
+		"usb_a_port_count": -1,
+		"ec_capability": []
 	},
 	"brya": {
 		"platform": "brya",
@@ -247,8 +254,8 @@
 			"charging",
 			"keyboard",
 			"lid",
-			"x86",
-			"usb"
+			"usb",
+			"x86"
 		],
 		"keypress_delay": 20,
 		"firmware_screen": 30,
@@ -278,9 +285,9 @@
 		"parent": "auron",
 		"ec_capability": [
 			"adc_ectemp",
-			"x86",
+			"peci",
 			"usb",
-			"peci"
+			"x86"
 		],
 		"has_lid": false,
 		"has_keyboard": false,
@@ -289,24 +296,29 @@
 	},
 	"candy": {
 		"platform": "candy",
-		"parent": "rambi"
+		"parent": "rambi",
+		"ec_capability": []
 	},
 	"caroline": {
 		"platform": "caroline",
-		"parent": "glados"
+		"parent": "glados",
+		"ec_capability": []
 	},
 	"cave": {
 		"platform": "cave",
-		"parent": "glados"
+		"parent": "glados",
+		"ec_capability": []
 	},
 	"celes": {
 		"platform": "celes",
 		"parent": "strago",
-		"spi_voltage": "pp3300"
+		"spi_voltage": "pp3300",
+		"ec_capability": []
 	},
 	"chell": {
 		"platform": "chell",
-		"parent": "glados"
+		"parent": "glados",
+		"ec_capability": []
 	},
 	"cheza": {
 		"platform": "cheza",
@@ -325,7 +337,8 @@
 	},
 	"coral": {
 		"platform": "coral",
-		"parent": "reef"
+		"parent": "reef",
+		"ec_capability": []
 	},
 	"cyan": {
 		"platform": "cyan",
@@ -338,9 +351,9 @@
 			"charging",
 			"keyboard",
 			"lid",
-			"x86",
+			"smart_usb_charge",
 			"usb",
-			"smart_usb_charge"
+			"x86"
 		],
 		"firmware_screen": 28,
 		"usb_plug": 28,
@@ -359,9 +372,9 @@
 			"charging",
 			"keyboard",
 			"lid",
-			"x86",
+			"smart_usb_charge",
 			"usb",
-			"smart_usb_charge"
+			"x86"
 		],
 		"firmware_screen": 15,
 		"spi_voltage": "pp3300",
@@ -521,7 +534,6 @@
 					}
 				]
 			},
-
 			"madoo": {
 				"usb_a_port_count": -1
 			}
@@ -536,9 +548,9 @@
 			"charging",
 			"keyboard",
 			"lid",
-			"x86",
+			"smart_usb_charge",
 			"usb",
-			"smart_usb_charge"
+			"x86"
 		],
 		"firmware_screen": 15,
 		"spi_voltage": "pp3300",
@@ -578,22 +590,26 @@
 	},
 	"edgar": {
 		"platform": "edgar",
-		"parent": "strago"
+		"parent": "strago",
+		"ec_capability": []
 	},
 	"elm": {
 		"platform": "elm",
 		"parent": "oak",
 		"ec_ro_vbus_bug": true,
 		"max_charging_power": 45.0,
-		"usb_a_port_count": -1
+		"usb_a_port_count": -1,
+		"ec_capability": []
 	},
 	"endeavour": {
 		"platform": "endeavour",
-		"parent": "fizz"
+		"parent": "fizz",
+		"ec_capability": []
 	},
 	"enguarde": {
 		"platform": "enguarde",
-		"parent": "rambi"
+		"parent": "rambi",
+		"ec_capability": []
 	},
 	"eve": {
 		"platform": "eve",
@@ -625,12 +641,14 @@
 	},
 	"expresso": {
 		"platform": "expresso",
-		"parent": "rambi"
+		"parent": "rambi",
+		"ec_capability": []
 	},
 	"fievel": {
 		"platform": "fievel",
 		"parent": "brain",
-		"delay_reboot_to_ping": 60
+		"delay_reboot_to_ping": 60,
+		"ec_capability": []
 	},
 	"fizz": {
 		"platform": "fizz",
@@ -654,7 +672,8 @@
 	"gale": {
 		"platform": "gale",
 		"parent": "jetstream",
-		"clear_dev_on_rec": true
+		"clear_dev_on_rec": true,
+		"ec_capability": []
 	},
 	"gandof": {
 		"platform": "gandof",
@@ -665,10 +684,10 @@
 			"charging",
 			"keyboard",
 			"lid",
-			"x86",
-			"usb",
 			"peci",
-			"smart_usb_charge"
+			"smart_usb_charge",
+			"usb",
+			"x86"
 		],
 		"usb_a_port_count": -1
 	},
@@ -685,8 +704,8 @@
 			"doubleboot",
 			"keyboard",
 			"lid",
-			"x86",
-			"usbpd_uart"
+			"usbpd_uart",
+			"x86"
 		],
 		"spi_voltage": "pp3300",
 		"servo_prog_state_delay": 10,
@@ -696,7 +715,8 @@
 	"gnawty": {
 		"platform": "gnawty",
 		"parent": "rambi",
-		"spi_voltage": "pp3300"
+		"spi_voltage": "pp3300",
+		"ec_capability": []
 	},
 	"gru": {
 		"platform": "gru",
@@ -705,10 +725,10 @@
 		"chrome_ec": true,
 		"ec_ro_vbus_bug": true,
 		"ec_capability": [
+			"arm",
 			"battery",
 			"charging",
 			"keyboard",
-			"arm",
 			"lid"
 		],
 		"ec_boot_to_console": 0.2,
@@ -743,7 +763,8 @@
 	},
 	"guado": {
 		"platform": "guado",
-		"parent": "jecht"
+		"parent": "jecht",
+		"ec_capability": []
 	},
 	"guybrush": {
 		"platform": "guybrush",
@@ -786,7 +807,8 @@
 	},
 	"hana": {
 		"platform": "hana",
-		"parent": "oak"
+		"parent": "oak",
+		"ec_capability": []
 	},
 	"hatch": {
 		"platform": "hatch",
@@ -798,9 +820,9 @@
 			"charging",
 			"keyboard",
 			"lid",
-			"x86",
+			"smart_usb_charge",
 			"usb",
-			"smart_usb_charge"
+			"x86"
 		],
 		"firmware_screen": 15,
 		"spi_voltage": "pp3300",
@@ -835,7 +857,8 @@
 	},
 	"heli": {
 		"platform": "heli",
-		"parent": "rambi"
+		"parent": "rambi",
+		"ec_capability": []
 	},
 	"jacuzzi": {
 		"platform": "jacuzzi",
@@ -864,7 +887,8 @@
 		"rec_button_dev_switch": true,
 		"spi_voltage": "pp3300",
 		"smm_store": false,
-		"usb_a_port_count": -1
+		"usb_a_port_count": -1,
+		"ec_capability": []
 	},
 	"jetstream": {
 		"platform": "jetstream",
@@ -873,11 +897,13 @@
 		"has_lid": false,
 		"has_keyboard": false,
 		"rec_button_dev_switch": true,
-		"smm_store": false
+		"smm_store": false,
+		"ec_capability": []
 	},
 	"kalista": {
 		"platform": "kalista",
-		"parent": "fizz"
+		"parent": "fizz",
+		"ec_capability": []
 	},
 	"keeby": {
 		"platform": "keeby",
@@ -890,9 +916,9 @@
 			"charging",
 			"keyboard",
 			"lid",
-			"x86",
+			"smart_usb_charge",
 			"usb",
-			"smart_usb_charge"
+			"x86"
 		],
 		"firmware_screen": 15,
 		"spi_voltage": "pp3300",
@@ -914,23 +940,28 @@
 	},
 	"kefka": {
 		"platform": "kefka",
-		"parent": "strago"
+		"parent": "strago",
+		"ec_capability": []
 	},
 	"kevin": {
 		"platform": "kevin",
-		"parent": "gru"
+		"parent": "gru",
+		"ec_capability": []
 	},
 	"kevin64": {
 		"platform": "kevin64",
-		"parent": "kevin"
+		"parent": "kevin",
+		"ec_capability": []
 	},
 	"kevin_tpm2": {
 		"platform": "kevin_tpm2",
-		"parent": "gru"
+		"parent": "gru",
+		"ec_capability": []
 	},
 	"kip": {
 		"platform": "kip",
-		"parent": "rambi"
+		"parent": "rambi",
+		"ec_capability": []
 	},
 	"kukui": {
 		"platform": "kukui",
@@ -968,25 +999,28 @@
 			"doubleboot",
 			"keyboard",
 			"lid",
-			"x86",
 			"usb",
-			"usbpd_uart"
+			"usbpd_uart",
+			"x86"
 		],
 		"smm_store": false,
 		"usb_a_port_count": -1
 	},
 	"lars": {
 		"platform": "lars",
-		"parent": "kunimitsu"
+		"parent": "kunimitsu",
+		"ec_capability": []
 	},
 	"lulu": {
 		"platform": "lulu",
-		"parent": "auron"
+		"parent": "auron",
+		"ec_capability": []
 	},
 	"mickey": {
 		"platform": "mickey",
 		"parent": "brain",
-		"has_powerbutton": false
+		"has_powerbutton": false,
+		"ec_capability": []
 	},
 	"mistral": {
 		"platform": "mistral",
@@ -995,7 +1029,8 @@
 		"rec_button_dev_switch": false,
 		"warm_reset_hold_time": 0.7,
 		"has_powerbutton": false,
-		"clear_dev_on_rec": true
+		"clear_dev_on_rec": true,
+		"ec_capability": []
 	},
 	"nami": {
 		"platform": "nami",
@@ -1022,7 +1057,8 @@
 	},
 	"nasher": {
 		"platform": "nasher",
-		"parent": "reef"
+		"parent": "reef",
+		"ec_capability": []
 	},
 	"nautilus": {
 		"platform": "nautilus",
@@ -1048,9 +1084,9 @@
 		"platform": "ninja",
 		"parent": "rambi",
 		"ec_capability": [
-			"x86",
+			"smart_usb_charge",
 			"usb",
-			"smart_usb_charge"
+			"x86"
 		],
 		"has_lid": false,
 		"has_keyboard": false,
@@ -1068,10 +1104,10 @@
 		"has_keyboard": false,
 		"chrome_ec": true,
 		"ec_capability": [
-			"x86",
 			"battery",
 			"charging",
-			"lid"
+			"lid",
+			"x86"
 		],
 		"cr50_capability": [
 			"wp_on_in_g3",
@@ -1086,10 +1122,10 @@
 		"mode_switcher_type": "keyboard_dev_switcher",
 		"chrome_ec": true,
 		"ec_capability": [
+			"arm",
 			"battery",
 			"charging",
 			"keyboard",
-			"arm",
 			"lid"
 		],
 		"ec_has_powerbtn_cmd": false,
@@ -1102,13 +1138,13 @@
 		"ec_boot_to_console": 0.3,
 		"ec_capability": [
 			"battery",
+			"cbi",
 			"charging",
 			"keyboard",
 			"lid",
-			"x86",
-			"usb",
 			"smart_usb_charge",
-			"cbi"
+			"usb",
+			"x86"
 		],
 		"cr50_capability": [
 			"rdd_leakage"
@@ -1148,11 +1184,13 @@
 	},
 	"orco": {
 		"platform": "orco",
-		"parent": "rambi"
+		"parent": "rambi",
+		"ec_capability": []
 	},
 	"paine": {
 		"platform": "paine",
-		"parent": "auron"
+		"parent": "auron",
+		"ec_capability": []
 	},
 	"pinky": {
 		"platform": "pinky",
@@ -1160,10 +1198,10 @@
 		"chrome_ec": true,
 		"ec_ro_vbus_bug": true,
 		"ec_capability": [
+			"arm",
 			"battery",
 			"charging",
 			"keyboard",
-			"arm",
 			"lid"
 		],
 		"ec_boot_to_console": 1.1,
@@ -1182,10 +1220,10 @@
 		"has_keyboard": false,
 		"chrome_ec": true,
 		"ec_capability": [
-			"x86",
 			"battery",
 			"charging",
-			"lid"
+			"lid",
+			"x86"
 		],
 		"smm_store": false,
 		"max_charging_power": 45.0,
@@ -1224,7 +1262,8 @@
 	},
 	"pyro": {
 		"platform": "pyro",
-		"parent": "reef"
+		"parent": "reef",
+		"ec_capability": []
 	},
 	"rambi": {
 		"platform": "rambi",
@@ -1237,9 +1276,9 @@
 			"charging",
 			"keyboard",
 			"lid",
-			"x86",
+			"smart_usb_charge",
 			"usb",
-			"smart_usb_charge"
+			"x86"
 		],
 		"firmware_screen": 7,
 		"spi_voltage": "pp1800",
@@ -1280,9 +1319,9 @@
 			"charging",
 			"keyboard",
 			"lid",
-			"x86",
+			"smart_usb_charge",
 			"usb",
-			"smart_usb_charge"
+			"x86"
 		],
 		"firmware_screen": 25,
 		"usb_plug": 45,
@@ -1293,19 +1332,23 @@
 	},
 	"reef_uni": {
 		"platform": "reef_uni",
-		"parent": "reef"
+		"parent": "reef",
+		"ec_capability": []
 	},
 	"reks": {
 		"platform": "reks",
-		"parent": "strago"
+		"parent": "strago",
+		"ec_capability": []
 	},
 	"relm": {
 		"platform": "relm",
-		"parent": "strago"
+		"parent": "strago",
+		"ec_capability": []
 	},
 	"rikku": {
 		"platform": "rikku",
-		"parent": "jecht"
+		"parent": "jecht",
+		"ec_capability": []
 	},
 	"samus": {
 		"platform": "samus",
@@ -1321,11 +1364,11 @@
 			"charging",
 			"keyboard",
 			"lid",
-			"x86",
-			"usb",
 			"peci",
 			"smart_usb_charge",
-			"usbpd_uart"
+			"usb",
+			"usbpd_uart",
+			"x86"
 		],
 		"firmware_screen": 15,
 		"spi_voltage": "pp3300",
@@ -1335,7 +1378,8 @@
 	},
 	"sand": {
 		"platform": "sand",
-		"parent": "reef"
+		"parent": "reef",
+		"ec_capability": []
 	},
 	"sarien": {
 		"platform": "sarien",
@@ -1381,11 +1425,13 @@
 	},
 	"sentry": {
 		"platform": "sentry",
-		"parent": "kunimitsu"
+		"parent": "kunimitsu",
+		"ec_capability": []
 	},
 	"setzer": {
 		"platform": "setzer",
-		"parent": "strago"
+		"parent": "strago",
+		"ec_capability": []
 	},
 	"slippy": {
 		"platform": "slippy",
@@ -1400,10 +1446,10 @@
 			"charging",
 			"keyboard",
 			"lid",
-			"x86",
+			"peci",
 			"thermal",
 			"usb",
-			"peci"
+			"x86"
 		],
 		"spi_voltage": "pp3300",
 		"smm_store": false,
@@ -1411,16 +1457,19 @@
 	},
 	"snappy": {
 		"platform": "snappy",
-		"parent": "reef"
+		"parent": "reef",
+		"ec_capability": []
 	},
 	"soraka": {
 		"platform": "soraka",
-		"parent": "poppy"
+		"parent": "poppy",
+		"ec_capability": []
 	},
 	"storm": {
 		"platform": "storm",
 		"parent": "jetstream",
-		"clear_dev_on_rec": true
+		"clear_dev_on_rec": true,
+		"ec_capability": []
 	},
 	"strago": {
 		"platform": "strago",
@@ -1433,9 +1482,9 @@
 			"charging",
 			"keyboard",
 			"lid",
-			"x86",
+			"smart_usb_charge",
 			"usb",
-			"smart_usb_charge"
+			"x86"
 		],
 		"firmware_screen": 25,
 		"usb_plug": 45,
@@ -1467,9 +1516,9 @@
 		"platform": "sumo",
 		"parent": "rambi",
 		"ec_capability": [
-			"x86",
+			"smart_usb_charge",
 			"usb",
-			"smart_usb_charge"
+			"x86"
 		],
 		"has_lid": false,
 		"has_keyboard": false,
@@ -1480,19 +1529,23 @@
 	},
 	"swanky": {
 		"platform": "swanky",
-		"parent": "rambi"
+		"parent": "rambi",
+		"ec_capability": []
 	},
 	"terra": {
 		"platform": "terra",
-		"parent": "strago"
+		"parent": "strago",
+		"ec_capability": []
 	},
 	"tidus": {
 		"platform": "tidus",
-		"parent": "jecht"
+		"parent": "jecht",
+		"ec_capability": []
 	},
 	"tiger": {
 		"platform": "tiger",
-		"parent": "brain"
+		"parent": "brain",
+		"ec_capability": []
 	},
 	"trogdor": {
 		"platform": "trogdor",
@@ -1521,7 +1574,8 @@
 	},
 	"ultima": {
 		"platform": "ultima",
-		"parent": "strago"
+		"parent": "strago",
+		"ec_capability": []
 	},
 	"veyron": {
 		"platform": "veyron",
@@ -1530,7 +1584,8 @@
 		"keypress_delay": 6,
 		"delay_reboot_to_ping": 60,
 		"has_eventlog": false,
-		"usb_a_port_count": -1
+		"usb_a_port_count": -1,
+		"ec_capability": []
 	},
 	"volteer": {
 		"platform": "volteer",
@@ -1543,8 +1598,8 @@
 			"charging",
 			"keyboard",
 			"lid",
-			"x86",
-			"usb"
+			"usb",
+			"x86"
 		],
 		"keypress_delay": 20,
 		"firmware_screen": 30,
@@ -1578,19 +1633,23 @@
 	},
 	"whirlwind": {
 		"platform": "whirlwind",
-		"parent": "jetstream"
+		"parent": "jetstream",
+		"ec_capability": []
 	},
 	"winky": {
 		"platform": "winky",
-		"parent": "rambi"
+		"parent": "rambi",
+		"ec_capability": []
 	},
 	"wizpig": {
 		"platform": "wizpig",
-		"parent": "strago"
+		"parent": "strago",
+		"ec_capability": []
 	},
 	"yuna": {
 		"platform": "yuna",
-		"parent": "auron"
+		"parent": "auron",
+		"ec_capability": []
 	},
 	"zork": {
 		"platform": "zork",
@@ -1598,13 +1657,13 @@
 		"chrome_ec": true,
 		"ec_capability": [
 			"battery",
+			"cbi",
 			"charging",
 			"keyboard",
 			"lid",
-			"x86",
-			"usb",
 			"smart_usb_charge",
-			"cbi"
+			"usb",
+			"x86"
 		],
 		"servo_prog_state_delay": 1.0,
 		"smm_store": false,

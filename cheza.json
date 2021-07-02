@@ -6,10 +6,20 @@
     "has_keyboard": false,
     "chrome_ec": true,
     "usb_a_port_count": -1,
-    "ec_capability": [
-        "arm",
-        "battery",
-        "charging",
-        "lid"
-    ]
+    "ec_capability": {
+        "adc_ectemp": false,
+        "arm": true,
+        "battery": true,
+        "cbi": false,
+        "charging": true,
+        "doubleboot": false,
+        "keyboard": false,
+        "lid": true,
+        "peci": false,
+        "smart_usb_charge": false,
+        "thermal": false,
+        "usb": false,
+        "usbpd_uart": false,
+        "x86": false
+    }
 }

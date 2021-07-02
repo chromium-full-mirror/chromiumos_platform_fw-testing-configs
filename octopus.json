@@ -3,16 +3,22 @@
     "mode_switcher_type": "keyboard_dev_switcher",
     "chrome_ec": true,
     "ec_boot_to_console": 0.3,
-    "ec_capability": [
-        "battery",
-        "charging",
-        "keyboard",
-        "lid",
-        "x86",
-        "usb",
-        "smart_usb_charge",
-        "cbi"
-    ],
+    "ec_capability": {
+        "adc_ectemp": false,
+        "arm": false,
+        "battery": true,
+        "cbi": true,
+        "charging": true,
+        "doubleboot": false,
+        "keyboard": true,
+        "lid": true,
+        "peci": false,
+        "smart_usb_charge": true,
+        "thermal": false,
+        "usb": true,
+        "usbpd_uart": false,
+        "x86": true
+    },
     "cr50_capability": [
         "rdd_leakage"
     ],

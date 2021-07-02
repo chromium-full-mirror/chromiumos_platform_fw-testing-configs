@@ -6,16 +6,22 @@
     "dark_resume_capable": true,
     "spi_voltage": "pp3300",
     "ec_boot_to_console": 0.2,
-    "ec_capability": [
-        "battery",
-        "charging",
-        "doubleboot",
-        "keyboard",
-        "lid",
-        "x86",
-        "usb",
-        "usbpd_uart"
-    ],
+    "ec_capability": {
+        "adc_ectemp": false,
+        "arm": false,
+        "battery": true,
+        "cbi": false,
+        "charging": true,
+        "doubleboot": true,
+        "keyboard": true,
+        "lid": true,
+        "peci": false,
+        "smart_usb_charge": false,
+        "thermal": false,
+        "usb": true,
+        "usbpd_uart": true,
+        "x86": true
+    },
     "smm_store": false,
     "usb_a_port_count": -1
 }

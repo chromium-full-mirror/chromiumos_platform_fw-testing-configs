@@ -41,8 +41,23 @@
     "rec_button_dev_switch": false,
     "rec_button_dev_switch.DOC": "Whether the recovery button switches to dev mode",
 
-    "ec_capability": [],
-    "ec_capability.DOC": "List of capabilities of the Chrome EC",
+    "ec_capability": {
+        "adc_ectemp": null,
+        "arm": null,
+        "battery": null,
+        "cbi": null,
+        "charging": null,
+        "doubleboot": null,
+        "keyboard": null,
+        "lid": null,
+        "peci": null,
+        "smart_usb_charge": null,
+        "thermal": null,
+        "usb": null,
+        "usbpd_uart": null,
+        "x86": null
+    },
+    "ec_capability.DOC": "Map of capabilities of the Chrome EC",
 
     "cr50_capability": [],
     "cr50_capability.DOC": "List of capabilities of the CR50",

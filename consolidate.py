@@ -27,6 +27,18 @@ import sys
 DEFAULT_OUTPUT_FILEPATH = 'CONSOLIDATED.json'
 
 
+class FormatException(Exception):
+    def __init__(self, message, platform=None, field=None):
+        if not message:
+            message = 'Formatting issue in platform json'
+        if platform:
+            message += ', in platform {}'.format(platform)
+        if field:
+            message += ', in field {}'.format(field)
+        message += '!'
+        super().__init__(message)
+
+
 def parse_args(argv=None):
     """Determine input dir and output file from command-line args.
 
@@ -90,7 +102,73 @@ def load_json(fwtc_dir, platforms):
         with open(json_path) as json_file:
             j = json.load(json_file, object_pairs_hook=collections.OrderedDict)
         consolidated[platform] = j
+    reformat_ec_capability(consolidated )
     return consolidated
+
+
+def reformat_ec_capability(consolidated):
+    """Reformat ec_capability from map to list as expected in consolidated dict.
+    Based on explicitly defined ec_capabilities and ec_capabilities of parent
+    platforms.
+
+    Args:
+        consolidated: Dict containing configs for each platform JSON file.
+
+    Returns:
+        None
+    """
+    platform_ec = dict()  # To keep track of platforms and their capabilities
+    # To keep track of all ec_capabilities expected to be defined
+    full_cap_set = set()
+    for platform, conf in consolidated.items():
+        if 'ec_capability' not in conf and 'parent' not in conf:
+            continue
+        elif platform == 'DEFAULTS':
+            # Collect set of all possible settings
+            full_cap_set = set(conf['ec_capability'].keys())
+            conf['ec_capability'] = []
+            continue
+
+        # collect explicitly defined capabilities for each platform
+        ec_cap = conf.get('ec_capability', dict())
+        incl = set(k for k, v in ec_cap.items() if v)
+        excl = set(k for k, v in ec_cap.items() if not v)
+        platform_ec[platform] = incl, excl
+
+    # For platforms with explicitly defined capabilies, recurse through parents
+    # inheritance from parents is overridden by children
+    # Need separate loop to ensure incl, excl calculated for parent platforms
+    for platform, (incl, excl) in platform_ec.items():
+        curr_plat = platform
+        seen = {platform}
+        while 'parent' in consolidated.get(curr_plat, dict()):
+            curr_plat = consolidated[curr_plat].get('parent')
+
+            # Check that there is no cycle of inheritance
+            if curr_plat not in seen:
+                seen.add(curr_plat)
+            else:
+                raise FormatException(
+                    'Circular parent from platform json',
+                    platform=platform, field='parent')
+
+            par_incl, par_excl = platform_ec.get(curr_plat, (set(), set()))
+            # ensure children get precedence in inheriting capabilities
+            incl = incl.union(par_incl.difference(excl))
+            excl = excl.union(par_excl.difference(incl))
+
+        # Raise error if capability undefined after inheriting from parents
+        if incl.union(excl) != full_cap_set:
+            raise FormatException(
+                'Not all capabilities accounted for',
+                platform=platform, field='ec_capability')
+        # Raise error if capability is somehow both defined true and false
+        if incl.intersection(excl):
+            raise FormatException(
+                'Include/exclude not mutually exclusive',
+                platform=platform, field='ec_capability')
+
+        consolidated[platform]['ec_capability'] = sorted(incl)
 
 
 def write_output(consolidated_json, output_path):

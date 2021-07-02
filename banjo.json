@@ -1,5 +1,14 @@
 {
-    "platform": "banjo",
-    "parent": "rambi",
-    "spi_voltage": "pp3300"
+	"platform": "banjo",
+	"parent": "rambi",
+	"spi_voltage": "pp3300",
+	"ec_capability": {
+		"battery": false,
+		"charging": false,
+		"keyboard": false,
+		"lid": false,
+		"smart_usb_charge": false,
+		"usb": false,
+		"x86": false
+	}
 }

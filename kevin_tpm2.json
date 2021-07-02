@@ -1,4 +1,11 @@
 {
-    "platform": "kevin_tpm2",
-    "parent": "gru"
+	"platform": "kevin_tpm2",
+	"parent": "gru",
+	"ec_capability": {
+		"arm": false,
+		"battery": false,
+		"charging": false,
+		"keyboard": false,
+		"lid": false
+	}
 }

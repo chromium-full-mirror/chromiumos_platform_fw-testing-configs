@@ -7,12 +7,22 @@
     "usb_image_boot_timeout": 60,
     "has_keyboard": false,
     "chrome_ec": true,
-    "ec_capability": [
-        "x86",
-        "battery",
-        "charging",
-        "lid"
-    ],
+    "ec_capability": {
+        "adc_ectemp": false,
+        "arm": false,
+        "battery": true,
+        "cbi": false,
+        "charging": true,
+        "doubleboot": false,
+        "keyboard": false,
+        "lid": true,
+        "peci": false,
+        "smart_usb_charge": false,
+        "thermal": false,
+        "usb": false,
+        "usbpd_uart": false,
+        "x86": true
+    },
     "cr50_capability": [
         "wp_on_in_g3",
         "rdd_off_in_g3"

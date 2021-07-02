@@ -3,13 +3,22 @@
     "is_detachable": true,
     "has_keyboard": false,
     "chrome_ec": true,
-    "ec_capability": [
-        "arm",
-        "battery",
-        "charging",
-        "lid",
-        "usb"
-    ],
+    "ec_capability": {
+        "adc_ectemp": false,
+        "arm": true,
+        "battery": true,
+        "cbi": false,
+        "charging": true,
+        "doubleboot": false,
+        "keyboard": false,
+        "lid": true,
+        "peci": false,
+        "smart_usb_charge": false,
+        "thermal": false,
+        "usb": true,
+        "usbpd_uart": false,
+        "x86": false
+    },
     "charger_profile_override": true,
     "usb_a_port_count": -1,
     "models": {

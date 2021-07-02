@@ -1,4 +1,13 @@
 {
-    "platform": "cave",
-    "parent": "glados"
+	"platform": "cave",
+	"parent": "glados",
+	"ec_capability": {
+		"battery": false,
+		"charging": false,
+		"doubleboot": false,
+		"keyboard": false,
+		"lid": false,
+		"usbpd_uart": false,
+		"x86": false
+	}
 }

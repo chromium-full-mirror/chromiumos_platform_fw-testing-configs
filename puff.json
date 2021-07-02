@@ -8,11 +8,22 @@
     "rec_button_dev_switch": true,
     "spi_voltage": "pp3300",
     "chrome_ec": true,
-    "ec_capability": [
-        "cbi",
-        "usb",
-        "x86"
-    ],
+    "ec_capability": {
+        "adc_ectemp": false,
+        "arm": false,
+        "battery": false,
+        "cbi": true,
+        "charging": false,
+        "doubleboot": false,
+        "keyboard": false,
+        "lid": false,
+        "peci": false,
+        "smart_usb_charge": false,
+        "thermal": false,
+        "usb": true,
+        "usbpd_uart": false,
+        "x86": true
+    },
     "ec_forwards_short_pp_press": true,
     "hibernate": false,
     "delay_powerinfo_stable": 6,

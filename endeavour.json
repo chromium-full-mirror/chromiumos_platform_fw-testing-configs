@@ -1,4 +1,7 @@
 {
-    "platform": "endeavour",
-    "parent": "fizz"
+	"platform": "endeavour",
+	"parent": "fizz",
+	"ec_capability": {
+		"x86": false
+	}
 }

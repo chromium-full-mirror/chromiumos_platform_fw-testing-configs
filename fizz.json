@@ -9,9 +9,22 @@
     "spi_voltage": "pp3300",
     "chrome_ec": true,
     "ec_forwards_short_pp_press": true,
-    "ec_capability": [
-        "x86"
-    ],
+    "ec_capability": {
+        "adc_ectemp": false,
+        "arm": false,
+        "battery": false,
+        "cbi": false,
+        "charging": false,
+        "doubleboot": false,
+        "keyboard": false,
+        "lid": false,
+        "peci": false,
+        "smart_usb_charge": false,
+        "thermal": false,
+        "usb": false,
+        "usbpd_uart": false,
+        "x86": true
+    },
     "delay_reboot_to_ping": 40,
     "smm_store": false,
     "max_charging_power": 100.0,

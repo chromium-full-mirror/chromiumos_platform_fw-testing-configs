@@ -1,4 +1,10 @@
 {
-    "platform": "soraka",
-    "parent": "poppy"
+	"platform": "soraka",
+	"parent": "poppy",
+	"ec_capability": {
+		"battery": false,
+		"charging": false,
+		"lid": false,
+		"x86": false
+	}
 }

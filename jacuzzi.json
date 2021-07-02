@@ -4,13 +4,9 @@
     "mode_switcher_type": "keyboard_dev_switcher",
     "has_keyboard": true,
     "chrome_ec": true,
-    "ec_capability": [
-        "arm",
-        "battery",
-        "charging",
-        "keyboard",
-        "lid"
-    ],
+    "ec_capability": {
+        "keyboard": true
+    },
     "ec_boot_to_console": 2,
     "ec_reboot_to_g3_delay": 10,
     "usbc_input_voltage_limit": 20,

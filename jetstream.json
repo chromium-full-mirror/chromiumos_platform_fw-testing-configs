@@ -5,5 +5,21 @@
     "has_lid": false,
     "has_keyboard": false,
     "rec_button_dev_switch": true,
-    "smm_store": false
+    "smm_store": false,
+    "ec_capability": {
+        "adc_ectemp": false,
+        "arm": false,
+        "battery": false,
+        "cbi": false,
+        "charging": false,
+        "doubleboot": false,
+        "keyboard": false,
+        "lid": false,
+        "peci": false,
+        "smart_usb_charge": false,
+        "thermal": false,
+        "usb": false,
+        "usbpd_uart": false,
+        "x86": false
+    }
 }
