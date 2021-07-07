@@ -410,6 +410,14 @@
 					}
 				]
 			},
+			"drawper": {
+				"custom_usb_enable_pins": [
+					{
+						"name": "EN_USB_A_5V",
+						"ioex": false
+					}
+				]
+			},
 			"lantis": {
 				"custom_usb_enable_pins": [
 					{
