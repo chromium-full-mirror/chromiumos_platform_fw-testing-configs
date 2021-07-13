@@ -102,43 +102,45 @@ def load_json(fwtc_dir, platforms):
         with open(json_path) as json_file:
             j = json.load(json_file, object_pairs_hook=collections.OrderedDict)
         consolidated[platform] = j
-    reformat_ec_capability(consolidated )
+    reformat_capability_map(consolidated, 'ec_capability')
+    reformat_capability_map(consolidated, 'cr50_capability')
     return consolidated
 
 
-def reformat_ec_capability(consolidated):
-    """Reformat ec_capability from map to list as expected in consolidated dict.
-    Based on explicitly defined ec_capabilities and ec_capabilities of parent
+def reformat_capability_map(consolidated, cap_field):
+    """Reformat {cap_field} from map to list as expected in consolidated dict.
+    Based on explicitly defined {cap_field} and {cap_field} of parent
     platforms.
 
     Args:
         consolidated: Dict containing configs for each platform JSON file.
+        cap_field: Capability map eg. 'ec_capability' or 'cr50_capability'.
 
     Returns:
         None
     """
-    platform_ec = dict()  # To keep track of platforms and their capabilities
-    # To keep track of all ec_capabilities expected to be defined
+    platform_caps = dict()  # To keep track of platforms and their capabilities
+    # To keep track of all capabilities expected to be defined
     full_cap_set = set()
     for platform, conf in consolidated.items():
-        if 'ec_capability' not in conf and 'parent' not in conf:
+        if cap_field not in conf and 'parent' not in conf:
             continue
         elif platform == 'DEFAULTS':
             # Collect set of all possible settings
-            full_cap_set = set(conf['ec_capability'].keys())
-            conf['ec_capability'] = []
+            full_cap_set = set(conf.get(cap_field, dict()).keys())
+            conf[cap_field] = []
             continue
 
         # collect explicitly defined capabilities for each platform
-        ec_cap = conf.get('ec_capability', dict())
-        incl = set(k for k, v in ec_cap.items() if v)
-        excl = set(k for k, v in ec_cap.items() if not v)
-        platform_ec[platform] = incl, excl
+        caps = conf.get(cap_field, dict())
+        incl = set(k for k, v in caps.items() if v)
+        excl = set(k for k, v in caps.items() if not v)
+        platform_caps[platform] = incl, excl
 
     # For platforms with explicitly defined capabilies, recurse through parents
     # inheritance from parents is overridden by children
     # Need separate loop to ensure incl, excl calculated for parent platforms
-    for platform, (incl, excl) in platform_ec.items():
+    for platform, (incl, excl) in platform_caps.items():
         curr_plat = platform
         seen = {platform}
         while 'parent' in consolidated.get(curr_plat, dict()):
@@ -152,7 +154,7 @@ def reformat_ec_capability(consolidated):
                     'Circular parent from platform json',
                     platform=platform, field='parent')
 
-            par_incl, par_excl = platform_ec.get(curr_plat, (set(), set()))
+            par_incl, par_excl = platform_caps.get(curr_plat, (set(), set()))
             # ensure children get precedence in inheriting capabilities
             incl = incl.union(par_incl.difference(excl))
             excl = excl.union(par_excl.difference(incl))
@@ -161,14 +163,14 @@ def reformat_ec_capability(consolidated):
         if incl.union(excl) != full_cap_set:
             raise FormatException(
                 'Not all capabilities accounted for',
-                platform=platform, field='ec_capability')
+                platform=platform, field=cap_field)
         # Raise error if capability is somehow both defined true and false
         if incl.intersection(excl):
             raise FormatException(
                 'Include/exclude not mutually exclusive',
-                platform=platform, field='ec_capability')
+                platform=platform, field=cap_field)
 
-        consolidated[platform]['ec_capability'] = sorted(incl)
+        consolidated[platform][cap_field] = sorted(incl)
 
 
 def write_output(consolidated_json, output_path):

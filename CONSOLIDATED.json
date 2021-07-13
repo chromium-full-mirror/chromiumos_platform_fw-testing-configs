@@ -134,12 +134,14 @@
 	"arkham": {
 		"platform": "arkham",
 		"parent": "jetstream",
-		"ec_capability": []
+		"ec_capability": [],
+		"cr50_capability": []
 	},
 	"asuka": {
 		"platform": "asuka",
 		"parent": "kunimitsu",
-		"ec_capability": []
+		"ec_capability": [],
+		"cr50_capability": []
 	},
 	"asurada": {
 		"platform": "asurada",
@@ -166,7 +168,8 @@
 					}
 				]
 			}
-		}
+		},
+		"cr50_capability": []
 	},
 	"atlas": {
 		"platform": "atlas",
@@ -208,28 +211,33 @@
 		],
 		"spi_voltage": "pp3300",
 		"smm_store": false,
-		"usb_a_port_count": -1
+		"usb_a_port_count": -1,
+		"cr50_capability": []
 	},
 	"banjo": {
 		"platform": "banjo",
 		"parent": "rambi",
 		"spi_voltage": "pp3300",
-		"ec_capability": []
+		"ec_capability": [],
+		"cr50_capability": []
 	},
 	"banon": {
 		"platform": "banon",
 		"parent": "strago",
-		"ec_capability": []
+		"ec_capability": [],
+		"cr50_capability": []
 	},
 	"betty": {
 		"platform": "betty",
 		"parent": "auron",
-		"ec_capability": []
+		"ec_capability": [],
+		"cr50_capability": []
 	},
 	"bob": {
 		"platform": "bob",
 		"parent": "gru",
-		"ec_capability": []
+		"ec_capability": [],
+		"cr50_capability": []
 	},
 	"brain": {
 		"platform": "brain",
@@ -241,7 +249,8 @@
 		"hold_pwr_button_poweron": 0.7,
 		"powerup_ready": 15,
 		"usb_a_port_count": -1,
-		"ec_capability": []
+		"ec_capability": [],
+		"cr50_capability": []
 	},
 	"brya": {
 		"platform": "brya",
@@ -278,7 +287,8 @@
 		],
 		"ap_flash_ccd_post_commands": [
 			"power_state:reset"
-		]
+		],
+		"cr50_capability": []
 	},
 	"buddy": {
 		"platform": "buddy",
@@ -292,33 +302,39 @@
 		"has_lid": false,
 		"has_keyboard": false,
 		"rec_button_dev_switch": true,
-		"usb_a_port_count": -1
+		"usb_a_port_count": -1,
+		"cr50_capability": []
 	},
 	"candy": {
 		"platform": "candy",
 		"parent": "rambi",
-		"ec_capability": []
+		"ec_capability": [],
+		"cr50_capability": []
 	},
 	"caroline": {
 		"platform": "caroline",
 		"parent": "glados",
-		"ec_capability": []
+		"ec_capability": [],
+		"cr50_capability": []
 	},
 	"cave": {
 		"platform": "cave",
 		"parent": "glados",
-		"ec_capability": []
+		"ec_capability": [],
+		"cr50_capability": []
 	},
 	"celes": {
 		"platform": "celes",
 		"parent": "strago",
 		"spi_voltage": "pp3300",
-		"ec_capability": []
+		"ec_capability": [],
+		"cr50_capability": []
 	},
 	"chell": {
 		"platform": "chell",
 		"parent": "glados",
-		"ec_capability": []
+		"ec_capability": [],
+		"cr50_capability": []
 	},
 	"cheza": {
 		"platform": "cheza",
@@ -333,12 +349,14 @@
 			"battery",
 			"charging",
 			"lid"
-		]
+		],
+		"cr50_capability": []
 	},
 	"coral": {
 		"platform": "coral",
 		"parent": "reef",
-		"ec_capability": []
+		"ec_capability": [],
+		"cr50_capability": []
 	},
 	"cyan": {
 		"platform": "cyan",
@@ -359,7 +377,8 @@
 		"usb_plug": 28,
 		"usb_a_port_count": -1,
 		"spi_voltage": "pp1800",
-		"smm_store": false
+		"smm_store": false,
+		"cr50_capability": []
 	},
 	"dedede": {
 		"platform": "dedede",
@@ -537,7 +556,8 @@
 			"madoo": {
 				"usb_a_port_count": -1
 			}
-		}
+		},
+		"cr50_capability": []
 	},
 	"dragonegg": {
 		"platform": "dragonegg",
@@ -563,7 +583,8 @@
 			}
 		],
 		"smm_store": false,
-		"max_charging_power": 45.0
+		"max_charging_power": 45.0,
+		"cr50_capability": []
 	},
 	"drallion": {
 		"platform": "drallion",
@@ -586,12 +607,14 @@
 		"ec_forwards_short_pp_press": true,
 		"serial_number_length": 7,
 		"has_diagnostics_image": true,
-		"usb_a_port_count": -1
+		"usb_a_port_count": -1,
+		"cr50_capability": []
 	},
 	"edgar": {
 		"platform": "edgar",
 		"parent": "strago",
-		"ec_capability": []
+		"ec_capability": [],
+		"cr50_capability": []
 	},
 	"elm": {
 		"platform": "elm",
@@ -599,17 +622,20 @@
 		"ec_ro_vbus_bug": true,
 		"max_charging_power": 45.0,
 		"usb_a_port_count": -1,
-		"ec_capability": []
+		"ec_capability": [],
+		"cr50_capability": []
 	},
 	"endeavour": {
 		"platform": "endeavour",
 		"parent": "fizz",
-		"ec_capability": []
+		"ec_capability": [],
+		"cr50_capability": []
 	},
 	"enguarde": {
 		"platform": "enguarde",
 		"parent": "rambi",
-		"ec_capability": []
+		"ec_capability": [],
+		"cr50_capability": []
 	},
 	"eve": {
 		"platform": "eve",
@@ -642,13 +668,15 @@
 	"expresso": {
 		"platform": "expresso",
 		"parent": "rambi",
-		"ec_capability": []
+		"ec_capability": [],
+		"cr50_capability": []
 	},
 	"fievel": {
 		"platform": "fievel",
 		"parent": "brain",
 		"delay_reboot_to_ping": 60,
-		"ec_capability": []
+		"ec_capability": [],
+		"cr50_capability": []
 	},
 	"fizz": {
 		"platform": "fizz",
@@ -667,13 +695,15 @@
 		"delay_reboot_to_ping": 40,
 		"smm_store": false,
 		"max_charging_power": 100.0,
-		"usb_a_port_count": -1
+		"usb_a_port_count": -1,
+		"cr50_capability": []
 	},
 	"gale": {
 		"platform": "gale",
 		"parent": "jetstream",
 		"clear_dev_on_rec": true,
-		"ec_capability": []
+		"ec_capability": [],
+		"cr50_capability": []
 	},
 	"gandof": {
 		"platform": "gandof",
@@ -689,7 +719,8 @@
 			"usb",
 			"x86"
 		],
-		"usb_a_port_count": -1
+		"usb_a_port_count": -1,
+		"cr50_capability": []
 	},
 	"glados": {
 		"platform": "glados",
@@ -710,13 +741,15 @@
 		"spi_voltage": "pp3300",
 		"servo_prog_state_delay": 10,
 		"smm_store": false,
-		"usb_a_port_count": -1
+		"usb_a_port_count": -1,
+		"cr50_capability": []
 	},
 	"gnawty": {
 		"platform": "gnawty",
 		"parent": "rambi",
 		"spi_voltage": "pp3300",
-		"ec_capability": []
+		"ec_capability": [],
+		"cr50_capability": []
 	},
 	"gru": {
 		"platform": "gru",
@@ -734,7 +767,8 @@
 		"ec_boot_to_console": 0.2,
 		"firmware_screen": 7,
 		"usb_hid_wake_enabled": false,
-		"usb_a_port_count": -1
+		"usb_a_port_count": -1,
+		"cr50_capability": []
 	},
 	"grunt": {
 		"platform": "grunt",
@@ -759,12 +793,14 @@
 			"liara": {
 				"usbc_voltage_on_shutdown_and_full_batt": 5
 			}
-		}
+		},
+		"cr50_capability": []
 	},
 	"guado": {
 		"platform": "guado",
 		"parent": "jecht",
-		"ec_capability": []
+		"ec_capability": [],
+		"cr50_capability": []
 	},
 	"guybrush": {
 		"platform": "guybrush",
@@ -803,12 +839,14 @@
 		],
 		"ap_flash_ccd_post_commands": [
 			"power_state:reset"
-		]
+		],
+		"cr50_capability": []
 	},
 	"hana": {
 		"platform": "hana",
 		"parent": "oak",
-		"ec_capability": []
+		"ec_capability": [],
+		"cr50_capability": []
 	},
 	"hatch": {
 		"platform": "hatch",
@@ -858,7 +896,8 @@
 	"heli": {
 		"platform": "heli",
 		"parent": "rambi",
-		"ec_capability": []
+		"ec_capability": [],
+		"cr50_capability": []
 	},
 	"jacuzzi": {
 		"platform": "jacuzzi",
@@ -877,7 +916,8 @@
 		"ec_reboot_to_g3_delay": 10,
 		"usbc_input_voltage_limit": 20,
 		"charger_profile_override": true,
-		"usb_a_port_count": -1
+		"usb_a_port_count": -1,
+		"cr50_capability": []
 	},
 	"jecht": {
 		"platform": "jecht",
@@ -888,7 +928,8 @@
 		"spi_voltage": "pp3300",
 		"smm_store": false,
 		"usb_a_port_count": -1,
-		"ec_capability": []
+		"ec_capability": [],
+		"cr50_capability": []
 	},
 	"jetstream": {
 		"platform": "jetstream",
@@ -898,12 +939,14 @@
 		"has_keyboard": false,
 		"rec_button_dev_switch": true,
 		"smm_store": false,
-		"ec_capability": []
+		"ec_capability": [],
+		"cr50_capability": []
 	},
 	"kalista": {
 		"platform": "kalista",
 		"parent": "fizz",
-		"ec_capability": []
+		"ec_capability": [],
+		"cr50_capability": []
 	},
 	"keeby": {
 		"platform": "keeby",
@@ -936,32 +979,38 @@
 				"name": "EN_USB_A1_VBUS",
 				"ioex": false
 			}
-		]
+		],
+		"cr50_capability": []
 	},
 	"kefka": {
 		"platform": "kefka",
 		"parent": "strago",
-		"ec_capability": []
+		"ec_capability": [],
+		"cr50_capability": []
 	},
 	"kevin": {
 		"platform": "kevin",
 		"parent": "gru",
-		"ec_capability": []
+		"ec_capability": [],
+		"cr50_capability": []
 	},
 	"kevin64": {
 		"platform": "kevin64",
 		"parent": "kevin",
-		"ec_capability": []
+		"ec_capability": [],
+		"cr50_capability": []
 	},
 	"kevin_tpm2": {
 		"platform": "kevin_tpm2",
 		"parent": "gru",
-		"ec_capability": []
+		"ec_capability": [],
+		"cr50_capability": []
 	},
 	"kip": {
 		"platform": "kip",
 		"parent": "rambi",
-		"ec_capability": []
+		"ec_capability": [],
+		"cr50_capability": []
 	},
 	"kukui": {
 		"platform": "kukui",
@@ -983,7 +1032,8 @@
 		"usbc_input_voltage_limit": 12,
 		"charger_profile_override": true,
 		"max_charging_power": 45.0,
-		"usb_a_port_count": -1
+		"usb_a_port_count": -1,
+		"cr50_capability": []
 	},
 	"kunimitsu": {
 		"platform": "kunimitsu",
@@ -1004,23 +1054,27 @@
 			"x86"
 		],
 		"smm_store": false,
-		"usb_a_port_count": -1
+		"usb_a_port_count": -1,
+		"cr50_capability": []
 	},
 	"lars": {
 		"platform": "lars",
 		"parent": "kunimitsu",
-		"ec_capability": []
+		"ec_capability": [],
+		"cr50_capability": []
 	},
 	"lulu": {
 		"platform": "lulu",
 		"parent": "auron",
-		"ec_capability": []
+		"ec_capability": [],
+		"cr50_capability": []
 	},
 	"mickey": {
 		"platform": "mickey",
 		"parent": "brain",
 		"has_powerbutton": false,
-		"ec_capability": []
+		"ec_capability": [],
+		"cr50_capability": []
 	},
 	"mistral": {
 		"platform": "mistral",
@@ -1030,7 +1084,8 @@
 		"warm_reset_hold_time": 0.7,
 		"has_powerbutton": false,
 		"clear_dev_on_rec": true,
-		"ec_capability": []
+		"ec_capability": [],
+		"cr50_capability": []
 	},
 	"nami": {
 		"platform": "nami",
@@ -1058,7 +1113,8 @@
 	"nasher": {
 		"platform": "nasher",
 		"parent": "reef",
-		"ec_capability": []
+		"ec_capability": [],
+		"cr50_capability": []
 	},
 	"nautilus": {
 		"platform": "nautilus",
@@ -1078,7 +1134,8 @@
 		"dark_resume_capable": true,
 		"smm_store": false,
 		"max_charging_power": 45.0,
-		"usb_a_port_count": -1
+		"usb_a_port_count": -1,
+		"cr50_capability": []
 	},
 	"ninja": {
 		"platform": "ninja",
@@ -1092,7 +1149,8 @@
 		"has_keyboard": false,
 		"rec_button_dev_switch": true,
 		"spi_voltage": "pp3300",
-		"usb_a_port_count": -1
+		"usb_a_port_count": -1,
+		"cr50_capability": []
 	},
 	"nocturne": {
 		"platform": "nocturne",
@@ -1110,8 +1168,8 @@
 			"x86"
 		],
 		"cr50_capability": [
-			"wp_on_in_g3",
-			"rdd_off_in_g3"
+			"rdd_off_in_g3",
+			"wp_on_in_g3"
 		],
 		"max_charging_power": 45.0,
 		"usbc_voltage_on_shutdown_and_full_batt": 9,
@@ -1129,7 +1187,8 @@
 			"lid"
 		],
 		"ec_has_powerbtn_cmd": false,
-		"usb_a_port_count": -1
+		"usb_a_port_count": -1,
+		"cr50_capability": []
 	},
 	"octopus": {
 		"platform": "octopus",
@@ -1185,12 +1244,14 @@
 	"orco": {
 		"platform": "orco",
 		"parent": "rambi",
-		"ec_capability": []
+		"ec_capability": [],
+		"cr50_capability": []
 	},
 	"paine": {
 		"platform": "paine",
 		"parent": "auron",
-		"ec_capability": []
+		"ec_capability": [],
+		"cr50_capability": []
 	},
 	"pinky": {
 		"platform": "pinky",
@@ -1207,7 +1268,8 @@
 		"ec_boot_to_console": 1.1,
 		"ec_has_powerbtn_cmd": false,
 		"software_sync_update": 6,
-		"usb_a_port_count": -1
+		"usb_a_port_count": -1,
+		"cr50_capability": []
 	},
 	"poppy": {
 		"platform": "poppy",
@@ -1227,7 +1289,8 @@
 		],
 		"smm_store": false,
 		"max_charging_power": 45.0,
-		"usb_a_port_count": -1
+		"usb_a_port_count": -1,
+		"cr50_capability": []
 	},
 	"puff": {
 		"platform": "puff",
@@ -1258,12 +1321,14 @@
 		"max_charging_power": 100.0,
 		"ap_flash_ccd_programmer": "raiden_debug_spi:target=AP,serial=%s",
 		"ap_flash_ccd_pre_commands": [],
-		"ap_flash_ccd_post_commands": []
+		"ap_flash_ccd_post_commands": [],
+		"cr50_capability": []
 	},
 	"pyro": {
 		"platform": "pyro",
 		"parent": "reef",
-		"ec_capability": []
+		"ec_capability": [],
+		"cr50_capability": []
 	},
 	"rambi": {
 		"platform": "rambi",
@@ -1284,7 +1349,8 @@
 		"spi_voltage": "pp1800",
 		"smm_store": false,
 		"delay_reboot_to_ping": 60,
-		"usb_a_port_count": -1
+		"usb_a_port_count": -1,
+		"cr50_capability": []
 	},
 	"rammus": {
 		"platform": "rammus",
@@ -1306,7 +1372,8 @@
 		"usb_a_port_count": -1,
 		"ap_flash_ccd_programmer": "raiden_debug_spi:target=AP,serial=%s",
 		"ap_flash_ccd_pre_commands": [],
-		"ap_flash_ccd_post_commands": []
+		"ap_flash_ccd_post_commands": [],
+		"cr50_capability": []
 	},
 	"reef": {
 		"platform": "reef",
@@ -1328,27 +1395,32 @@
 		"spi_voltage": "pp1800",
 		"smm_store": false,
 		"max_charging_power": 45.0,
-		"usb_a_port_count": -1
+		"usb_a_port_count": -1,
+		"cr50_capability": []
 	},
 	"reef_uni": {
 		"platform": "reef_uni",
 		"parent": "reef",
-		"ec_capability": []
+		"ec_capability": [],
+		"cr50_capability": []
 	},
 	"reks": {
 		"platform": "reks",
 		"parent": "strago",
-		"ec_capability": []
+		"ec_capability": [],
+		"cr50_capability": []
 	},
 	"relm": {
 		"platform": "relm",
 		"parent": "strago",
-		"ec_capability": []
+		"ec_capability": [],
+		"cr50_capability": []
 	},
 	"rikku": {
 		"platform": "rikku",
 		"parent": "jecht",
-		"ec_capability": []
+		"ec_capability": [],
+		"cr50_capability": []
 	},
 	"samus": {
 		"platform": "samus",
@@ -1374,12 +1446,14 @@
 		"spi_voltage": "pp3300",
 		"servo_prog_state_delay": 10,
 		"smm_store": false,
-		"usb_a_port_count": -1
+		"usb_a_port_count": -1,
+		"cr50_capability": []
 	},
 	"sand": {
 		"platform": "sand",
 		"parent": "reef",
-		"ec_capability": []
+		"ec_capability": [],
+		"cr50_capability": []
 	},
 	"sarien": {
 		"platform": "sarien",
@@ -1405,7 +1479,8 @@
 		"serial_number_length": 7,
 		"has_diagnostics_image": true,
 		"rma_entered_automatically": false,
-		"usb_a_port_count": -1
+		"usb_a_port_count": -1,
+		"cr50_capability": []
 	},
 	"scarlet": {
 		"platform": "scarlet",
@@ -1421,17 +1496,20 @@
 		"hibernate": false,
 		"is_detachable": true,
 		"max_charging_power": 38.55,
-		"usb_a_port_count": -1
+		"usb_a_port_count": -1,
+		"cr50_capability": []
 	},
 	"sentry": {
 		"platform": "sentry",
 		"parent": "kunimitsu",
-		"ec_capability": []
+		"ec_capability": [],
+		"cr50_capability": []
 	},
 	"setzer": {
 		"platform": "setzer",
 		"parent": "strago",
-		"ec_capability": []
+		"ec_capability": [],
+		"cr50_capability": []
 	},
 	"slippy": {
 		"platform": "slippy",
@@ -1453,23 +1531,27 @@
 		],
 		"spi_voltage": "pp3300",
 		"smm_store": false,
-		"usb_a_port_count": -1
+		"usb_a_port_count": -1,
+		"cr50_capability": []
 	},
 	"snappy": {
 		"platform": "snappy",
 		"parent": "reef",
-		"ec_capability": []
+		"ec_capability": [],
+		"cr50_capability": []
 	},
 	"soraka": {
 		"platform": "soraka",
 		"parent": "poppy",
-		"ec_capability": []
+		"ec_capability": [],
+		"cr50_capability": []
 	},
 	"storm": {
 		"platform": "storm",
 		"parent": "jetstream",
 		"clear_dev_on_rec": true,
-		"ec_capability": []
+		"ec_capability": [],
+		"cr50_capability": []
 	},
 	"strago": {
 		"platform": "strago",
@@ -1490,7 +1572,8 @@
 		"usb_plug": 45,
 		"spi_voltage": "pp1800",
 		"smm_store": false,
-		"usb_a_port_count": -1
+		"usb_a_port_count": -1,
+		"cr50_capability": []
 	},
 	"strongbad": {
 		"platform": "strongbad",
@@ -1510,7 +1593,8 @@
 			"coachz": {
 				"usbc_input_voltage_limit": 15
 			}
-		}
+		},
+		"cr50_capability": []
 	},
 	"sumo": {
 		"platform": "sumo",
@@ -1525,27 +1609,32 @@
 		"rec_button_dev_switch": true,
 		"firmware_screen": 10,
 		"keypress_delay": 6,
-		"usb_a_port_count": -1
+		"usb_a_port_count": -1,
+		"cr50_capability": []
 	},
 	"swanky": {
 		"platform": "swanky",
 		"parent": "rambi",
-		"ec_capability": []
+		"ec_capability": [],
+		"cr50_capability": []
 	},
 	"terra": {
 		"platform": "terra",
 		"parent": "strago",
-		"ec_capability": []
+		"ec_capability": [],
+		"cr50_capability": []
 	},
 	"tidus": {
 		"platform": "tidus",
 		"parent": "jecht",
-		"ec_capability": []
+		"ec_capability": [],
+		"cr50_capability": []
 	},
 	"tiger": {
 		"platform": "tiger",
 		"parent": "brain",
-		"ec_capability": []
+		"ec_capability": [],
+		"cr50_capability": []
 	},
 	"trogdor": {
 		"platform": "trogdor",
@@ -1570,12 +1659,14 @@
 			"lazor": {
 				"usbc_input_voltage_limit": 15
 			}
-		}
+		},
+		"cr50_capability": []
 	},
 	"ultima": {
 		"platform": "ultima",
 		"parent": "strago",
-		"ec_capability": []
+		"ec_capability": [],
+		"cr50_capability": []
 	},
 	"veyron": {
 		"platform": "veyron",
@@ -1585,7 +1676,8 @@
 		"delay_reboot_to_ping": 60,
 		"has_eventlog": false,
 		"usb_a_port_count": -1,
-		"ec_capability": []
+		"ec_capability": [],
+		"cr50_capability": []
 	},
 	"volteer": {
 		"platform": "volteer",
@@ -1628,27 +1720,32 @@
 			"volta": {
 				"max_charging_power": 45.0
 			}
-		}
+		},
+		"cr50_capability": []
 	},
 	"whirlwind": {
 		"platform": "whirlwind",
 		"parent": "jetstream",
-		"ec_capability": []
+		"ec_capability": [],
+		"cr50_capability": []
 	},
 	"winky": {
 		"platform": "winky",
 		"parent": "rambi",
-		"ec_capability": []
+		"ec_capability": [],
+		"cr50_capability": []
 	},
 	"wizpig": {
 		"platform": "wizpig",
 		"parent": "strago",
-		"ec_capability": []
+		"ec_capability": [],
+		"cr50_capability": []
 	},
 	"yuna": {
 		"platform": "yuna",
 		"parent": "auron",
-		"ec_capability": []
+		"ec_capability": [],
+		"cr50_capability": []
 	},
 	"zork": {
 		"platform": "zork",
@@ -1682,6 +1779,7 @@
 		"max_charging_power": 65.0,
 		"ap_flash_ccd_programmer": "raiden_debug_spi:target=AP,serial=%s",
 		"ap_flash_ccd_pre_commands": [],
-		"ap_flash_ccd_post_commands": []
+		"ap_flash_ccd_post_commands": [],
+		"cr50_capability": []
 	}
 }

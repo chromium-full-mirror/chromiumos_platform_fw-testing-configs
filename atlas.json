@@ -23,8 +23,10 @@
     "servo_prog_state_delay": 10,
     "dark_resume_capable": true,
     "usb_a_port_count": -1,
-    "cr50_capability": [
-        "rdd_leakage",
-	"wp_on_in_g3"
-    ]
+    "cr50_capability": {
+        "ec_hibernate_breaks_rdd": false,
+        "wp_on_in_g3": true,
+        "rdd_off_in_g3": false,
+        "rdd_leakage": true
+    }
 }

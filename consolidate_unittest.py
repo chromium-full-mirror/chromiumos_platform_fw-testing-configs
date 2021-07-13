@@ -106,6 +106,12 @@ class TestLoadJSON(unittest.TestCase):
                          '\t\t"usb": true,\n' +          # set as True for test
                          '\t\t"usbpd_uart": false,\n' +
                          '\t\t"x86": true\n' +           # set as True for test
+                         '\t},\n' +
+                         '\t"cr50_capability": {' +
+                         '\t\t"ec_hibernate_breaks_rdd": false,\n' +
+                         '\t\t"wp_on_in_g3": true,\n' +  # set as True for test
+                         '\t\t"rdd_off_in_g3": false,\n' +
+                         '\t\t"rdd_leakage": true\n' +   # set as True for test
                          '\t}\n' +
                          '}')
         defaults_filename = os.path.join(self.mock_fwtc_dir.name,
@@ -129,6 +135,12 @@ class TestLoadJSON(unittest.TestCase):
                                 '\t\t"usb": null,\n' +
                                 '\t\t"usbpd_uart": null,\n' +
                                 '\t\t"x86": null\n' +
+                                '\t},\n' +
+                                '\t"cr50_capability": {' +
+                                '\t\t"ec_hibernate_breaks_rdd": null,\n' +
+                                '\t\t"wp_on_in_g3": null,\n' +
+                                '\t\t"rdd_off_in_g3": null,\n' +
+                                '\t\t"rdd_leakage": null\n' +
                                 '\t}\n' +
                                 '}')
 
@@ -142,9 +154,11 @@ class TestLoadJSON(unittest.TestCase):
         expected['DEFAULTS']['platform'] = None
         expected['DEFAULTS']['platform_DOC'] = 'foo'
         expected['DEFAULTS']['ec_capability'] = []
+        expected['DEFAULTS']['cr50_capability'] = []
         expected['a'] = collections.OrderedDict()
         expected['a']['platform'] = 'a'
         expected['a']['ec_capability'] = ['usb', 'x86']
+        expected['a']['cr50_capability'] = ['rdd_leakage', 'wp_on_in_g3']
         actual = consolidate.load_json(self.mock_fwtc_dir.name,
                                        ['DEFAULTS', 'a'])
         self.assertEqual(actual, expected)
@@ -189,24 +203,32 @@ class TestInvalidECCapability(unittest.TestCase):
         self.mock_fwtc_dir = tempfile.TemporaryDirectory()
         a_json_fp = os.path.join(self.mock_fwtc_dir.name, 'a.json')
         with open(a_json_fp, 'w') as a_json_file:
-            a_json = collections.OrderedDict({'platform': 'a',
-                                              'firmware_screen': 0.5,
-                                              'ec_capability': {
-                                                  'adc_ectemp': True,
-                                                  'arm': True,
-                                                  'battery': False,
-                                                  'cbi': False,
-                                                  'charging': False,
-                                                  'doubleboot': False,
-                                                  'keyboard': False,
-                                                  'lid': False,
-                                                  'peci': False,
-                                                  'smart_usb_charge': False,
-                                                  'thermal': False,
-                                                  'usb': True,
-                                                  'usbpd_uart': False,
-                                                  'x86': True
-                                              }})
+            a_json = collections.OrderedDict({
+                'platform': 'a',
+                'firmware_screen': 0.5,
+                'ec_capability': {
+                    'adc_ectemp': True,
+                    'arm': True,
+                    'battery': False,
+                    'cbi': False,
+                    'charging': False,
+                    'doubleboot': False,
+                    'keyboard': False,
+                    'lid': False,
+                    'peci': False,
+                    'smart_usb_charge': False,
+                    'thermal': False,
+                    'usb': True,
+                    'usbpd_uart': False,
+                    'x86': True
+                },
+                'cr50_capability': {
+                    'ec_hibernate_breaks_rdd': True,
+                    'wp_on_in_g3': True,
+                    'rdd_off_in_g3': False,
+                    'rdd_leakage': False
+                }
+            })
             json.dump(a_json, a_json_file)
         z_json_fp = os.path.join(self.mock_fwtc_dir.name, 'z.json')
         with open(z_json_fp, 'w') as z_json_file:
@@ -216,6 +238,10 @@ class TestInvalidECCapability(unittest.TestCase):
                                               'ec_capability': {  # override a:
                                                   'arm': False,
                                                   'FAKE': True, # invalid
+                                              },
+                                              'cr50_capability': {
+                                                  'wp_on_in_g3': False,
+                                                  'rdd_off_in_g3': True,
                                               }
                                             })
             json.dump(z_json, z_json_file)
@@ -226,20 +252,26 @@ class TestInvalidECCapability(unittest.TestCase):
                 'platform': None,
                 'platform_DOC': 'foo',
                 'ec_capability': {
-                        'adc_ectemp': None,
-                        'arm': None,
-                        'battery': None,
-                        'cbi': None,
-                        'charging': None,
-                        'doubleboot': None,
-                        'keyboard': None,
-                        'lid': None,
-                        'peci': None,
-                        'smart_usb_charge': None,
-                        'thermal': None,
-                        'usb': None,
-                        'usbpd_uart': None,
-                        'x86': None
+                    'adc_ectemp': None,
+                    'arm': None,
+                    'battery': None,
+                    'cbi': None,
+                    'charging': None,
+                    'doubleboot': None,
+                    'keyboard': None,
+                    'lid': None,
+                    'peci': None,
+                    'smart_usb_charge': None,
+                    'thermal': None,
+                    'usb': None,
+                    'usbpd_uart': None,
+                    'x86': None
+                },
+                'cr50_capability': {
+                    'ec_hibernate_breaks_rdd': None,
+                    'wp_on_in_g3': None,
+                    'rdd_off_in_g3': None,
+                    'rdd_leakage': None
                 }
             })
             json.dump(defaults_json, defaults_json_file)
@@ -266,23 +298,31 @@ class TestMissingECCapability(unittest.TestCase):
         self.mock_fwtc_dir = tempfile.TemporaryDirectory()
         a_json_fp = os.path.join(self.mock_fwtc_dir.name, 'a.json')
         with open(a_json_fp, 'w') as a_json_file:
-            a_json = collections.OrderedDict({'platform': 'a',
-                                              'firmware_screen': 0.5,
-                                              'ec_capability': {
-                                                  'adc_ectemp': True,
-                                                  'arm': True,
-                                                  # Removed battery, cbi keys
-                                                  'charging': False,
-                                                  'doubleboot': False,
-                                                  'keyboard': False,
-                                                  'lid': False,
-                                                  'peci': False,
-                                                  'smart_usb_charge': False,
-                                                  'thermal': False,
-                                                  'usb': True,
-                                                  'usbpd_uart': False,
-                                                  'x86': True
-                                              }})
+            a_json = collections.OrderedDict({
+                'platform': 'a',
+                'firmware_screen': 0.5,
+                'ec_capability': {
+                    'adc_ectemp': True,
+                    'arm': True,
+                    # Removed battery, cbi keys
+                    'charging': False,
+                    'doubleboot': False,
+                    'keyboard': False,
+                    'lid': False,
+                    'peci': False,
+                    'smart_usb_charge': False,
+                    'thermal': False,
+                    'usb': True,
+                    'usbpd_uart': False,
+                    'x86': True
+                },
+                'cr50_capability': {
+                    'ec_hibernate_breaks_rdd': True,
+                    'wp_on_in_g3': True,
+                    'rdd_off_in_g3': False,
+                    'rdd_leakage': False
+                }
+            })
             json.dump(a_json, a_json_file)
         z_json_fp = os.path.join(self.mock_fwtc_dir.name, 'z.json')
         with open(z_json_fp, 'w') as z_json_file:
@@ -293,8 +333,11 @@ class TestMissingECCapability(unittest.TestCase):
                                                   'arm': False,
                                                   'keyboard': True,
                                                   'lid': True,
-                                              }
-                                            })
+                                              },
+                                              'cr50_capability': {
+                                                  'wp_on_in_g3': False,
+                                                  'rdd_off_in_g3': True,
+                                              }})
             json.dump(z_json, z_json_file)
         defaults_json_fp = os.path.join(self.mock_fwtc_dir.name,
                                         'DEFAULTS.json')
@@ -303,20 +346,185 @@ class TestMissingECCapability(unittest.TestCase):
                 'platform': None,
                 'platform_DOC': 'foo',
                 'ec_capability': {
-                        'adc_ectemp': None,
-                        'arm': None,
-                        'battery': None,
-                        'cbi': None,
-                        'charging': None,
-                        'doubleboot': None,
-                        'keyboard': None,
-                        'lid': None,
-                        'peci': None,
-                        'smart_usb_charge': None,
-                        'thermal': None,
-                        'usb': None,
-                        'usbpd_uart': None,
-                        'x86': None
+                    'adc_ectemp': None,
+                    'arm': None,
+                    'battery': None,
+                    'cbi': None,
+                    'charging': None,
+                    'doubleboot': None,
+                    'keyboard': None,
+                    'lid': None,
+                    'peci': None,
+                    'smart_usb_charge': None,
+                    'thermal': None,
+                    'usb': None,
+                    'usbpd_uart': None,
+                    'x86': None
+                },
+                'cr50_capability': {
+                    'ec_hibernate_breaks_rdd': None,
+                    'wp_on_in_g3': None,
+                    'rdd_off_in_g3': None,
+                    'rdd_leakage': None
+                }
+            })
+            json.dump(defaults_json, defaults_json_file)
+
+    def tearDown(self):
+        """Delete output file and mock fw-testing-configs directory."""
+        self.mock_fwtc_dir.cleanup()
+        if os.path.isfile(TestMain.output_fp):
+            os.remove(TestMain.output_fp)
+
+    def test_main(self):
+        with self.assertRaises(consolidate.FormatException):
+            # Should raise error since neither z nor a have all required keys
+            argv = ['-i', self.mock_fwtc_dir.name, '-o', TestMain.output_fp]
+            consolidate.main(argv)
+
+
+class TestInvalidCR50Capability(unittest.TestCase):
+    """Test case for invalid cr50_capability configurations"""
+    output_fp = '/tmp/CONSOLIDATED.json'
+
+    def setUp(self):
+        """Create and populate mock fw-testing-configs directory."""
+        self.mock_fwtc_dir = tempfile.TemporaryDirectory()
+        a_json_fp = os.path.join(self.mock_fwtc_dir.name, 'a.json')
+        with open(a_json_fp, 'w') as a_json_file:
+            a_json = collections.OrderedDict({
+                'platform': 'a',
+                'firmware_screen': 0.5,
+                'ec_capability': {
+                    'adc_ectemp': True,
+                    'arm': True,
+                    'battery': False,
+                    'cbi': False,
+                    'charging': False,
+                    'doubleboot': False,
+                    'keyboard': False,
+                    'lid': False,
+                    'peci': False,
+                    'smart_usb_charge': False,
+                    'thermal': False,
+                    'usb': True,
+                    'usbpd_uart': False,
+                    'x86': True
+                },
+                'cr50_capability': {
+                    'FAKE': True,          # invalid cr50_capability
+                    'wp_on_in_g3': True,
+                    'rdd_off_in_g3': False,
+                    'rdd_leakage': False
+                }
+            })
+            json.dump(a_json, a_json_file)
+        defaults_json_fp = os.path.join(self.mock_fwtc_dir.name,
+                                        'DEFAULTS.json')
+        with open(defaults_json_fp, 'w') as defaults_json_file:
+            defaults_json = collections.OrderedDict({
+                'platform': None,
+                'platform_DOC': 'foo',
+                'ec_capability': {
+                    'adc_ectemp': None,
+                    'arm': None,
+                    'battery': None,
+                    'cbi': None,
+                    'charging': None,
+                    'doubleboot': None,
+                    'keyboard': None,
+                    'lid': None,
+                    'peci': None,
+                    'smart_usb_charge': None,
+                    'thermal': None,
+                    'usb': None,
+                    'usbpd_uart': None,
+                    'x86': None
+                },
+                'cr50_capability': {
+                    'ec_hibernate_breaks_rdd': None,
+                    'wp_on_in_g3': None,
+                    'rdd_off_in_g3': None,
+                    'rdd_leakage': None
+                }
+            })
+            json.dump(defaults_json, defaults_json_file)
+
+    def tearDown(self):
+        """Delete output file and mock fw-testing-configs directory."""
+        self.mock_fwtc_dir.cleanup()
+        if os.path.isfile(TestMain.output_fp):
+            os.remove(TestMain.output_fp)
+
+    def test_main(self):
+        with self.assertRaises(consolidate.FormatException):
+            # Should raise error since child has invalid capability
+            argv = ['-i', self.mock_fwtc_dir.name, '-o', TestMain.output_fp]
+            consolidate.main(argv)
+
+
+class TestMissingCR50Capability(unittest.TestCase):
+    """Test case for missing cr_50 configurations"""
+    output_fp = '/tmp/CONSOLIDATED.json'
+
+    def setUp(self):
+        """Create and populate mock fw-testing-configs directory."""
+        self.mock_fwtc_dir = tempfile.TemporaryDirectory()
+        a_json_fp = os.path.join(self.mock_fwtc_dir.name, 'a.json')
+        with open(a_json_fp, 'w') as a_json_file:
+            a_json = collections.OrderedDict({
+                'platform': 'a',
+                'firmware_screen': 0.5,
+                'ec_capability': {
+                    'adc_ectemp': True,
+                    'arm': True,
+                    'battery': False,
+                    'cbi': False,
+                    'charging': False,
+                    'doubleboot': False,
+                    'keyboard': False,
+                    'lid': False,
+                    'peci': False,
+                    'smart_usb_charge': False,
+                    'thermal': False,
+                    'usb': True,
+                    'usbpd_uart': False,
+                    'x86': True
+                },
+                'cr50_capability': {
+                    'ec_hibernate_breaks_rdd': True,
+                    'rdd_off_in_g3': False,  # 'wp_on_in_g3' removed
+                    'rdd_leakage': False
+                }
+            })
+            json.dump(a_json, a_json_file)
+        defaults_json_fp = os.path.join(self.mock_fwtc_dir.name,
+                                        'DEFAULTS.json')
+        with open(defaults_json_fp, 'w') as defaults_json_file:
+            defaults_json = collections.OrderedDict({
+                'platform': None,
+                'platform_DOC': 'foo',
+                'ec_capability': {
+                    'adc_ectemp': None,
+                    'arm': None,
+                    'battery': None,
+                    'cbi': None,
+                    'charging': None,
+                    'doubleboot': None,
+                    'keyboard': None,
+                    'lid': None,
+                    'peci': None,
+                    'smart_usb_charge': None,
+                    'thermal': None,
+                    'usb': None,
+                    'usbpd_uart': None,
+                    'x86': None
+                },
+                'cr50_capability': {
+                    'ec_hibernate_breaks_rdd': None,
+                    'wp_on_in_g3': None,
+                    'rdd_off_in_g3': None,
+                    'rdd_leakage': None
                 }
             })
             json.dump(defaults_json, defaults_json_file)
@@ -343,24 +551,32 @@ class TestMain(unittest.TestCase):
         self.mock_fwtc_dir = tempfile.TemporaryDirectory()
         a_json_fp = os.path.join(self.mock_fwtc_dir.name, 'a.json')
         with open(a_json_fp, 'w') as a_json_file:
-            a_json = collections.OrderedDict({'platform': 'a',
-                                              'firmware_screen': 0.5,
-                                              'ec_capability': {
-                                                  'adc_ectemp': True,
-                                                  'arm': True,
-                                                  'battery': False,
-                                                  'cbi': False,
-                                                  'charging': False,
-                                                  'doubleboot': False,
-                                                  'keyboard': False,
-                                                  'lid': False,
-                                                  'peci': False,
-                                                  'smart_usb_charge': False,
-                                                  'thermal': False,
-                                                  'usb': True,
-                                                  'usbpd_uart': False,
-                                                  'x86': True
-                                              }})
+            a_json = collections.OrderedDict({
+                'platform': 'a',
+                'firmware_screen': 0.5,
+                'ec_capability': {
+                    'adc_ectemp': True,
+                    'arm': True,
+                    'battery': False,
+                    'cbi': False,
+                    'charging': False,
+                    'doubleboot': False,
+                    'keyboard': False,
+                    'lid': False,
+                    'peci': False,
+                    'smart_usb_charge': False,
+                    'thermal': False,
+                    'usb': True,
+                    'usbpd_uart': False,
+                    'x86': True
+                },
+                'cr50_capability': {
+                    'ec_hibernate_breaks_rdd': True,
+                    'wp_on_in_g3': True,
+                    'rdd_off_in_g3': False,
+                    'rdd_leakage': False
+                }
+            })
             json.dump(a_json, a_json_file)
         z_json_fp = os.path.join(self.mock_fwtc_dir.name, 'z.json')
         with open(z_json_fp, 'w') as z_json_file:
@@ -371,6 +587,10 @@ class TestMain(unittest.TestCase):
                                                   'arm': False,
                                                   'keyboard': True,
                                                   'lid': True,
+                                              },
+                                              'cr50_capability': {
+                                                  'wp_on_in_g3': False,
+                                                  'rdd_off_in_g3': True,
                                               }
                                             })
             json.dump(z_json, z_json_file)
@@ -401,6 +621,12 @@ class TestMain(unittest.TestCase):
                         'usb': None,
                         'usbpd_uart': None,
                         'x86': None
+                },
+                'cr50_capability': {
+                    'ec_hibernate_breaks_rdd': None,
+                    'wp_on_in_g3': None,
+                    'rdd_off_in_g3': None,
+                    'rdd_leakage': None
                 }
             })
             json.dump(defaults_json, defaults_json_file)
@@ -417,7 +643,8 @@ class TestMain(unittest.TestCase):
                            '\t"DEFAULTS": {\n',
                            '\t\t"platform": null,\n',
                            '\t\t"platform_DOC": "foo",\n',
-                           '\t\t"ec_capability": []\n',
+                           '\t\t"ec_capability": [],\n',
+                           '\t\t"cr50_capability": []\n',
                            '\t},\n',
                            '\t"a": {\n',
                            '\t\t"platform": "a",\n',
@@ -427,6 +654,10 @@ class TestMain(unittest.TestCase):
                            '\t\t\t"arm",\n',
                            '\t\t\t"usb",\n',
                            '\t\t\t"x86"\n',
+                           '\t\t],\n',
+                           '\t\t"cr50_capability": [\n',
+                           '\t\t\t"ec_hibernate_breaks_rdd",\n',
+                           '\t\t\t"wp_on_in_g3"\n',
                            '\t\t]\n',
                            '\t},\n',
                            '\t"b": {\n',
@@ -438,6 +669,10 @@ class TestMain(unittest.TestCase):
                            '\t\t\t"lid",\n', # specific for z
                            '\t\t\t"usb",\n', # inherited from a
                            '\t\t\t"x86"\n', # inherited from a
+                           '\t\t],\n',
+                           '\t\t"cr50_capability": [\n',
+                           '\t\t\t"ec_hibernate_breaks_rdd",\n',
+                           '\t\t\t"rdd_off_in_g3"\n',
                            '\t\t]\n',
                            '\t},\n',
                            '\t"z": {\n',
@@ -450,6 +685,10 @@ class TestMain(unittest.TestCase):
                            '\t\t\t"lid",\n', # specific for z
                            '\t\t\t"usb",\n', # inherited from a
                            '\t\t\t"x86"\n', # inherited from a
+                           '\t\t],\n',
+                           '\t\t"cr50_capability": [\n',
+                           '\t\t\t"ec_hibernate_breaks_rdd",\n',
+                           '\t\t\t"rdd_off_in_g3"\n',
                            '\t\t]\n',
                            '\t}\n',
                            '}']

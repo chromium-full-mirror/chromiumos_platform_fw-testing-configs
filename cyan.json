@@ -24,5 +24,11 @@
     "usb_plug": 28,
     "usb_a_port_count": -1,
     "spi_voltage": "pp1800",
-    "smm_store": false
+    "smm_store": false,
+    "cr50_capability": {
+        "ec_hibernate_breaks_rdd": false,
+        "wp_on_in_g3": false,
+        "rdd_off_in_g3": false,
+        "rdd_leakage": false
+    }
 }

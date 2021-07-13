@@ -40,5 +40,11 @@
     ],
     "ap_flash_ccd_post_commands": [
         "power_state:reset"
-    ]
+    ],
+    "cr50_capability": {
+        "ec_hibernate_breaks_rdd": false,
+        "wp_on_in_g3": false,
+        "rdd_off_in_g3": false,
+        "rdd_leakage": false
+    }
 }
