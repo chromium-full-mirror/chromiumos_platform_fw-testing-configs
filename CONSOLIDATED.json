@@ -1031,7 +1031,8 @@
 		"charger_profile_override": true,
 		"max_charging_power": 45.0,
 		"usb_a_port_count": -1,
-		"cr50_capability": []
+		"cr50_capability": [],
+		"ap_flash_ccd_programmer": "raiden_debug_spi:target=AP,serial=%s"
 	},
 	"kunimitsu": {
 		"platform": "kunimitsu",
