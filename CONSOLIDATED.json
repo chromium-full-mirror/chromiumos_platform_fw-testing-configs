@@ -1720,7 +1720,9 @@
 				"max_charging_power": 45.0
 			}
 		},
-		"cr50_capability": []
+		"cr50_capability": [
+			"rdd_off_in_g3"
+		]
 	},
 	"whirlwind": {
 		"platform": "whirlwind",
