@@ -1791,6 +1791,16 @@
 		"ap_flash_ccd_post_commands": [],
 		"cr50_capability": [
 			"rdd_off_in_g3"
-		]
+		],
+		"models": {
+			"woomax": {
+				"custom_usb_enable_pins": [
+					{
+						"name": "EN_USB_A0_5V",
+						"ioex": true
+					}
+				]
+			}
+		}
 	}
 }

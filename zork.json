@@ -42,5 +42,15 @@
         "wp_on_in_g3": false,
         "rdd_off_in_g3": true,
         "rdd_leakage": false
+    },
+    "models": {
+        "woomax": {
+            "custom_usb_enable_pins": [
+                {
+                    "name": "EN_USB_A0_5V",
+                    "ioex": true
+                }
+            ]
+        }
     }
 }
