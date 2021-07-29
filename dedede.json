@@ -113,6 +113,14 @@
                 }
             ]
         },
+        "storo360": {
+            "custom_usb_enable_pins": [
+                {
+                    "name": "EN_USB_A0_VBUS",
+                    "ioex": false
+                }
+            ]
+        },
         "galith": {
             "custom_usb_enable_pins": [
                 {
