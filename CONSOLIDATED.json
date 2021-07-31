@@ -92,8 +92,6 @@
 		"usb_image_boot_timeout.DOC": "Timeout of confirming DUT doesn't boot on USB image in Recovery screen",
 		"smm_store": true,
 		"smm_store.DOC": "Check SMMSTORE exists in FMap for x86 boards",
-		"intel_cse_lite": false,
-		"intel_cse_lite.DOC": "Check if platform uses Intel CSE Lite firmware",
 		"lid_wake_from_power_off": true,
 		"lid_wake_from_power_off.DOC": "True if the lid can wake the system from a powered off state",
 		"ap_access_ec_flash": true,
@@ -259,7 +257,6 @@
 	"brya": {
 		"platform": "brya",
 		"mode_switcher_type": "menu_switcher",
-		"intel_cse_lite": true,
 		"chrome_ec": true,
 		"ec_capability": [
 			"battery",
@@ -389,7 +386,6 @@
 	"dedede": {
 		"platform": "dedede",
 		"mode_switcher_type": "menu_switcher",
-		"intel_cse_lite": true,
 		"chrome_ec": true,
 		"ec_capability": [
 			"battery",
@@ -973,7 +969,6 @@
 	"keeby": {
 		"platform": "keeby",
 		"mode_switcher_type": "menu_switcher",
-		"intel_cse_lite": true,
 		"chrome_ec": true,
 		"ec_capability": [
 			"battery",
@@ -1326,7 +1321,6 @@
 	"puff": {
 		"platform": "puff",
 		"mode_switcher_type": "menu_switcher",
-		"intel_cse_lite": true,
 		"firmware_screen": 15,
 		"has_lid": false,
 		"has_keyboard": false,
@@ -1722,7 +1716,6 @@
 	"volteer": {
 		"platform": "volteer",
 		"mode_switcher_type": "menu_switcher",
-		"intel_cse_lite": true,
 		"chrome_ec": true,
 		"ec_capability": [
 			"battery",
