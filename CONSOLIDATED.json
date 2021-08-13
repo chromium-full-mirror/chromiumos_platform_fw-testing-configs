@@ -337,6 +337,23 @@
 		"ec_capability": [],
 		"cr50_capability": []
 	},
+	"cherry": {
+		"platform": "cherry",
+		"mode_switcher_type": "menu_switcher",
+		"chrome_ec": true,
+		"ec_capability": [
+			"arm",
+			"battery",
+			"charging",
+			"keyboard",
+			"lid",
+			"usb"
+		],
+		"firmware_screen": 20,
+		"ec_reboot_to_g3_delay": 10,
+		"usbc_voltage_on_shutdown_and_full_batt": 9,
+		"cr50_capability": []
+	},
 	"cheza": {
 		"platform": "cheza",
 		"mode_switcher_type": "tablet_detachable_switcher",
