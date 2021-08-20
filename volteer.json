@@ -1,6 +1,7 @@
 {
     "platform": "volteer",
     "mode_switcher_type": "menu_switcher",
+    "firmware_screen": 5,
     "chrome_ec": true,
     "ec_capability": {
         "adc_ectemp": false,
@@ -18,7 +19,6 @@
         "usbpd_uart": false,
         "x86": true
     },
-    "keypress_delay": 20,
     "spi_voltage": "pp3300",
     "custom_usb_enable_pins": [
         {
