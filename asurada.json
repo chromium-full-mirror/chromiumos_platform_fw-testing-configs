@@ -30,6 +30,15 @@
                     "ioex": false
                 }
             ]
+        },
+        "spherion": {
+            "max_charging_power": 65.0,
+            "custom_usb_enable_pins": [
+                {
+                    "name": "EN_PP5000_USB_A0_VBUS",
+                    "ioex": false
+                }
+            ]
         }
     },
     "cr50_capability": {
