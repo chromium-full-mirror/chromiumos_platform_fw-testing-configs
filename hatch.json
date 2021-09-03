@@ -47,6 +47,9 @@
         "kled": {
             "usbc_input_voltage_limit": 15
         },
+        "kohaku": {
+            "usb_a_port_count": 0
+        },
         "mushu": {
             "max_charging_power": 100.0
         }
