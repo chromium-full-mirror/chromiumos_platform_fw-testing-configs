@@ -1,7 +1,7 @@
 {
     "platform": "volteer",
     "mode_switcher_type": "menu_switcher",
-    "firmware_screen": 5,
+    "firmware_screen": 11,
     "chrome_ec": true,
     "ec_capability": {
         "adc_ectemp": false,
