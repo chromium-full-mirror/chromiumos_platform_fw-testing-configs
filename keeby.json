@@ -35,6 +35,16 @@
             "ioex": false
         }
     ],
+    "models": {
+    	"cappy2": {
+		"custom_usb_enable_pins": [
+			{
+				"name": "EN_USB_A0_VBUS",
+				"ioex": false
+			}
+		]
+	}
+    },
     "cr50_capability": {
         "ec_hibernate_breaks_rdd": false,
         "wp_on_in_g3": false,
