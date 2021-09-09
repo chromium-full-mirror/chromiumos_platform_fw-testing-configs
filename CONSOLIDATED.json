@@ -959,6 +959,7 @@
 			"keyboard",
 			"lid"
 		],
+		"is_detachable": false,
 		"ec_boot_to_console": 2,
 		"ec_reboot_to_g3_delay": 10,
 		"usbc_input_voltage_limit": 20,
