@@ -1773,6 +1773,9 @@
 		"ap_flash_ccd_pre_commands": [],
 		"ap_flash_ccd_post_commands": [],
 		"models": {
+			"collis": {
+				"max_charging_power": 45.0
+			},
 			"copano": {
 				"max_charging_power": 45.0
 			},
