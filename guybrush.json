@@ -22,6 +22,7 @@
     "smm_store": false,
     "firmware_screen": 15,
     "delay_powerinfo_stable": 5,
+    "hold_pwr_button_poweroff": 4,
     "custom_usb_enable_pins": [
         {
             "name": "EN_PP5000_USB_A0_VBUS",
