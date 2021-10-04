@@ -160,6 +160,9 @@
     "lid_wake_from_power_off": true,
             "lid_wake_from_power_off.DOC": "True if the lid can wake the system from a powered off state",
 
+    "ac_on_can_wake_ap_from_ulp": false,
+    "ac_on_can_wake_ap_from_ulp.DOC": "True if the AC on event can wake the AP from ULP state",
+
     "ap_access_ec_flash": true,
             "ap_access_ec_flash.DOC": "True if AP can access the EC flash while Chrome OS is running",
 
