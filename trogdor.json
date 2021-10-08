@@ -25,6 +25,7 @@
         }
     ],
     "charger_profile_override": true,
+    "ac_on_can_wake_ap_from_ulp": true,
     "models": {
         "lazor": {
             "usbc_input_voltage_limit": 15
