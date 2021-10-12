@@ -46,6 +46,8 @@
 		"has_eventlog.DOC": "Whether the platform has eventlog support including proper timestamps. (Only for old boards! Never disable this 'temporarily, until we get around to implementing it'!)",
 		"firmware_screen": 10,
 		"firmware_screen.DOC": "Delay between power-on and firmware screen",
+		"serial_firmware_boot_delay": 10,
+		"serial_firmware_boot_delay.DOC": "Extra time to add to `firmware_screen` delay if using serial port is enabled in AP firmware.",
 		"delay_powerinfo_stable": 0,
 		"delay_powerinfo_stable.DOC": "Delay between AP power-on and when powerinfo is stable. Some CPUs have an internal reset that transitions through different power states.",
 		"delay_reboot_to_ping": 30,
