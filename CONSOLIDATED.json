@@ -309,7 +309,8 @@
 		"ap_flash_ccd_post_commands": [
 			"power_state:reset"
 		],
-		"cr50_capability": []
+		"cr50_capability": [],
+		"ac_on_can_wake_ap_from_ulp": true
 	},
 	"buddy": {
 		"platform": "buddy",
