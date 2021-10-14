@@ -52,5 +52,6 @@
                 }
             ]
         }
-    }
+    },
+    "minios_enabled": false
 }

@@ -57,5 +57,6 @@
         }
     },
     "max_charging_power": 45.0,
-    "minidiag_enabled": false
+    "minidiag_enabled": false,
+    "minios_enabled": false
 }

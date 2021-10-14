@@ -36,5 +36,6 @@
         "rdd_leakage": false
     },
     "ap_flash_ccd_programmer": "raiden_debug_spi:target=AP,serial=%s",
-    "minidiag_enabled": false
+    "minidiag_enabled": false,
+    "minios_enabled": false
 }

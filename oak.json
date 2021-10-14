@@ -26,5 +26,6 @@
         "rdd_off_in_g3": false,
         "rdd_leakage": false
     },
-    "minidiag_enabled": false
+    "minidiag_enabled": false,
+    "minios_enabled": false
 }
