@@ -1056,6 +1056,22 @@
 			}
 		],
 		"models": {
+			"haboki": {
+				"custom_usb_enable_pins": [
+				{
+					"name": "EN_USB_A_5V",
+					"ioex": false
+				}
+			]
+		},
+			"habokay": {
+				"custom_usb_enable_pins": [
+				{
+					"name": "EN_USB_A_5V",
+					"ioex": false
+				}
+			]
+		},
 			"cappy2": {
 				"custom_usb_enable_pins": [
 					{
