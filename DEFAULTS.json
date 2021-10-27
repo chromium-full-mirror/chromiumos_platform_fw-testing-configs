@@ -124,6 +124,9 @@
     "ec_boot_to_wp_en": 0,
     "ec_boot_to_wp_en.DOC": "Delay for AP initiating an EC reboot in order to enable EC WP",
 
+    "minios_screen": 20,
+    "minios_screen.DOC": "Delay between selecting booting minios and minios screen",
+
     "hibernate": true,
     "hibernate.DOC": "True if the device supports hibernation",
 
