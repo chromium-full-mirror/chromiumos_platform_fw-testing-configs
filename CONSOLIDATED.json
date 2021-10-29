@@ -611,6 +611,14 @@
 			},
 			"madoo": {
 				"usb_a_port_count": -1
+			},
+			"bugzzy": {
+				"custom_usb_enable_pins": [
+					{
+						"name": "EN_USB_A0_VBUS",
+						"ioex": false
+					}
+				]
 			}
 		},
 		"cr50_capability": [],
