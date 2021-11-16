@@ -1900,6 +1900,9 @@
 			},
 			"volta": {
 				"max_charging_power": 45.0
+			},
+			"chronicler": {
+				"firmware_screen": 16
 			}
 		},
 		"cr50_capability": [
