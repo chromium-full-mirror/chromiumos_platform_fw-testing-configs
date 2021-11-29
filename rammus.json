@@ -25,11 +25,6 @@
     "smm_store": false,
     "max_charging_power": 45.0,
     "usb_a_port_count": -1,
-    "ap_flash_ccd_programmer": "raiden_debug_spi:target=AP,serial=%s",
-    "ap_flash_ccd_pre_commands": [
-    ],
-    "ap_flash_ccd_post_commands": [
-    ],
     "cr50_capability": {
         "ec_hibernate_breaks_rdd": false,
         "wp_on_in_g3": false,

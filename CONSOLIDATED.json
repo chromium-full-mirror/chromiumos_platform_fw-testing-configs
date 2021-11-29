@@ -128,12 +128,6 @@
 		"max_charging_power.DOC": "Max charging power for DUT in watts",
 		"usbc_voltage_on_shutdown_and_full_batt": 20,
 		"usbc_voltage_on_shutdown_and_full_batt.DOC": "Input voltage limit applied by DUT when it is in G3/S5 and battery is full. 20 volts means there is no limit",
-		"ap_flash_ccd_programmer": null,
-		"ap_flash_ccd_programmer.DOC": "The programmer to be passed to flashrom -p. Use a %s to indicate the location for the CCD serial number",
-		"ap_flash_ccd_pre_commands": [],
-		"ap_flash_ccd_pre_commands.DOC": "A list of dut-control commands to execute before flashing AP firmware over ccd",
-		"ap_flash_ccd_post_commands": [],
-		"ap_flash_ccd_post_commands.DOC": "A list of dut-control commands to execute after flashing AP firmware over ccd",
 		"minidiag_enabled": true,
 		"minidiag_enabled.DOC": "Whether minidiag is enabled",
 		"minios_enabled": true,
@@ -338,14 +332,6 @@
 		"hold_pwr_button_nopowerd_shutdown": 14,
 		"hold_pwr_button_poweron": 3,
 		"max_charging_power": 60.0,
-		"ap_flash_ccd_programmer": "raiden_debug_spi:target=AP,custom_rst=True,serial=%s",
-		"ap_flash_ccd_pre_commands": [
-			"ec_uart_cmd:apshutdown",
-			"sleep:5"
-		],
-		"ap_flash_ccd_post_commands": [
-			"power_state:reset"
-		],
 		"cr50_capability": [],
 		"ac_on_can_wake_ap_from_ulp": true
 	},
@@ -487,18 +473,6 @@
 		"hold_pwr_button_nopowerd_shutdown": 14,
 		"usbc_input_voltage_limit": 15,
 		"max_charging_power": 45.0,
-		"ap_flash_ccd_programmer": "raiden_debug_spi:target=AP,custom_rst=True,serial=%s",
-		"ap_flash_ccd_pre_commands": [
-			"ec_uart_cmd:apshutdown",
-			"sleep:5",
-			"ec_uart_cmd:gpioset en_pp3300_a 1",
-			"sleep:0.2",
-			"ec_uart_cmd:gpioset ec_ap_rsmrst_l 0",
-			"ec_uart_cmd:gpioset ec_ap_rsmrst_l 0"
-		],
-		"ap_flash_ccd_post_commands": [
-			"power_state:reset"
-		],
 		"custom_usb_enable_pins": [
 			{
 				"name": "EN_USB_A0_VBUS",
@@ -769,7 +743,6 @@
 		"dut_can_source_power_in_suspend": false,
 		"max_charging_power": 45.0,
 		"usb_a_port_count": -1,
-		"ap_flash_ccd_programmer": "raiden_debug_spi:target=AP,serial=%s",
 		"minidiag_enabled": false,
 		"minios_enabled": false
 	},
@@ -899,9 +872,6 @@
 		"smm_store": false,
 		"gsc_can_wake_ec_with_reset": false,
 		"max_charging_power": 45.0,
-		"ap_flash_ccd_programmer": "raiden_debug_spi:target=AP,serial=%s",
-		"ap_flash_ccd_pre_commands": [],
-		"ap_flash_ccd_post_commands": [],
 		"usb_a_port_count": -1,
 		"models": {
 			"liara": {
@@ -948,14 +918,6 @@
 			}
 		],
 		"max_charging_power": 100.0,
-		"ap_flash_ccd_programmer": "raiden_debug_spi:target=AP,custom_rst=True,serial=%s",
-		"ap_flash_ccd_pre_commands": [
-			"ec_uart_cmd:apshutdown",
-			"sleep:5"
-		],
-		"ap_flash_ccd_post_commands": [
-			"power_state:reset"
-		],
 		"cr50_capability": []
 	},
 	"hana": {
@@ -991,9 +953,6 @@
 		"cr50_capability": [
 			"ec_hibernate_breaks_rdd"
 		],
-		"ap_flash_ccd_programmer": "raiden_debug_spi:target=AP,serial=%s",
-		"ap_flash_ccd_pre_commands": [],
-		"ap_flash_ccd_post_commands": [],
 		"models": {
 			"dratini": {
 				"usbc_voltage_on_shutdown_and_full_batt": 5
@@ -1214,7 +1173,6 @@
 		"max_charging_power": 45.0,
 		"usb_a_port_count": -1,
 		"cr50_capability": [],
-		"ap_flash_ccd_programmer": "raiden_debug_spi:target=AP,serial=%s",
 		"minidiag_enabled": false,
 		"minios_enabled": false
 	},
@@ -1415,9 +1373,6 @@
 			}
 		],
 		"smm_store": false,
-		"ap_flash_ccd_programmer": "raiden_debug_spi:target=AP,serial=%s",
-		"ap_flash_ccd_pre_commands": [],
-		"ap_flash_ccd_post_commands": [],
 		"models": {
 			"ampton": {
 				"usbc_voltage_on_shutdown_and_full_batt": 5
@@ -1515,9 +1470,6 @@
 		],
 		"smm_store": false,
 		"max_charging_power": 100.0,
-		"ap_flash_ccd_programmer": "raiden_debug_spi:target=AP,serial=%s",
-		"ap_flash_ccd_pre_commands": [],
-		"ap_flash_ccd_post_commands": [],
 		"cr50_capability": [],
 		"minidiag_enabled": false,
 		"minios_enabled": false
@@ -1570,9 +1522,6 @@
 		"smm_store": false,
 		"max_charging_power": 45.0,
 		"usb_a_port_count": -1,
-		"ap_flash_ccd_programmer": "raiden_debug_spi:target=AP,serial=%s",
-		"ap_flash_ccd_pre_commands": [],
-		"ap_flash_ccd_post_commands": [],
 		"cr50_capability": [],
 		"minidiag_enabled": false,
 		"minios_enabled": false
@@ -1919,9 +1868,6 @@
 		"dark_resume_capable": true,
 		"smm_store": false,
 		"hold_pwr_button_nopowerd_shutdown": 14,
-		"ap_flash_ccd_programmer": "raiden_debug_spi:target=AP,serial=%s",
-		"ap_flash_ccd_pre_commands": [],
-		"ap_flash_ccd_post_commands": [],
 		"models": {
 			"collis": {
 				"max_charging_power": 45.0
@@ -2001,9 +1947,6 @@
 			}
 		],
 		"max_charging_power": 65.0,
-		"ap_flash_ccd_programmer": "raiden_debug_spi:target=AP,serial=%s",
-		"ap_flash_ccd_pre_commands": [],
-		"ap_flash_ccd_post_commands": [],
 		"cr50_capability": [
 			"rdd_off_in_g3"
 		],

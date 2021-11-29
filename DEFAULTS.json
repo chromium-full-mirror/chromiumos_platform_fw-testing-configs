@@ -211,15 +211,6 @@
     "usbc_voltage_on_shutdown_and_full_batt": 20,
     "usbc_voltage_on_shutdown_and_full_batt.DOC": "Input voltage limit applied by DUT when it is in G3/S5 and battery is full. 20 volts means there is no limit",
 
-    "ap_flash_ccd_programmer": null,
-    "ap_flash_ccd_programmer.DOC": "The programmer to be passed to flashrom -p. Use a %s to indicate the location for the CCD serial number",
-
-    "ap_flash_ccd_pre_commands": [],
-    "ap_flash_ccd_pre_commands.DOC": "A list of dut-control commands to execute before flashing AP firmware over ccd",
-
-    "ap_flash_ccd_post_commands": [],
-    "ap_flash_ccd_post_commands.DOC": "A list of dut-control commands to execute after flashing AP firmware over ccd",
-
     "minidiag_enabled": true,
     "minidiag_enabled.DOC": "Whether minidiag is enabled",
 
