@@ -1,14 +1,4 @@
 {
 	"platform": "yuna",
-	"parent": "auron",
-	"ec_capability": {
-		"adc_ectemp": false,
-		"battery": false,
-		"charging": false,
-		"keyboard": false,
-		"lid": false,
-		"peci": false,
-		"usb": false,
-		"x86": false
-	}
+	"parent": "auron"
 }

@@ -1,11 +1,4 @@
 {
 	"platform": "kevin64",
-	"parent": "kevin",
-	"ec_capability": {
-		"arm": false,
-		"battery": false,
-		"charging": false,
-		"keyboard": false,
-		"lid": false
-	}
+	"parent": "kevin"
 }

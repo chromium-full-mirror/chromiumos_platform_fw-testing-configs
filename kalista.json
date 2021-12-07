@@ -1,7 +1,4 @@
 {
 	"platform": "kalista",
-	"parent": "fizz",
-	"ec_capability": {
-		"x86": false
-	}
+	"parent": "fizz"
 }

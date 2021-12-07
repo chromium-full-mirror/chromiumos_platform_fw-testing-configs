@@ -1,14 +1,4 @@
 {
 	"platform": "sentry",
-	"parent": "kunimitsu",
-	"ec_capability": {
-		"battery": false,
-		"charging": false,
-		"doubleboot": false,
-		"keyboard": false,
-		"lid": false,
-		"usb": false,
-		"usbpd_uart": false,
-		"x86": false
-	}
+	"parent": "kunimitsu"
 }

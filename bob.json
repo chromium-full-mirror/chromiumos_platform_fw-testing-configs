@@ -1,11 +1,4 @@
 {
 	"platform": "bob",
-	"parent": "gru",
-	"ec_capability": {
-		"arm": false,
-		"battery": false,
-		"charging": false,
-		"keyboard": false,
-		"lid": false
-	}
+	"parent": "gru"
 }
