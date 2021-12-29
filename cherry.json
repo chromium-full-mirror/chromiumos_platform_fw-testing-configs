@@ -6,7 +6,7 @@
         "adc_ectemp": false,
         "arm": true,
         "battery": true,
-        "cbi": false,
+        "cbi": true,
         "charging": true,
         "doubleboot": false,
         "keyboard": true,

@@ -468,6 +468,7 @@
 		"ec_capability": [
 			"arm",
 			"battery",
+			"cbi",
 			"charging",
 			"keyboard",
 			"lid",
