@@ -1359,6 +1359,7 @@
 		],
 		"is_detachable": true,
 		"hold_pwr_button_poweron": 1.2,
+		"hold_pwr_button_poweroff": 6,
 		"hibernate": false,
 		"ec_reboot_to_g3_delay": 10,
 		"ec_boot_to_console": 2,
