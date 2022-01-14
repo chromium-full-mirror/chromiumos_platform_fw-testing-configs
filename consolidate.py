@@ -123,32 +123,30 @@ def reformat_capability_map(consolidated, cap_field):
     # To keep track of all capabilities expected to be defined
     full_cap_set = set()
     for platform, conf in consolidated.items():
-        if cap_field not in conf and 'parent' not in conf:
-            continue
-        elif platform == 'DEFAULTS':
+        if platform == 'DEFAULTS':
             # Collect set of all possible settings
             full_cap_set = set(conf.get(cap_field, dict()).keys())
-            conf[cap_field] = []
-            continue
 
         # collect explicitly defined capabilities for each platform
         caps = conf.get(cap_field, dict())
         incl = set(k for k, v in caps.items() if v)
-        excl = set(k for k, v in caps.items() if not v)
+        excl = set(k for k, v in caps.items() if not v and v is not None)
         platform_caps[platform] = incl, excl
 
-    # For platforms with explicitly defined capabilies, recurse through parents
+    # For platforms with explicitly defined capabilities, recurse through parents
     # inheritance from parents is overridden by children
     # Need separate loop to ensure incl, excl calculated for parent platforms
     for platform, (incl, excl) in platform_caps.items():
         curr_plat = platform
         seen = {platform}
-        while 'parent' in consolidated.get(curr_plat, dict()):
-            curr_plat = consolidated[curr_plat].get('parent')
+        while True:
+            curr_plat = consolidated[curr_plat].get('parent') or 'DEFAULTS'
 
             # Check that there is no cycle of inheritance
             if curr_plat not in seen:
                 seen.add(curr_plat)
+            elif curr_plat == 'DEFAULTS':
+                break
             else:
                 raise FormatException(
                     'Circular parent from platform json',
@@ -159,16 +157,17 @@ def reformat_capability_map(consolidated, cap_field):
             incl = incl.union(par_incl.difference(excl))
             excl = excl.union(par_excl.difference(incl))
 
-        # Raise error if capability undefined after inheriting from parents
-        if incl.union(excl) != full_cap_set:
-            raise FormatException(
-                'Not all capabilities accounted for',
-                platform=platform, field=cap_field)
-        # Raise error if capability is somehow both defined true and false
-        if incl.intersection(excl):
-            raise FormatException(
-                'Include/exclude not mutually exclusive',
-                platform=platform, field=cap_field)
+        if platform != 'DEFAULTS':
+            # Raise error if capability undefined after inheriting from parents
+            if incl.union(excl) != full_cap_set:
+                raise FormatException(
+                    'Not all capabilities accounted for',
+                    platform=platform, field=cap_field)
+            # Raise error if capability is somehow both defined true and false
+            if incl.intersection(excl):
+                raise FormatException(
+                    'Include/exclude not mutually exclusive',
+                    platform=platform, field=cap_field)
 
         consolidated[platform][cap_field] = sorted(incl)
 
