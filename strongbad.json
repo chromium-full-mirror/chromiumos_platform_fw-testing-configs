@@ -26,11 +26,5 @@
             "usbc_input_voltage_limit": 15
         }
     },
-    "cr50_capability": {
-        "ec_hibernate_breaks_rdd": false,
-        "wp_on_in_g3": false,
-        "rdd_off_in_g3": false,
-        "rdd_leakage": false
-    },
     "minios_enabled": false
 }

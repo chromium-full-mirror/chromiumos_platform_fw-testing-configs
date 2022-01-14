@@ -38,12 +38,6 @@
     "has_diagnostics_image": true,
     "rma_entered_automatically": false,
     "usb_a_port_count": -1,
-    "cr50_capability": {
-        "ec_hibernate_breaks_rdd": false,
-        "wp_on_in_g3": false,
-        "rdd_off_in_g3": false,
-        "rdd_leakage": false
-    },
     "minidiag_enabled": false,
     "minios_enabled": false
 }

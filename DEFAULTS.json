@@ -60,10 +60,10 @@
     "ec_capability.DOC": "Map of capabilities of the Chrome EC",
 
     "cr50_capability": {
-        "ec_hibernate_breaks_rdd": null,
-        "wp_on_in_g3": null,
-        "rdd_off_in_g3": null,
-        "rdd_leakage": null
+        "ec_hibernate_breaks_rdd": false,
+        "wp_on_in_g3": false,
+        "rdd_off_in_g3": false,
+        "rdd_leakage": false
     },
     "cr50_capability.DOC": "List of capabilities of the CR50",
 

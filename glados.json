@@ -25,12 +25,6 @@
     "servo_prog_state_delay": 10,
     "smm_store": false,
     "usb_a_port_count": -1,
-    "cr50_capability": {
-        "ec_hibernate_breaks_rdd": false,
-        "wp_on_in_g3": false,
-        "rdd_off_in_g3": false,
-        "rdd_leakage": false
-    },
     "minidiag_enabled": false,
     "minios_enabled": false
 }
