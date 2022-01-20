@@ -2228,6 +2228,9 @@
 			},
 			"chronicler": {
 				"firmware_screen": 16
+			},
+			"eldrid": {
+				"firmware_screen": 20
 			}
 		},
 		"cr50_capability": [
