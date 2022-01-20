@@ -2065,7 +2065,8 @@
 				"usbc_input_voltage_limit": 15
 			}
 		},
-		"cr50_capability": []
+		"cr50_capability": [],
+		"minios_enabled": false
 	},
 	"sumo": {
 		"platform": "sumo",
