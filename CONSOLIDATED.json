@@ -1064,7 +1064,9 @@
 			}
 		],
 		"max_charging_power": 100.0,
-		"cr50_capability": []
+		"cr50_capability": [
+			"deep_sleep_in_s0i3"
+		]
 	},
 	"hana": {
 		"platform": "hana",
