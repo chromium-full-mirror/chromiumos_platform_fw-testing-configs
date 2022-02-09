@@ -2229,7 +2229,8 @@
 		"cr50_capability": [
 			"rdd_off_in_g3"
 		],
-		"minios_enabled": false
+		"minios_enabled": false,
+		"ac_on_can_wake_ap_from_ulp": true
 	},
 	"whirlwind": {
 		"platform": "whirlwind",

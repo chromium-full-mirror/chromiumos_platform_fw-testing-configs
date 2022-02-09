@@ -56,5 +56,6 @@
         "rdd_leakage": false,
         "deep_sleep_in_s0i3": false
     },
-    "minios_enabled": false
+    "minios_enabled": false,
+    "ac_on_can_wake_ap_from_ulp": true
 }
