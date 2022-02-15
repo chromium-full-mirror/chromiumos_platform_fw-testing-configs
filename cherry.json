@@ -19,7 +19,6 @@
         "x86": false
     },
     "firmware_screen": 20,
-    "minios_enabled": false,
     "ec_reboot_to_g3_delay": 10,
     "usbc_voltage_on_shutdown_and_full_batt": 9,
     "custom_usb_enable_pins": [
@@ -27,5 +26,10 @@
             "name": "EN_PP5000_USB_A0_VBUS_X",
             "ioex": false
         }
-    ]
+    ],
+    "models": {
+        "tomato": {
+            "minios_enabled": false
+        }
+    }
 }
