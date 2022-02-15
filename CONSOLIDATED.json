@@ -2213,6 +2213,9 @@
 			"copano": {
 				"max_charging_power": 45.0
 			},
+			"elemi": {
+				"hold_pwr_button_poweroff": 7
+			},
 			"halvor": {
 				"max_charging_power": 65.0
 			},
@@ -2295,6 +2298,7 @@
 			"usb",
 			"x86"
 		],
+		"hold_pwr_button_poweroff": 7,
 		"servo_prog_state_delay": 1.0,
 		"smm_store": false,
 		"firmware_screen": 15,

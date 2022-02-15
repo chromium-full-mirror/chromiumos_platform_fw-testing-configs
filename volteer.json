@@ -36,6 +36,9 @@
         "copano": {
             "max_charging_power": 45.0
         },
+	"elemi": {
+	    "hold_pwr_button_poweroff": 7
+	},
         "halvor": {
             "max_charging_power": 65.0
         },

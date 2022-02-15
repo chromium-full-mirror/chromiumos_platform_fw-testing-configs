@@ -18,6 +18,7 @@
         "usbpd_uart": false,
         "x86": true
     },
+    "hold_pwr_button_poweroff": 7,
     "servo_prog_state_delay": 1.0,
     "smm_store": false,
     "firmware_screen": 15,
