@@ -646,6 +646,22 @@
 					}
 				]
 			},
+			"galnat": {
+				"custom_usb_enable_pins": [
+					{
+						"name": "EN_USB_A0_VBUS",
+						"ioex": false
+					}
+				]
+			},
+			"galnat360": {
+				"custom_usb_enable_pins": [
+					{
+						"name": "EN_USB_A0_VBUS",
+						"ioex": false
+					}
+				]
+			},
 			"galtic": {
 				"custom_usb_enable_pins": [
 					{
