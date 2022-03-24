@@ -196,6 +196,14 @@
                 }
             ]
         },
+        "pasara": {
+            "custom_usb_enable_pins": [
+                {
+                    "name": "EN_USB_A0_VBUS",
+                    "ioex": false
+                }
+            ]
+        },
         "madoo": {
             "usb_a_port_count": 0
         },
