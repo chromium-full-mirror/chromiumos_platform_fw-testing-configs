@@ -1,7 +1,7 @@
 {
     "platform": "sarien",
     "mode_switcher_type": "keyboard_dev_switcher",
-    "firmware_screen": 15,
+    "firmware_screen": 18,
     "delay_reboot_to_ping": 40,
     "hold_pwr_button_poweroff": 10,
     "hold_pwr_button_poweron": 1.2,
