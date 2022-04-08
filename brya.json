@@ -27,6 +27,11 @@
             "ioex": false
         }
     ],
+    "models": {
+        "vell": {
+            "usb_a_port_count": 0
+        }
+    },
     "dark_resume_capable": true,
     "smm_store": false,
     "hold_pwr_button_nopowerd_shutdown": 14,
