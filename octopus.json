@@ -25,7 +25,6 @@
         "rdd_off_in_g3": false,
         "rdd_leakage": true
     },
-    "firmware_screen": 30,
     "usb_plug": 45,
     "spi_voltage": "pp1800",
     "custom_usb_enable_pins": [
