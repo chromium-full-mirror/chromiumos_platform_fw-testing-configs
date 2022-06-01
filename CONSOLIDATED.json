@@ -368,6 +368,9 @@
 		"models": {
 			"vell": {
 				"usb_a_port_count": 0
+			},
+			"banshee": {
+				"usb_a_port_count": 0
 			}
 		},
 		"dark_resume_capable": true,
