@@ -61,5 +61,9 @@
 		]
 	}
     },
+    "minidiag_capability": {
+        "event_log_launch_count": false,
+        "cbmem_preserved_by_ap_reset": false
+    },
     "minios_enabled": false
 }

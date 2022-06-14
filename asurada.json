@@ -41,5 +41,9 @@
             ]
         }
     },
+    "minidiag_capability": {
+        "storage_self_test": false,
+        "event_log_launch_count": false
+    },
     "minios_enabled": false
 }

@@ -104,6 +104,7 @@ def load_json(fwtc_dir, platforms):
         consolidated[platform] = j
     reformat_capability_map(consolidated, 'ec_capability')
     reformat_capability_map(consolidated, 'cr50_capability')
+    reformat_capability_map(consolidated, 'minidiag_capability')
     return consolidated
 
 

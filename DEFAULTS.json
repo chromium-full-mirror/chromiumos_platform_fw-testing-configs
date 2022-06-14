@@ -215,6 +215,13 @@
     "minidiag_enabled": true,
     "minidiag_enabled.DOC": "Whether minidiag is enabled",
 
+    "minidiag_capability": {
+        "storage_self_test": true,
+        "event_log_launch_count": true,
+        "cbmem_preserved_by_ap_reset": true
+    },
+    "minidiag_capability.DOC": "List of capabilities of the minidiag, do not use these for devices which does not enable minidiag",
+
     "minios_enabled": true,
     "minios_enabled.DOC": "Whether minios is enabled",
 

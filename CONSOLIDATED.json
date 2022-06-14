@@ -130,6 +130,12 @@
 		"usbc_voltage_on_shutdown_and_full_batt.DOC": "Input voltage limit applied by DUT when it is in G3/S5 and battery is full. 20 volts means there is no limit",
 		"minidiag_enabled": true,
 		"minidiag_enabled.DOC": "Whether minidiag is enabled",
+		"minidiag_capability": [
+			"cbmem_preserved_by_ap_reset",
+			"event_log_launch_count",
+			"storage_self_test"
+		],
+		"minidiag_capability.DOC": "List of capabilities of the minidiag, do not use these for devices which does not enable minidiag",
 		"minios_enabled": true,
 		"minios_enabled.DOC": "Whether minios is enabled",
 		"fw_update_build": null,
@@ -139,7 +145,12 @@
 		"platform": "arkham",
 		"parent": "jetstream",
 		"ec_capability": [],
-		"cr50_capability": []
+		"cr50_capability": [],
+		"minidiag_capability": [
+			"cbmem_preserved_by_ap_reset",
+			"event_log_launch_count",
+			"storage_self_test"
+		]
 	},
 	"asuka": {
 		"platform": "asuka",
@@ -154,7 +165,12 @@
 			"usbpd_uart",
 			"x86"
 		],
-		"cr50_capability": []
+		"cr50_capability": [],
+		"minidiag_capability": [
+			"cbmem_preserved_by_ap_reset",
+			"event_log_launch_count",
+			"storage_self_test"
+		]
 	},
 	"asurada": {
 		"platform": "asurada",
@@ -191,6 +207,9 @@
 				]
 			}
 		},
+		"minidiag_capability": [
+			"cbmem_preserved_by_ap_reset"
+		],
 		"minios_enabled": false,
 		"cr50_capability": []
 	},
@@ -215,7 +234,12 @@
 			"wp_on_in_g3"
 		],
 		"minidiag_enabled": false,
-		"minios_enabled": false
+		"minios_enabled": false,
+		"minidiag_capability": [
+			"cbmem_preserved_by_ap_reset",
+			"event_log_launch_count",
+			"storage_self_test"
+		]
 	},
 	"auron": {
 		"platform": "auron",
@@ -239,7 +263,12 @@
 		"usb_a_port_count": -1,
 		"minidiag_enabled": false,
 		"minios_enabled": false,
-		"cr50_capability": []
+		"cr50_capability": [],
+		"minidiag_capability": [
+			"cbmem_preserved_by_ap_reset",
+			"event_log_launch_count",
+			"storage_self_test"
+		]
 	},
 	"banjo": {
 		"platform": "banjo",
@@ -254,7 +283,12 @@
 			"usb",
 			"x86"
 		],
-		"cr50_capability": []
+		"cr50_capability": [],
+		"minidiag_capability": [
+			"cbmem_preserved_by_ap_reset",
+			"event_log_launch_count",
+			"storage_self_test"
+		]
 	},
 	"banon": {
 		"platform": "banon",
@@ -268,7 +302,12 @@
 			"usb",
 			"x86"
 		],
-		"cr50_capability": []
+		"cr50_capability": [],
+		"minidiag_capability": [
+			"cbmem_preserved_by_ap_reset",
+			"event_log_launch_count",
+			"storage_self_test"
+		]
 	},
 	"betty": {
 		"platform": "betty",
@@ -283,7 +322,12 @@
 			"usb",
 			"x86"
 		],
-		"cr50_capability": []
+		"cr50_capability": [],
+		"minidiag_capability": [
+			"cbmem_preserved_by_ap_reset",
+			"event_log_launch_count",
+			"storage_self_test"
+		]
 	},
 	"bob": {
 		"platform": "bob",
@@ -295,7 +339,12 @@
 			"keyboard",
 			"lid"
 		],
-		"cr50_capability": []
+		"cr50_capability": [],
+		"minidiag_capability": [
+			"cbmem_preserved_by_ap_reset",
+			"event_log_launch_count",
+			"storage_self_test"
+		]
 	},
 	"brain": {
 		"platform": "brain",
@@ -308,7 +357,12 @@
 		"powerup_ready": 15,
 		"usb_a_port_count": -1,
 		"ec_capability": [],
-		"cr50_capability": []
+		"cr50_capability": [],
+		"minidiag_capability": [
+			"cbmem_preserved_by_ap_reset",
+			"event_log_launch_count",
+			"storage_self_test"
+		]
 	},
 	"brask": {
 		"platform": "brask",
@@ -318,6 +372,10 @@
 			"cbi",
 			"usb",
 			"x86"
+		],
+		"minidiag_capability": [
+			"event_log_launch_count",
+			"storage_self_test"
 		],
 		"keypress_delay": 20,
 		"firmware_screen": 30,
@@ -381,6 +439,10 @@
 				"firmware_screen": 20
 			}
 		},
+		"minidiag_capability": [
+			"event_log_launch_count",
+			"storage_self_test"
+		],
 		"dark_resume_capable": true,
 		"smm_store": false,
 		"hold_pwr_button_nopowerd_shutdown": 14,
@@ -402,7 +464,12 @@
 		"has_keyboard": false,
 		"rec_button_dev_switch": true,
 		"usb_a_port_count": -1,
-		"cr50_capability": []
+		"cr50_capability": [],
+		"minidiag_capability": [
+			"cbmem_preserved_by_ap_reset",
+			"event_log_launch_count",
+			"storage_self_test"
+		]
 	},
 	"candy": {
 		"platform": "candy",
@@ -416,7 +483,12 @@
 			"usb",
 			"x86"
 		],
-		"cr50_capability": []
+		"cr50_capability": [],
+		"minidiag_capability": [
+			"cbmem_preserved_by_ap_reset",
+			"event_log_launch_count",
+			"storage_self_test"
+		]
 	},
 	"caroline": {
 		"platform": "caroline",
@@ -430,7 +502,12 @@
 			"usbpd_uart",
 			"x86"
 		],
-		"cr50_capability": []
+		"cr50_capability": [],
+		"minidiag_capability": [
+			"cbmem_preserved_by_ap_reset",
+			"event_log_launch_count",
+			"storage_self_test"
+		]
 	},
 	"cave": {
 		"platform": "cave",
@@ -444,7 +521,12 @@
 			"usbpd_uart",
 			"x86"
 		],
-		"cr50_capability": []
+		"cr50_capability": [],
+		"minidiag_capability": [
+			"cbmem_preserved_by_ap_reset",
+			"event_log_launch_count",
+			"storage_self_test"
+		]
 	},
 	"celes": {
 		"platform": "celes",
@@ -459,7 +541,12 @@
 			"usb",
 			"x86"
 		],
-		"cr50_capability": []
+		"cr50_capability": [],
+		"minidiag_capability": [
+			"cbmem_preserved_by_ap_reset",
+			"event_log_launch_count",
+			"storage_self_test"
+		]
 	},
 	"chell": {
 		"platform": "chell",
@@ -473,7 +560,12 @@
 			"usbpd_uart",
 			"x86"
 		],
-		"cr50_capability": []
+		"cr50_capability": [],
+		"minidiag_capability": [
+			"cbmem_preserved_by_ap_reset",
+			"event_log_launch_count",
+			"storage_self_test"
+		]
 	},
 	"cherry": {
 		"platform": "cherry",
@@ -502,7 +594,12 @@
 				"minios_enabled": false
 			}
 		},
-		"cr50_capability": []
+		"cr50_capability": [],
+		"minidiag_capability": [
+			"cbmem_preserved_by_ap_reset",
+			"event_log_launch_count",
+			"storage_self_test"
+		]
 	},
 	"cheza": {
 		"platform": "cheza",
@@ -520,7 +617,12 @@
 		],
 		"minidiag_enabled": false,
 		"minios_enabled": false,
-		"cr50_capability": []
+		"cr50_capability": [],
+		"minidiag_capability": [
+			"cbmem_preserved_by_ap_reset",
+			"event_log_launch_count",
+			"storage_self_test"
+		]
 	},
 	"coral": {
 		"platform": "coral",
@@ -534,7 +636,12 @@
 			"usb",
 			"x86"
 		],
-		"cr50_capability": []
+		"cr50_capability": [],
+		"minidiag_capability": [
+			"cbmem_preserved_by_ap_reset",
+			"event_log_launch_count",
+			"storage_self_test"
+		]
 	},
 	"corsola": {
 		"platform": "corsola",
@@ -559,7 +666,12 @@
 				"ioex": false
 			}
 		],
-		"cr50_capability": []
+		"cr50_capability": [],
+		"minidiag_capability": [
+			"cbmem_preserved_by_ap_reset",
+			"event_log_launch_count",
+			"storage_self_test"
+		]
 	},
 	"cyan": {
 		"platform": "cyan",
@@ -583,7 +695,12 @@
 		"smm_store": false,
 		"minidiag_enabled": false,
 		"minios_enabled": false,
-		"cr50_capability": []
+		"cr50_capability": [],
+		"minidiag_capability": [
+			"cbmem_preserved_by_ap_reset",
+			"event_log_launch_count",
+			"storage_self_test"
+		]
 	},
 	"dedede": {
 		"platform": "dedede",
@@ -830,6 +947,7 @@
 			}
 		},
 		"ac_on_can_wake_ap_from_ulp": true,
+		"minidiag_capability": [],
 		"minios_enabled": false,
 		"cr50_capability": []
 	},
@@ -859,7 +977,12 @@
 		"hold_pwr_button_poweron": 3,
 		"max_charging_power": 60.0,
 		"ac_on_can_wake_ap_from_ulp": true,
-		"cr50_capability": []
+		"cr50_capability": [],
+		"minidiag_capability": [
+			"cbmem_preserved_by_ap_reset",
+			"event_log_launch_count",
+			"storage_self_test"
+		]
 	},
 	"dragonegg": {
 		"platform": "dragonegg",
@@ -888,7 +1011,12 @@
 		"max_charging_power": 45.0,
 		"minidiag_enabled": false,
 		"minios_enabled": false,
-		"cr50_capability": []
+		"cr50_capability": [],
+		"minidiag_capability": [
+			"cbmem_preserved_by_ap_reset",
+			"event_log_launch_count",
+			"storage_self_test"
+		]
 	},
 	"drallion": {
 		"platform": "drallion",
@@ -914,7 +1042,12 @@
 		"usb_a_port_count": -1,
 		"minidiag_enabled": false,
 		"minios_enabled": false,
-		"cr50_capability": []
+		"cr50_capability": [],
+		"minidiag_capability": [
+			"cbmem_preserved_by_ap_reset",
+			"event_log_launch_count",
+			"storage_self_test"
+		]
 	},
 	"edgar": {
 		"platform": "edgar",
@@ -928,7 +1061,12 @@
 			"usb",
 			"x86"
 		],
-		"cr50_capability": []
+		"cr50_capability": [],
+		"minidiag_capability": [
+			"cbmem_preserved_by_ap_reset",
+			"event_log_launch_count",
+			"storage_self_test"
+		]
 	},
 	"elm": {
 		"platform": "elm",
@@ -943,7 +1081,12 @@
 			"keyboard",
 			"lid"
 		],
-		"cr50_capability": []
+		"cr50_capability": [],
+		"minidiag_capability": [
+			"cbmem_preserved_by_ap_reset",
+			"event_log_launch_count",
+			"storage_self_test"
+		]
 	},
 	"endeavour": {
 		"platform": "endeavour",
@@ -951,7 +1094,12 @@
 		"ec_capability": [
 			"x86"
 		],
-		"cr50_capability": []
+		"cr50_capability": [],
+		"minidiag_capability": [
+			"cbmem_preserved_by_ap_reset",
+			"event_log_launch_count",
+			"storage_self_test"
+		]
 	},
 	"enguarde": {
 		"platform": "enguarde",
@@ -965,7 +1113,12 @@
 			"usb",
 			"x86"
 		],
-		"cr50_capability": []
+		"cr50_capability": [],
+		"minidiag_capability": [
+			"cbmem_preserved_by_ap_reset",
+			"event_log_launch_count",
+			"storage_self_test"
+		]
 	},
 	"eve": {
 		"platform": "eve",
@@ -994,7 +1147,12 @@
 		"max_charging_power": 45.0,
 		"usb_a_port_count": -1,
 		"minidiag_enabled": false,
-		"minios_enabled": false
+		"minios_enabled": false,
+		"minidiag_capability": [
+			"cbmem_preserved_by_ap_reset",
+			"event_log_launch_count",
+			"storage_self_test"
+		]
 	},
 	"expresso": {
 		"platform": "expresso",
@@ -1008,14 +1166,24 @@
 			"usb",
 			"x86"
 		],
-		"cr50_capability": []
+		"cr50_capability": [],
+		"minidiag_capability": [
+			"cbmem_preserved_by_ap_reset",
+			"event_log_launch_count",
+			"storage_self_test"
+		]
 	},
 	"fievel": {
 		"platform": "fievel",
 		"parent": "brain",
 		"delay_reboot_to_ping": 60,
 		"ec_capability": [],
-		"cr50_capability": []
+		"cr50_capability": [],
+		"minidiag_capability": [
+			"cbmem_preserved_by_ap_reset",
+			"event_log_launch_count",
+			"storage_self_test"
+		]
 	},
 	"fizz": {
 		"platform": "fizz",
@@ -1037,14 +1205,24 @@
 		"usb_a_port_count": -1,
 		"minidiag_enabled": false,
 		"minios_enabled": false,
-		"cr50_capability": []
+		"cr50_capability": [],
+		"minidiag_capability": [
+			"cbmem_preserved_by_ap_reset",
+			"event_log_launch_count",
+			"storage_self_test"
+		]
 	},
 	"gale": {
 		"platform": "gale",
 		"parent": "jetstream",
 		"clear_dev_on_rec": true,
 		"ec_capability": [],
-		"cr50_capability": []
+		"cr50_capability": [],
+		"minidiag_capability": [
+			"cbmem_preserved_by_ap_reset",
+			"event_log_launch_count",
+			"storage_self_test"
+		]
 	},
 	"gandof": {
 		"platform": "gandof",
@@ -1061,7 +1239,12 @@
 			"x86"
 		],
 		"usb_a_port_count": -1,
-		"cr50_capability": []
+		"cr50_capability": [],
+		"minidiag_capability": [
+			"cbmem_preserved_by_ap_reset",
+			"event_log_launch_count",
+			"storage_self_test"
+		]
 	},
 	"glados": {
 		"platform": "glados",
@@ -1085,14 +1268,24 @@
 		"usb_a_port_count": -1,
 		"minidiag_enabled": false,
 		"minios_enabled": false,
-		"cr50_capability": []
+		"cr50_capability": [],
+		"minidiag_capability": [
+			"cbmem_preserved_by_ap_reset",
+			"event_log_launch_count",
+			"storage_self_test"
+		]
 	},
 	"gnawty": {
 		"platform": "gnawty",
 		"parent": "rambi",
 		"spi_voltage": "pp3300",
 		"ec_capability": [],
-		"cr50_capability": []
+		"cr50_capability": [],
+		"minidiag_capability": [
+			"cbmem_preserved_by_ap_reset",
+			"event_log_launch_count",
+			"storage_self_test"
+		]
 	},
 	"gru": {
 		"platform": "gru",
@@ -1113,7 +1306,12 @@
 		"usb_a_port_count": -1,
 		"minidiag_enabled": false,
 		"minios_enabled": false,
-		"cr50_capability": []
+		"cr50_capability": [],
+		"minidiag_capability": [
+			"cbmem_preserved_by_ap_reset",
+			"event_log_launch_count",
+			"storage_self_test"
+		]
 	},
 	"grunt": {
 		"platform": "grunt",
@@ -1138,13 +1336,23 @@
 		},
 		"minidiag_enabled": false,
 		"minios_enabled": false,
-		"cr50_capability": []
+		"cr50_capability": [],
+		"minidiag_capability": [
+			"cbmem_preserved_by_ap_reset",
+			"event_log_launch_count",
+			"storage_self_test"
+		]
 	},
 	"guado": {
 		"platform": "guado",
 		"parent": "jecht",
 		"ec_capability": [],
-		"cr50_capability": []
+		"cr50_capability": [],
+		"minidiag_capability": [
+			"cbmem_preserved_by_ap_reset",
+			"event_log_launch_count",
+			"storage_self_test"
+		]
 	},
 	"guybrush": {
 		"platform": "guybrush",
@@ -1180,6 +1388,11 @@
 		"dark_resume_capable": true,
 		"cr50_capability": [
 			"deep_sleep_in_s0i3"
+		],
+		"minidiag_capability": [
+			"cbmem_preserved_by_ap_reset",
+			"event_log_launch_count",
+			"storage_self_test"
 		]
 	},
 	"hana": {
@@ -1192,7 +1405,12 @@
 			"keyboard",
 			"lid"
 		],
-		"cr50_capability": []
+		"cr50_capability": [],
+		"minidiag_capability": [
+			"cbmem_preserved_by_ap_reset",
+			"event_log_launch_count",
+			"storage_self_test"
+		]
 	},
 	"hatch": {
 		"platform": "hatch",
@@ -1242,7 +1460,12 @@
 			}
 		},
 		"minidiag_enabled": false,
-		"minios_enabled": false
+		"minios_enabled": false,
+		"minidiag_capability": [
+			"cbmem_preserved_by_ap_reset",
+			"event_log_launch_count",
+			"storage_self_test"
+		]
 	},
 	"heli": {
 		"platform": "heli",
@@ -1256,7 +1479,12 @@
 			"usb",
 			"x86"
 		],
-		"cr50_capability": []
+		"cr50_capability": [],
+		"minidiag_capability": [
+			"cbmem_preserved_by_ap_reset",
+			"event_log_launch_count",
+			"storage_self_test"
+		]
 	},
 	"herobrine": {
 		"platform": "herobrine",
@@ -1284,7 +1512,12 @@
 			}
 		},
 		"minios_enabled": false,
-		"cr50_capability": []
+		"cr50_capability": [],
+		"minidiag_capability": [
+			"cbmem_preserved_by_ap_reset",
+			"event_log_launch_count",
+			"storage_self_test"
+		]
 	},
 	"jacuzzi": {
 		"platform": "jacuzzi",
@@ -1305,7 +1538,12 @@
 		"usbc_input_voltage_limit": 20,
 		"charger_profile_override": true,
 		"usb_a_port_count": -1,
-		"cr50_capability": []
+		"cr50_capability": [],
+		"minidiag_capability": [
+			"cbmem_preserved_by_ap_reset",
+			"event_log_launch_count",
+			"storage_self_test"
+		]
 	},
 	"jecht": {
 		"platform": "jecht",
@@ -1319,7 +1557,12 @@
 		"ec_capability": [],
 		"minidiag_enabled": false,
 		"minios_enabled": false,
-		"cr50_capability": []
+		"cr50_capability": [],
+		"minidiag_capability": [
+			"cbmem_preserved_by_ap_reset",
+			"event_log_launch_count",
+			"storage_self_test"
+		]
 	},
 	"jetstream": {
 		"platform": "jetstream",
@@ -1332,7 +1575,12 @@
 		"ec_capability": [],
 		"minidiag_enabled": false,
 		"minios_enabled": false,
-		"cr50_capability": []
+		"cr50_capability": [],
+		"minidiag_capability": [
+			"cbmem_preserved_by_ap_reset",
+			"event_log_launch_count",
+			"storage_self_test"
+		]
 	},
 	"kalista": {
 		"platform": "kalista",
@@ -1340,7 +1588,12 @@
 		"ec_capability": [
 			"x86"
 		],
-		"cr50_capability": []
+		"cr50_capability": [],
+		"minidiag_capability": [
+			"cbmem_preserved_by_ap_reset",
+			"event_log_launch_count",
+			"storage_self_test"
+		]
 	},
 	"keeby": {
 		"platform": "keeby",
@@ -1399,6 +1652,9 @@
 				]
 			}
 		},
+		"minidiag_capability": [
+			"storage_self_test"
+		],
 		"minios_enabled": false,
 		"cr50_capability": []
 	},
@@ -1414,7 +1670,12 @@
 			"usb",
 			"x86"
 		],
-		"cr50_capability": []
+		"cr50_capability": [],
+		"minidiag_capability": [
+			"cbmem_preserved_by_ap_reset",
+			"event_log_launch_count",
+			"storage_self_test"
+		]
 	},
 	"kevin": {
 		"platform": "kevin",
@@ -1426,7 +1687,12 @@
 			"keyboard",
 			"lid"
 		],
-		"cr50_capability": []
+		"cr50_capability": [],
+		"minidiag_capability": [
+			"cbmem_preserved_by_ap_reset",
+			"event_log_launch_count",
+			"storage_self_test"
+		]
 	},
 	"kevin64": {
 		"platform": "kevin64",
@@ -1438,7 +1704,12 @@
 			"keyboard",
 			"lid"
 		],
-		"cr50_capability": []
+		"cr50_capability": [],
+		"minidiag_capability": [
+			"cbmem_preserved_by_ap_reset",
+			"event_log_launch_count",
+			"storage_self_test"
+		]
 	},
 	"kevin_tpm2": {
 		"platform": "kevin_tpm2",
@@ -1450,7 +1721,12 @@
 			"keyboard",
 			"lid"
 		],
-		"cr50_capability": []
+		"cr50_capability": [],
+		"minidiag_capability": [
+			"cbmem_preserved_by_ap_reset",
+			"event_log_launch_count",
+			"storage_self_test"
+		]
 	},
 	"kip": {
 		"platform": "kip",
@@ -1464,7 +1740,12 @@
 			"usb",
 			"x86"
 		],
-		"cr50_capability": []
+		"cr50_capability": [],
+		"minidiag_capability": [
+			"cbmem_preserved_by_ap_reset",
+			"event_log_launch_count",
+			"storage_self_test"
+		]
 	},
 	"kukui": {
 		"platform": "kukui",
@@ -1490,7 +1771,12 @@
 		"usb_a_port_count": -1,
 		"minidiag_enabled": false,
 		"minios_enabled": false,
-		"cr50_capability": []
+		"cr50_capability": [],
+		"minidiag_capability": [
+			"cbmem_preserved_by_ap_reset",
+			"event_log_launch_count",
+			"storage_self_test"
+		]
 	},
 	"kunimitsu": {
 		"platform": "kunimitsu",
@@ -1514,7 +1800,12 @@
 		"usb_a_port_count": -1,
 		"minidiag_enabled": false,
 		"minios_enabled": false,
-		"cr50_capability": []
+		"cr50_capability": [],
+		"minidiag_capability": [
+			"cbmem_preserved_by_ap_reset",
+			"event_log_launch_count",
+			"storage_self_test"
+		]
 	},
 	"lars": {
 		"platform": "lars",
@@ -1529,7 +1820,12 @@
 			"usbpd_uart",
 			"x86"
 		],
-		"cr50_capability": []
+		"cr50_capability": [],
+		"minidiag_capability": [
+			"cbmem_preserved_by_ap_reset",
+			"event_log_launch_count",
+			"storage_self_test"
+		]
 	},
 	"lulu": {
 		"platform": "lulu",
@@ -1544,14 +1840,24 @@
 			"usb",
 			"x86"
 		],
-		"cr50_capability": []
+		"cr50_capability": [],
+		"minidiag_capability": [
+			"cbmem_preserved_by_ap_reset",
+			"event_log_launch_count",
+			"storage_self_test"
+		]
 	},
 	"mickey": {
 		"platform": "mickey",
 		"parent": "brain",
 		"has_powerbutton": false,
 		"ec_capability": [],
-		"cr50_capability": []
+		"cr50_capability": [],
+		"minidiag_capability": [
+			"cbmem_preserved_by_ap_reset",
+			"event_log_launch_count",
+			"storage_self_test"
+		]
 	},
 	"mistral": {
 		"platform": "mistral",
@@ -1562,7 +1868,12 @@
 		"has_powerbutton": false,
 		"clear_dev_on_rec": true,
 		"ec_capability": [],
-		"cr50_capability": []
+		"cr50_capability": [],
+		"minidiag_capability": [
+			"cbmem_preserved_by_ap_reset",
+			"event_log_launch_count",
+			"storage_self_test"
+		]
 	},
 	"nami": {
 		"platform": "nami",
@@ -1587,7 +1898,12 @@
 		"max_charging_power": 70.0,
 		"usb_a_port_count": -1,
 		"minidiag_enabled": false,
-		"minios_enabled": false
+		"minios_enabled": false,
+		"minidiag_capability": [
+			"cbmem_preserved_by_ap_reset",
+			"event_log_launch_count",
+			"storage_self_test"
+		]
 	},
 	"nasher": {
 		"platform": "nasher",
@@ -1601,7 +1917,12 @@
 			"usb",
 			"x86"
 		],
-		"cr50_capability": []
+		"cr50_capability": [],
+		"minidiag_capability": [
+			"cbmem_preserved_by_ap_reset",
+			"event_log_launch_count",
+			"storage_self_test"
+		]
 	},
 	"nautilus": {
 		"platform": "nautilus",
@@ -1624,7 +1945,12 @@
 		"usb_a_port_count": -1,
 		"minidiag_enabled": false,
 		"minios_enabled": false,
-		"cr50_capability": []
+		"cr50_capability": [],
+		"minidiag_capability": [
+			"cbmem_preserved_by_ap_reset",
+			"event_log_launch_count",
+			"storage_self_test"
+		]
 	},
 	"ninja": {
 		"platform": "ninja",
@@ -1639,7 +1965,12 @@
 		"rec_button_dev_switch": true,
 		"spi_voltage": "pp3300",
 		"usb_a_port_count": -1,
-		"cr50_capability": []
+		"cr50_capability": [],
+		"minidiag_capability": [
+			"cbmem_preserved_by_ap_reset",
+			"event_log_launch_count",
+			"storage_self_test"
+		]
 	},
 	"nissa": {
 		"platform": "nissa",
@@ -1674,7 +2005,12 @@
 				"fw_update_build": "nissa-release/R107-15099.0.0"
 			}
 		},
-		"cr50_capability": []
+		"cr50_capability": [],
+		"minidiag_capability": [
+			"cbmem_preserved_by_ap_reset",
+			"event_log_launch_count",
+			"storage_self_test"
+		]
 	},
 	"nocturne": {
 		"platform": "nocturne",
@@ -1699,7 +2035,12 @@
 		"usbc_voltage_on_shutdown_and_full_batt": 9,
 		"usb_a_port_count": -1,
 		"minidiag_enabled": false,
-		"minios_enabled": false
+		"minios_enabled": false,
+		"minidiag_capability": [
+			"cbmem_preserved_by_ap_reset",
+			"event_log_launch_count",
+			"storage_self_test"
+		]
 	},
 	"oak": {
 		"platform": "oak",
@@ -1716,7 +2057,12 @@
 		"usb_a_port_count": -1,
 		"minidiag_enabled": false,
 		"minios_enabled": false,
-		"cr50_capability": []
+		"cr50_capability": [],
+		"minidiag_capability": [
+			"cbmem_preserved_by_ap_reset",
+			"event_log_launch_count",
+			"storage_self_test"
+		]
 	},
 	"octopus": {
 		"platform": "octopus",
@@ -1778,7 +2124,12 @@
 		},
 		"max_charging_power": 45.0,
 		"minidiag_enabled": false,
-		"minios_enabled": false
+		"minios_enabled": false,
+		"minidiag_capability": [
+			"cbmem_preserved_by_ap_reset",
+			"event_log_launch_count",
+			"storage_self_test"
+		]
 	},
 	"orco": {
 		"platform": "orco",
@@ -1792,7 +2143,12 @@
 			"usb",
 			"x86"
 		],
-		"cr50_capability": []
+		"cr50_capability": [],
+		"minidiag_capability": [
+			"cbmem_preserved_by_ap_reset",
+			"event_log_launch_count",
+			"storage_self_test"
+		]
 	},
 	"paine": {
 		"platform": "paine",
@@ -1807,7 +2163,12 @@
 			"usb",
 			"x86"
 		],
-		"cr50_capability": []
+		"cr50_capability": [],
+		"minidiag_capability": [
+			"cbmem_preserved_by_ap_reset",
+			"event_log_launch_count",
+			"storage_self_test"
+		]
 	},
 	"pinky": {
 		"platform": "pinky",
@@ -1825,7 +2186,12 @@
 		"ec_has_powerbtn_cmd": false,
 		"software_sync_update": 6,
 		"usb_a_port_count": -1,
-		"cr50_capability": []
+		"cr50_capability": [],
+		"minidiag_capability": [
+			"cbmem_preserved_by_ap_reset",
+			"event_log_launch_count",
+			"storage_self_test"
+		]
 	},
 	"poppy": {
 		"platform": "poppy",
@@ -1848,7 +2214,12 @@
 		"usb_a_port_count": -1,
 		"minidiag_enabled": false,
 		"minios_enabled": false,
-		"cr50_capability": []
+		"cr50_capability": [],
+		"minidiag_capability": [
+			"cbmem_preserved_by_ap_reset",
+			"event_log_launch_count",
+			"storage_self_test"
+		]
 	},
 	"puff": {
 		"platform": "puff",
@@ -1878,7 +2249,12 @@
 		"max_charging_power": 100.0,
 		"minidiag_enabled": false,
 		"minios_enabled": false,
-		"cr50_capability": []
+		"cr50_capability": [],
+		"minidiag_capability": [
+			"cbmem_preserved_by_ap_reset",
+			"event_log_launch_count",
+			"storage_self_test"
+		]
 	},
 	"pyro": {
 		"platform": "pyro",
@@ -1892,7 +2268,12 @@
 			"usb",
 			"x86"
 		],
-		"cr50_capability": []
+		"cr50_capability": [],
+		"minidiag_capability": [
+			"cbmem_preserved_by_ap_reset",
+			"event_log_launch_count",
+			"storage_self_test"
+		]
 	},
 	"rambi": {
 		"platform": "rambi",
@@ -1916,7 +2297,12 @@
 		"usb_a_port_count": -1,
 		"minidiag_enabled": false,
 		"minios_enabled": false,
-		"cr50_capability": []
+		"cr50_capability": [],
+		"minidiag_capability": [
+			"cbmem_preserved_by_ap_reset",
+			"event_log_launch_count",
+			"storage_self_test"
+		]
 	},
 	"rammus": {
 		"platform": "rammus",
@@ -1938,7 +2324,12 @@
 		"usb_a_port_count": -1,
 		"minidiag_enabled": false,
 		"minios_enabled": false,
-		"cr50_capability": []
+		"cr50_capability": [],
+		"minidiag_capability": [
+			"cbmem_preserved_by_ap_reset",
+			"event_log_launch_count",
+			"storage_self_test"
+		]
 	},
 	"reef": {
 		"platform": "reef",
@@ -1963,7 +2354,12 @@
 		"usb_a_port_count": -1,
 		"minidiag_enabled": false,
 		"minios_enabled": false,
-		"cr50_capability": []
+		"cr50_capability": [],
+		"minidiag_capability": [
+			"cbmem_preserved_by_ap_reset",
+			"event_log_launch_count",
+			"storage_self_test"
+		]
 	},
 	"reef_uni": {
 		"platform": "reef_uni",
@@ -1977,7 +2373,12 @@
 			"usb",
 			"x86"
 		],
-		"cr50_capability": []
+		"cr50_capability": [],
+		"minidiag_capability": [
+			"cbmem_preserved_by_ap_reset",
+			"event_log_launch_count",
+			"storage_self_test"
+		]
 	},
 	"reks": {
 		"platform": "reks",
@@ -1991,7 +2392,12 @@
 			"usb",
 			"x86"
 		],
-		"cr50_capability": []
+		"cr50_capability": [],
+		"minidiag_capability": [
+			"cbmem_preserved_by_ap_reset",
+			"event_log_launch_count",
+			"storage_self_test"
+		]
 	},
 	"relm": {
 		"platform": "relm",
@@ -2005,13 +2411,23 @@
 			"usb",
 			"x86"
 		],
-		"cr50_capability": []
+		"cr50_capability": [],
+		"minidiag_capability": [
+			"cbmem_preserved_by_ap_reset",
+			"event_log_launch_count",
+			"storage_self_test"
+		]
 	},
 	"rikku": {
 		"platform": "rikku",
 		"parent": "jecht",
 		"ec_capability": [],
-		"cr50_capability": []
+		"cr50_capability": [],
+		"minidiag_capability": [
+			"cbmem_preserved_by_ap_reset",
+			"event_log_launch_count",
+			"storage_self_test"
+		]
 	},
 	"samus": {
 		"platform": "samus",
@@ -2040,7 +2456,12 @@
 		"usb_a_port_count": -1,
 		"minidiag_enabled": false,
 		"minios_enabled": false,
-		"cr50_capability": []
+		"cr50_capability": [],
+		"minidiag_capability": [
+			"cbmem_preserved_by_ap_reset",
+			"event_log_launch_count",
+			"storage_self_test"
+		]
 	},
 	"sand": {
 		"platform": "sand",
@@ -2054,7 +2475,12 @@
 			"usb",
 			"x86"
 		],
-		"cr50_capability": []
+		"cr50_capability": [],
+		"minidiag_capability": [
+			"cbmem_preserved_by_ap_reset",
+			"event_log_launch_count",
+			"storage_self_test"
+		]
 	},
 	"sarien": {
 		"platform": "sarien",
@@ -2083,7 +2509,12 @@
 		"usb_a_port_count": -1,
 		"minidiag_enabled": false,
 		"minios_enabled": false,
-		"cr50_capability": []
+		"cr50_capability": [],
+		"minidiag_capability": [
+			"cbmem_preserved_by_ap_reset",
+			"event_log_launch_count",
+			"storage_self_test"
+		]
 	},
 	"scarlet": {
 		"platform": "scarlet",
@@ -2100,7 +2531,12 @@
 		"is_detachable": true,
 		"max_charging_power": 38.55,
 		"usb_a_port_count": -1,
-		"cr50_capability": []
+		"cr50_capability": [],
+		"minidiag_capability": [
+			"cbmem_preserved_by_ap_reset",
+			"event_log_launch_count",
+			"storage_self_test"
+		]
 	},
 	"sentry": {
 		"platform": "sentry",
@@ -2115,7 +2551,12 @@
 			"usbpd_uart",
 			"x86"
 		],
-		"cr50_capability": []
+		"cr50_capability": [],
+		"minidiag_capability": [
+			"cbmem_preserved_by_ap_reset",
+			"event_log_launch_count",
+			"storage_self_test"
+		]
 	},
 	"setzer": {
 		"platform": "setzer",
@@ -2129,7 +2570,12 @@
 			"usb",
 			"x86"
 		],
-		"cr50_capability": []
+		"cr50_capability": [],
+		"minidiag_capability": [
+			"cbmem_preserved_by_ap_reset",
+			"event_log_launch_count",
+			"storage_self_test"
+		]
 	},
 	"shotzo": {
 		"platform": "shotzo",
@@ -2159,7 +2605,12 @@
 			}
 		],
 		"minios_enabled": false,
-		"cr50_capability": []
+		"cr50_capability": [],
+		"minidiag_capability": [
+			"cbmem_preserved_by_ap_reset",
+			"event_log_launch_count",
+			"storage_self_test"
+		]
 	},
 	"skyrim": {
 		"platform": "skyrim",
@@ -2198,7 +2649,12 @@
 		"cr50_capability": [
 			"deep_sleep_in_s0i3"
 		],
-		"minios_enabled": false
+		"minios_enabled": false,
+		"minidiag_capability": [
+			"cbmem_preserved_by_ap_reset",
+			"event_log_launch_count",
+			"storage_self_test"
+		]
 	},
 	"slippy": {
 		"platform": "slippy",
@@ -2223,7 +2679,12 @@
 		"usb_a_port_count": -1,
 		"minidiag_enabled": false,
 		"minios_enabled": false,
-		"cr50_capability": []
+		"cr50_capability": [],
+		"minidiag_capability": [
+			"cbmem_preserved_by_ap_reset",
+			"event_log_launch_count",
+			"storage_self_test"
+		]
 	},
 	"snappy": {
 		"platform": "snappy",
@@ -2237,7 +2698,12 @@
 			"usb",
 			"x86"
 		],
-		"cr50_capability": []
+		"cr50_capability": [],
+		"minidiag_capability": [
+			"cbmem_preserved_by_ap_reset",
+			"event_log_launch_count",
+			"storage_self_test"
+		]
 	},
 	"soraka": {
 		"platform": "soraka",
@@ -2248,14 +2714,24 @@
 			"lid",
 			"x86"
 		],
-		"cr50_capability": []
+		"cr50_capability": [],
+		"minidiag_capability": [
+			"cbmem_preserved_by_ap_reset",
+			"event_log_launch_count",
+			"storage_self_test"
+		]
 	},
 	"storm": {
 		"platform": "storm",
 		"parent": "jetstream",
 		"clear_dev_on_rec": true,
 		"ec_capability": [],
-		"cr50_capability": []
+		"cr50_capability": [],
+		"minidiag_capability": [
+			"cbmem_preserved_by_ap_reset",
+			"event_log_launch_count",
+			"storage_self_test"
+		]
 	},
 	"strago": {
 		"platform": "strago",
@@ -2279,7 +2755,12 @@
 		"usb_a_port_count": -1,
 		"minidiag_enabled": false,
 		"minios_enabled": false,
-		"cr50_capability": []
+		"cr50_capability": [],
+		"minidiag_capability": [
+			"cbmem_preserved_by_ap_reset",
+			"event_log_launch_count",
+			"storage_self_test"
+		]
 	},
 	"strongbad": {
 		"platform": "strongbad",
@@ -2302,7 +2783,12 @@
 			}
 		},
 		"minios_enabled": false,
-		"cr50_capability": []
+		"cr50_capability": [],
+		"minidiag_capability": [
+			"cbmem_preserved_by_ap_reset",
+			"event_log_launch_count",
+			"storage_self_test"
+		]
 	},
 	"sumo": {
 		"platform": "sumo",
@@ -2318,7 +2804,12 @@
 		"firmware_screen": 10,
 		"keypress_delay": 6,
 		"usb_a_port_count": -1,
-		"cr50_capability": []
+		"cr50_capability": [],
+		"minidiag_capability": [
+			"cbmem_preserved_by_ap_reset",
+			"event_log_launch_count",
+			"storage_self_test"
+		]
 	},
 	"swanky": {
 		"platform": "swanky",
@@ -2332,7 +2823,12 @@
 			"usb",
 			"x86"
 		],
-		"cr50_capability": []
+		"cr50_capability": [],
+		"minidiag_capability": [
+			"cbmem_preserved_by_ap_reset",
+			"event_log_launch_count",
+			"storage_self_test"
+		]
 	},
 	"terra": {
 		"platform": "terra",
@@ -2346,19 +2842,34 @@
 			"usb",
 			"x86"
 		],
-		"cr50_capability": []
+		"cr50_capability": [],
+		"minidiag_capability": [
+			"cbmem_preserved_by_ap_reset",
+			"event_log_launch_count",
+			"storage_self_test"
+		]
 	},
 	"tidus": {
 		"platform": "tidus",
 		"parent": "jecht",
 		"ec_capability": [],
-		"cr50_capability": []
+		"cr50_capability": [],
+		"minidiag_capability": [
+			"cbmem_preserved_by_ap_reset",
+			"event_log_launch_count",
+			"storage_self_test"
+		]
 	},
 	"tiger": {
 		"platform": "tiger",
 		"parent": "brain",
 		"ec_capability": [],
-		"cr50_capability": []
+		"cr50_capability": [],
+		"minidiag_capability": [
+			"cbmem_preserved_by_ap_reset",
+			"event_log_launch_count",
+			"storage_self_test"
+		]
 	},
 	"trogdor": {
 		"platform": "trogdor",
@@ -2385,6 +2896,7 @@
 				"usbc_input_voltage_limit": 15
 			}
 		},
+		"minidiag_capability": [],
 		"minios_enabled": false,
 		"cr50_capability": []
 	},
@@ -2400,7 +2912,12 @@
 			"usb",
 			"x86"
 		],
-		"cr50_capability": []
+		"cr50_capability": [],
+		"minidiag_capability": [
+			"cbmem_preserved_by_ap_reset",
+			"event_log_launch_count",
+			"storage_self_test"
+		]
 	},
 	"veyron": {
 		"platform": "veyron",
@@ -2413,7 +2930,12 @@
 		"ec_capability": [],
 		"minidiag_enabled": false,
 		"minios_enabled": false,
-		"cr50_capability": []
+		"cr50_capability": [],
+		"minidiag_capability": [
+			"cbmem_preserved_by_ap_reset",
+			"event_log_launch_count",
+			"storage_self_test"
+		]
 	},
 	"volteer": {
 		"platform": "volteer",
@@ -2471,6 +2993,9 @@
 		"cr50_capability": [
 			"rdd_off_in_g3"
 		],
+		"minidiag_capability": [
+			"storage_self_test"
+		],
 		"minios_enabled": false,
 		"ac_on_can_wake_ap_from_ulp": true
 	},
@@ -2478,7 +3003,12 @@
 		"platform": "whirlwind",
 		"parent": "jetstream",
 		"ec_capability": [],
-		"cr50_capability": []
+		"cr50_capability": [],
+		"minidiag_capability": [
+			"cbmem_preserved_by_ap_reset",
+			"event_log_launch_count",
+			"storage_self_test"
+		]
 	},
 	"winky": {
 		"platform": "winky",
@@ -2492,7 +3022,12 @@
 			"usb",
 			"x86"
 		],
-		"cr50_capability": []
+		"cr50_capability": [],
+		"minidiag_capability": [
+			"cbmem_preserved_by_ap_reset",
+			"event_log_launch_count",
+			"storage_self_test"
+		]
 	},
 	"wizpig": {
 		"platform": "wizpig",
@@ -2506,7 +3041,12 @@
 			"usb",
 			"x86"
 		],
-		"cr50_capability": []
+		"cr50_capability": [],
+		"minidiag_capability": [
+			"cbmem_preserved_by_ap_reset",
+			"event_log_launch_count",
+			"storage_self_test"
+		]
 	},
 	"yuna": {
 		"platform": "yuna",
@@ -2521,7 +3061,12 @@
 			"usb",
 			"x86"
 		],
-		"cr50_capability": []
+		"cr50_capability": [],
+		"minidiag_capability": [
+			"cbmem_preserved_by_ap_reset",
+			"event_log_launch_count",
+			"storage_self_test"
+		]
 	},
 	"zork": {
 		"platform": "zork",
@@ -2615,6 +3160,9 @@
 				]
 			}
 		},
+		"minidiag_capability": [
+			"cbmem_preserved_by_ap_reset"
+		],
 		"minios_enabled": false,
 		"ac_on_can_wake_ap_from_ulp": true
 	}

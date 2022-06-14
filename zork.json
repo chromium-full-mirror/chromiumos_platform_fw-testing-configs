@@ -100,6 +100,10 @@
             ]
         }
     },
+    "minidiag_capability": {
+	"storage_self_test": false,
+        "event_log_launch_count": false
+    },
     "minios_enabled": false,
     "ac_on_can_wake_ap_from_ulp": true
 }
