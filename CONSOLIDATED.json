@@ -2073,6 +2073,44 @@
 		],
 		"cr50_capability": []
 	},
+	"skyrim": {
+		"platform": "skyrim",
+		"mode_switcher_type": "menu_switcher",
+		"chrome_ec": true,
+		"ec_capability": [
+			"battery",
+			"cbi",
+			"charging",
+			"keyboard",
+			"lid",
+			"smart_usb_charge",
+			"usb",
+			"x86"
+		],
+		"servo_prog_state_delay": 1.0,
+		"smm_store": false,
+		"firmware_screen": 15,
+		"delay_powerinfo_stable": 5,
+		"serial_firmware_boot_delay": 10,
+		"delay_reboot_to_ping": 30,
+		"hold_pwr_button_poweroff": 4,
+		"custom_usb_enable_pins": [
+			{
+				"name": "EN_PP5000_USB_A0_VBUS",
+				"ioex": true
+			},
+			{
+				"name": "EN_PP5000_USB_A1_VBUS_DB_L",
+				"ioex": true
+			}
+		],
+		"ec_boot_to_console": 1.2,
+		"max_charging_power": 100.0,
+		"ac_on_can_wake_ap_from_ulp": true,
+		"cr50_capability": [
+			"deep_sleep_in_s0i3"
+		]
+	},
 	"slippy": {
 		"platform": "slippy",
 		"mode_switcher_type": "keyboard_dev_switcher",
