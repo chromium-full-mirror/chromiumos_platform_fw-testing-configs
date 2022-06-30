@@ -1140,6 +1140,7 @@
 		],
 		"max_charging_power": 100.0,
 		"ac_on_can_wake_ap_from_ulp": true,
+		"dark_resume_capable": true,
 		"cr50_capability": [
 			"deep_sleep_in_s0i3"
 		]
