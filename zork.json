@@ -43,6 +43,54 @@
         "deep_sleep_in_s0i3": false
     },
     "models": {
+        "dalboz": {
+            "custom_usb_enable_pins": [
+                {
+                    "name": "EN_USB_A0_5V",
+                    "ioex": true
+                },
+                {
+                    "name": "EN_USB_A1_5V_DB_OPT1",
+                    "ioex": true
+                }
+            ]
+        },
+        "vilboz": {
+            "custom_usb_enable_pins": [
+                {
+                    "name": "EN_USB_A0_5V",
+                    "ioex": true
+                },
+                {
+                    "name": "EN_USB_A1_5V",
+                    "ioex": false
+                }
+            ]
+        },
+        "vilboz14": {
+            "custom_usb_enable_pins": [
+                {
+                    "name": "EN_USB_A0_5V",
+                    "ioex": true
+                },
+                {
+                    "name": "EN_USB_A1_5V",
+                    "ioex": false
+                }
+            ]
+        },
+        "vilboz360": {
+            "custom_usb_enable_pins": [
+                {
+                    "name": "EN_USB_A0_5V",
+                    "ioex": true
+                },
+                {
+                    "name": "EN_USB_A1_5V",
+                    "ioex": false
+                }
+            ]
+        },
         "woomax": {
             "custom_usb_enable_pins": [
                 {

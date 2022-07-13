@@ -69,7 +69,7 @@
     "cr50_capability.DOC": "List of capabilities of the CR50",
 
     "custom_usb_enable_pins": [],
-    "custom_usb_enable_pins.DOC": "List of USB-A enable GPIO pin names with optional io expander flags",
+    "custom_usb_enable_pins.DOC": "List of USB-A enable GPIO pin names with optional io expander flags. From usb_port_enable[] in board.c.",
 
     "usb_a_port_count": null,
     "usb_a_port_count.DOC": "The number of USB-A ports on the device to be tested. -1 means unknown, do not use -1 for new boards.",
