@@ -1,0 +1,34 @@
+{
+    "platform": "draco",
+    "mode_switcher_type": "menu_switcher",
+    "chrome_ec": true,
+    "ec_capability": {
+        "adc_ectemp": false,
+        "arm": false,
+        "battery": true,
+        "cbi": true,
+        "charging": true,
+        "doubleboot": false,
+        "keyboard": true,
+        "lid": true,
+        "peci": false,
+        "smart_usb_charge": false,
+        "thermal": false,
+        "usb": true,
+        "usbpd_uart": false,
+        "x86": true
+    },
+    "spi_voltage": "pp3300",
+    "custom_usb_enable_pins": [
+        {
+            "name": "EN_PP5000_USBA_R",
+            "ioex": false
+        }
+    ],
+    "dark_resume_capable": true,
+    "smm_store": false,
+    "hold_pwr_button_nopowerd_shutdown": 14,
+    "hold_pwr_button_poweron": 3,
+    "max_charging_power": 60.0,
+    "ac_on_can_wake_ap_from_ulp": true
+}

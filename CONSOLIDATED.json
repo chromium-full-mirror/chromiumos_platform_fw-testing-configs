@@ -824,6 +824,34 @@
 		"minios_enabled": false,
 		"cr50_capability": []
 	},
+	"draco": {
+		"platform": "draco",
+		"mode_switcher_type": "menu_switcher",
+		"chrome_ec": true,
+		"ec_capability": [
+			"battery",
+			"cbi",
+			"charging",
+			"keyboard",
+			"lid",
+			"usb",
+			"x86"
+		],
+		"spi_voltage": "pp3300",
+		"custom_usb_enable_pins": [
+			{
+				"name": "EN_PP5000_USBA_R",
+				"ioex": false
+			}
+		],
+		"dark_resume_capable": true,
+		"smm_store": false,
+		"hold_pwr_button_nopowerd_shutdown": 14,
+		"hold_pwr_button_poweron": 3,
+		"max_charging_power": 60.0,
+		"ac_on_can_wake_ap_from_ulp": true,
+		"cr50_capability": []
+	},
 	"dragonegg": {
 		"platform": "dragonegg",
 		"mode_switcher_type": "keyboard_dev_switcher",
