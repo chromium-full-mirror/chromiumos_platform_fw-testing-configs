@@ -54,7 +54,7 @@ def parse_args(argv=None):
     parser = argparse.ArgumentParser()
     parser.add_argument('-i', '--input-dir',
                         help='Directory with fw-testing-configs JSON files',
-                        default=os.path.dirname(__file__))
+                        default=os.path.dirname(os.path.realpath(__file__)))
     parser.add_argument('-o', '--output', help='Filepath to write output to',
                         default=DEFAULT_OUTPUT_FILEPATH)
     return parser.parse_args(argv)
