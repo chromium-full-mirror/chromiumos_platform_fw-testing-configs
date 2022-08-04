@@ -2101,6 +2101,36 @@
 		],
 		"cr50_capability": []
 	},
+	"shotzo": {
+		"platform": "shotzo",
+		"mode_switcher_type": "menu_switcher",
+		"chrome_ec": true,
+		"ec_capability": [
+			"cbi",
+			"usb",
+			"x86"
+		],
+		"firmware_screen": 15,
+		"spi_voltage": "pp3300",
+		"dark_resume_capable": true,
+		"smm_store": false,
+		"hold_pwr_button_nopowerd_shutdown": 14,
+		"hold_pwr_button_poweron": 3,
+		"usbc_input_voltage_limit": 15,
+		"max_charging_power": 45.0,
+		"has_lid": false,
+		"has_keyboard": false,
+		"hibernate": false,
+		"rec_button_dev_switch": true,
+		"custom_usb_enable_pins": [
+			{
+				"name": "EN_PP5000_USB_VBUS",
+				"ioex": false
+			}
+		],
+		"minios_enabled": false,
+		"cr50_capability": []
+	},
 	"skyrim": {
 		"platform": "skyrim",
 		"mode_switcher_type": "menu_switcher",
