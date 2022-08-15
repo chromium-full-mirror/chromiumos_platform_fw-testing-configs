@@ -2155,11 +2155,11 @@
 		"custom_usb_enable_pins": [
 			{
 				"name": "EN_PP5000_USB_A0_VBUS",
-				"ioex": true
+				"ioex": false
 			},
 			{
-				"name": "EN_PP5000_USB_A1_VBUS_DB_L",
-				"ioex": true
+				"name": "EN_PP5000_USB_A1_VBUS",
+				"ioex": false
 			}
 		],
 		"ec_boot_to_console": 1.2,
