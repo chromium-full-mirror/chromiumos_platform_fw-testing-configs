@@ -821,6 +821,7 @@
 				]
 			}
 		},
+		"ac_on_can_wake_ap_from_ulp": true,
 		"minios_enabled": false,
 		"cr50_capability": []
 	},
