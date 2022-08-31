@@ -1217,6 +1217,9 @@
 			"dratini": {
 				"usbc_voltage_on_shutdown_and_full_batt": 5
 			},
+			"helios": {
+				"custom_usb_enable_pins": []
+			},
 			"jinlon": {
 				"usbc_voltage_on_shutdown_and_full_batt": 5
 			},
@@ -1738,13 +1741,25 @@
 				"usbc_voltage_on_shutdown_and_full_batt": 5
 			},
 			"bluebird": {
-				"usbc_input_voltage_limit": 15
+				"usbc_input_voltage_limit": 15,
+				"custom_usb_enable_pins": [
+					{
+						"name": "EN_USB_A0_5V",
+						"ioex": false
+					}
+				]
 			},
 			"bobba360": {
 				"usbc_input_voltage_limit": 15
 			},
 			"casta": {
-				"usbc_input_voltage_limit": 15
+				"usbc_input_voltage_limit": 15,
+				"custom_usb_enable_pins": [
+					{
+						"name": "EN_USB_A0_5V",
+						"ioex": false
+					}
+				]
 			}
 		},
 		"max_charging_power": 45.0,
