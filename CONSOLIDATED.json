@@ -131,7 +131,9 @@
 		"minidiag_enabled": true,
 		"minidiag_enabled.DOC": "Whether minidiag is enabled",
 		"minios_enabled": true,
-		"minios_enabled.DOC": "Whether minios is enabled"
+		"minios_enabled.DOC": "Whether minios is enabled",
+		"fw_update_build": null,
+		"fw_update_build.DOC": "Override firmware build to use for testing firmware update"
 	},
 	"arkham": {
 		"platform": "arkham",
@@ -1667,6 +1669,11 @@
 		"hold_pwr_button_poweron": 1.2,
 		"max_charging_power": 60.0,
 		"ac_on_can_wake_ap_from_ulp": true,
+		"models": {
+			"nivviks": {
+				"fw_update_build": "nissa-release/R107-15099.0.0"
+			}
+		},
 		"cr50_capability": []
 	},
 	"nocturne": {
