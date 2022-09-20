@@ -31,6 +31,12 @@
         },
         "banshee": {
             "usb_a_port_count": 0
+        },
+        "brya": {
+            "firmware_screen": 20
+        },
+        "skolas": {
+            "firmware_screen": 20
         }
     },
     "dark_resume_capable": true,
