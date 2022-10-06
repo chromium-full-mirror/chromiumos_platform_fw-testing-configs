@@ -30,6 +30,5 @@
         "herobrine": {
             "usbc_input_voltage_limit": 15
         }
-    },
-    "minios_enabled": false
+    }
 }

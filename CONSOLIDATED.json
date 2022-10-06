@@ -1511,7 +1511,6 @@
 				"usbc_input_voltage_limit": 15
 			}
 		},
-		"minios_enabled": false,
 		"cr50_capability": [],
 		"minidiag_capability": [
 			"cbmem_preserved_by_ap_reset",
