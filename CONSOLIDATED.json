@@ -531,7 +531,9 @@
 	"celes": {
 		"platform": "celes",
 		"parent": "strago",
-		"spi_voltage": "pp3300",
+		"mode_switcher_type": "keyboard_dev_switcher",
+		"chrome_ec": true,
+		"ec_ro_vbus_bug": false,
 		"ec_capability": [
 			"battery",
 			"charging",
@@ -541,6 +543,23 @@
 			"usb",
 			"x86"
 		],
+		"firmware_screen": 25,
+		"spi_voltage": "pp3300",
+		"servo_prog_state_delay": 10,
+		"delay_reboot_to_ping": 40,
+		"smm_store": false,
+		"custom_usb_enable_pins": [
+			{
+				"name": "USB1_ENABLE",
+				"ioex": false
+			},
+			{
+				"name": "USB2_ENABLE",
+				"ioex": false
+			}
+		],
+		"minidiag_enabled": false,
+		"minios_enabled": false,
 		"cr50_capability": [],
 		"minidiag_capability": [
 			"cbmem_preserved_by_ap_reset",
