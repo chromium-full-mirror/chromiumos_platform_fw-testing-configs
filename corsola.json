@@ -18,6 +18,9 @@
         "usbpd_uart": false,
         "x86": false
     },
+    "minidiag_capability": {
+        "event_log_test_report": true
+    },
     "firmware_screen": 20,
     "minios_enabled": false,
     "ec_reboot_to_g3_delay": 10,

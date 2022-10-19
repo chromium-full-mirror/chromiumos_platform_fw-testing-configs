@@ -218,7 +218,8 @@
     "minidiag_capability": {
         "storage_self_test": true,
         "event_log_launch_count": true,
-        "cbmem_preserved_by_ap_reset": true
+        "cbmem_preserved_by_ap_reset": true,
+        "event_log_test_report": false
     },
     "minidiag_capability.DOC": "List of capabilities of the minidiag, do not use these for devices which does not enable minidiag",
 

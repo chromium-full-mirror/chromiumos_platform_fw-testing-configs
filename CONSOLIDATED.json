@@ -675,6 +675,12 @@
 			"lid",
 			"usb"
 		],
+		"minidiag_capability": [
+			"cbmem_preserved_by_ap_reset",
+			"event_log_launch_count",
+			"event_log_test_report",
+			"storage_self_test"
+		],
 		"firmware_screen": 20,
 		"minios_enabled": false,
 		"ec_reboot_to_g3_delay": 10,
@@ -685,12 +691,7 @@
 				"ioex": false
 			}
 		],
-		"cr50_capability": [],
-		"minidiag_capability": [
-			"cbmem_preserved_by_ap_reset",
-			"event_log_launch_count",
-			"storage_self_test"
-		]
+		"cr50_capability": []
 	},
 	"cyan": {
 		"platform": "cyan",
