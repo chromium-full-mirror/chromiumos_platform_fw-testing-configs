@@ -18,6 +18,9 @@
         "usbpd_uart": false,
         "x86": true
     },
+    "minidiag_capability": {
+        "cbmem_preserved_by_ap_reset": false
+    },
     "servo_prog_state_delay": 1.0,
     "smm_store": false,
     "firmware_screen": 15,

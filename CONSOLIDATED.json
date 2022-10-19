@@ -1368,6 +1368,10 @@
 			"usb",
 			"x86"
 		],
+		"minidiag_capability": [
+			"event_log_launch_count",
+			"storage_self_test"
+		],
 		"servo_prog_state_delay": 1.0,
 		"smm_store": false,
 		"firmware_screen": 15,
@@ -1388,11 +1392,6 @@
 		"dark_resume_capable": true,
 		"cr50_capability": [
 			"deep_sleep_in_s0i3"
-		],
-		"minidiag_capability": [
-			"cbmem_preserved_by_ap_reset",
-			"event_log_launch_count",
-			"storage_self_test"
 		]
 	},
 	"hana": {
@@ -2625,6 +2624,10 @@
 			"usb",
 			"x86"
 		],
+		"minidiag_capability": [
+			"event_log_launch_count",
+			"storage_self_test"
+		],
 		"servo_prog_state_delay": 1.0,
 		"smm_store": false,
 		"firmware_screen": 15,
@@ -2648,12 +2651,7 @@
 		"cr50_capability": [
 			"deep_sleep_in_s0i3"
 		],
-		"minios_enabled": false,
-		"minidiag_capability": [
-			"cbmem_preserved_by_ap_reset",
-			"event_log_launch_count",
-			"storage_self_test"
-		]
+		"minios_enabled": false
 	},
 	"slippy": {
 		"platform": "slippy",
