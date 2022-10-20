@@ -1,5 +1,6 @@
 {
     "platform": "kukui",
+    "keypress_delay": 3,
     "mode_switcher_type": "tablet_detachable_switcher",
     "has_keyboard": false,
     "chrome_ec": true,
