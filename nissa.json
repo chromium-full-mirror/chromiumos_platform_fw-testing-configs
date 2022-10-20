@@ -27,6 +27,9 @@
             "ioex": false
         }
     ],
+    "minidiag_capability": {
+        "cbmem_preserved_by_ap_reset": false
+   },
     "dark_resume_capable": true,
     "smm_store": false,
     "hold_pwr_button_nopowerd_shutdown": 14,

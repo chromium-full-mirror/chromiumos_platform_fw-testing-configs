@@ -1992,6 +1992,10 @@
 				"ioex": false
 			}
 		],
+		"minidiag_capability": [
+			"event_log_launch_count",
+			"storage_self_test"
+		],
 		"dark_resume_capable": true,
 		"smm_store": false,
 		"hold_pwr_button_nopowerd_shutdown": 14,
@@ -2003,12 +2007,7 @@
 				"fw_update_build": "nissa-release/R107-15099.0.0"
 			}
 		},
-		"cr50_capability": [],
-		"minidiag_capability": [
-			"cbmem_preserved_by_ap_reset",
-			"event_log_launch_count",
-			"storage_self_test"
-		]
+		"cr50_capability": []
 	},
 	"nocturne": {
 		"platform": "nocturne",
