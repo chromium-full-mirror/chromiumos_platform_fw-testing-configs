@@ -2651,7 +2651,7 @@
 		"cr50_capability": [
 			"deep_sleep_in_s0i3"
 		],
-		"minios_enabled": false
+		"minios_enabled": true
 	},
 	"slippy": {
 		"platform": "slippy",
