@@ -2666,7 +2666,7 @@
 		"delay_powerinfo_stable": 5,
 		"serial_firmware_boot_delay": 10,
 		"delay_reboot_to_ping": 30,
-		"hold_pwr_button_poweroff": 4,
+		"hold_pwr_button_poweroff": 3,
 		"custom_usb_enable_pins": [
 			{
 				"name": "EN_PP5000_USB_A0_VBUS",
