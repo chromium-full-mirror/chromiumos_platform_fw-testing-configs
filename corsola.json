@@ -30,5 +30,13 @@
             "name": "en_pp5000_usb_a0_vbus",
             "ioex": false
         }
-    ]
+    ],
+    "models": {
+        "steelix": {
+            "fw_update_build": "corsola-release/R109-15190.0.0"
+        },
+        "rusty": {
+            "fw_update_build": "corsola-release/R109-15190.0.0"
+        }
+    }
 }
