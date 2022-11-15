@@ -1481,10 +1481,15 @@
 				"usbc_input_voltage_limit": 15
 			},
 			"kohaku": {
+				"custom_usb_enable_pins": [],
 				"usb_a_port_count": 0
 			},
 			"mushu": {
 				"max_charging_power": 100.0
+			},
+			"nightfury": {
+				"custom_usb_enable_pins": [],
+				"usb_a_port_count": 0
 			}
 		},
 		"minidiag_enabled": false,
