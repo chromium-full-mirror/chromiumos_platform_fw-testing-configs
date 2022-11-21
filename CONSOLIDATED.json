@@ -2458,6 +2458,35 @@
 			"storage_self_test"
 		]
 	},
+	"rex": {
+		"platform": "rex",
+		"mode_switcher_type": "menu_switcher",
+		"chrome_ec": true,
+		"ec_capability": [
+			"battery",
+			"cbi",
+			"charging",
+			"keyboard",
+			"lid",
+			"usb",
+			"x86"
+		],
+		"keypress_delay": 20,
+		"firmware_screen": 30,
+		"spi_voltage": "pp3300",
+		"dark_resume_capable": true,
+		"smm_store": false,
+		"hold_pwr_button_nopowerd_shutdown": 14,
+		"hold_pwr_button_poweron": 3,
+		"max_charging_power": 60.0,
+		"ac_on_can_wake_ap_from_ulp": true,
+		"cr50_capability": [],
+		"minidiag_capability": [
+			"cbmem_preserved_by_ap_reset",
+			"event_log_launch_count",
+			"storage_self_test"
+		]
+	},
 	"rikku": {
 		"platform": "rikku",
 		"parent": "jecht",
