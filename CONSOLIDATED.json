@@ -1472,7 +1472,8 @@
 				"usbc_voltage_on_shutdown_and_full_batt": 5
 			},
 			"helios": {
-				"custom_usb_enable_pins": []
+				"custom_usb_enable_pins": [],
+				"usb_a_port_count": 0
 			},
 			"jinlon": {
 				"usbc_voltage_on_shutdown_and_full_batt": 5
