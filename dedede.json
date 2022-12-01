@@ -36,6 +36,18 @@
         }
     ],
     "models": {
+        "boten": {
+            "custom_usb_enable_pins": [
+                {
+                    "name": "EN_USB_A0_VBUS",
+                    "ioex": false
+                },
+                {
+                    "name": "EN_PP5000_U",
+                    "ioex": false
+                }
+            ]
+        },
         "drawcia": {
             "custom_usb_enable_pins": [
                 {
@@ -145,6 +157,10 @@
                 {
                     "name": "EN_USB_A0_VBUS",
                     "ioex": false
+                },
+                {
+                    "name": "EN_PP5000_U",
+                    "ioex": false
                 }
             ]
         },
@@ -176,6 +192,10 @@
             "custom_usb_enable_pins": [
                 {
                     "name": "EN_USB_A0_VBUS",
+                    "ioex": false
+                },
+                {
+                    "name": "EN_PP5000_U",
                     "ioex": false
                 }
             ]
