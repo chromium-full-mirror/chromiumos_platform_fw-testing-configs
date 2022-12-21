@@ -627,6 +627,25 @@
 			"storage_self_test"
 		]
 	},
+	"cherry64": {
+		"platform": "cherry64",
+		"parent": "cherry",
+		"ec_capability": [
+			"arm",
+			"battery",
+			"cbi",
+			"charging",
+			"keyboard",
+			"lid",
+			"usb"
+		],
+		"cr50_capability": [],
+		"minidiag_capability": [
+			"cbmem_preserved_by_ap_reset",
+			"event_log_launch_count",
+			"storage_self_test"
+		]
+	},
 	"cheza": {
 		"platform": "cheza",
 		"mode_switcher_type": "tablet_detachable_switcher",
