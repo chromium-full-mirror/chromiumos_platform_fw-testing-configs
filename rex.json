@@ -18,6 +18,12 @@
         "usbpd_uart": false,
         "x86": true
     },
+    "custom_usb_enable_pins": [
+        {
+            "name": "en_pp5000_usba_r",
+            "ioex": false
+        }
+    ],
     "keypress_delay": 20,
     "firmware_screen": 30,
     "spi_voltage": "pp3300",
