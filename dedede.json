@@ -36,6 +36,18 @@
         }
     ],
     "models": {
+        "beetley": {
+            "custom_usb_enable_pins": [
+                {
+                    "name": "EN_USB_A0_VBUS",
+                    "ioex": false
+                },
+                {
+                    "name": "EN_PP5000_U",
+                    "ioex": false
+                }
+            ]
+        },
         "blipper": {
             "custom_usb_enable_pins": [
                 {
