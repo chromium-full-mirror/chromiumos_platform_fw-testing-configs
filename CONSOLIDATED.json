@@ -235,6 +235,11 @@
 		],
 		"minidiag_enabled": false,
 		"minios_enabled": false,
+		"models": {
+			"atlas": {
+				"usb_a_port_count": 0
+			}
+		},
 		"minidiag_capability": [
 			"cbmem_preserved_by_ap_reset",
 			"event_log_launch_count",
@@ -1237,6 +1242,11 @@
 		"usb_a_port_count": -1,
 		"minidiag_enabled": false,
 		"minios_enabled": false,
+		"models": {
+			"eve": {
+				"usb_a_port_count": 0
+			}
+		},
 		"minidiag_capability": [
 			"cbmem_preserved_by_ap_reset",
 			"event_log_launch_count",
@@ -1871,6 +1881,14 @@
 		"usb_a_port_count": -1,
 		"minidiag_enabled": false,
 		"minios_enabled": false,
+		"models": {
+			"kodama": {
+				"usb_a_port_count": 0
+			},
+			"krane": {
+				"usb_a_port_count": 0
+			}
+		},
 		"cr50_capability": [],
 		"minidiag_capability": [
 			"cbmem_preserved_by_ap_reset",

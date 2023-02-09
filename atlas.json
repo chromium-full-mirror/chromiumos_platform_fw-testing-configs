@@ -30,5 +30,10 @@
         "rdd_leakage": true
     },
     "minidiag_enabled": false,
-    "minios_enabled": false
+    "minios_enabled": false,
+    "models": {
+        "atlas": {
+            "usb_a_port_count": 0
+        }
+    }
 }
