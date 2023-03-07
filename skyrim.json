@@ -49,5 +49,6 @@
         "deep_sleep_in_s0i3": false
     },
     "minios_enabled": true,
+    "rec_force_mrc": false,
     "fw_update_build": "skyrim-release/R110-15268.0.0"
 }
