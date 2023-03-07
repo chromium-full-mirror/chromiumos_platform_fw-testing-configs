@@ -432,9 +432,11 @@
 		],
 		"models": {
 			"vell": {
+				"custom_usb_enable_pins": [],
 				"usb_a_port_count": 0
 			},
 			"banshee": {
+				"custom_usb_enable_pins": [],
 				"usb_a_port_count": 0
 			},
 			"brya": {
@@ -2554,8 +2556,8 @@
 		],
 		"custom_usb_enable_pins": [
 			{
-			"name": "en_pp5000_usba_r",
-			"ioex": false
+				"name": "en_pp5000_usba_r",
+				"ioex": false
 			}
 		],
 		"keypress_delay": 20,
