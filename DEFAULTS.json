@@ -227,5 +227,8 @@
     "minios_enabled.DOC": "Whether minios is enabled",
 
     "fw_update_build": null,
-    "fw_update_build.DOC": "Override firmware build to use for testing firmware update"
+    "fw_update_build.DOC": "Override firmware build to use for testing firmware update",
+
+    "suspend_cbmem": true,
+    "suspend_cbmem.DOC": "device supports cbmem after suspend"
 }

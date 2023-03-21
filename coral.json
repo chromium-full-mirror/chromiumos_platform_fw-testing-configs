@@ -1,4 +1,5 @@
 {
 	"platform": "coral",
-	"parent": "reef"
+	"parent": "reef",
+	"suspend_cbmem": false
 }
