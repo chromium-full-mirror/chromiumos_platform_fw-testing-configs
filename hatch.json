@@ -35,6 +35,7 @@
         "rdd_leakage": false,
         "deep_sleep_in_s0i3": false
     },
+    "custom_max_tpm_init_us": 230000,
     "models": {
         "dratini": {
             "usbc_voltage_on_shutdown_and_full_batt": 5
