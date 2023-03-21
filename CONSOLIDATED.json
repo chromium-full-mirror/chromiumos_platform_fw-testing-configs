@@ -1377,6 +1377,27 @@
 			"storage_self_test"
 		]
 	},
+	"geralt": {
+		"platform": "geralt",
+		"mode_switcher_type": "menu_switcher",
+		"is_detachable": true,
+		"chrome_ec": true,
+		"ec_capability": [
+			"arm",
+			"battery",
+			"cbi",
+			"charging",
+			"usb"
+		],
+		"minidiag_capability": [
+			"event_log_launch_count",
+			"event_log_test_report",
+			"storage_self_test"
+		],
+		"firmware_screen": 20,
+		"usbc_voltage_on_shutdown_and_full_batt": 9,
+		"cr50_capability": []
+	},
 	"glados": {
 		"platform": "glados",
 		"mode_switcher_type": "keyboard_dev_switcher",
