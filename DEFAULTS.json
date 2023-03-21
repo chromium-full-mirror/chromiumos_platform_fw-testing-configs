@@ -216,5 +216,8 @@
     "minidiag_enabled.DOC": "Whether minidiag is enabled",
 
     "minios_enabled": true,
-    "minios_enabled.DOC": "Whether minios is enabled"
+    "minios_enabled.DOC": "Whether minios is enabled",
+
+    "suspend_cbmem": true,
+    "suspend_cbmem.DOC": "device supports cbmem after suspend"
 }
