@@ -1,5 +1,6 @@
 {
 	"platform": "coral",
 	"parent": "reef",
-	"suspend_cbmem": false
+	"suspend_cbmem": false,
+	"custom_max_tpm_init_us": 180000
 }

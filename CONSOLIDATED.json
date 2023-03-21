@@ -32,6 +32,8 @@
 		"ec_capability.DOC": "Map of capabilities of the Chrome EC",
 		"cr50_capability": [],
 		"cr50_capability.DOC": "List of capabilities of the CR50",
+		"custom_max_tpm_init_us": 0,
+		"custom_max_tpm_init_us.DOC": "Maximum amount of time allowed for TPM init. Use a non-zero amount if it's board specific",
 		"custom_usb_enable_pins": [],
 		"custom_usb_enable_pins.DOC": "List of USB-A enable GPIO pin names with optional io expander flags. From usb_port_enable[] in board.c.",
 		"usb_a_port_count": null,
@@ -675,6 +677,7 @@
 		"platform": "coral",
 		"parent": "reef",
 		"suspend_cbmem": false,
+		"custom_max_tpm_init_us": 180000,
 		"ec_capability": [
 			"battery",
 			"charging",
