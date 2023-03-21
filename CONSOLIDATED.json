@@ -237,6 +237,7 @@
 			"rdd_leakage",
 			"wp_on_in_g3"
 		],
+		"custom_max_tpm_init_us": 230000,
 		"minidiag_enabled": false,
 		"minios_enabled": false,
 		"minidiag_capability": [
@@ -1445,6 +1446,7 @@
 		"cr50_capability": [
 			"ec_hibernate_breaks_rdd"
 		],
+		"custom_max_tpm_init_us": 230000,
 		"models": {
 			"dratini": {
 				"usbc_voltage_on_shutdown_and_full_batt": 5
@@ -2713,6 +2715,7 @@
 	"soraka": {
 		"platform": "soraka",
 		"parent": "poppy",
+		"custom_max_tpm_init_us": 230000,
 		"ec_capability": [
 			"battery",
 			"charging",
