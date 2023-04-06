@@ -1120,6 +1120,7 @@
 		"ac_on_can_wake_ap_from_ulp": true,
 		"minidiag_capability": [],
 		"minios_enabled": false,
+		"custom_max_tpm_init_us": 140000,
 		"cr50_capability": []
 	},
 	"draco": {
