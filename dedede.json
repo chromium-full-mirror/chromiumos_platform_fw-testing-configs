@@ -254,5 +254,6 @@
         "event_log_launch_count": false,
         "cbmem_preserved_by_ap_reset": false
     },
-    "minios_enabled": false
+    "minios_enabled": false,
+    "custom_max_tpm_init_us": 140000
 }
