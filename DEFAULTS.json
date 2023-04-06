@@ -233,5 +233,11 @@
     "fw_update_build.DOC": "Override firmware build to use for testing firmware update",
 
     "suspend_cbmem": true,
-    "suspend_cbmem.DOC": "device supports cbmem after suspend"
+    "suspend_cbmem.DOC": "device supports cbmem after suspend",
+
+    "s3_override_to_unsupported": false,
+    "s3_override_to_unsupported.DOC": "Tests check the dut state to determine if s3 is supported. Overrid to unsupported. File a bug for why.",
+
+    "s0ix_override_to_unsupported": false,
+    "s0ix_override_to_unsupported.DOC": "Tests check the dut state to determine if s0ix is supported. Overrid to unsupported. File a bug for why."
 }
