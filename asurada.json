@@ -21,6 +21,7 @@
     "firmware_screen": 20,
     "ec_reboot_to_g3_delay": 10,
     "usbc_voltage_on_shutdown_and_full_batt": 9,
+    "custom_max_tpm_init_us": 240000,
     "models": {
         "hayato": {
             "max_charging_power": 45.0,
