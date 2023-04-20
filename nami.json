@@ -30,6 +30,7 @@
         "rdd_off_in_g3": false,
         "rdd_leakage": true
     },
+    "custom_max_tpm_init_us": 240000,
     "max_charging_power": 70.0,
     "usb_a_port_count": -1,
     "minidiag_enabled": false,
