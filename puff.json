@@ -37,5 +37,6 @@
     "max_charging_power": 100.0,
     "minidiag_enabled": false,
     "minios_enabled": false,
-    "s0ix_override_to_unsupported" : true
+    "s0ix_override_to_unsupported" : true,
+    "s3_override_to_unsupported": true
 }

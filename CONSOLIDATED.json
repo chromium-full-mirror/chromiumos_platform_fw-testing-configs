@@ -2476,6 +2476,7 @@
 		"minidiag_enabled": false,
 		"minios_enabled": false,
 		"s0ix_override_to_unsupported": true,
+		"s3_override_to_unsupported": true,
 		"cr50_capability": [],
 		"minidiag_capability": [
 			"cbmem_preserved_by_ap_reset",
