@@ -19,6 +19,7 @@
         "usbpd_uart": false,
         "x86": false
     },
+    "s0ix_override_to_unsupported" : true,
     "charger_profile_override": true,
     "ac_on_can_wake_ap_from_ulp": true,
     "usb_a_port_count": -1,
