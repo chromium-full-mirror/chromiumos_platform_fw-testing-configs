@@ -3147,6 +3147,7 @@
 			"lid",
 			"usb"
 		],
+		"s0ix_override_to_unsupported": true,
 		"custom_usb_enable_pins": [
 			{
 				"name": "EN_USB_A_5V",
