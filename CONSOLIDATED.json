@@ -2308,6 +2308,7 @@
 		"cr50_capability": [
 			"rdd_leakage"
 		],
+		"custom_max_tpm_init_us": 240000,
 		"usb_plug": 45,
 		"spi_voltage": "pp1800",
 		"custom_usb_enable_pins": [
