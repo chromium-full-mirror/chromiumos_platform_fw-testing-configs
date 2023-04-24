@@ -24,7 +24,6 @@
             "ioex": false
         }
     ],
-    "keypress_delay": 20,
     "firmware_screen": 30,
     "spi_voltage": "pp3300",
     "dark_resume_capable": true,

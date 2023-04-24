@@ -392,7 +392,6 @@
 			"event_log_launch_count",
 			"storage_self_test"
 		],
-		"keypress_delay": 20,
 		"firmware_screen": 30,
 		"spi_voltage": "pp3300",
 		"custom_usb_enable_pins": [
@@ -1209,7 +1208,6 @@
 		"power_button_dev_switch": true,
 		"smm_store": false,
 		"ap_access_ec_flash": false,
-		"keypress_delay": 11,
 		"rec_force_mrc": false,
 		"ap_up_after_cr50_reboot": false,
 		"ec_forwards_short_pp_press": true,
@@ -2208,7 +2206,6 @@
 			"usb",
 			"x86"
 		],
-		"keypress_delay": 20,
 		"firmware_screen": 30,
 		"spi_voltage": "pp3300",
 		"custom_usb_enable_pins": [
@@ -2666,7 +2663,6 @@
 				"ioex": false
 			}
 		],
-		"keypress_delay": 20,
 		"firmware_screen": 30,
 		"spi_voltage": "pp3300",
 		"dark_resume_capable": true,
@@ -2762,7 +2758,6 @@
 		"power_button_dev_switch": true,
 		"smm_store": false,
 		"ap_access_ec_flash": false,
-		"keypress_delay": 11,
 		"rec_force_mrc": false,
 		"ap_up_after_cr50_reboot": false,
 		"gsc_update_wait_for_reboot": 25,

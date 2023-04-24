@@ -29,7 +29,6 @@
     "power_button_dev_switch": true,
     "smm_store": false,
     "ap_access_ec_flash": false,
-    "keypress_delay": 11,
     "rec_force_mrc": false,
     "ap_up_after_cr50_reboot": false,
     "gsc_update_wait_for_reboot": 25,
