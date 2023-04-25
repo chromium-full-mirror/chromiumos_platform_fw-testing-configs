@@ -239,5 +239,9 @@
     "s3_override_to_unsupported.DOC": "Tests check the dut state to determine if s3 is supported. Overrid to unsupported. File a bug for why.",
 
     "s0ix_override_to_unsupported": false,
-    "s0ix_override_to_unsupported.DOC": "Tests check the dut state to determine if s0ix is supported. Overrid to unsupported. File a bug for why."
+    "s0ix_override_to_unsupported.DOC": "Tests check the dut state to determine if s0ix is supported. Overrid to unsupported. File a bug for why.",
+
+    "broken_firmware_screen_requires_recovery": true,
+    "broken_firmware_screen_requires_recovery.DOC": "True if on the recovery screen esc+power+refresh needed to boot from usb"
+
 }
