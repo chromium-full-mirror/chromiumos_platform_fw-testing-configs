@@ -45,5 +45,6 @@
         "rdd_off_in_g3": false,
         "rdd_leakage": false,
         "deep_sleep_in_s0i3": true
-    }
+    },
+    "s3_override_to_unsupported": true
 }

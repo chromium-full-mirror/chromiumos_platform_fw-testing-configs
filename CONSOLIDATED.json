@@ -1595,7 +1595,8 @@
 		"dark_resume_capable": true,
 		"cr50_capability": [
 			"deep_sleep_in_s0i3"
-		]
+		],
+		"s3_override_to_unsupported": true
 	},
 	"hana": {
 		"platform": "hana",
