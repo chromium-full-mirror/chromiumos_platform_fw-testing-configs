@@ -2915,7 +2915,8 @@
 		"cr50_capability": [],
 		"minios_enabled": true,
 		"rec_force_mrc": false,
-		"fw_update_build": "skyrim-release/R110-15268.0.0"
+		"fw_update_build": "skyrim-release/R110-15268.0.0",
+		"s3_override_to_unsupported": true
 	},
 	"slippy": {
 		"platform": "slippy",
