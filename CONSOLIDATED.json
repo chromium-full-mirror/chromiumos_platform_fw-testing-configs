@@ -1437,6 +1437,8 @@
 			"battery",
 			"cbi",
 			"charging",
+			"keyboard",
+			"lid",
 			"usb"
 		],
 		"minidiag_capability": [
