@@ -308,6 +308,47 @@
                     "ioex": false
                 }
             ]
+        },
+        "dibbi": {
+            "ec_capability": {
+                "adc_ectemp": false,
+                "arm": false,
+                "battery": false,
+                "cbi": true,
+                "charging": false,
+                "doubleboot": false,
+                "keyboard": false,
+                "lid": false,
+                "peci": false,
+                "smart_usb_charge": false,
+                "thermal": false,
+                "usb": true,
+                "usbpd_uart": false,
+                "x86": true
+            },
+            "hold_pwr_button_poweron": 3,
+            "has_lid": false,
+            "has_keyboard": false,
+            "hibernate": false,
+            "rec_button_dev_switch": true,
+            "custom_usb_enable_pins": [
+                {
+                    "name": "EN_USB_A0_VBUS",
+                    "ioex": false
+                },
+                {
+                    "name": "EN_USB_A1_VBUS",
+                    "ioex": false
+                },
+                {
+                    "name": "EN_USB_A2_VBUS",
+                    "ioex": false
+                },
+                {
+                    "name": "EN_USB_A3_VBUS",
+                    "ioex": false
+                }
+            ]
         }
     },
     "ac_on_can_wake_ap_from_ulp": true,
