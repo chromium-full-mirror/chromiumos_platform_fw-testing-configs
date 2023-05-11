@@ -28,11 +28,13 @@ DEFAULT_OUTPUT_FILEPATH = 'CONSOLIDATED.json'
 
 
 class FormatException(Exception):
-    def __init__(self, message, platform=None, field=None):
+    def __init__(self, message, platform=None, model=None, field=None):
         if not message:
             message = 'Formatting issue in platform json'
         if platform:
             message += ', in platform {}'.format(platform)
+        if model:
+            message += ', in model {}'.format(model)
         if field:
             message += ', in field {}'.format(field)
         message += '!'
@@ -132,12 +134,22 @@ def reformat_capability_map(consolidated, cap_field):
         caps = conf.get(cap_field, dict())
         incl = set(k for k, v in caps.items() if v)
         excl = set(k for k, v in caps.items() if not v and v is not None)
-        platform_caps[platform] = incl, excl
+
+        # collect the capabilities for each model
+        models_caps = dict()
+        models = conf.get("models", dict())
+        for model, model_conf in models.items():
+            model_caps = model_conf.get(cap_field, dict())
+            model_incl = set(k for k, v in model_caps.items() if v)
+            model_excl = set(k for k, v in model_caps.items() if not v and v is not None)
+            models_caps[model] = model_incl, model_excl
+
+        platform_caps[platform] = incl, excl, models_caps
 
     # For platforms with explicitly defined capabilities, recurse through parents
     # inheritance from parents is overridden by children
     # Need separate loop to ensure incl, excl calculated for parent platforms
-    for platform, (incl, excl) in platform_caps.items():
+    for platform, (incl, excl, models) in platform_caps.items():
         curr_plat = platform
         seen = {platform}
         while True:
@@ -153,7 +165,7 @@ def reformat_capability_map(consolidated, cap_field):
                     'Circular parent from platform json',
                     platform=platform, field='parent')
 
-            par_incl, par_excl = platform_caps.get(curr_plat, (set(), set()))
+            par_incl, par_excl, par_models_caps = platform_caps.get(curr_plat, (set(), set(), set()))
             # ensure children get precedence in inheriting capabilities
             incl = incl.union(par_incl.difference(excl))
             excl = excl.union(par_excl.difference(incl))
@@ -170,6 +182,14 @@ def reformat_capability_map(consolidated, cap_field):
                     'Include/exclude not mutually exclusive',
                     platform=platform, field=cap_field)
 
+        for model, (model_incl, model_excl) in models.items():
+            if not model_incl:
+                continue
+            if model_incl.union(model_excl) != full_cap_set:
+                raise FormatException(
+                    'Not all capabilities accounted for',
+                    platform=platform, model=model, field=cap_field)
+            consolidated[platform]['models'][model][cap_field] = sorted(model_incl)
         consolidated[platform][cap_field] = sorted(incl)
 
 
