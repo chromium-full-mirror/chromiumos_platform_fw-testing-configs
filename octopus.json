@@ -44,6 +44,9 @@
         "ampton": {
             "usbc_voltage_on_shutdown_and_full_batt": 5
         },
+        "bloog": {
+            "delay_reboot_to_ping": 60
+        },
         "bluebird": {
             "usbc_input_voltage_limit": 15,
             "custom_usb_enable_pins": [

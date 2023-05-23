@@ -38,7 +38,8 @@
             "usb_a_port_count": 0
         },
         "krane": {
-            "usb_a_port_count": 0
+            "usb_a_port_count": 0,
+            "delay_reboot_to_ping": 90
         }
     }
 }

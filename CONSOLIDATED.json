@@ -53,7 +53,7 @@
 		"delay_powerinfo_stable": 0,
 		"delay_powerinfo_stable.DOC": "Delay between AP power-on and when powerinfo is stable. Some CPUs have an internal reset that transitions through different power states.",
 		"delay_reboot_to_ping": 30,
-		"delay_reboot_to_ping.DOC": "Delay between reboot and first ping response from the DUT. When this times out, it indicates we're stuck at a firmware screen. Hence, bypass action has to be taken if we want to proceed.",
+		"delay_reboot_to_ping.DOC": "Worst case delay between boot and ready for ssh. I.e. booting from servo provided USB to rec mode.",
 		"keypress_delay": 0.2,
 		"keypress_delay.DOC": "Delay between keypresses in firmware screen",
 		"dev_screen_timeout": 30,
@@ -2023,7 +2023,8 @@
 				"usb_a_port_count": 0
 			},
 			"krane": {
-				"usb_a_port_count": 0
+				"usb_a_port_count": 0,
+				"delay_reboot_to_ping": 90
 			}
 		},
 		"cr50_capability": [],
@@ -2358,6 +2359,9 @@
 		"models": {
 			"ampton": {
 				"usbc_voltage_on_shutdown_and_full_batt": 5
+			},
+			"bloog": {
+				"delay_reboot_to_ping": 60
 			},
 			"bluebird": {
 				"usbc_input_voltage_limit": 15,
