@@ -2275,7 +2275,7 @@
 		"platform": "nocturne",
 		"mode_switcher_type": "tablet_detachable_switcher",
 		"is_detachable": true,
-		"keypress_delay": 1,
+		"keypress_delay": 5,
 		"has_lid": true,
 		"usb_image_boot_timeout": 60,
 		"has_keyboard": false,
