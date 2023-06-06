@@ -82,7 +82,7 @@
 		"ec_reboot_to_g3_delay.DOC": "Delay for waiting EC turning off the AP",
 		"software_sync": 6,
 		"software_sync.DOC": "Delay of EC software sync hash calculating time",
-		"software_sync_update": 2,
+		"software_sync_update": 15,
 		"software_sync_update.DOC": "Delay of EC software sync updating EC",
 		"hold_pwr_button_poweroff": 5,
 		"hold_pwr_button_poweroff.DOC": "Duration of holding power button to power off DUT normally",
