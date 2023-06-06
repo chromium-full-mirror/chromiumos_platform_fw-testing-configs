@@ -98,7 +98,7 @@
     "delay_powerinfo_stable": 0,
     "delay_powerinfo_stable.DOC": "Delay between AP power-on and when powerinfo is stable. Some CPUs have an internal reset that transitions through different power states.",
 
-    "delay_reboot_to_ping": 30,
+    "delay_reboot_to_ping": 60,
     "delay_reboot_to_ping.DOC": "Worst case delay between boot and ready for ssh. I.e. booting from servo provided USB to rec mode.",
 
     "keypress_delay": 0.2,
