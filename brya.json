@@ -35,10 +35,12 @@
             "usb_a_port_count": 0
         },
         "brya": {
-            "firmware_screen": 20
+            "firmware_screen": 20,
+            "delay_reboot_to_ping": 120
         },
         "skolas": {
-            "firmware_screen": 20
+            "firmware_screen": 20,
+            "delay_reboot_to_ping": 120
         },
         "taniks": {
             "firmware_screen": 30,
