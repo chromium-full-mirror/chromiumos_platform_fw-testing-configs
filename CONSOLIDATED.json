@@ -3057,6 +3057,28 @@
 			"storage_self_test"
 		]
 	},
+	"staryu": {
+		"platform": "staryu",
+		"parent": "corsola",
+		"mode_switcher_type": "menu_switcher",
+		"is_detachable": true,
+		"ec_capability": [
+			"arm",
+			"battery",
+			"cbi",
+			"charging",
+			"keyboard",
+			"lid",
+			"usb"
+		],
+		"cr50_capability": [],
+		"minidiag_capability": [
+			"cbmem_preserved_by_ap_reset",
+			"event_log_launch_count",
+			"event_log_test_report",
+			"storage_self_test"
+		]
+	},
 	"storm": {
 		"platform": "storm",
 		"parent": "jetstream",

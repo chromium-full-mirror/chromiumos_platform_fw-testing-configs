@@ -1,0 +1,6 @@
+{
+    "platform": "staryu",
+    "parent": "corsola",
+    "mode_switcher_type": "menu_switcher",
+    "is_detachable": true
+}
