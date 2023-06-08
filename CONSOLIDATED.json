@@ -442,9 +442,8 @@
 			}
 		],
 		"models": {
-			"vell": {
-				"custom_usb_enable_pins": [],
-				"usb_a_port_count": 0
+			"agah": {
+				"delay_reboot_to_ping": 120
 			},
 			"banshee": {
 				"custom_usb_enable_pins": [],
@@ -454,6 +453,9 @@
 				"firmware_screen": 20,
 				"delay_reboot_to_ping": 120
 			},
+			"constitution": {
+				"delay_reboot_to_ping": 120
+			},
 			"skolas": {
 				"firmware_screen": 20,
 				"delay_reboot_to_ping": 120
@@ -461,6 +463,37 @@
 			"taniks": {
 				"firmware_screen": 30,
 				"delay_reboot_to_ping": 120
+			},
+			"crota": {
+				"delay_reboot_to_ping": 120
+			},
+			"gaelin": {
+				"delay_reboot_to_ping": 120
+			},
+			"gladios": {
+				"delay_reboot_to_ping": 120
+			},
+			"kano": {
+				"delay_reboot_to_ping": 120
+			},
+			"kuldax": {
+				"delay_reboot_to_ping": 120
+			},
+			"lisbon": {
+				"delay_reboot_to_ping": 120
+			},
+			"marasov": {
+				"delay_reboot_to_ping": 120
+			},
+			"omnigul": {
+				"delay_reboot_to_ping": 120
+			},
+			"osiris": {
+				"delay_reboot_to_ping": 120
+			},
+			"vell": {
+				"custom_usb_enable_pins": [],
+				"usb_a_port_count": 0
 			}
 		},
 		"minidiag_capability": [
