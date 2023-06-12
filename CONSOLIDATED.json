@@ -2053,13 +2053,13 @@
 		"usb_a_port_count": -1,
 		"minidiag_enabled": false,
 		"minios_enabled": false,
+		"delay_reboot_to_ping": 120,
 		"models": {
 			"kodama": {
 				"usb_a_port_count": 0
 			},
 			"krane": {
-				"usb_a_port_count": 0,
-				"delay_reboot_to_ping": 90
+				"usb_a_port_count": 0
 			}
 		},
 		"cr50_capability": [],
@@ -2330,6 +2330,7 @@
 		"usb_a_port_count": -1,
 		"minidiag_enabled": false,
 		"minios_enabled": false,
+		"delay_reboot_to_ping": 120,
 		"minidiag_capability": [
 			"cbmem_preserved_by_ap_reset",
 			"event_log_launch_count",
@@ -2821,7 +2822,7 @@
 		"platform": "sarien",
 		"mode_switcher_type": "keyboard_dev_switcher",
 		"firmware_screen": 18,
-		"delay_reboot_to_ping": 40,
+		"delay_reboot_to_ping": 120,
 		"hold_pwr_button_poweroff": 10,
 		"hold_pwr_button_poweron": 1.2,
 		"has_lid": true,
@@ -3043,6 +3044,7 @@
 		"platform": "soraka",
 		"parent": "poppy",
 		"custom_max_tpm_init_us": 230000,
+		"delay_reboot_to_ping": 120,
 		"ec_capability": [
 			"battery",
 			"charging",

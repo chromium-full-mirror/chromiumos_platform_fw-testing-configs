@@ -34,5 +34,6 @@
     "usbc_voltage_on_shutdown_and_full_batt": 9,
     "usb_a_port_count": -1,
     "minidiag_enabled": false,
-    "minios_enabled": false
+    "minios_enabled": false,
+    "delay_reboot_to_ping": 120
 }
