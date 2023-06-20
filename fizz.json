@@ -25,7 +25,7 @@
         "usbpd_uart": false,
         "x86": true
     },
-    "delay_reboot_to_ping": 40,
+    "delay_reboot_to_ping": 60,
     "smm_store": false,
     "max_charging_power": 100.0,
     "usb_a_port_count": -1,
