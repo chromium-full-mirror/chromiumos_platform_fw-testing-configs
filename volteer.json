@@ -29,6 +29,7 @@
     "dark_resume_capable": true,
     "smm_store": false,
     "hold_pwr_button_nopowerd_shutdown": 14,
+    "delay_reboot_to_ping": 90,
     "models": {
         "collis": {
             "max_charging_power": 45.0
