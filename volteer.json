@@ -66,6 +66,7 @@
         "deep_sleep_in_s0i3": false
     },
     "custom_max_tpm_init_us": 230000,
+    "s3_override_to_unsupported" : true,
     "minidiag_capability": {
         "event_log_launch_count": false,
         "cbmem_preserved_by_ap_reset": false
