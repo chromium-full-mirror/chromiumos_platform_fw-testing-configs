@@ -31,5 +31,6 @@
     "smm_store": false,
     "hold_pwr_button_nopowerd_shutdown": 14,
     "max_charging_power": 60.0,
-    "ac_on_can_wake_ap_from_ulp": true
+    "ac_on_can_wake_ap_from_ulp": true,
+    "delay_reboot_to_ping": 90
 }
