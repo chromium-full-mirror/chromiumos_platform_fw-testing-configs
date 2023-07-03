@@ -1,4 +1,5 @@
 {
 	"platform": "kalista",
-	"parent": "fizz"
+	"parent": "fizz",
+	"delay_reboot_to_ping": 140
 }

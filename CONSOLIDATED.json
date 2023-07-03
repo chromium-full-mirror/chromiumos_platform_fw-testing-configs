@@ -1264,7 +1264,7 @@
 		"platform": "drallion",
 		"mode_switcher_type": "keyboard_dev_switcher",
 		"firmware_screen": 15,
-		"delay_reboot_to_ping": 40,
+		"delay_reboot_to_ping": 70,
 		"hold_pwr_button_poweroff": 10,
 		"hold_pwr_button_poweron": 1.2,
 		"has_lid": true,
@@ -1446,6 +1446,17 @@
 			"x86"
 		],
 		"delay_reboot_to_ping": 60,
+		"models": {
+			"teemo": {
+				"delay_reboot_to_ping": 130
+			},
+			"sion": {
+				"delay_reboot_to_ping": 140
+			},
+			"kench": {
+				"delay_reboot_to_ping": 80
+			}
+		},
 		"smm_store": false,
 		"max_charging_power": 100.0,
 		"usb_a_port_count": -1,
@@ -1602,6 +1613,9 @@
 			"liara": {
 				"usbc_voltage_on_shutdown_and_full_batt": 5,
 				"hold_pwr_button_poweroff": 6
+			},
+			"careena": {
+				"delay_reboot_to_ping": 80
 			}
 		},
 		"minidiag_enabled": false,
@@ -1869,6 +1883,7 @@
 	"kalista": {
 		"platform": "kalista",
 		"parent": "fizz",
+		"delay_reboot_to_ping": 140,
 		"ec_capability": [
 			"x86"
 		],
@@ -2540,7 +2555,7 @@
 		"ec_forwards_short_pp_press": true,
 		"hibernate": false,
 		"delay_powerinfo_stable": 6,
-		"delay_reboot_to_ping": 40,
+		"delay_reboot_to_ping": 60,
 		"custom_usb_enable_pins": [
 			{
 				"name": "EN_PP5000_USB_VBUS",
@@ -2650,6 +2665,7 @@
 			"usb",
 			"x86"
 		],
+		"delay_reboot_to_ping": 80,
 		"firmware_screen": 25,
 		"usb_plug": 45,
 		"spi_voltage": "pp1800",
@@ -2869,6 +2885,7 @@
 		"is_detachable": true,
 		"max_charging_power": 38.55,
 		"usb_a_port_count": -1,
+		"delay_reboot_to_ping": 80,
 		"cr50_capability": [],
 		"minidiag_capability": [
 			"cbmem_preserved_by_ap_reset",

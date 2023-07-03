@@ -26,7 +26,7 @@
     "ec_forwards_short_pp_press": true,
     "hibernate": false,
     "delay_powerinfo_stable": 6,
-    "delay_reboot_to_ping": 40,
+    "delay_reboot_to_ping": 60,
     "custom_usb_enable_pins": [
         {
             "name": "EN_PP5000_USB_VBUS",

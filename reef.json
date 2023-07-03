@@ -20,6 +20,7 @@
         "usbpd_uart": false,
         "x86": true
     },
+    "delay_reboot_to_ping": 80,
     "firmware_screen": 25,
     "usb_plug": 45,
     "spi_voltage": "pp1800",

@@ -26,6 +26,17 @@
         "x86": true
     },
     "delay_reboot_to_ping": 60,
+    "models": {
+        "teemo":{
+            "delay_reboot_to_ping": 130
+        },
+        "sion":{
+            "delay_reboot_to_ping": 140
+        },
+        "kench":{
+            "delay_reboot_to_ping": 80
+        }
+    },
     "smm_store": false,
     "max_charging_power": 100.0,
     "usb_a_port_count": -1,
