@@ -26,7 +26,6 @@
     "firmware_screen": 15,
     "delay_powerinfo_stable": 5,
     "serial_firmware_boot_delay": 10,
-    "delay_reboot_to_ping": 30,
     "hold_pwr_button_poweroff": 3,
     "custom_usb_enable_pins": [
         {
