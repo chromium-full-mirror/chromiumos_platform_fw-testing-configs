@@ -865,7 +865,7 @@
 			"usb",
 			"x86"
 		],
-		"firmware_screen": 15,
+		"firmware_screen": 20,
 		"spi_voltage": "pp3300",
 		"dark_resume_capable": true,
 		"smm_store": false,
