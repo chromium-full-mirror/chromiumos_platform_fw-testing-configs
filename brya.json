@@ -44,6 +44,9 @@
             "firmware_screen": 20,
             "delay_reboot_to_ping": 120
         },
+        "taeko": {
+            "firmware_screen": 20
+        },
         "taniks": {
             "firmware_screen": 30,
             "delay_reboot_to_ping": 120
