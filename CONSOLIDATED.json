@@ -3161,13 +3161,11 @@
 				"usbc_input_voltage_limit": 15
 			}
 		},
-		"minios_enabled": false,
-		"cr50_capability": [],
 		"minidiag_capability": [
-			"cbmem_preserved_by_ap_reset",
-			"event_log_launch_count",
-			"storage_self_test"
-		]
+			"cbmem_preserved_by_ap_reset"
+		],
+		"minios_enabled": false,
+		"cr50_capability": []
 	},
 	"sumo": {
 		"platform": "sumo",
