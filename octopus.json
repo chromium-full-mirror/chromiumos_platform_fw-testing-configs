@@ -3,6 +3,7 @@
     "mode_switcher_type": "keyboard_dev_switcher",
     "chrome_ec": true,
     "ec_boot_to_console": 0.3,
+    "firmware_screen": 20,
     "ec_capability": {
         "adc_ectemp": false,
         "arm": false,
