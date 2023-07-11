@@ -3319,7 +3319,7 @@
 	"volteer": {
 		"platform": "volteer",
 		"mode_switcher_type": "menu_switcher",
-		"firmware_screen": 11,
+		"firmware_screen": 20,
 		"chrome_ec": true,
 		"ec_capability": [
 			"battery",
