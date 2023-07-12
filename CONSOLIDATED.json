@@ -2287,7 +2287,6 @@
 		"is_detachable": true,
 		"keypress_delay": 5,
 		"has_lid": true,
-		"usb_image_boot_timeout": 60,
 		"has_keyboard": false,
 		"chrome_ec": true,
 		"ec_capability": [
@@ -2305,6 +2304,7 @@
 		"usb_a_port_count": -1,
 		"minidiag_enabled": false,
 		"minios_enabled": false,
+		"usb_image_boot_timeout": 120,
 		"delay_reboot_to_ping": 120,
 		"minidiag_capability": [
 			"cbmem_preserved_by_ap_reset",
