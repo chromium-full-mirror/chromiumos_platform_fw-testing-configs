@@ -149,6 +149,7 @@
             ]
         },
         "kracko360": {
+            "delay_reboot_to_ping" : 80,
             "custom_usb_enable_pins": [
                 {
                     "name": "EN_USB_A_5V",

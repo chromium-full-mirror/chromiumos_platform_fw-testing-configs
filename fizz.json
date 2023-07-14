@@ -33,6 +33,9 @@
         "sion":{
             "delay_reboot_to_ping": 140
         },
+        "jax" :{
+            "delay_reboot_to_ping": 80
+        },
         "kench":{
             "delay_reboot_to_ping": 80
         }
