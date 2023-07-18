@@ -2344,7 +2344,8 @@
 		"mode_switcher_type": "keyboard_dev_switcher",
 		"chrome_ec": true,
 		"ec_boot_to_console": 0.3,
-		"firmware_screen": 20,
+		"firmware_screen": 30,
+		"delay_reboot_to_ping": 120,
 		"ec_capability": [
 			"battery",
 			"cbi",
