@@ -18,7 +18,8 @@
         "usbpd_uart": false,
         "x86": true
     },
-    "firmware_screen": 20,
+    "firmware_screen": 30,
+    "delay_reboot_to_ping" : 120,
     "spi_voltage": "pp3300",
     "dark_resume_capable": true,
     "smm_store": false,
