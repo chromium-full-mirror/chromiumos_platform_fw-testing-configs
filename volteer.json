@@ -1,7 +1,7 @@
 {
     "platform": "volteer",
     "mode_switcher_type": "menu_switcher",
-    "firmware_screen": 20,
+    "firmware_screen": 30,
     "chrome_ec": true,
     "ec_capability": {
         "adc_ectemp": false,
@@ -29,7 +29,7 @@
     "dark_resume_capable": true,
     "smm_store": false,
     "hold_pwr_button_nopowerd_shutdown": 14,
-    "delay_reboot_to_ping": 90,
+    "delay_reboot_to_ping": 120,
     "models": {
         "collis": {
             "max_charging_power": 45.0
