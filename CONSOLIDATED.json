@@ -1162,6 +1162,28 @@
 					}
 				]
 			},
+			"boxy": {
+				"ec_capability": [
+					"cbi",
+					"usb",
+					"x86"
+				],
+				"hold_pwr_button_poweron": 3,
+				"has_lid": false,
+				"has_keyboard": false,
+				"hibernate": false,
+				"rec_button_dev_switch": true,
+				"custom_usb_enable_pins": [
+					{
+						"name": "EN_USB_A0_VBUS",
+						"ioex": false
+					},
+					{
+						"name": "EN_USB_A1_VBUS",
+						"ioex": false
+					}
+				]
+			},
 			"taranza": {
 				"ec_capability": [
 					"cbi",
