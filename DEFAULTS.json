@@ -68,6 +68,9 @@
     },
     "cr50_capability.DOC": "List of capabilities of the CR50",
 
+    "ec_efs2": false,
+    "ec_efs2.DOC": "Whether The EC uses EC-EFS2",
+
     "custom_max_tpm_init_us": 0,
     "custom_max_tpm_init_us.DOC": "Maximum amount of time allowed for TPM init. Use a non-zero amount if it's board specific",
 

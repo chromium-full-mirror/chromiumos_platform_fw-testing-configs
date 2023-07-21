@@ -18,6 +18,7 @@
         "usbpd_uart": false,
         "x86": true
     },
+    "ec_efs2": true,
     "minidiag_capability": {
         "cbmem_preserved_by_ap_reset": false
     },

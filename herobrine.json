@@ -18,6 +18,7 @@
         "usbpd_uart": false,
         "x86": false
     },
+    "ec_efs2": true,
     "custom_usb_enable_pins": [
         {
             "name": "EN_USB_A_5V",

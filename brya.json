@@ -18,6 +18,7 @@
         "usbpd_uart": false,
         "x86": true
     },
+    "ec_efs2": true,
     "firmware_screen": 30,
     "delay_reboot_to_ping": 120,
     "spi_voltage": "pp3300",

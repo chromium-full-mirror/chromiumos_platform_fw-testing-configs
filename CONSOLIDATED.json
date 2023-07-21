@@ -32,6 +32,8 @@
 		"ec_capability.DOC": "Map of capabilities of the Chrome EC",
 		"cr50_capability": [],
 		"cr50_capability.DOC": "List of capabilities of the CR50",
+		"ec_efs2": false,
+		"ec_efs2.DOC": "Whether The EC uses EC-EFS2",
 		"custom_max_tpm_init_us": 0,
 		"custom_max_tpm_init_us.DOC": "Maximum amount of time allowed for TPM init. Use a non-zero amount if it's board specific",
 		"custom_usb_enable_pins": [],
@@ -434,6 +436,7 @@
 			"usb",
 			"x86"
 		],
+		"ec_efs2": true,
 		"firmware_screen": 30,
 		"delay_reboot_to_ping": 120,
 		"spi_voltage": "pp3300",
@@ -615,6 +618,7 @@
 		],
 		"firmware_screen": 20,
 		"ec_reboot_to_g3_delay": 10,
+		"ec_efs2": true,
 		"usbc_voltage_on_shutdown_and_full_batt": 9,
 		"custom_usb_enable_pins": [
 			{
@@ -759,6 +763,7 @@
 		],
 		"firmware_screen": 20,
 		"ec_reboot_to_g3_delay": 10,
+		"ec_efs2": true,
 		"usbc_voltage_on_shutdown_and_full_batt": 9,
 		"custom_usb_enable_pins": [
 			{
@@ -822,6 +827,7 @@
 			"usb",
 			"x86"
 		],
+		"ec_efs2": true,
 		"firmware_screen": 30,
 		"delay_reboot_to_ping": 120,
 		"spi_voltage": "pp3300",
@@ -1513,6 +1519,7 @@
 			"lid",
 			"usb"
 		],
+		"ec_efs2": true,
 		"minidiag_capability": [
 			"event_log_launch_count",
 			"event_log_test_report",
@@ -1788,6 +1795,7 @@
 			"lid",
 			"usb"
 		],
+		"ec_efs2": true,
 		"custom_usb_enable_pins": [
 			{
 				"name": "EN_USB_A_5V",
@@ -2291,6 +2299,7 @@
 			"usb",
 			"x86"
 		],
+		"ec_efs2": true,
 		"firmware_screen": 30,
 		"spi_voltage": "pp3300",
 		"custom_usb_enable_pins": [
@@ -2551,6 +2560,7 @@
 			"x86"
 		],
 		"ec_forwards_short_pp_press": true,
+		"ec_efs2": true,
 		"hibernate": false,
 		"delay_powerinfo_stable": 6,
 		"delay_reboot_to_ping": 60,
@@ -2979,6 +2989,7 @@
 			"usb",
 			"x86"
 		],
+		"ec_efs2": true,
 		"minidiag_capability": [
 			"event_log_launch_count",
 			"storage_self_test"
@@ -3327,6 +3338,7 @@
 			"usb",
 			"x86"
 		],
+		"ec_efs2": true,
 		"spi_voltage": "pp3300",
 		"custom_usb_enable_pins": [
 			{
@@ -3461,6 +3473,7 @@
 			"usb",
 			"x86"
 		],
+		"ec_efs2": true,
 		"hold_pwr_button_poweroff": 10,
 		"servo_prog_state_delay": 1.0,
 		"smm_store": false,
