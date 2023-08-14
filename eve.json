@@ -40,5 +40,6 @@
         "eve": {
             "usb_a_port_count": 0
         }
-    }
+    },
+    "rec_invalid_screen": 5
 }

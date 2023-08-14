@@ -34,5 +34,6 @@
     "max_charging_power": 70.0,
     "usb_a_port_count": -1,
     "minidiag_enabled": false,
-    "minios_enabled": false
+    "minios_enabled": false,
+    "rec_invalid_screen": 5
 }
