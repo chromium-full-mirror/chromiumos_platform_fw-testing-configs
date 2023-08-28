@@ -25,5 +25,6 @@
     "usb_hid_wake_enabled": false,
     "usb_a_port_count": -1,
     "minidiag_enabled": false,
-    "minios_enabled": false
+    "minios_enabled": false,
+    "no_broken_screen_in_dev": true
 }

@@ -41,5 +41,6 @@
             "usb_a_port_count": 0
         }
     },
-    "rec_invalid_screen": 5
+    "rec_invalid_screen": 5,
+    "no_broken_screen_in_dev": true
 }

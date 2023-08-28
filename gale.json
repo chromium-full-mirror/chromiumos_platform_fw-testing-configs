@@ -1,5 +1,6 @@
 {
     "platform": "gale",
     "parent": "jetstream",
-    "clear_dev_on_rec": true
+    "clear_dev_on_rec": true,
+    "no_broken_screen_in_dev": true
 }

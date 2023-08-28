@@ -245,7 +245,10 @@
     "s0ix_override_to_unsupported.DOC": "Tests check the dut state to determine if s0ix is supported. Overrid to unsupported. File a bug for why.",
 
     "broken_firmware_screen_requires_recovery": true,
-    "broken_firmware_screen_requires_recovery.DOC": "True if on the recovery screen esc+power+refresh needed to boot from usb",
+    "broken_firmware_screen_requires_recovery.DOC": "True if on the recovery screen esc+power+refresh needed to boot from usb. Deprecated. Use 'no_broken_screen_in_dev' instead.",
+
+    "no_broken_screen_in_dev": false,
+    "no_broken_screen_in_dev.DOC": "True if DUT reaches insert screen instead of broken screen when dev switch is on",
 
     "rec_invalid_screen": 2,
     "rec_invalid_screen.DOC": "Delay to wait for the recovery invalid screen after plugging an invalid USB"

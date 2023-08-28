@@ -151,7 +151,9 @@
 		"s0ix_override_to_unsupported": false,
 		"s0ix_override_to_unsupported.DOC": "Tests check the dut state to determine if s0ix is supported. Overrid to unsupported. File a bug for why.",
 		"broken_firmware_screen_requires_recovery": true,
-		"broken_firmware_screen_requires_recovery.DOC": "True if on the recovery screen esc+power+refresh needed to boot from usb",
+		"broken_firmware_screen_requires_recovery.DOC": "True if on the recovery screen esc+power+refresh needed to boot from usb. Deprecated. Use 'no_broken_screen_in_dev' instead.",
+		"no_broken_screen_in_dev": false,
+		"no_broken_screen_in_dev.DOC": "True if DUT reaches insert screen instead of broken screen when dev switch is on",
 		"rec_invalid_screen": 2,
 		"rec_invalid_screen.DOC": "Delay to wait for the recovery invalid screen after plugging an invalid USB"
 	},
@@ -729,6 +731,7 @@
 		"suspend_cbmem": false,
 		"custom_max_tpm_init_us": 180000,
 		"rec_invalid_screen": 5,
+		"no_broken_screen_in_dev": true,
 		"ec_capability": [
 			"battery",
 			"charging",
@@ -1427,6 +1430,7 @@
 			}
 		},
 		"rec_invalid_screen": 5,
+		"no_broken_screen_in_dev": true,
 		"minidiag_capability": [
 			"cbmem_preserved_by_ap_reset",
 			"event_log_launch_count",
@@ -1498,6 +1502,7 @@
 		"usb_a_port_count": -1,
 		"minidiag_enabled": false,
 		"minios_enabled": false,
+		"no_broken_screen_in_dev": true,
 		"cr50_capability": [],
 		"minidiag_capability": [
 			"cbmem_preserved_by_ap_reset",
@@ -1509,6 +1514,7 @@
 		"platform": "gale",
 		"parent": "jetstream",
 		"clear_dev_on_rec": true,
+		"no_broken_screen_in_dev": true,
 		"ec_capability": [],
 		"cr50_capability": [],
 		"minidiag_capability": [
@@ -1585,6 +1591,7 @@
 		"usb_a_port_count": -1,
 		"minidiag_enabled": false,
 		"minios_enabled": false,
+		"no_broken_screen_in_dev": true,
 		"cr50_capability": [],
 		"minidiag_capability": [
 			"cbmem_preserved_by_ap_reset",
@@ -1623,6 +1630,7 @@
 		"usb_a_port_count": -1,
 		"minidiag_enabled": false,
 		"minios_enabled": false,
+		"no_broken_screen_in_dev": true,
 		"cr50_capability": [],
 		"minidiag_capability": [
 			"cbmem_preserved_by_ap_reset",
@@ -2411,6 +2419,7 @@
 		"usb_a_port_count": -1,
 		"minidiag_enabled": false,
 		"minios_enabled": false,
+		"no_broken_screen_in_dev": true,
 		"cr50_capability": [],
 		"minidiag_capability": [
 			"cbmem_preserved_by_ap_reset",
@@ -2719,6 +2728,7 @@
 		"usb_a_port_count": -1,
 		"minidiag_enabled": false,
 		"minios_enabled": false,
+		"no_broken_screen_in_dev": true,
 		"cr50_capability": [],
 		"minidiag_capability": [
 			"cbmem_preserved_by_ap_reset",
