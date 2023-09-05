@@ -35,5 +35,6 @@
     "usb_a_port_count": -1,
     "minidiag_enabled": false,
     "minios_enabled": false,
-    "rec_invalid_screen": 5
+    "rec_invalid_screen": 5,
+    "ac_on_can_wake_ap_from_ulp": true
 }

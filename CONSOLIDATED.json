@@ -2257,6 +2257,7 @@
 		"minidiag_enabled": false,
 		"minios_enabled": false,
 		"rec_invalid_screen": 5,
+		"ac_on_can_wake_ap_from_ulp": true,
 		"minidiag_capability": [
 			"cbmem_preserved_by_ap_reset",
 			"event_log_launch_count",
