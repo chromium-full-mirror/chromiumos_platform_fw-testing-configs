@@ -2817,7 +2817,6 @@
 			}
 		],
 		"firmware_screen": 20,
-		"dev_screen_timeout": 20,
 		"spi_voltage": "pp3300",
 		"dark_resume_capable": true,
 		"smm_store": false,
