@@ -185,6 +185,9 @@
     "gsc_can_wake_ec_with_reset": true,
     "gsc_can_wake_ec_with_reset.DOC": "True if the GSC can wake the EC with its reset GPIO",
 
+    "gsc_off_in_ulp": false,
+    "gsc_off_in_ulp.DOC": "True if the GSC is unpowered in ULP",
+
     "ap_up_after_cr50_reboot": true,
     "ap_up_after_cr50_reboot.DOC": "True if AP is normally expected to be powered on after the Cr50 reboots (when AC power is connected)",
 
