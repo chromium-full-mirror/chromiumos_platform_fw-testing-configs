@@ -19,6 +19,7 @@
         "x86": true
     },
     "ec_efs2": true,
+    "gsc_off_in_ulp": true,
     "firmware_screen": 30,
     "delay_reboot_to_ping" : 120,
     "spi_voltage": "pp3300",
