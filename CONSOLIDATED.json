@@ -2094,40 +2094,6 @@
 			"storage_self_test"
 		]
 	},
-	"samus": {
-		"platform": "samus",
-		"mode_switcher_type": "keyboard_dev_switcher",
-		"ec_boot_to_console": 0.6,
-		"chrome_ec": true,
-		"ec_ro_vbus_bug": true,
-		"chrome_usbpd": true,
-		"dark_resume_capable": true,
-		"ec_capability": [
-			"adc_ectemp",
-			"battery",
-			"charging",
-			"keyboard",
-			"lid",
-			"peci",
-			"smart_usb_charge",
-			"usb",
-			"usbpd_uart",
-			"x86"
-		],
-		"firmware_screen": 15,
-		"spi_voltage": "pp3300",
-		"servo_prog_state_delay": 10,
-		"smm_store": false,
-		"usb_a_port_count": -1,
-		"minidiag_enabled": false,
-		"minios_enabled": false,
-		"cr50_capability": [],
-		"minidiag_capability": [
-			"cbmem_preserved_by_ap_reset",
-			"event_log_launch_count",
-			"storage_self_test"
-		]
-	},
 	"sand": {
 		"platform": "sand",
 		"parent": "reef",
