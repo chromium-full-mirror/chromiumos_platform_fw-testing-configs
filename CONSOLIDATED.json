@@ -255,35 +255,6 @@
 			"storage_self_test"
 		]
 	},
-	"auron": {
-		"platform": "auron",
-		"mode_switcher_type": "keyboard_dev_switcher",
-		"ec_boot_to_console": 0.6,
-		"chrome_ec": true,
-		"ec_ro_vbus_bug": true,
-		"dark_resume_capable": true,
-		"ec_capability": [
-			"adc_ectemp",
-			"battery",
-			"charging",
-			"keyboard",
-			"lid",
-			"peci",
-			"usb",
-			"x86"
-		],
-		"spi_voltage": "pp3300",
-		"smm_store": false,
-		"usb_a_port_count": -1,
-		"minidiag_enabled": false,
-		"minios_enabled": false,
-		"cr50_capability": [],
-		"minidiag_capability": [
-			"cbmem_preserved_by_ap_reset",
-			"event_log_launch_count",
-			"storage_self_test"
-		]
-	},
 	"banjo": {
 		"platform": "banjo",
 		"parent": "rambi",
@@ -313,26 +284,6 @@
 			"keyboard",
 			"lid",
 			"smart_usb_charge",
-			"usb",
-			"x86"
-		],
-		"cr50_capability": [],
-		"minidiag_capability": [
-			"cbmem_preserved_by_ap_reset",
-			"event_log_launch_count",
-			"storage_self_test"
-		]
-	},
-	"betty": {
-		"platform": "betty",
-		"parent": "auron",
-		"ec_capability": [
-			"adc_ectemp",
-			"battery",
-			"charging",
-			"keyboard",
-			"lid",
-			"peci",
 			"usb",
 			"x86"
 		],
@@ -462,26 +413,6 @@
 		"max_charging_power": 60.0,
 		"ac_on_can_wake_ap_from_ulp": true,
 		"cr50_capability": []
-	},
-	"buddy": {
-		"platform": "buddy",
-		"parent": "auron",
-		"ec_capability": [
-			"adc_ectemp",
-			"peci",
-			"usb",
-			"x86"
-		],
-		"has_lid": false,
-		"has_keyboard": false,
-		"rec_button_dev_switch": true,
-		"usb_a_port_count": -1,
-		"cr50_capability": [],
-		"minidiag_capability": [
-			"cbmem_preserved_by_ap_reset",
-			"event_log_launch_count",
-			"storage_self_test"
-		]
 	},
 	"candy": {
 		"platform": "candy",
@@ -1502,28 +1433,6 @@
 			"storage_self_test"
 		]
 	},
-	"gandof": {
-		"platform": "gandof",
-		"parent": "auron",
-		"ec_capability": [
-			"adc_ectemp",
-			"battery",
-			"charging",
-			"keyboard",
-			"lid",
-			"peci",
-			"smart_usb_charge",
-			"usb",
-			"x86"
-		],
-		"usb_a_port_count": -1,
-		"cr50_capability": [],
-		"minidiag_capability": [
-			"cbmem_preserved_by_ap_reset",
-			"event_log_launch_count",
-			"storage_self_test"
-		]
-	},
 	"geralt": {
 		"platform": "geralt",
 		"mode_switcher_type": "menu_switcher",
@@ -2144,26 +2053,6 @@
 			"storage_self_test"
 		]
 	},
-	"lulu": {
-		"platform": "lulu",
-		"parent": "auron",
-		"ec_capability": [
-			"adc_ectemp",
-			"battery",
-			"charging",
-			"keyboard",
-			"lid",
-			"peci",
-			"usb",
-			"x86"
-		],
-		"cr50_capability": [],
-		"minidiag_capability": [
-			"cbmem_preserved_by_ap_reset",
-			"event_log_launch_count",
-			"storage_self_test"
-		]
-	},
 	"mickey": {
 		"platform": "mickey",
 		"parent": "brain",
@@ -2456,26 +2345,6 @@
 			"keyboard",
 			"lid",
 			"smart_usb_charge",
-			"usb",
-			"x86"
-		],
-		"cr50_capability": [],
-		"minidiag_capability": [
-			"cbmem_preserved_by_ap_reset",
-			"event_log_launch_count",
-			"storage_self_test"
-		]
-	},
-	"paine": {
-		"platform": "paine",
-		"parent": "auron",
-		"ec_capability": [
-			"adc_ectemp",
-			"battery",
-			"charging",
-			"keyboard",
-			"lid",
-			"peci",
 			"usb",
 			"x86"
 		],
@@ -3399,26 +3268,6 @@
 			"keyboard",
 			"lid",
 			"smart_usb_charge",
-			"usb",
-			"x86"
-		],
-		"cr50_capability": [],
-		"minidiag_capability": [
-			"cbmem_preserved_by_ap_reset",
-			"event_log_launch_count",
-			"storage_self_test"
-		]
-	},
-	"yuna": {
-		"platform": "yuna",
-		"parent": "auron",
-		"ec_capability": [
-			"adc_ectemp",
-			"battery",
-			"charging",
-			"keyboard",
-			"lid",
-			"peci",
 			"usb",
 			"x86"
 		],

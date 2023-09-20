@@ -1,8 +1,0 @@
-{
-    "platform": "gandof",
-    "parent": "auron",
-    "ec_capability": {
-        "smart_usb_charge": true
-    },
-    "usb_a_port_count": -1
-}
