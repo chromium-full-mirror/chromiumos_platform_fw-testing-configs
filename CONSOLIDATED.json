@@ -1017,40 +1017,6 @@
 			"storage_self_test"
 		]
 	},
-	"dragonegg": {
-		"platform": "dragonegg",
-		"mode_switcher_type": "keyboard_dev_switcher",
-		"chrome_ec": true,
-		"ec_capability": [
-			"battery",
-			"charging",
-			"keyboard",
-			"lid",
-			"smart_usb_charge",
-			"usb",
-			"x86"
-		],
-		"firmware_screen": 15,
-		"spi_voltage": "pp3300",
-		"servo_prog_state_delay": 10,
-		"dark_resume_capable": true,
-		"custom_usb_enable_pins": [
-			{
-				"name": "EN_USB_A_5V",
-				"ioex": false
-			}
-		],
-		"smm_store": false,
-		"max_charging_power": 45.0,
-		"minidiag_enabled": false,
-		"minios_enabled": false,
-		"cr50_capability": [],
-		"minidiag_capability": [
-			"cbmem_preserved_by_ap_reset",
-			"event_log_launch_count",
-			"storage_self_test"
-		]
-	},
 	"drallion": {
 		"platform": "drallion",
 		"mode_switcher_type": "keyboard_dev_switcher",
