@@ -1402,44 +1402,6 @@
 			"storage_self_test"
 		]
 	},
-	"herobrine": {
-		"platform": "herobrine",
-		"mode_switcher_type": "menu_switcher",
-		"chrome_ec": true,
-		"ec_capability": [
-			"arm",
-			"battery",
-			"charging",
-			"keyboard",
-			"lid",
-			"usb"
-		],
-		"ec_efs2": true,
-		"custom_usb_enable_pins": [
-			{
-				"name": "EN_USB_A_5V",
-				"ioex": false
-			}
-		],
-		"charger_profile_override": true,
-		"ac_on_can_wake_ap_from_ulp": true,
-		"models": {
-			"herobrine": {
-				"usbc_input_voltage_limit": 15
-			},
-			"evoker": {
-				"usbc_input_voltage_limit": 15,
-				"custom_usb_enable_pins": [],
-				"usb_a_port_count": 0
-			}
-		},
-		"cr50_capability": [],
-		"minidiag_capability": [
-			"cbmem_preserved_by_ap_reset",
-			"event_log_launch_count",
-			"storage_self_test"
-		]
-	},
 	"jacuzzi": {
 		"platform": "jacuzzi",
 		"parent": "kukui",
