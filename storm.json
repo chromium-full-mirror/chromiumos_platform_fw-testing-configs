@@ -1,5 +1,0 @@
-{
-    "platform": "storm",
-    "parent": "jetstream",
-    "clear_dev_on_rec": true
-}

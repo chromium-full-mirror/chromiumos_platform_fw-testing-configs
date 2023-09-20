@@ -159,17 +159,6 @@
 		"rec_invalid_screen": 2,
 		"rec_invalid_screen.DOC": "Delay to wait for the recovery invalid screen after plugging an invalid USB"
 	},
-	"arkham": {
-		"platform": "arkham",
-		"parent": "jetstream",
-		"ec_capability": [],
-		"cr50_capability": [],
-		"minidiag_capability": [
-			"cbmem_preserved_by_ap_reset",
-			"event_log_launch_count",
-			"storage_self_test"
-		]
-	},
 	"asuka": {
 		"platform": "asuka",
 		"parent": "kunimitsu",
@@ -1513,19 +1502,6 @@
 			"storage_self_test"
 		]
 	},
-	"gale": {
-		"platform": "gale",
-		"parent": "jetstream",
-		"clear_dev_on_rec": true,
-		"no_broken_screen_in_dev": true,
-		"ec_capability": [],
-		"cr50_capability": [],
-		"minidiag_capability": [
-			"cbmem_preserved_by_ap_reset",
-			"event_log_launch_count",
-			"storage_self_test"
-		]
-	},
 	"gandof": {
 		"platform": "gandof",
 		"parent": "auron",
@@ -1912,24 +1888,6 @@
 			"storage_self_test"
 		]
 	},
-	"jetstream": {
-		"platform": "jetstream",
-		"mode_switcher_type": "jetstream_switcher",
-		"firmware_screen": 16,
-		"has_lid": false,
-		"has_keyboard": false,
-		"rec_button_dev_switch": true,
-		"smm_store": false,
-		"ec_capability": [],
-		"minidiag_enabled": false,
-		"minios_enabled": false,
-		"cr50_capability": [],
-		"minidiag_capability": [
-			"cbmem_preserved_by_ap_reset",
-			"event_log_launch_count",
-			"storage_self_test"
-		]
-	},
 	"kalista": {
 		"platform": "kalista",
 		"parent": "fizz",
@@ -2210,22 +2168,6 @@
 		"platform": "mickey",
 		"parent": "brain",
 		"has_powerbutton": false,
-		"ec_capability": [],
-		"cr50_capability": [],
-		"minidiag_capability": [
-			"cbmem_preserved_by_ap_reset",
-			"event_log_launch_count",
-			"storage_self_test"
-		]
-	},
-	"mistral": {
-		"platform": "mistral",
-		"parent": "jetstream",
-		"chrome_ec": false,
-		"rec_button_dev_switch": false,
-		"warm_reset_hold_time": 0.7,
-		"has_powerbutton": false,
-		"clear_dev_on_rec": true,
 		"ec_capability": [],
 		"cr50_capability": [],
 		"minidiag_capability": [
@@ -3161,18 +3103,6 @@
 			"storage_self_test"
 		]
 	},
-	"storm": {
-		"platform": "storm",
-		"parent": "jetstream",
-		"clear_dev_on_rec": true,
-		"ec_capability": [],
-		"cr50_capability": [],
-		"minidiag_capability": [
-			"cbmem_preserved_by_ap_reset",
-			"event_log_launch_count",
-			"storage_self_test"
-		]
-	},
 	"strago": {
 		"platform": "strago",
 		"mode_switcher_type": "keyboard_dev_switcher",
@@ -3440,17 +3370,6 @@
 		],
 		"minios_enabled": false,
 		"ac_on_can_wake_ap_from_ulp": true
-	},
-	"whirlwind": {
-		"platform": "whirlwind",
-		"parent": "jetstream",
-		"ec_capability": [],
-		"cr50_capability": [],
-		"minidiag_capability": [
-			"cbmem_preserved_by_ap_reset",
-			"event_log_launch_count",
-			"storage_self_test"
-		]
 	},
 	"winky": {
 		"platform": "winky",
