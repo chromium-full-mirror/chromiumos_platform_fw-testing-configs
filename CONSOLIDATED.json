@@ -468,29 +468,6 @@
 			"storage_self_test"
 		]
 	},
-	"cheza": {
-		"platform": "cheza",
-		"mode_switcher_type": "tablet_detachable_switcher",
-		"is_detachable": true,
-		"has_lid": true,
-		"has_keyboard": false,
-		"chrome_ec": true,
-		"usb_a_port_count": -1,
-		"ec_capability": [
-			"arm",
-			"battery",
-			"charging",
-			"lid"
-		],
-		"minidiag_enabled": false,
-		"minios_enabled": false,
-		"cr50_capability": [],
-		"minidiag_capability": [
-			"cbmem_preserved_by_ap_reset",
-			"event_log_launch_count",
-			"storage_self_test"
-		]
-	},
 	"constitution": {
 		"platform": "constitution",
 		"mode_switcher_type": "menu_switcher",
