@@ -2269,36 +2269,6 @@
 		"fw_update_build": "skyrim-release/R110-15268.0.0",
 		"s3_override_to_unsupported": true
 	},
-	"slippy": {
-		"platform": "slippy",
-		"mode_switcher_type": "keyboard_dev_switcher",
-		"ec_boot_to_console": 0.6,
-		"chrome_ec": true,
-		"ec_ro_vbus_bug": true,
-		"dark_resume_capable": true,
-		"ec_capability": [
-			"adc_ectemp",
-			"battery",
-			"charging",
-			"keyboard",
-			"lid",
-			"peci",
-			"thermal",
-			"usb",
-			"x86"
-		],
-		"spi_voltage": "pp3300",
-		"smm_store": false,
-		"usb_a_port_count": -1,
-		"minidiag_enabled": false,
-		"minios_enabled": false,
-		"cr50_capability": [],
-		"minidiag_capability": [
-			"cbmem_preserved_by_ap_reset",
-			"event_log_launch_count",
-			"storage_self_test"
-		]
-	},
 	"snappy": {
 		"platform": "snappy",
 		"parent": "reef",
