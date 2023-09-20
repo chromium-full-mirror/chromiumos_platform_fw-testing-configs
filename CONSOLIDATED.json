@@ -255,25 +255,6 @@
 			"storage_self_test"
 		]
 	},
-	"banon": {
-		"platform": "banon",
-		"parent": "strago",
-		"ec_capability": [
-			"battery",
-			"charging",
-			"keyboard",
-			"lid",
-			"smart_usb_charge",
-			"usb",
-			"x86"
-		],
-		"cr50_capability": [],
-		"minidiag_capability": [
-			"cbmem_preserved_by_ap_reset",
-			"event_log_launch_count",
-			"storage_self_test"
-		]
-	},
 	"bob": {
 		"platform": "bob",
 		"parent": "gru",
@@ -425,45 +406,6 @@
 			"usbpd_uart",
 			"x86"
 		],
-		"cr50_capability": [],
-		"minidiag_capability": [
-			"cbmem_preserved_by_ap_reset",
-			"event_log_launch_count",
-			"storage_self_test"
-		]
-	},
-	"celes": {
-		"platform": "celes",
-		"parent": "strago",
-		"mode_switcher_type": "keyboard_dev_switcher",
-		"chrome_ec": true,
-		"ec_ro_vbus_bug": false,
-		"ec_capability": [
-			"battery",
-			"charging",
-			"keyboard",
-			"lid",
-			"smart_usb_charge",
-			"usb",
-			"x86"
-		],
-		"firmware_screen": 25,
-		"spi_voltage": "pp3300",
-		"servo_prog_state_delay": 10,
-		"delay_reboot_to_ping": 40,
-		"smm_store": false,
-		"custom_usb_enable_pins": [
-			{
-				"name": "USB1_ENABLE",
-				"ioex": false
-			},
-			{
-				"name": "USB2_ENABLE",
-				"ioex": false
-			}
-		],
-		"minidiag_enabled": false,
-		"minios_enabled": false,
 		"cr50_capability": [],
 		"minidiag_capability": [
 			"cbmem_preserved_by_ap_reset",
@@ -1209,25 +1151,6 @@
 			"storage_self_test"
 		]
 	},
-	"edgar": {
-		"platform": "edgar",
-		"parent": "strago",
-		"ec_capability": [
-			"battery",
-			"charging",
-			"keyboard",
-			"lid",
-			"smart_usb_charge",
-			"usb",
-			"x86"
-		],
-		"cr50_capability": [],
-		"minidiag_capability": [
-			"cbmem_preserved_by_ap_reset",
-			"event_log_launch_count",
-			"storage_self_test"
-		]
-	},
 	"elm": {
 		"platform": "elm",
 		"parent": "oak",
@@ -1765,25 +1688,6 @@
 		],
 		"minios_enabled": false,
 		"cr50_capability": []
-	},
-	"kefka": {
-		"platform": "kefka",
-		"parent": "strago",
-		"ec_capability": [
-			"battery",
-			"charging",
-			"keyboard",
-			"lid",
-			"smart_usb_charge",
-			"usb",
-			"x86"
-		],
-		"cr50_capability": [],
-		"minidiag_capability": [
-			"cbmem_preserved_by_ap_reset",
-			"event_log_launch_count",
-			"storage_self_test"
-		]
 	},
 	"kevin": {
 		"platform": "kevin",
@@ -2375,44 +2279,6 @@
 			"storage_self_test"
 		]
 	},
-	"reks": {
-		"platform": "reks",
-		"parent": "strago",
-		"ec_capability": [
-			"battery",
-			"charging",
-			"keyboard",
-			"lid",
-			"smart_usb_charge",
-			"usb",
-			"x86"
-		],
-		"cr50_capability": [],
-		"minidiag_capability": [
-			"cbmem_preserved_by_ap_reset",
-			"event_log_launch_count",
-			"storage_self_test"
-		]
-	},
-	"relm": {
-		"platform": "relm",
-		"parent": "strago",
-		"ec_capability": [
-			"battery",
-			"charging",
-			"keyboard",
-			"lid",
-			"smart_usb_charge",
-			"usb",
-			"x86"
-		],
-		"cr50_capability": [],
-		"minidiag_capability": [
-			"cbmem_preserved_by_ap_reset",
-			"event_log_launch_count",
-			"storage_self_test"
-		]
-	},
 	"rex": {
 		"platform": "rex",
 		"mode_switcher_type": "menu_switcher",
@@ -2579,25 +2445,6 @@
 			"lid",
 			"usb",
 			"usbpd_uart",
-			"x86"
-		],
-		"cr50_capability": [],
-		"minidiag_capability": [
-			"cbmem_preserved_by_ap_reset",
-			"event_log_launch_count",
-			"storage_self_test"
-		]
-	},
-	"setzer": {
-		"platform": "setzer",
-		"parent": "strago",
-		"ec_capability": [
-			"battery",
-			"charging",
-			"keyboard",
-			"lid",
-			"smart_usb_charge",
-			"usb",
 			"x86"
 		],
 		"cr50_capability": [],
@@ -2777,35 +2624,6 @@
 			"storage_self_test"
 		]
 	},
-	"strago": {
-		"platform": "strago",
-		"mode_switcher_type": "keyboard_dev_switcher",
-		"chrome_ec": true,
-		"ec_ro_vbus_bug": true,
-		"ec_boot_to_console": 0.3,
-		"ec_capability": [
-			"battery",
-			"charging",
-			"keyboard",
-			"lid",
-			"smart_usb_charge",
-			"usb",
-			"x86"
-		],
-		"firmware_screen": 25,
-		"usb_plug": 45,
-		"spi_voltage": "pp1800",
-		"smm_store": false,
-		"usb_a_port_count": -1,
-		"minidiag_enabled": false,
-		"minios_enabled": false,
-		"cr50_capability": [],
-		"minidiag_capability": [
-			"cbmem_preserved_by_ap_reset",
-			"event_log_launch_count",
-			"storage_self_test"
-		]
-	},
 	"strongbad": {
 		"platform": "strongbad",
 		"is_detachable": true,
@@ -2830,25 +2648,6 @@
 		"minidiag_capability": [],
 		"minios_enabled": false,
 		"cr50_capability": []
-	},
-	"terra": {
-		"platform": "terra",
-		"parent": "strago",
-		"ec_capability": [
-			"battery",
-			"charging",
-			"keyboard",
-			"lid",
-			"smart_usb_charge",
-			"usb",
-			"x86"
-		],
-		"cr50_capability": [],
-		"minidiag_capability": [
-			"cbmem_preserved_by_ap_reset",
-			"event_log_launch_count",
-			"storage_self_test"
-		]
 	},
 	"tidus": {
 		"platform": "tidus",
@@ -2901,25 +2700,6 @@
 		"minidiag_capability": [],
 		"minios_enabled": false,
 		"cr50_capability": []
-	},
-	"ultima": {
-		"platform": "ultima",
-		"parent": "strago",
-		"ec_capability": [
-			"battery",
-			"charging",
-			"keyboard",
-			"lid",
-			"smart_usb_charge",
-			"usb",
-			"x86"
-		],
-		"cr50_capability": [],
-		"minidiag_capability": [
-			"cbmem_preserved_by_ap_reset",
-			"event_log_launch_count",
-			"storage_self_test"
-		]
 	},
 	"veyron": {
 		"platform": "veyron",
@@ -3004,25 +2784,6 @@
 		],
 		"minios_enabled": false,
 		"ac_on_can_wake_ap_from_ulp": true
-	},
-	"wizpig": {
-		"platform": "wizpig",
-		"parent": "strago",
-		"ec_capability": [
-			"battery",
-			"charging",
-			"keyboard",
-			"lid",
-			"smart_usb_charge",
-			"usb",
-			"x86"
-		],
-		"cr50_capability": [],
-		"minidiag_capability": [
-			"cbmem_preserved_by_ap_reset",
-			"event_log_launch_count",
-			"storage_self_test"
-		]
 	},
 	"zork": {
 		"platform": "zork",
