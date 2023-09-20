@@ -1279,17 +1279,6 @@
 			"storage_self_test"
 		]
 	},
-	"guado": {
-		"platform": "guado",
-		"parent": "jecht",
-		"ec_capability": [],
-		"cr50_capability": [],
-		"minidiag_capability": [
-			"cbmem_preserved_by_ap_reset",
-			"event_log_launch_count",
-			"storage_self_test"
-		]
-	},
 	"guybrush": {
 		"platform": "guybrush",
 		"mode_switcher_type": "menu_switcher",
@@ -1470,25 +1459,6 @@
 		"usbc_input_voltage_limit": 20,
 		"charger_profile_override": true,
 		"usb_a_port_count": -1,
-		"cr50_capability": [],
-		"minidiag_capability": [
-			"cbmem_preserved_by_ap_reset",
-			"event_log_launch_count",
-			"storage_self_test"
-		]
-	},
-	"jecht": {
-		"platform": "jecht",
-		"mode_switcher_type": "keyboard_dev_switcher",
-		"has_lid": false,
-		"has_keyboard": false,
-		"rec_button_dev_switch": true,
-		"spi_voltage": "pp3300",
-		"smm_store": false,
-		"usb_a_port_count": -1,
-		"ec_capability": [],
-		"minidiag_enabled": false,
-		"minios_enabled": false,
 		"cr50_capability": [],
 		"minidiag_capability": [
 			"cbmem_preserved_by_ap_reset",
@@ -2162,17 +2132,6 @@
 			"storage_self_test"
 		]
 	},
-	"rikku": {
-		"platform": "rikku",
-		"parent": "jecht",
-		"ec_capability": [],
-		"cr50_capability": [],
-		"minidiag_capability": [
-			"cbmem_preserved_by_ap_reset",
-			"event_log_launch_count",
-			"storage_self_test"
-		]
-	},
 	"samus": {
 		"platform": "samus",
 		"mode_switcher_type": "keyboard_dev_switcher",
@@ -2497,17 +2456,6 @@
 		"minidiag_capability": [],
 		"minios_enabled": false,
 		"cr50_capability": []
-	},
-	"tidus": {
-		"platform": "tidus",
-		"parent": "jecht",
-		"ec_capability": [],
-		"cr50_capability": [],
-		"minidiag_capability": [
-			"cbmem_preserved_by_ap_reset",
-			"event_log_launch_count",
-			"storage_self_test"
-		]
 	},
 	"trogdor": {
 		"platform": "trogdor",
