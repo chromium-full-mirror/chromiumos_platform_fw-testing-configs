@@ -574,35 +574,6 @@
 		},
 		"cr50_capability": []
 	},
-	"cyan": {
-		"platform": "cyan",
-		"mode_switcher_type": "keyboard_dev_switcher",
-		"chrome_ec": true,
-		"ec_ro_vbus_bug": true,
-		"ec_boot_to_console": 0.3,
-		"ec_capability": [
-			"battery",
-			"charging",
-			"keyboard",
-			"lid",
-			"smart_usb_charge",
-			"usb",
-			"x86"
-		],
-		"firmware_screen": 28,
-		"usb_plug": 28,
-		"usb_a_port_count": -1,
-		"spi_voltage": "pp1800",
-		"smm_store": false,
-		"minidiag_enabled": false,
-		"minios_enabled": false,
-		"cr50_capability": [],
-		"minidiag_capability": [
-			"cbmem_preserved_by_ap_reset",
-			"event_log_launch_count",
-			"storage_self_test"
-		]
-	},
 	"dedede": {
 		"platform": "dedede",
 		"mode_switcher_type": "menu_switcher",
