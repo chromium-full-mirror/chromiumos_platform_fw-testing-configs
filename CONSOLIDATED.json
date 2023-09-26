@@ -1759,14 +1759,7 @@
 		"ac_on_can_wake_ap_from_ulp": true,
 		"usbc_input_voltage_limit": 15,
 		"max_charging_power": 45.0,
-		"models": {
-			"nivviks": {
-				"fw_update_build": "nissa-release/R109-15213.0.0"
-			},
-			"nereid": {
-				"fw_update_build": "nissa-release/R109-15213.0.0"
-			}
-		},
+		"fw_update_build": "nissa-release/R109-15213.0.0",
 		"cr50_capability": []
 	},
 	"nocturne": {
