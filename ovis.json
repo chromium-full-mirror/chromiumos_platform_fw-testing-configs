@@ -1,0 +1,31 @@
+{
+  "custom_usb_enable_pins": [
+    {
+      "ioex": false,
+      "name": "en_pp5000_usba_r"
+    }
+  ],
+  "delay_reboot_to_ping": 90,
+  "ec_capability": {
+    "arm": false,
+    "battery": false,
+    "cbi": true,
+    "charging": false,
+    "keyboard": false,
+    "lid": false,
+    "x86": true
+  },
+  "firmware_screen": 20,
+  "has_keyboard": false,
+  "has_lid": false,
+  "hibernate": false,
+  "hold_pwr_button_nopowerd_shutdown": 14,
+  "max_charging_power": 120.0,
+  "minidiag_capability": {
+    "cbmem_preserved_by_ap_reset": false
+  },
+  "platform": "ovis",
+  "rec_button_dev_switch": true,
+  "smm_store": false,
+  "spi_voltage": "pp3300"
+}
