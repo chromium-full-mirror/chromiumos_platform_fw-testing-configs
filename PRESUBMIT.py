@@ -21,7 +21,7 @@ def VerifyJson(input_api, output_api):
         include_deletes=False, file_filter=json_file_filter
     ):
         name = affected.LocalPath()
-        with open(name) as f:
+        with open(name, encoding="utf-8") as f:
             try:
                 json.load(f)
             except Exception as e:

@@ -3,11 +3,7 @@
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
-"""
-
-Unit tests for platform_json.py
-
-"""
+"""Unit tests for platform_json.py"""
 
 import collections
 import io
@@ -77,13 +73,13 @@ def _run_main(argv):
         sys.stdout = original_stdout
 
 
-class AbstractMockConfigTestCase(object):
+class AbstractMockConfigTestCase:
     """Parent class to handle setup and teardown of mock configs."""
 
     def setUp(self):  # pylint:disable=invalid-name
         """Write mock JSON to a temporary file"""
         _, self.mock_filepath = tempfile.mkstemp()
-        with open(self.mock_filepath, "w") as mock_file:
+        with open(self.mock_filepath, "w", encoding="utf-8") as mock_file:
             mock_file.write(MOCK_CONSOLIDATED_JSON_CONTENTS)
 
     def tearDown(self):  # pylint:disable=invalid-name

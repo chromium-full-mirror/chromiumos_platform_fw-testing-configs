@@ -38,8 +38,6 @@ RE_CONDITION = re.compile(r"^(\w+)(!?[=:]|[<>]=?)(\w+)$")
 class ConditionError(ValueError):
     """Error class for when a condition argument is malformed."""
 
-    pass
-
 
 class UnrecognizedOperatorError(ValueError):
     """Error class for when a query contains an unexpected operator."""
@@ -48,14 +46,12 @@ class UnrecognizedOperatorError(ValueError):
 class NotIterableError(ValueError):
     """Error class for querying for a member of a non-iterable field."""
 
-    pass
-
 
 class NotNumericError(ValueError):
     """Error class for when a non-number is used for numeric comparison."""
 
 
-class Condition(object):
+class Condition:
     """A condition for whether a config's field matches an expected rule."""
 
     def __init__(self, string_condition):
@@ -147,7 +143,7 @@ def parse_args(argv):
 
 def all_satisfied(conditions, config):
     """Determine whether the config satisfies all Conditions."""
-    return all([cond.evaluate(config) for cond in conditions])
+    return all(cond.evaluate(config) for cond in conditions)
 
 
 def main(argv):

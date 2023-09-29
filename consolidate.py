@@ -28,15 +28,17 @@ DEFAULT_OUTPUT_FILEPATH = "CONSOLIDATED.json"
 
 
 class FormatException(Exception):
+    """An exception thrown when the json is invalid."""
+
     def __init__(self, message, platform=None, model=None, field=None):
         if not message:
             message = "Formatting issue in platform json"
         if platform:
-            message += ", in platform {}".format(platform)
+            message += f", in platform {platform}"
         if model:
-            message += ", in model {}".format(model)
+            message += f", in model {model}"
         if field:
-            message += ", in field {}".format(field)
+            message += f", in field {field}"
         message += "!"
         super().__init__(message)
 
@@ -73,7 +75,8 @@ def get_platform_names(fwtc_dir):
     """Create a list of platforms with JSON files.
 
     Args:
-        fwtc_dir: The fw-testing-configs directory containing platform JSON files.
+        fwtc_dir: The fw-testing-configs directory containing platform JSON
+        files.
 
     Returns:
         A list of strings representing the names of platforms which have JSON
@@ -97,7 +100,8 @@ def load_json(fwtc_dir, platforms):
     """Create an OrderedDict of {platform_name: json_contents}.
 
     Args:
-        fwtc_dir: The fw-testing-configs directory containing platform JSON files.
+        fwtc_dir: The fw-testing-configs directory containing platform JSON
+        files.
         platforms: A sorted list of names which have JSON files in fwtc_dir.
 
     Returns:
@@ -108,7 +112,7 @@ def load_json(fwtc_dir, platforms):
     consolidated = collections.OrderedDict()
     for platform in platforms:
         json_path = os.path.join(fwtc_dir, platform + ".json")
-        with open(json_path) as json_file:
+        with open(json_path, encoding="utf-8") as json_file:
             j = json.load(json_file, object_pairs_hook=collections.OrderedDict)
         consolidated[platform] = j
     reformat_capability_map(consolidated, "ec_capability")
@@ -119,6 +123,7 @@ def load_json(fwtc_dir, platforms):
 
 def reformat_capability_map(consolidated, cap_field):
     """Reformat {cap_field} from map to list as expected in consolidated dict.
+
     Based on explicitly defined {cap_field} and {cap_field} of parent
     platforms.
 
@@ -129,24 +134,24 @@ def reformat_capability_map(consolidated, cap_field):
     Returns:
         None
     """
-    platform_caps = dict()  # To keep track of platforms and their capabilities
+    platform_caps = {}  # To keep track of platforms and their capabilities
     # To keep track of all capabilities expected to be defined
     full_cap_set = set()
     for platform, conf in consolidated.items():
         if platform == "DEFAULTS":
             # Collect set of all possible settings
-            full_cap_set = set(conf.get(cap_field, dict()).keys())
+            full_cap_set = set(conf.get(cap_field, {}).keys())
 
         # collect explicitly defined capabilities for each platform
-        caps = conf.get(cap_field, dict())
+        caps = conf.get(cap_field, {})
         incl = set(k for k, v in caps.items() if v)
         excl = set(k for k, v in caps.items() if not v and v is not None)
 
         # collect the capabilities for each model
-        models_caps = dict()
-        models = conf.get("models", dict())
+        models_caps = {}
+        models = conf.get("models", {})
         for model, model_conf in models.items():
-            model_caps = model_conf.get(cap_field, dict())
+            model_caps = model_conf.get(cap_field, {})
             model_incl = set(k for k, v in model_caps.items() if v)
             model_excl = set(
                 k for k, v in model_caps.items() if not v and v is not None
@@ -155,8 +160,8 @@ def reformat_capability_map(consolidated, cap_field):
 
         platform_caps[platform] = incl, excl, models_caps
 
-    # For platforms with explicitly defined capabilities, recurse through parents
-    # inheritance from parents is overridden by children
+    # For platforms with explicitly defined capabilities, recurse through
+    # parents inheritance from parents is overridden by children
     # Need separate loop to ensure incl, excl calculated for parent platforms
     for platform, (incl, excl, models) in platform_caps.items():
         curr_plat = platform
@@ -176,7 +181,7 @@ def reformat_capability_map(consolidated, cap_field):
                     field="parent",
                 )
 
-            par_incl, par_excl, par_models_caps = platform_caps.get(
+            par_incl, par_excl, _ = platform_caps.get(
                 curr_plat, (set(), set(), set())
             )
             # ensure children get precedence in inheriting capabilities
@@ -224,7 +229,7 @@ def write_output(consolidated_json, output_path):
     """
     if os.path.isfile(output_path):
         os.remove(output_path)
-    with open(output_path, "w") as output_file:
+    with open(output_path, "w", encoding="utf-8") as output_file:
         json.dump(consolidated_json, output_file, indent="\t", sort_keys=True)
     os.chmod(output_path, stat.S_IRUSR | stat.S_IRGRP | stat.S_IROTH)
 

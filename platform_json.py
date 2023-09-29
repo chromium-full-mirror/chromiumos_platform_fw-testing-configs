@@ -36,8 +36,6 @@ META_FIELD_REGEXES = (re.compile(r"^models$"), re.compile(r"\.DOC$"))
 class PlatformNotFoundError(AttributeError):
     """Error class for when the requested platform name is not found."""
 
-    pass
-
 
 class FieldNotFoundError(AttributeError):
     """Error class for when the requested field name is not found."""
@@ -135,7 +133,7 @@ def load_consolidated_json(consolidated_fp):
     """Return the contents of consolidated_fp as a Python object."""
     if not os.path.isfile(consolidated_fp):
         raise FileNotFoundError(consolidated_fp)
-    with open(consolidated_fp) as consolidated_file:
+    with open(consolidated_fp, encoding="utf-8") as consolidated_file:
         return json.load(consolidated_file)
 
 
@@ -145,6 +143,7 @@ def calculate_config(platform, model, consolidated_json):
     Args:
         platform: The name of the platform to calculate values for.
         model: The name of the model to check for overrides.
+        consolidated_json: The full json dict for all platforms.
     """
     final_json = collections.OrderedDict()
     for field in consolidated_json["DEFAULTS"]:
@@ -156,8 +155,7 @@ def calculate_config(platform, model, consolidated_json):
 
 
 def main(argv):
-    """
-    Parse command-line args and print a JSON config to stdout.
+    """Parse command-line args and print a JSON config to stdout.
 
     Args:
         argv: List of command-line args, excluding the invoked script.

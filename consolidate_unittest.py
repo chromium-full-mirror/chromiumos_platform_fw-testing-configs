@@ -3,11 +3,7 @@
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
-"""
-
-Unit tests for consolidate.py.
-
-"""
+"""Unit tests for consolidate.py."""
 
 import collections
 import difflib
@@ -24,8 +20,7 @@ class TestParseArgs(unittest.TestCase):
     """Test case for parse_args()."""
 
     def setUp(self):
-        """
-        Change the current working directory.
+        """Change the current working directory.
 
         This will ensure that even if the script is run from elsewhere,
         input_dir arg still defaults to fw-testing-configs.
@@ -61,7 +56,9 @@ class TestGetPlatformNames(unittest.TestCase):
 
     def setUp(self):
         """Create mock fw-testing-configs directory."""
-        self.mock_fwtc_dir = tempfile.TemporaryDirectory()
+        self.mock_fwtc_dir = (
+            tempfile.TemporaryDirectory()  # pylint: disable=consider-using-with
+        )
         mock_platform_names = ["z", "a", "b", "DEFAULTS", "CONSOLIDATED"]
         for platform in mock_platform_names:
             mock_filepath = os.path.join(
@@ -74,8 +71,7 @@ class TestGetPlatformNames(unittest.TestCase):
         self.mock_fwtc_dir.cleanup()
 
     def test_get_platform_names(self):
-        """
-        Verify that platform names load in the correct order.
+        """Verify that platform names load in the correct order.
 
         The correct order is starting with DEFAULTS, then alphabetical.
         The .json file extension should not be included.
@@ -90,9 +86,11 @@ class TestLoadJSON(unittest.TestCase):
     def setUp(self):
         """Setup mock fw-testing-configs directory."""
         self.maxDiff = None
-        self.mock_fwtc_dir = tempfile.TemporaryDirectory()
+        self.mock_fwtc_dir = (
+            tempfile.TemporaryDirectory()  # pylint: disable=consider-using-with
+        )
         a_filename = os.path.join(self.mock_fwtc_dir.name, "a.json")
-        with open(a_filename, "w") as a_file:
+        with open(a_filename, "w", encoding="utf-8") as a_file:
             a_file.write(
                 "{\n"
                 + '\t"platform": "a",\n'
@@ -130,7 +128,7 @@ class TestLoadJSON(unittest.TestCase):
         defaults_filename = os.path.join(
             self.mock_fwtc_dir.name, "DEFAULTS.json"
         )
-        with open(defaults_filename, "w") as defaults_file:
+        with open(defaults_filename, "w", encoding="utf-8") as defaults_file:
             defaults_file.write(
                 "{\n"
                 + '\t"platform": null,\n'
@@ -219,14 +217,16 @@ class TestWriteOutput(unittest.TestCase):
         consolidate.write_output(mock_json, TestWriteOutput.output_fp)
 
         # Verify file contents
-        with open(TestWriteOutput.output_fp) as output_file:
+        with open(TestWriteOutput.output_fp, encoding="utf-8") as output_file:
             output_contents = output_file.readlines()
         expected = ["{\n", '\t"bar": "baz",\n', '\t"foo": "bar"\n', "}"]
         self.assertEqual(output_contents, expected)
 
         # Verify that file is read-only
         with self.assertRaises(PermissionError):
-            with open(TestWriteOutput.output_fp, "w") as output_file:
+            with open(
+                TestWriteOutput.output_fp, "w", encoding="utf-8"
+            ) as output_file:
                 output_file.write("foo")
 
 
@@ -237,9 +237,11 @@ class TestInvalidECCapability(unittest.TestCase):
 
     def setUp(self):
         """Create and populate mock fw-testing-configs directory."""
-        self.mock_fwtc_dir = tempfile.TemporaryDirectory()
+        self.mock_fwtc_dir = (
+            tempfile.TemporaryDirectory()  # pylint: disable=consider-using-with
+        )
         a_json_fp = os.path.join(self.mock_fwtc_dir.name, "a.json")
-        with open(a_json_fp, "w") as a_json_file:
+        with open(a_json_fp, "w", encoding="utf-8") as a_json_file:
             a_json = collections.OrderedDict(
                 {
                     "platform": "a",
@@ -270,7 +272,7 @@ class TestInvalidECCapability(unittest.TestCase):
             )
             json.dump(a_json, a_json_file)
         z_json_fp = os.path.join(self.mock_fwtc_dir.name, "z.json")
-        with open(z_json_fp, "w") as z_json_file:
+        with open(z_json_fp, "w", encoding="utf-8") as z_json_file:
             z_json = collections.OrderedDict(
                 {
                     "platform": "z",
@@ -290,7 +292,9 @@ class TestInvalidECCapability(unittest.TestCase):
         defaults_json_fp = os.path.join(
             self.mock_fwtc_dir.name, "DEFAULTS.json"
         )
-        with open(defaults_json_fp, "w") as defaults_json_file:
+        with open(
+            defaults_json_fp, "w", encoding="utf-8"
+        ) as defaults_json_file:
             defaults_json = collections.OrderedDict(
                 {
                     "platform": None,
@@ -345,9 +349,11 @@ class TestMissingECCapability(unittest.TestCase):
 
     def setUp(self):
         """Create and populate mock fw-testing-configs directory."""
-        self.mock_fwtc_dir = tempfile.TemporaryDirectory()
+        self.mock_fwtc_dir = (
+            tempfile.TemporaryDirectory()  # pylint: disable=consider-using-with
+        )
         a_json_fp = os.path.join(self.mock_fwtc_dir.name, "a.json")
-        with open(a_json_fp, "w") as a_json_file:
+        with open(a_json_fp, "w", encoding="utf-8") as a_json_file:
             a_json = collections.OrderedDict(
                 {
                     "platform": "a",
@@ -377,7 +383,7 @@ class TestMissingECCapability(unittest.TestCase):
             )
             json.dump(a_json, a_json_file)
         z_json_fp = os.path.join(self.mock_fwtc_dir.name, "z.json")
-        with open(z_json_fp, "w") as z_json_file:
+        with open(z_json_fp, "w", encoding="utf-8") as z_json_file:
             z_json = collections.OrderedDict(
                 {
                     "platform": "z",
@@ -398,7 +404,9 @@ class TestMissingECCapability(unittest.TestCase):
         defaults_json_fp = os.path.join(
             self.mock_fwtc_dir.name, "DEFAULTS.json"
         )
-        with open(defaults_json_fp, "w") as defaults_json_file:
+        with open(
+            defaults_json_fp, "w", encoding="utf-8"
+        ) as defaults_json_file:
             defaults_json = collections.OrderedDict(
                 {
                     "platform": None,
@@ -453,9 +461,11 @@ class TestInvalidCR50Capability(unittest.TestCase):
 
     def setUp(self):
         """Create and populate mock fw-testing-configs directory."""
-        self.mock_fwtc_dir = tempfile.TemporaryDirectory()
+        self.mock_fwtc_dir = (
+            tempfile.TemporaryDirectory()  # pylint: disable=consider-using-with
+        )
         a_json_fp = os.path.join(self.mock_fwtc_dir.name, "a.json")
-        with open(a_json_fp, "w") as a_json_file:
+        with open(a_json_fp, "w", encoding="utf-8") as a_json_file:
             a_json = collections.OrderedDict(
                 {
                     "platform": "a",
@@ -488,7 +498,9 @@ class TestInvalidCR50Capability(unittest.TestCase):
         defaults_json_fp = os.path.join(
             self.mock_fwtc_dir.name, "DEFAULTS.json"
         )
-        with open(defaults_json_fp, "w") as defaults_json_file:
+        with open(
+            defaults_json_fp, "w", encoding="utf-8"
+        ) as defaults_json_file:
             defaults_json = collections.OrderedDict(
                 {
                     "platform": None,
@@ -543,9 +555,11 @@ class TestMissingCR50Capability(unittest.TestCase):
 
     def setUp(self):
         """Create and populate mock fw-testing-configs directory."""
-        self.mock_fwtc_dir = tempfile.TemporaryDirectory()
+        self.mock_fwtc_dir = (
+            tempfile.TemporaryDirectory()  # pylint: disable=consider-using-with
+        )
         a_json_fp = os.path.join(self.mock_fwtc_dir.name, "a.json")
-        with open(a_json_fp, "w") as a_json_file:
+        with open(a_json_fp, "w", encoding="utf-8") as a_json_file:
             a_json = collections.OrderedDict(
                 {
                     "platform": "a",
@@ -577,7 +591,9 @@ class TestMissingCR50Capability(unittest.TestCase):
         defaults_json_fp = os.path.join(
             self.mock_fwtc_dir.name, "DEFAULTS.json"
         )
-        with open(defaults_json_fp, "w") as defaults_json_file:
+        with open(
+            defaults_json_fp, "w", encoding="utf-8"
+        ) as defaults_json_file:
             defaults_json = collections.OrderedDict(
                 {
                     "platform": None,
@@ -632,9 +648,11 @@ class TestInvalidMinidiagCapability(unittest.TestCase):
 
     def setUp(self):
         """Create and populate mock fw-testing-configs directory."""
-        self.mock_fwtc_dir = tempfile.TemporaryDirectory()
+        self.mock_fwtc_dir = (
+            tempfile.TemporaryDirectory()  # pylint: disable=consider-using-with
+        )
         a_json_fp = os.path.join(self.mock_fwtc_dir.name, "a.json")
-        with open(a_json_fp, "w") as a_json_file:
+        with open(a_json_fp, "w", encoding="utf-8") as a_json_file:
             a_json = collections.OrderedDict(
                 {
                     "platform": "a",
@@ -673,7 +691,9 @@ class TestInvalidMinidiagCapability(unittest.TestCase):
         defaults_json_fp = os.path.join(
             self.mock_fwtc_dir.name, "DEFAULTS.json"
         )
-        with open(defaults_json_fp, "w") as defaults_json_file:
+        with open(
+            defaults_json_fp, "w", encoding="utf-8"
+        ) as defaults_json_file:
             defaults_json = collections.OrderedDict(
                 {
                     "platform": None,
@@ -733,9 +753,11 @@ class TestMissingMinidiagCapability(unittest.TestCase):
 
     def setUp(self):
         """Create and populate mock fw-testing-configs directory."""
-        self.mock_fwtc_dir = tempfile.TemporaryDirectory()
+        self.mock_fwtc_dir = (
+            tempfile.TemporaryDirectory()  # pylint: disable=consider-using-with
+        )
         a_json_fp = os.path.join(self.mock_fwtc_dir.name, "a.json")
-        with open(a_json_fp, "w") as a_json_file:
+        with open(a_json_fp, "w", encoding="utf-8") as a_json_file:
             a_json = collections.OrderedDict(
                 {
                     "platform": "a",
@@ -773,7 +795,9 @@ class TestMissingMinidiagCapability(unittest.TestCase):
         defaults_json_fp = os.path.join(
             self.mock_fwtc_dir.name, "DEFAULTS.json"
         )
-        with open(defaults_json_fp, "w") as defaults_json_file:
+        with open(
+            defaults_json_fp, "w", encoding="utf-8"
+        ) as defaults_json_file:
             defaults_json = collections.OrderedDict(
                 {
                     "platform": None,
@@ -834,9 +858,11 @@ class TestMain(unittest.TestCase):
     def setUp(self):
         """Create and populate mock fw-testing-configs directory."""
         self.maxDiff = None
-        self.mock_fwtc_dir = tempfile.TemporaryDirectory()
+        self.mock_fwtc_dir = (
+            tempfile.TemporaryDirectory()  # pylint: disable=consider-using-with
+        )
         a_json_fp = os.path.join(self.mock_fwtc_dir.name, "a.json")
-        with open(a_json_fp, "w") as a_json_file:
+        with open(a_json_fp, "w", encoding="utf-8") as a_json_file:
             a_json = collections.OrderedDict(
                 {
                     "platform": "a",
@@ -861,7 +887,7 @@ class TestMain(unittest.TestCase):
             )
             json.dump(a_json, a_json_file)
         z_json_fp = os.path.join(self.mock_fwtc_dir.name, "z.json")
-        with open(z_json_fp, "w") as z_json_file:
+        with open(z_json_fp, "w", encoding="utf-8") as z_json_file:
             z_json = collections.OrderedDict(
                 {
                     "platform": "z",
@@ -883,7 +909,7 @@ class TestMain(unittest.TestCase):
             )
             json.dump(z_json, z_json_file)
         b_json_fp = os.path.join(self.mock_fwtc_dir.name, "b.json")
-        with open(b_json_fp, "w") as b_json_file:
+        with open(b_json_fp, "w", encoding="utf-8") as b_json_file:
             b_json = collections.OrderedDict(
                 {
                     "platform": "b",  # b<-z<-a
@@ -899,7 +925,9 @@ class TestMain(unittest.TestCase):
         defaults_json_fp = os.path.join(
             self.mock_fwtc_dir.name, "DEFAULTS.json"
         )
-        with open(defaults_json_fp, "w") as defaults_json_file:
+        with open(
+            defaults_json_fp, "w", encoding="utf-8"
+        ) as defaults_json_file:
             defaults_json = collections.OrderedDict(
                 {
                     "platform": None,
@@ -1020,7 +1048,7 @@ class TestMain(unittest.TestCase):
             consolidate.main(argv)
 
             # Verify the output.
-            with open(TestMain.output_fp) as output_file:
+            with open(TestMain.output_fp, encoding="utf-8") as output_file:
                 output_contents = [s.strip() for s in output_file.readlines()]
             expected_output = [s.strip() for s in expected_str.splitlines()]
 
@@ -1031,7 +1059,7 @@ class TestMain(unittest.TestCase):
 
         # Verify the final output is read-only.
         with self.assertRaises(PermissionError):
-            with open(TestMain.output_fp, "w") as output_file:
+            with open(TestMain.output_fp, "w", encoding="utf-8") as output_file:
                 output_file.write("foo")
 
 
