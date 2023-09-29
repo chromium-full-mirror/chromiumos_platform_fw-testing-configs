@@ -14,6 +14,7 @@ import os
 import pathlib
 import tempfile
 import unittest
+import difflib
 
 import consolidate
 
@@ -203,8 +204,8 @@ class TestWriteOutput(unittest.TestCase):
         with open(TestWriteOutput.output_fp) as output_file:
             output_contents = output_file.readlines()
         expected = ['{\n',
-                    '\t"foo": "bar",\n',
-                    '\t"bar": "baz"\n',
+                    '\t"bar": "baz",\n',
+                    '\t"foo": "bar"\n',
                     '}']
         self.assertEqual(output_contents, expected)
 
@@ -876,74 +877,74 @@ class TestMain(unittest.TestCase):
 
     def test_main(self):
         """Verify that the whole script works, end-to-end."""
-        expected_output = ['{\n',
-                           '\t"DEFAULTS": {\n',
-                           '\t\t"platform": null,\n',
-                           '\t\t"platform_DOC": "foo",\n',
-                           '\t\t"ec_capability": [\n',
-                           '\t\t\t"default_true"\n',
-                           '\t\t],\n',
-                           '\t\t"cr50_capability": [],\n',
-                           '\t\t"minidiag_capability": [\n',
-                           '\t\t\t"event_log_launch_count",\n',
-                           '\t\t\t"storage_self_test"\n',
-                           '\t\t]\n',
-                           '\t},\n',
-                           '\t"a": {\n',
-                           '\t\t"platform": "a",\n',
-                           '\t\t"firmware_screen": 0.5,\n',
-                           '\t\t"ec_capability": [\n',
-                           '\t\t\t"adc_ectemp",\n',
-                           '\t\t\t"arm",\n',
-                           '\t\t\t"default_true",\n',
-                           '\t\t\t"usb",\n',
-                           '\t\t\t"x86"\n',
-                           '\t\t],\n',
-                           '\t\t"cr50_capability": [],\n',
-                           '\t\t"minidiag_capability": [\n',
-                           '\t\t\t"event_log_launch_count",\n',
-                           '\t\t\t"storage_self_test"\n',
-                           '\t\t]\n',
-                           '\t},\n',
-                           '\t"b": {\n',
-                           '\t\t"platform": "b",\n',
-                           '\t\t"parent": "z",\n',
-                           '\t\t"cr50_capability": [\n',
-                           '\t\t\t"ec_hibernate_breaks_rdd",\n',
-                           '\t\t\t"rdd_leakage"\n',
-                           '\t\t],\n',
-                           '\t\t"minidiag_capability": [\n',
-                           '\t\t\t"storage_self_test"\n',
-                           '\t\t],\n',
-                           '\t\t"ec_capability": [\n',
-                           '\t\t\t"adc_ectemp",\n', # inherit from a
-                           '\t\t\t"keyboard",\n', # specific for z
-                           '\t\t\t"lid",\n', # specific for z
-                           '\t\t\t"usb",\n', # inherited from a
-                           '\t\t\t"x86"\n', # inherited from a
-                           '\t\t]\n',
-                           '\t},\n',
-                           '\t"z": {\n',
-                           '\t\t"platform": "z",\n',
-                           '\t\t"parent": "a",\n',
-                           '\t\t"firmware_screen": 10,\n',
-                           '\t\t"ec_capability": [\n',
-                           '\t\t\t"adc_ectemp",\n', # inherit from a
-                           '\t\t\t"keyboard",\n', # specific for z
-                           '\t\t\t"lid",\n', # specific for z
-                           '\t\t\t"usb",\n', # inherited from a
-                           '\t\t\t"x86"\n', # inherited from a
-                           '\t\t],\n',
-                           '\t\t"cr50_capability": [\n',
-                           '\t\t\t"rdd_leakage",\n',
-                           '\t\t\t"rdd_off_in_g3"\n',
-                           '\t\t],\n',
-                           '\t\t"minidiag_capability": [\n',
-                           '\t\t\t"event_log_launch_count",\n',
-                           '\t\t\t"storage_self_test"\n',
-                           '\t\t]\n',
-                           '\t}\n',
-                           '}']
+        expected_str = '''{
+    "DEFAULTS": {
+        "cr50_capability": [],
+        "ec_capability": [
+            "default_true"
+        ],
+        "minidiag_capability": [
+            "event_log_launch_count",
+            "storage_self_test"
+        ],
+        "platform": null,
+        "platform_DOC": "foo"
+    },
+    "a": {
+        "cr50_capability": [],
+        "ec_capability": [
+            "adc_ectemp",
+            "arm",
+            "default_true",
+            "usb",
+            "x86"
+        ],
+        "firmware_screen": 0.5,
+        "minidiag_capability": [
+            "event_log_launch_count",
+            "storage_self_test"
+        ],
+        "platform": "a"
+    },
+    "b": {
+        "cr50_capability": [
+            "ec_hibernate_breaks_rdd",
+            "rdd_leakage"
+        ],
+        "ec_capability": [
+            "adc_ectemp",
+            "keyboard",
+            "lid",
+            "usb",
+            "x86"
+        ],
+        "minidiag_capability": [
+            "storage_self_test"
+        ],
+        "parent": "z",
+        "platform": "b"
+    },
+    "z": {
+        "cr50_capability": [
+            "rdd_leakage",
+            "rdd_off_in_g3"
+        ],
+        "ec_capability": [
+            "adc_ectemp",
+            "keyboard",
+            "lid",
+            "usb",
+            "x86"
+        ],
+        "firmware_screen": 10,
+        "minidiag_capability": [
+            "event_log_launch_count",
+            "storage_self_test"
+        ],
+        "parent": "a",
+        "platform": "z"
+    }
+}'''
 
         # Run the script twice to verify idempotency.
         for _ in range(2):
@@ -953,9 +954,13 @@ class TestMain(unittest.TestCase):
 
             # Verify the output.
             with open(TestMain.output_fp) as output_file:
-                output_contents = output_file.readlines()
+                output_contents = [s.strip() for s in output_file.readlines()]
+            expected_output = [s.strip() for s in expected_str.splitlines()]
 
-            self.assertEqual(expected_output, output_contents)
+            self.assertTrue(
+                expected_output == output_contents,
+                ''.join(difflib.unified_diff(expected_output, output_contents)),
+            )
 
         # Verify the final output is read-only.
         with self.assertRaises(PermissionError):

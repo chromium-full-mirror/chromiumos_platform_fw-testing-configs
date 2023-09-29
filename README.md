@@ -65,6 +65,12 @@ If you are modifying both test files and config files, then you will need at lea
 
 When submitting multiple CL’s like that, please use the [Cq-Depend](https://chromium.googlesource.com/chromiumos/docs/+/refs/heads/master/contributing.md#CQ-DEPEND) syntax as appropriate. If you don't use Cq-Depend, you risk the name of a config attribute changing while tests are still looking for the old name, and then tests will break. The reverse is a risk, too. You might need both CL’s to depend on each other. Note that this while this precaution mitigates risk, it does not fully eliminate risk: only one of the CL's might get uploaded to the lab machines running Autotest/Tast, or one CL may be reverted without the other.
 
+Run the unit tests inside the chroot by running
+```
+cd ~/chromiumos/src/platform/tast-tests/src/go.chromium.org/tast-tests/cros/remote/firmware/data/fw-testing-configs
+pytest -v *_unittest.py
+```
+
 ## Accessing Configs During Tests
 
 In Autotest, configs are loaded during `FirmwareTest.initialize`. Config values can be accessed via `self.faft_config.${ATTRIBUTE}`, such as [`self.faft_config.chrome_ec`](https://source.corp.google.com/chromeos_public/src/third_party/autotest/files/server/cros/faft/firmware_test.py;rcl=b602ca9b2516613458bccc6009ffd342130f528b;l=149).
