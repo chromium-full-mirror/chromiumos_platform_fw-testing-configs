@@ -24,20 +24,20 @@ import stat
 import sys
 
 
-DEFAULT_OUTPUT_FILEPATH = 'CONSOLIDATED.json'
+DEFAULT_OUTPUT_FILEPATH = "CONSOLIDATED.json"
 
 
 class FormatException(Exception):
     def __init__(self, message, platform=None, model=None, field=None):
         if not message:
-            message = 'Formatting issue in platform json'
+            message = "Formatting issue in platform json"
         if platform:
-            message += ', in platform {}'.format(platform)
+            message += ", in platform {}".format(platform)
         if model:
-            message += ', in model {}'.format(model)
+            message += ", in model {}".format(model)
         if field:
-            message += ', in field {}'.format(field)
-        message += '!'
+            message += ", in field {}".format(field)
+        message += "!"
         super().__init__(message)
 
 
@@ -54,11 +54,18 @@ def parse_args(argv=None):
             output: The filepath where the final JSON output should be written
     """
     parser = argparse.ArgumentParser()
-    parser.add_argument('-i', '--input-dir',
-                        help='Directory with fw-testing-configs JSON files',
-                        default=os.path.dirname(os.path.realpath(__file__)))
-    parser.add_argument('-o', '--output', help='Filepath to write output to',
-                        default=DEFAULT_OUTPUT_FILEPATH)
+    parser.add_argument(
+        "-i",
+        "--input-dir",
+        help="Directory with fw-testing-configs JSON files",
+        default=os.path.dirname(os.path.realpath(__file__)),
+    )
+    parser.add_argument(
+        "-o",
+        "--output",
+        help="Filepath to write output to",
+        default=DEFAULT_OUTPUT_FILEPATH,
+    )
     return parser.parse_args(argv)
 
 
@@ -76,13 +83,13 @@ def get_platform_names(fwtc_dir):
     platforms = []
     for fname in os.listdir(fwtc_dir):
         platform, ext = os.path.splitext(fname)
-        if ext != '.json':
+        if ext != ".json":
             continue
-        elif platform in ('DEFAULTS', 'CONSOLIDATED'):
+        elif platform in ("DEFAULTS", "CONSOLIDATED"):
             continue
         platforms.append(platform)
     platforms.sort()
-    platforms = ['DEFAULTS'] + platforms
+    platforms = ["DEFAULTS"] + platforms
     return platforms
 
 
@@ -100,13 +107,13 @@ def load_json(fwtc_dir, platforms):
     """
     consolidated = collections.OrderedDict()
     for platform in platforms:
-        json_path = os.path.join(fwtc_dir, platform + '.json')
+        json_path = os.path.join(fwtc_dir, platform + ".json")
         with open(json_path) as json_file:
             j = json.load(json_file, object_pairs_hook=collections.OrderedDict)
         consolidated[platform] = j
-    reformat_capability_map(consolidated, 'ec_capability')
-    reformat_capability_map(consolidated, 'cr50_capability')
-    reformat_capability_map(consolidated, 'minidiag_capability')
+    reformat_capability_map(consolidated, "ec_capability")
+    reformat_capability_map(consolidated, "cr50_capability")
+    reformat_capability_map(consolidated, "minidiag_capability")
     return consolidated
 
 
@@ -126,7 +133,7 @@ def reformat_capability_map(consolidated, cap_field):
     # To keep track of all capabilities expected to be defined
     full_cap_set = set()
     for platform, conf in consolidated.items():
-        if platform == 'DEFAULTS':
+        if platform == "DEFAULTS":
             # Collect set of all possible settings
             full_cap_set = set(conf.get(cap_field, dict()).keys())
 
@@ -141,7 +148,9 @@ def reformat_capability_map(consolidated, cap_field):
         for model, model_conf in models.items():
             model_caps = model_conf.get(cap_field, dict())
             model_incl = set(k for k, v in model_caps.items() if v)
-            model_excl = set(k for k, v in model_caps.items() if not v and v is not None)
+            model_excl = set(
+                k for k, v in model_caps.items() if not v and v is not None
+            )
             models_caps[model] = model_incl, model_excl
 
         platform_caps[platform] = incl, excl, models_caps
@@ -153,43 +162,56 @@ def reformat_capability_map(consolidated, cap_field):
         curr_plat = platform
         seen = {platform}
         while True:
-            curr_plat = consolidated[curr_plat].get('parent') or 'DEFAULTS'
+            curr_plat = consolidated[curr_plat].get("parent") or "DEFAULTS"
 
             # Check that there is no cycle of inheritance
             if curr_plat not in seen:
                 seen.add(curr_plat)
-            elif curr_plat == 'DEFAULTS':
+            elif curr_plat == "DEFAULTS":
                 break
             else:
                 raise FormatException(
-                    'Circular parent from platform json',
-                    platform=platform, field='parent')
+                    "Circular parent from platform json",
+                    platform=platform,
+                    field="parent",
+                )
 
-            par_incl, par_excl, par_models_caps = platform_caps.get(curr_plat, (set(), set(), set()))
+            par_incl, par_excl, par_models_caps = platform_caps.get(
+                curr_plat, (set(), set(), set())
+            )
             # ensure children get precedence in inheriting capabilities
             incl = incl.union(par_incl.difference(excl))
             excl = excl.union(par_excl.difference(incl))
 
-        if platform != 'DEFAULTS':
+        if platform != "DEFAULTS":
             # Raise error if capability undefined after inheriting from parents
             if incl.union(excl) != full_cap_set:
                 raise FormatException(
-                    'Not all capabilities accounted for',
-                    platform=platform, field=cap_field)
+                    "Not all capabilities accounted for",
+                    platform=platform,
+                    field=cap_field,
+                )
             # Raise error if capability is somehow both defined true and false
             if incl.intersection(excl):
                 raise FormatException(
-                    'Include/exclude not mutually exclusive',
-                    platform=platform, field=cap_field)
+                    "Include/exclude not mutually exclusive",
+                    platform=platform,
+                    field=cap_field,
+                )
 
         for model, (model_incl, model_excl) in models.items():
             if not model_incl:
                 continue
             if model_incl.union(model_excl) != full_cap_set:
                 raise FormatException(
-                    'Not all capabilities accounted for',
-                    platform=platform, model=model, field=cap_field)
-            consolidated[platform]['models'][model][cap_field] = sorted(model_incl)
+                    "Not all capabilities accounted for",
+                    platform=platform,
+                    model=model,
+                    field=cap_field,
+                )
+            consolidated[platform]["models"][model][cap_field] = sorted(
+                model_incl
+            )
         consolidated[platform][cap_field] = sorted(incl)
 
 
@@ -202,8 +224,8 @@ def write_output(consolidated_json, output_path):
     """
     if os.path.isfile(output_path):
         os.remove(output_path)
-    with open(output_path, 'w') as output_file:
-        json.dump(consolidated_json, output_file, indent='\t', sort_keys=True)
+    with open(output_path, "w") as output_file:
+        json.dump(consolidated_json, output_file, indent="\t", sort_keys=True)
     os.chmod(output_path, stat.S_IRUSR | stat.S_IRGRP | stat.S_IROTH)
 
 
@@ -220,5 +242,5 @@ def main(argv=None):
     write_output(consolidated_json, args.output)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main(sys.argv[1:])

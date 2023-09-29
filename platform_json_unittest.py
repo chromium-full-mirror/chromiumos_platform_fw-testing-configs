@@ -4,6 +4,7 @@
 # found in the LICENSE file.
 
 """
+
 Unit tests for platform_json.py
 
 """
@@ -18,8 +19,8 @@ import unittest
 
 import platform_json
 
-MOCK_CONSOLIDATED_JSON_CONTENTS = \
-'''{
+
+MOCK_CONSOLIDATED_JSON_CONTENTS = """{
     "DEFAULTS": {
         "platform": null,
         "parent": null,
@@ -60,7 +61,7 @@ MOCK_CONSOLIDATED_JSON_CONTENTS = \
         "field2": 3,
         "field3": 3
     }
-}'''
+}"""
 
 
 def _run_main(argv):
@@ -82,7 +83,7 @@ class AbstractMockConfigTestCase(object):
     def setUp(self):  # pylint:disable=invalid-name
         """Write mock JSON to a temporary file"""
         _, self.mock_filepath = tempfile.mkstemp()
-        with open(self.mock_filepath, 'w') as mock_file:
+        with open(self.mock_filepath, "w") as mock_file:
             mock_file.write(MOCK_CONSOLIDATED_JSON_CONTENTS)
 
     def tearDown(self):  # pylint:disable=invalid-name
@@ -96,21 +97,22 @@ class InheritanceTestCase(AbstractMockConfigTestCase, unittest.TestCase):
     def runTest(self):  # pylint:disable=invalid-name
         """Load platform config and check that it looks correct"""
         consolidated_json = platform_json.load_consolidated_json(
-            self.mock_filepath)
-        my_platform = platform_json.calculate_config('my_platform',
-                                                     None,
-                                                     consolidated_json)
-        self.assertEqual(my_platform['field1'], 1) # No inheritance
-        self.assertEqual(my_platform['field2'], 2) # Direct inheritance
-        self.assertEqual(my_platform['field3'], 3) # Recursive inheritance
-        self.assertEqual(my_platform['field4'], 5) # Inherit from DEFAULTS
-        my_model = platform_json.calculate_config('my_platform',
-                                                  'my_model',
-                                                  consolidated_json)
-        self.assertEqual(my_model['field1'], 4) # Model override
-        self.assertEqual(my_model['field2'], 2) # Everything else is the same
-        self.assertEqual(my_model['field3'], 3)
-        self.assertEqual(my_model['field4'], 5)
+            self.mock_filepath
+        )
+        my_platform = platform_json.calculate_config(
+            "my_platform", None, consolidated_json
+        )
+        self.assertEqual(my_platform["field1"], 1)  # No inheritance
+        self.assertEqual(my_platform["field2"], 2)  # Direct inheritance
+        self.assertEqual(my_platform["field3"], 3)  # Recursive inheritance
+        self.assertEqual(my_platform["field4"], 5)  # Inherit from DEFAULTS
+        my_model = platform_json.calculate_config(
+            "my_platform", "my_model", consolidated_json
+        )
+        self.assertEqual(my_model["field1"], 4)  # Model override
+        self.assertEqual(my_model["field2"], 2)  # Everything else is the same
+        self.assertEqual(my_model["field3"], 3)
+        self.assertEqual(my_model["field4"], 5)
 
 
 class EndToEndPlatformTestCase(AbstractMockConfigTestCase, unittest.TestCase):
@@ -119,29 +121,31 @@ class EndToEndPlatformTestCase(AbstractMockConfigTestCase, unittest.TestCase):
     def runTest(self):  # pylint: disable=invalid-name
         """Main test logic"""
         # Basic platform specification
-        argv = ['my_platform', '-c', self.mock_filepath]
-        expected_json = collections.OrderedDict({
-            'platform': 'my_platform',
-            'parent': 'my_parent',
-            'field1': 1,
-            'field2': 2,
-            'field3': 3,
-            'field4': 5,
-            'fieldArray': [
-                'elem1',
-                'elem2',
-            ],
-        })
-        expected_output = json.dumps(expected_json, indent=4) + '\n'
+        argv = ["my_platform", "-c", self.mock_filepath]
+        expected_json = collections.OrderedDict(
+            {
+                "platform": "my_platform",
+                "parent": "my_parent",
+                "field1": 1,
+                "field2": 2,
+                "field3": 3,
+                "field4": 5,
+                "fieldArray": [
+                    "elem1",
+                    "elem2",
+                ],
+            }
+        )
+        expected_output = json.dumps(expected_json, indent=4) + "\n"
         self.assertEqual(_run_main(argv), expected_output)
 
         # Condensed output
-        argv.append('--condense-output')
+        argv.append("--condense-output")
         expected_output = json.dumps(expected_json, indent=None)
         self.assertEqual(_run_main(argv), expected_output)
 
         # Non-existent platform should raise an error
-        argv = ['fake_platform', '-c', self.mock_filepath]
+        argv = ["fake_platform", "-c", self.mock_filepath]
         with self.assertRaises(platform_json.PlatformNotFoundError):
             _run_main(argv)
 
@@ -152,18 +156,18 @@ class EndToEndFieldTestCase(AbstractMockConfigTestCase, unittest.TestCase):
     def runTest(self):  # pylint: disable=invalid-name
         """Main test logic"""
         # Basic field specification
-        argv = ['my_platform', '-f', 'field1', '-c', self.mock_filepath]
-        self.assertEqual(_run_main(argv), '1\n')
+        argv = ["my_platform", "-f", "field1", "-c", self.mock_filepath]
+        self.assertEqual(_run_main(argv), "1\n")
 
         # Condensed output should yield no newline
-        argv.append('--condense-output')
-        self.assertEqual(_run_main(argv), '1')
+        argv.append("--condense-output")
+        self.assertEqual(_run_main(argv), "1")
 
         # Non-existent field should raise an error
-        argv = ['my_platform', '-f', 'fake_field', '-c', self.mock_filepath]
+        argv = ["my_platform", "-f", "fake_field", "-c", self.mock_filepath]
         with self.assertRaises(platform_json.FieldNotFoundError):
             _run_main(argv)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

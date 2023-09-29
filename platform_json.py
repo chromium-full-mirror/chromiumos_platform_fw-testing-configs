@@ -30,14 +30,12 @@ import sys
 # Regexes matching fields which describe config metadata: that is, they do not
 # contain actual config information.  When calculating the final config, fields
 # matching any of these regexes will be ignored.
-META_FIELD_REGEXES = (
-    re.compile(r'^models$'),
-    re.compile(r'\.DOC$')
-)
+META_FIELD_REGEXES = (re.compile(r"^models$"), re.compile(r"\.DOC$"))
 
 
 class PlatformNotFoundError(AttributeError):
     """Error class for when the requested platform name is not found."""
+
     pass
 
 
@@ -65,18 +63,35 @@ def parse_args(argv):
         ValueError: If the passed-in platform name ends in '.json'
     """
     parser = argparse.ArgumentParser()
-    parser.add_argument('platform',
-                        help='The platform name to calculate a config for. '
-                             'Should not include ".json" suffix.')
-    parser.add_argument('-m', '--model', default=None,
-                        help='The model name of the board. If not specified, '
-                             'then no model overrides will be used.')
-    parser.add_argument('-f', '--field', default=None,
-                        help="If specified, only print this field's value.")
-    parser.add_argument('-c', '--consolidated', default='CONSOLIDATED.json',
-                        help='The filepath to CONSOLIDATED.json')
-    parser.add_argument('--condense-output', action='store_true',
-                        help='Print the output without pretty whitespace.')
+    parser.add_argument(
+        "platform",
+        help="The platform name to calculate a config for. "
+        'Should not include ".json" suffix.',
+    )
+    parser.add_argument(
+        "-m",
+        "--model",
+        default=None,
+        help="The model name of the board. If not specified, "
+        "then no model overrides will be used.",
+    )
+    parser.add_argument(
+        "-f",
+        "--field",
+        default=None,
+        help="If specified, only print this field's value.",
+    )
+    parser.add_argument(
+        "-c",
+        "--consolidated",
+        default="CONSOLIDATED.json",
+        help="The filepath to CONSOLIDATED.json",
+    )
+    parser.add_argument(
+        "--condense-output",
+        action="store_true",
+        help="Print the output without pretty whitespace.",
+    )
     args = parser.parse_args(argv)
     return args
 
@@ -101,7 +116,7 @@ def calculate_field_value(consolidated_json, field, platform, model=None):
     # Model overrides are most important.
     # Not all models have config overrides, so it's OK for the model name not
     # to be present in models_json.
-    models_json = consolidated_json[platform].get('models', {})
+    models_json = consolidated_json[platform].get("models", {})
     if field in models_json.get(model, {}):
         return models_json[model][field]
 
@@ -112,7 +127,7 @@ def calculate_field_value(consolidated_json, field, platform, model=None):
     # Finally, inherit from the parent (or DEFAULTS).
     # The DEFAULTS config contains every field name, so this will terminate the
     # recursion.
-    parent = consolidated_json[platform].get('parent', 'DEFAULTS')
+    parent = consolidated_json[platform].get("parent", "DEFAULTS")
     return calculate_field_value(consolidated_json, field, parent, model)
 
 
@@ -132,7 +147,7 @@ def calculate_config(platform, model, consolidated_json):
         model: The name of the model to check for overrides.
     """
     final_json = collections.OrderedDict()
-    for field in consolidated_json['DEFAULTS']:
+    for field in consolidated_json["DEFAULTS"]:
         if any(regex.search(field) for regex in META_FIELD_REGEXES):
             continue
         value = calculate_field_value(consolidated_json, field, platform, model)
@@ -150,8 +165,7 @@ def main(argv):
     """
     args = parse_args(argv)
     consolidated_json = load_consolidated_json(args.consolidated)
-    config_json = calculate_config(args.platform, args.model,
-                                   consolidated_json)
+    config_json = calculate_config(args.platform, args.model, consolidated_json)
     if args.field is None:
         # indent=None means no newlines/indents in stringified JSON.
         # indent=4 means 4-space indents.
@@ -161,8 +175,8 @@ def main(argv):
         raise FieldNotFoundError(args.field)
     else:
         output = config_json[args.field]
-    print(output, end='' if args.condense_output else '\n')
+    print(output, end="" if args.condense_output else "\n")
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main(sys.argv[1:])
