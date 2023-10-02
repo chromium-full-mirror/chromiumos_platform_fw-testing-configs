@@ -251,6 +251,25 @@ def detect_invalid_fields(consolidated):
                             platform=platform,
                             field=f"{field}.{subfield}",
                         )
+        models = conf.get("models", {})
+        for model, model_conf in models.items():
+            for field in model_conf:
+                if field not in consolidated["DEFAULTS"]:
+                    raise FormatException(
+                        "Unexpected json field",
+                        platform=platform,
+                        field=field,
+                        model=model,
+                    )
+                if isinstance(consolidated["DEFAULTS"][field], dict):
+                    for subfield in model_conf[field]:
+                        if subfield not in consolidated["DEFAULTS"][field]:
+                            raise FormatException(
+                                "Unexpected json field",
+                                platform=platform,
+                                field=f"{field}.{subfield}",
+                                model=model,
+                            )
 
 
 def copy_parent_data(consolidated):
