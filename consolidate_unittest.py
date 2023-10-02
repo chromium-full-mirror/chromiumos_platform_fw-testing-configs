@@ -132,7 +132,7 @@ class TestLoadJSON(unittest.TestCase):
             defaults_file.write(
                 "{\n"
                 + '  "platform": null,\n'
-                + '  "platform_DOC": "foo",\n'
+                + '  "platform.DOC": "foo",\n'
                 + '  "ec_capability": {'
                 + '    "adc_ectemp": null,\n'
                 + '    "arm": null,\n'
@@ -177,7 +177,7 @@ class TestLoadJSON(unittest.TestCase):
         expected = collections.OrderedDict()
         expected["DEFAULTS"] = collections.OrderedDict()
         expected["DEFAULTS"]["platform"] = None
-        expected["DEFAULTS"]["platform_DOC"] = "foo"
+        expected["DEFAULTS"]["platform.DOC"] = "foo"
         expected["DEFAULTS"]["ec_capability"] = ["default_true"]
         expected["DEFAULTS"]["cr50_capability"] = ["default_true"]
         expected["DEFAULTS"]["minidiag_capability"] = ["default_true"]
@@ -298,7 +298,7 @@ class TestInvalidECCapability(unittest.TestCase):
             defaults_json = collections.OrderedDict(
                 {
                     "platform": None,
-                    "platform_DOC": "foo",
+                    "platform.DOC": "foo",
                     "ec_capability": {
                         "adc_ectemp": None,
                         "arm": None,
@@ -410,7 +410,7 @@ class TestMissingECCapability(unittest.TestCase):
             defaults_json = collections.OrderedDict(
                 {
                     "platform": None,
-                    "platform_DOC": "foo",
+                    "platform.DOC": "foo",
                     "ec_capability": {
                         "adc_ectemp": None,
                         "arm": None,
@@ -504,7 +504,7 @@ class TestInvalidCR50Capability(unittest.TestCase):
             defaults_json = collections.OrderedDict(
                 {
                     "platform": None,
-                    "platform_DOC": "foo",
+                    "platform.DOC": "foo",
                     "ec_capability": {
                         "adc_ectemp": None,
                         "arm": None,
@@ -597,7 +597,7 @@ class TestMissingCR50Capability(unittest.TestCase):
             defaults_json = collections.OrderedDict(
                 {
                     "platform": None,
-                    "platform_DOC": "foo",
+                    "platform.DOC": "foo",
                     "ec_capability": {
                         "adc_ectemp": None,
                         "arm": None,
@@ -697,7 +697,7 @@ class TestInvalidMinidiagCapability(unittest.TestCase):
             defaults_json = collections.OrderedDict(
                 {
                     "platform": None,
-                    "platform_DOC": "foo",
+                    "platform.DOC": "foo",
                     "ec_capability": {
                         "adc_ectemp": None,
                         "arm": None,
@@ -801,7 +801,7 @@ class TestMissingMinidiagCapability(unittest.TestCase):
             defaults_json = collections.OrderedDict(
                 {
                     "platform": None,
-                    "platform_DOC": "foo",
+                    "platform.DOC": "foo",
                     "ec_capability": {
                         "adc_ectemp": None,
                         "arm": None,
@@ -931,7 +931,7 @@ class TestMain(unittest.TestCase):
             defaults_json = collections.OrderedDict(
                 {
                     "platform": None,
-                    "platform_DOC": "foo",
+                    "platform.DOC": "foo",
                     "firmware_screen": 42,
                     "parent": None,
                     "ec_capability": {
@@ -987,7 +987,7 @@ class TestMain(unittest.TestCase):
         ],
         "parent": null,
         "platform": null,
-        "platform_DOC": "foo"
+        "platform.DOC": "foo"
     },
     "a": {
         "cr50_capability": [],
@@ -1056,12 +1056,18 @@ class TestMain(unittest.TestCase):
                 output_contents = [s.strip() for s in output_file.readlines()]
             expected_output = [s.strip() for s in expected_str.splitlines()]
 
-            self.assertTrue(
-                expected_output == output_contents,
-                "\n".join(
-                    difflib.unified_diff(expected_output, output_contents)
-                ),
-            )
+            if expected_output != output_contents:
+                self.fail(
+                    "Expected output doesn't match actual output. Diff:\n"
+                    + "\n".join(
+                        difflib.unified_diff(
+                            expected_output,
+                            output_contents,
+                            fromfile="expected",
+                            tofile="actual",
+                        )
+                    ),
+                )
 
         # Verify the final output is read-only.
         with self.assertRaises(PermissionError):

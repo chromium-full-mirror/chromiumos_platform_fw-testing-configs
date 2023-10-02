@@ -19,6 +19,7 @@ Design doc: go/consolidate-fwtc
 import argparse
 import collections
 import json
+import logging
 import os
 import stat
 import sys
@@ -165,72 +166,50 @@ def reformat_capability_map(consolidated, cap_field):
         None
     """
     platform_caps = {}  # To keep track of platforms and their capabilities
-    # To keep track of all capabilities expected to be defined
-    full_cap_set = set()
     for platform, conf in consolidated.items():
-        if platform == "DEFAULTS":
-            # Collect set of all possible settings
-            full_cap_set = set(conf.get(cap_field, {}).keys())
-
         # collect explicitly defined capabilities for each platform
         caps = conf.get(cap_field, {})
+        logging.debug("%s before = %s", platform, caps)
+        curr_plat = platform
+        while curr_plat != "DEFAULTS":
+            curr_plat = consolidated[curr_plat].get("parent") or "DEFAULTS"
+            parent_caps = consolidated[curr_plat].get(cap_field, {})
+            for k, v in parent_caps.items():
+                if k not in caps:
+                    caps[k] = v
+                    if v is None:
+                        raise FormatException(
+                            f"Capability {k} is not set",
+                            platform=platform,
+                            field=cap_field,
+                        )
+        logging.debug("%s after = %s", platform, caps)
         incl = set(k for k, v in caps.items() if v)
-        excl = set(k for k, v in caps.items() if not v and v is not None)
 
         # collect the capabilities for each model
         models_caps = {}
         models = conf.get("models", {})
         for model, model_conf in models.items():
             model_caps = model_conf.get(cap_field, {})
+            logging.debug("%s.%s before = %s", platform, model, model_caps)
+            for k, v in caps.items():
+                if k not in model_caps:
+                    model_caps[k] = v
+                    if v is None:
+                        raise FormatException(
+                            f"Capability {k} is not set",
+                            platform=platform,
+                            field=cap_field,
+                            model=model,
+                        )
+            logging.debug("%s.%s after = %s", platform, model, model_caps)
             model_incl = set(k for k, v in model_caps.items() if v)
-            model_excl = set(
-                k for k, v in model_caps.items() if not v and v is not None
-            )
-            models_caps[model] = model_incl, model_excl
+            models_caps[model] = model_incl
 
-        platform_caps[platform] = incl, excl, models_caps
+        platform_caps[platform] = incl, models_caps
 
-    # For platforms with explicitly defined capabilities, recurse through
-    # parents inheritance from parents is overridden by children
-    # Need separate loop to ensure incl, excl calculated for parent platforms
-    for platform, (incl, excl, models) in platform_caps.items():
-        curr_plat = platform
-        while curr_plat != "DEFAULTS":
-            curr_plat = consolidated[curr_plat].get("parent") or "DEFAULTS"
-
-            par_incl, par_excl, _ = platform_caps.get(
-                curr_plat, (set(), set(), set())
-            )
-            # ensure children get precedence in inheriting capabilities
-            incl = incl.union(par_incl.difference(excl))
-            excl = excl.union(par_excl.difference(incl))
-
-        if platform != "DEFAULTS":
-            # Raise error if capability undefined after inheriting from parents
-            if incl.union(excl) != full_cap_set:
-                raise FormatException(
-                    "Not all capabilities accounted for",
-                    platform=platform,
-                    field=cap_field,
-                )
-            # Raise error if capability is somehow both defined true and false
-            if incl.intersection(excl):
-                raise FormatException(
-                    "Include/exclude not mutually exclusive",
-                    platform=platform,
-                    field=cap_field,
-                )
-
-        for model, (model_incl, model_excl) in models.items():
-            if not model_incl:
-                continue
-            if model_incl.union(model_excl) != full_cap_set:
-                raise FormatException(
-                    "Not all capabilities accounted for",
-                    platform=platform,
-                    model=model,
-                    field=cap_field,
-                )
+    for platform, (incl, models) in platform_caps.items():
+        for model, model_incl in models.items():
             consolidated[platform]["models"][model][cap_field] = sorted(
                 model_incl
             )

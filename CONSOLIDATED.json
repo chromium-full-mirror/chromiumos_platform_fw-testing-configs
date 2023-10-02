@@ -200,22 +200,46 @@
     "mode_switcher_type": "menu_switcher",
     "models": {
       "hayato": {
+        "cr50_capability": [],
         "custom_usb_enable_pins": [
           {
             "ioex": false,
             "name": "EN_PP5000_USB_A0_VBUS"
           }
         ],
-        "max_charging_power": 45.0
+        "ec_capability": [
+          "arm",
+          "battery",
+          "charging",
+          "keyboard",
+          "lid",
+          "usb"
+        ],
+        "max_charging_power": 45.0,
+        "minidiag_capability": [
+          "cbmem_preserved_by_ap_reset"
+        ]
       },
       "spherion": {
+        "cr50_capability": [],
         "custom_usb_enable_pins": [
           {
             "ioex": false,
             "name": "EN_PP5000_USB_A0_VBUS"
           }
         ],
-        "max_charging_power": 65.0
+        "ec_capability": [
+          "arm",
+          "battery",
+          "charging",
+          "keyboard",
+          "lid",
+          "usb"
+        ],
+        "max_charging_power": 65.0,
+        "minidiag_capability": [
+          "cbmem_preserved_by_ap_reset"
+        ]
       }
     },
     "platform": "asurada",
@@ -247,6 +271,22 @@
     "mode_switcher_type": "keyboard_dev_switcher",
     "models": {
       "atlas": {
+        "cr50_capability": [
+          "rdd_leakage",
+          "wp_on_in_g3"
+        ],
+        "ec_capability": [
+          "battery",
+          "charging",
+          "keyboard",
+          "lid",
+          "x86"
+        ],
+        "minidiag_capability": [
+          "cbmem_preserved_by_ap_reset",
+          "event_log_launch_count",
+          "storage_self_test"
+        ],
         "usb_a_port_count": 0
       }
     },
@@ -337,11 +377,39 @@
     "mode_switcher_type": "menu_switcher",
     "models": {
       "banshee": {
+        "cr50_capability": [],
         "custom_usb_enable_pins": [],
+        "ec_capability": [
+          "battery",
+          "cbi",
+          "charging",
+          "keyboard",
+          "lid",
+          "usb",
+          "x86"
+        ],
+        "minidiag_capability": [
+          "event_log_launch_count",
+          "storage_self_test"
+        ],
         "usb_a_port_count": 0
       },
       "vell": {
+        "cr50_capability": [],
         "custom_usb_enable_pins": [],
+        "ec_capability": [
+          "battery",
+          "cbi",
+          "charging",
+          "keyboard",
+          "lid",
+          "usb",
+          "x86"
+        ],
+        "minidiag_capability": [
+          "event_log_launch_count",
+          "storage_self_test"
+        ],
         "usb_a_port_count": 0
       }
     },
@@ -435,6 +503,21 @@
     "mode_switcher_type": "menu_switcher",
     "models": {
       "tomato": {
+        "cr50_capability": [],
+        "ec_capability": [
+          "arm",
+          "battery",
+          "cbi",
+          "charging",
+          "keyboard",
+          "lid",
+          "usb"
+        ],
+        "minidiag_capability": [
+          "cbmem_preserved_by_ap_reset",
+          "event_log_launch_count",
+          "storage_self_test"
+        ],
         "minios_enabled": false
       }
     },
@@ -547,6 +630,22 @@
     "mode_switcher_type": "menu_switcher",
     "models": {
       "voltorb": {
+        "cr50_capability": [],
+        "ec_capability": [
+          "arm",
+          "battery",
+          "cbi",
+          "charging",
+          "keyboard",
+          "lid",
+          "usb"
+        ],
+        "minidiag_capability": [
+          "cbmem_preserved_by_ap_reset",
+          "event_log_launch_count",
+          "event_log_test_report",
+          "storage_self_test"
+        ],
         "usbc_voltage_on_shutdown_and_full_batt": 15
       }
     },
@@ -590,6 +689,7 @@
     "mode_switcher_type": "menu_switcher",
     "models": {
       "beetley": {
+        "cr50_capability": [],
         "custom_usb_enable_pins": [
           {
             "ioex": false,
@@ -599,9 +699,21 @@
             "ioex": false,
             "name": "EN_PP5000_U"
           }
-        ]
+        ],
+        "ec_capability": [
+          "battery",
+          "cbi",
+          "charging",
+          "keyboard",
+          "lid",
+          "smart_usb_charge",
+          "usb",
+          "x86"
+        ],
+        "minidiag_capability": []
       },
       "blipper": {
+        "cr50_capability": [],
         "custom_usb_enable_pins": [
           {
             "ioex": false,
@@ -611,9 +723,21 @@
             "ioex": false,
             "name": "EN_PP5000_U"
           }
-        ]
+        ],
+        "ec_capability": [
+          "battery",
+          "cbi",
+          "charging",
+          "keyboard",
+          "lid",
+          "smart_usb_charge",
+          "usb",
+          "x86"
+        ],
+        "minidiag_capability": []
       },
       "bookem": {
+        "cr50_capability": [],
         "custom_usb_enable_pins": [
           {
             "ioex": false,
@@ -623,9 +747,21 @@
             "ioex": false,
             "name": "EN_PP5000_U"
           }
-        ]
+        ],
+        "ec_capability": [
+          "battery",
+          "cbi",
+          "charging",
+          "keyboard",
+          "lid",
+          "smart_usb_charge",
+          "usb",
+          "x86"
+        ],
+        "minidiag_capability": []
       },
       "boten": {
+        "cr50_capability": [],
         "custom_usb_enable_pins": [
           {
             "ioex": false,
@@ -635,9 +771,21 @@
             "ioex": false,
             "name": "EN_PP5000_U"
           }
-        ]
+        ],
+        "ec_capability": [
+          "battery",
+          "cbi",
+          "charging",
+          "keyboard",
+          "lid",
+          "smart_usb_charge",
+          "usb",
+          "x86"
+        ],
+        "minidiag_capability": []
       },
       "boxy": {
+        "cr50_capability": [],
         "custom_usb_enable_pins": [
           {
             "ioex": false,
@@ -657,33 +805,71 @@
         "has_lid": false,
         "hibernate": false,
         "hold_pwr_button_poweron": 3,
+        "minidiag_capability": [],
         "rec_button_dev_switch": true
       },
       "bugzzy": {
+        "cr50_capability": [],
         "custom_usb_enable_pins": [
           {
             "ioex": false,
             "name": "EN_USB_A0_VBUS"
           }
-        ]
+        ],
+        "ec_capability": [
+          "battery",
+          "cbi",
+          "charging",
+          "keyboard",
+          "lid",
+          "smart_usb_charge",
+          "usb",
+          "x86"
+        ],
+        "minidiag_capability": []
       },
       "cret": {
+        "cr50_capability": [],
         "custom_usb_enable_pins": [
           {
             "ioex": false,
             "name": "EN_USB_A0_VBUS"
           }
-        ]
+        ],
+        "ec_capability": [
+          "battery",
+          "cbi",
+          "charging",
+          "keyboard",
+          "lid",
+          "smart_usb_charge",
+          "usb",
+          "x86"
+        ],
+        "minidiag_capability": []
       },
       "cret360": {
+        "cr50_capability": [],
         "custom_usb_enable_pins": [
           {
             "ioex": false,
             "name": "EN_USB_A0_VBUS"
           }
-        ]
+        ],
+        "ec_capability": [
+          "battery",
+          "cbi",
+          "charging",
+          "keyboard",
+          "lid",
+          "smart_usb_charge",
+          "usb",
+          "x86"
+        ],
+        "minidiag_capability": []
       },
       "dibbi": {
+        "cr50_capability": [],
         "custom_usb_enable_pins": [
           {
             "ioex": false,
@@ -711,57 +897,131 @@
         "has_lid": false,
         "hibernate": false,
         "hold_pwr_button_poweron": 3,
+        "minidiag_capability": [],
         "rec_button_dev_switch": true
       },
       "drawcia": {
+        "cr50_capability": [],
         "custom_usb_enable_pins": [
           {
             "ioex": false,
             "name": "EN_USB_A_5V"
           }
-        ]
+        ],
+        "ec_capability": [
+          "battery",
+          "cbi",
+          "charging",
+          "keyboard",
+          "lid",
+          "smart_usb_charge",
+          "usb",
+          "x86"
+        ],
+        "minidiag_capability": []
       },
       "drawlat": {
+        "cr50_capability": [],
         "custom_usb_enable_pins": [
           {
             "ioex": false,
             "name": "EN_USB_A_5V"
           }
-        ]
+        ],
+        "ec_capability": [
+          "battery",
+          "cbi",
+          "charging",
+          "keyboard",
+          "lid",
+          "smart_usb_charge",
+          "usb",
+          "x86"
+        ],
+        "minidiag_capability": []
       },
       "drawman": {
+        "cr50_capability": [],
         "custom_usb_enable_pins": [
           {
             "ioex": false,
             "name": "EN_USB_A_5V"
           }
-        ]
+        ],
+        "ec_capability": [
+          "battery",
+          "cbi",
+          "charging",
+          "keyboard",
+          "lid",
+          "smart_usb_charge",
+          "usb",
+          "x86"
+        ],
+        "minidiag_capability": []
       },
       "drawper": {
+        "cr50_capability": [],
         "custom_usb_enable_pins": [
           {
             "ioex": false,
             "name": "EN_USB_A_5V"
           }
-        ]
+        ],
+        "ec_capability": [
+          "battery",
+          "cbi",
+          "charging",
+          "keyboard",
+          "lid",
+          "smart_usb_charge",
+          "usb",
+          "x86"
+        ],
+        "minidiag_capability": []
       },
       "galith": {
+        "cr50_capability": [],
         "custom_usb_enable_pins": [
           {
             "ioex": false,
             "name": "EN_USB_A0_VBUS"
           }
-        ]
+        ],
+        "ec_capability": [
+          "battery",
+          "cbi",
+          "charging",
+          "keyboard",
+          "lid",
+          "smart_usb_charge",
+          "usb",
+          "x86"
+        ],
+        "minidiag_capability": []
       },
       "galith360": {
+        "cr50_capability": [],
         "custom_usb_enable_pins": [
           {
             "ioex": false,
             "name": "EN_USB_A0_VBUS"
           }
-        ]
+        ],
+        "ec_capability": [
+          "battery",
+          "cbi",
+          "charging",
+          "keyboard",
+          "lid",
+          "smart_usb_charge",
+          "usb",
+          "x86"
+        ],
+        "minidiag_capability": []
       },
       "gallop": {
+        "cr50_capability": [],
         "custom_usb_enable_pins": [
           {
             "ioex": false,
@@ -771,25 +1031,61 @@
             "ioex": false,
             "name": "EN_PP5000_U"
           }
-        ]
+        ],
+        "ec_capability": [
+          "battery",
+          "cbi",
+          "charging",
+          "keyboard",
+          "lid",
+          "smart_usb_charge",
+          "usb",
+          "x86"
+        ],
+        "minidiag_capability": []
       },
       "galnat": {
+        "cr50_capability": [],
         "custom_usb_enable_pins": [
           {
             "ioex": false,
             "name": "EN_USB_A0_VBUS"
           }
-        ]
+        ],
+        "ec_capability": [
+          "battery",
+          "cbi",
+          "charging",
+          "keyboard",
+          "lid",
+          "smart_usb_charge",
+          "usb",
+          "x86"
+        ],
+        "minidiag_capability": []
       },
       "galnat360": {
+        "cr50_capability": [],
         "custom_usb_enable_pins": [
           {
             "ioex": false,
             "name": "EN_USB_A0_VBUS"
           }
-        ]
+        ],
+        "ec_capability": [
+          "battery",
+          "cbi",
+          "charging",
+          "keyboard",
+          "lid",
+          "smart_usb_charge",
+          "usb",
+          "x86"
+        ],
+        "minidiag_capability": []
       },
       "galtic": {
+        "cr50_capability": [],
         "custom_usb_enable_pins": [
           {
             "ioex": false,
@@ -799,131 +1095,323 @@
             "ioex": false,
             "name": "EN_PP5000_U"
           }
-        ]
+        ],
+        "ec_capability": [
+          "battery",
+          "cbi",
+          "charging",
+          "keyboard",
+          "lid",
+          "smart_usb_charge",
+          "usb",
+          "x86"
+        ],
+        "minidiag_capability": []
       },
       "galtic360": {
+        "cr50_capability": [],
         "custom_usb_enable_pins": [
           {
             "ioex": false,
             "name": "EN_USB_A0_VBUS"
           }
-        ]
+        ],
+        "ec_capability": [
+          "battery",
+          "cbi",
+          "charging",
+          "keyboard",
+          "lid",
+          "smart_usb_charge",
+          "usb",
+          "x86"
+        ],
+        "minidiag_capability": []
       },
       "kracko": {
-        "custom_usb_enable_pins": [
-          {
-            "ioex": false,
-            "name": "EN_USB_A_5V"
-          }
-        ]
-      },
-      "kracko360": {
+        "cr50_capability": [],
         "custom_usb_enable_pins": [
           {
             "ioex": false,
             "name": "EN_USB_A_5V"
           }
         ],
-        "delay_reboot_to_ping": 80
+        "ec_capability": [
+          "battery",
+          "cbi",
+          "charging",
+          "keyboard",
+          "lid",
+          "smart_usb_charge",
+          "usb",
+          "x86"
+        ],
+        "minidiag_capability": []
+      },
+      "kracko360": {
+        "cr50_capability": [],
+        "custom_usb_enable_pins": [
+          {
+            "ioex": false,
+            "name": "EN_USB_A_5V"
+          }
+        ],
+        "delay_reboot_to_ping": 80,
+        "ec_capability": [
+          "battery",
+          "cbi",
+          "charging",
+          "keyboard",
+          "lid",
+          "smart_usb_charge",
+          "usb",
+          "x86"
+        ],
+        "minidiag_capability": []
       },
       "landia": {
+        "cr50_capability": [],
         "custom_usb_enable_pins": [
           {
             "ioex": false,
             "name": "EN_USB_A_5V"
           }
-        ]
+        ],
+        "ec_capability": [
+          "battery",
+          "cbi",
+          "charging",
+          "keyboard",
+          "lid",
+          "smart_usb_charge",
+          "usb",
+          "x86"
+        ],
+        "minidiag_capability": []
       },
       "landrid": {
+        "cr50_capability": [],
         "custom_usb_enable_pins": [
           {
             "ioex": false,
             "name": "EN_USB_A_5V"
           }
-        ]
+        ],
+        "ec_capability": [
+          "battery",
+          "cbi",
+          "charging",
+          "keyboard",
+          "lid",
+          "smart_usb_charge",
+          "usb",
+          "x86"
+        ],
+        "minidiag_capability": []
       },
       "lantis": {
+        "cr50_capability": [],
         "custom_usb_enable_pins": [
           {
             "ioex": false,
             "name": "EN_USB_A_5V"
           }
-        ]
+        ],
+        "ec_capability": [
+          "battery",
+          "cbi",
+          "charging",
+          "keyboard",
+          "lid",
+          "smart_usb_charge",
+          "usb",
+          "x86"
+        ],
+        "minidiag_capability": []
       },
       "madoo": {
+        "cr50_capability": [],
         "custom_usb_enable_pins": [
           {
             "ioex": false,
             "name": "EN_PP5000_U"
           }
         ],
+        "ec_capability": [
+          "battery",
+          "cbi",
+          "charging",
+          "keyboard",
+          "lid",
+          "smart_usb_charge",
+          "usb",
+          "x86"
+        ],
+        "minidiag_capability": [],
         "usb_a_port_count": 0
       },
       "pasara": {
+        "cr50_capability": [],
         "custom_usb_enable_pins": [
           {
             "ioex": false,
             "name": "EN_USB_A0_VBUS"
           }
-        ]
+        ],
+        "ec_capability": [
+          "battery",
+          "cbi",
+          "charging",
+          "keyboard",
+          "lid",
+          "smart_usb_charge",
+          "usb",
+          "x86"
+        ],
+        "minidiag_capability": []
       },
       "peezer": {
+        "cr50_capability": [],
         "custom_usb_enable_pins": [
           {
             "ioex": false,
             "name": "EN_USB_A0_VBUS"
           }
-        ]
+        ],
+        "ec_capability": [
+          "battery",
+          "cbi",
+          "charging",
+          "keyboard",
+          "lid",
+          "smart_usb_charge",
+          "usb",
+          "x86"
+        ],
+        "minidiag_capability": []
       },
       "pirette": {
+        "cr50_capability": [],
         "custom_usb_enable_pins": [
           {
             "ioex": false,
             "name": "EN_USB_A0_VBUS"
           }
-        ]
+        ],
+        "ec_capability": [
+          "battery",
+          "cbi",
+          "charging",
+          "keyboard",
+          "lid",
+          "smart_usb_charge",
+          "usb",
+          "x86"
+        ],
+        "minidiag_capability": []
       },
       "pirika": {
+        "cr50_capability": [],
         "custom_usb_enable_pins": [
           {
             "ioex": false,
             "name": "EN_USB_A0_VBUS"
           }
-        ]
+        ],
+        "ec_capability": [
+          "battery",
+          "cbi",
+          "charging",
+          "keyboard",
+          "lid",
+          "smart_usb_charge",
+          "usb",
+          "x86"
+        ],
+        "minidiag_capability": []
       },
       "sasuke": {
+        "cr50_capability": [],
         "custom_usb_enable_pins": [
           {
             "ioex": false,
             "name": "EN_USB_A0_VBUS"
           }
-        ]
+        ],
+        "ec_capability": [
+          "battery",
+          "cbi",
+          "charging",
+          "keyboard",
+          "lid",
+          "smart_usb_charge",
+          "usb",
+          "x86"
+        ],
+        "minidiag_capability": []
       },
       "sasukette": {
+        "cr50_capability": [],
         "custom_usb_enable_pins": [
           {
             "ioex": false,
             "name": "EN_USB_A0_VBUS"
           }
-        ]
+        ],
+        "ec_capability": [
+          "battery",
+          "cbi",
+          "charging",
+          "keyboard",
+          "lid",
+          "smart_usb_charge",
+          "usb",
+          "x86"
+        ],
+        "minidiag_capability": []
       },
       "storo": {
+        "cr50_capability": [],
         "custom_usb_enable_pins": [
           {
             "ioex": false,
             "name": "EN_USB_A0_VBUS"
           }
-        ]
+        ],
+        "ec_capability": [
+          "battery",
+          "cbi",
+          "charging",
+          "keyboard",
+          "lid",
+          "smart_usb_charge",
+          "usb",
+          "x86"
+        ],
+        "minidiag_capability": []
       },
       "storo360": {
+        "cr50_capability": [],
         "custom_usb_enable_pins": [
           {
             "ioex": false,
             "name": "EN_USB_A0_VBUS"
           }
-        ]
+        ],
+        "ec_capability": [
+          "battery",
+          "cbi",
+          "charging",
+          "keyboard",
+          "lid",
+          "smart_usb_charge",
+          "usb",
+          "x86"
+        ],
+        "minidiag_capability": []
       },
       "taranza": {
+        "cr50_capability": [],
         "custom_usb_enable_pins": [
           {
             "ioex": false,
@@ -955,6 +1443,7 @@
         "has_lid": false,
         "hibernate": false,
         "hold_pwr_button_poweron": 3,
+        "minidiag_capability": [],
         "rec_button_dev_switch": true
       }
     },
@@ -1089,6 +1578,23 @@
     "mode_switcher_type": "keyboard_dev_switcher",
     "models": {
       "eve": {
+        "cr50_capability": [
+          "rdd_leakage",
+          "wp_on_in_g3"
+        ],
+        "ec_capability": [
+          "battery",
+          "charging",
+          "doubleboot",
+          "keyboard",
+          "lid",
+          "x86"
+        ],
+        "minidiag_capability": [
+          "cbmem_preserved_by_ap_reset",
+          "event_log_launch_count",
+          "storage_self_test"
+        ],
         "usb_a_port_count": 0
       }
     },
@@ -1123,16 +1629,52 @@
     "mode_switcher_type": "keyboard_dev_switcher",
     "models": {
       "jax": {
-        "delay_reboot_to_ping": 80
+        "cr50_capability": [],
+        "delay_reboot_to_ping": 80,
+        "ec_capability": [
+          "x86"
+        ],
+        "minidiag_capability": [
+          "cbmem_preserved_by_ap_reset",
+          "event_log_launch_count",
+          "storage_self_test"
+        ]
       },
       "kench": {
-        "delay_reboot_to_ping": 80
+        "cr50_capability": [],
+        "delay_reboot_to_ping": 80,
+        "ec_capability": [
+          "x86"
+        ],
+        "minidiag_capability": [
+          "cbmem_preserved_by_ap_reset",
+          "event_log_launch_count",
+          "storage_self_test"
+        ]
       },
       "sion": {
-        "delay_reboot_to_ping": 140
+        "cr50_capability": [],
+        "delay_reboot_to_ping": 140,
+        "ec_capability": [
+          "x86"
+        ],
+        "minidiag_capability": [
+          "cbmem_preserved_by_ap_reset",
+          "event_log_launch_count",
+          "storage_self_test"
+        ]
       },
       "teemo": {
-        "delay_reboot_to_ping": 130
+        "cr50_capability": [],
+        "delay_reboot_to_ping": 130,
+        "ec_capability": [
+          "x86"
+        ],
+        "minidiag_capability": [
+          "cbmem_preserved_by_ap_reset",
+          "event_log_launch_count",
+          "storage_self_test"
+        ]
       }
     },
     "no_broken_screen_in_dev": true,
@@ -1245,10 +1787,36 @@
     "mode_switcher_type": "keyboard_dev_switcher",
     "models": {
       "careena": {
-        "delay_reboot_to_ping": 80
+        "cr50_capability": [],
+        "delay_reboot_to_ping": 80,
+        "ec_capability": [
+          "battery",
+          "charging",
+          "keyboard",
+          "lid",
+          "x86"
+        ],
+        "minidiag_capability": [
+          "cbmem_preserved_by_ap_reset",
+          "event_log_launch_count",
+          "storage_self_test"
+        ]
       },
       "liara": {
+        "cr50_capability": [],
+        "ec_capability": [
+          "battery",
+          "charging",
+          "keyboard",
+          "lid",
+          "x86"
+        ],
         "hold_pwr_button_poweroff": 6,
+        "minidiag_capability": [
+          "cbmem_preserved_by_ap_reset",
+          "event_log_launch_count",
+          "storage_self_test"
+        ],
         "usbc_voltage_on_shutdown_and_full_batt": 5
       }
     },
@@ -1351,30 +1919,174 @@
     "mode_switcher_type": "keyboard_dev_switcher",
     "models": {
       "dratini": {
+        "cr50_capability": [
+          "ec_hibernate_breaks_rdd"
+        ],
+        "ec_capability": [
+          "battery",
+          "cbi",
+          "charging",
+          "keyboard",
+          "lid",
+          "smart_usb_charge",
+          "usb",
+          "x86"
+        ],
+        "minidiag_capability": [
+          "cbmem_preserved_by_ap_reset",
+          "event_log_launch_count",
+          "storage_self_test"
+        ],
         "usbc_voltage_on_shutdown_and_full_batt": 5
       },
       "helios": {
+        "cr50_capability": [
+          "ec_hibernate_breaks_rdd"
+        ],
         "custom_usb_enable_pins": [],
+        "ec_capability": [
+          "battery",
+          "cbi",
+          "charging",
+          "keyboard",
+          "lid",
+          "smart_usb_charge",
+          "usb",
+          "x86"
+        ],
+        "minidiag_capability": [
+          "cbmem_preserved_by_ap_reset",
+          "event_log_launch_count",
+          "storage_self_test"
+        ],
         "usb_a_port_count": 0
       },
       "jinlon": {
+        "cr50_capability": [
+          "ec_hibernate_breaks_rdd"
+        ],
+        "ec_capability": [
+          "battery",
+          "cbi",
+          "charging",
+          "keyboard",
+          "lid",
+          "smart_usb_charge",
+          "usb",
+          "x86"
+        ],
+        "minidiag_capability": [
+          "cbmem_preserved_by_ap_reset",
+          "event_log_launch_count",
+          "storage_self_test"
+        ],
         "usbc_voltage_on_shutdown_and_full_batt": 5
       },
       "kindred": {
-        "delay_reboot_to_ping": 120
+        "cr50_capability": [
+          "ec_hibernate_breaks_rdd"
+        ],
+        "delay_reboot_to_ping": 120,
+        "ec_capability": [
+          "battery",
+          "cbi",
+          "charging",
+          "keyboard",
+          "lid",
+          "smart_usb_charge",
+          "usb",
+          "x86"
+        ],
+        "minidiag_capability": [
+          "cbmem_preserved_by_ap_reset",
+          "event_log_launch_count",
+          "storage_self_test"
+        ]
       },
       "kled": {
+        "cr50_capability": [
+          "ec_hibernate_breaks_rdd"
+        ],
+        "ec_capability": [
+          "battery",
+          "cbi",
+          "charging",
+          "keyboard",
+          "lid",
+          "smart_usb_charge",
+          "usb",
+          "x86"
+        ],
+        "minidiag_capability": [
+          "cbmem_preserved_by_ap_reset",
+          "event_log_launch_count",
+          "storage_self_test"
+        ],
         "usbc_input_voltage_limit": 15
       },
       "kohaku": {
+        "cr50_capability": [
+          "ec_hibernate_breaks_rdd"
+        ],
         "custom_usb_enable_pins": [],
+        "ec_capability": [
+          "battery",
+          "cbi",
+          "charging",
+          "keyboard",
+          "lid",
+          "smart_usb_charge",
+          "usb",
+          "x86"
+        ],
+        "minidiag_capability": [
+          "cbmem_preserved_by_ap_reset",
+          "event_log_launch_count",
+          "storage_self_test"
+        ],
         "usb_a_port_count": 0
       },
       "mushu": {
-        "max_charging_power": 100.0
+        "cr50_capability": [
+          "ec_hibernate_breaks_rdd"
+        ],
+        "ec_capability": [
+          "battery",
+          "cbi",
+          "charging",
+          "keyboard",
+          "lid",
+          "smart_usb_charge",
+          "usb",
+          "x86"
+        ],
+        "max_charging_power": 100.0,
+        "minidiag_capability": [
+          "cbmem_preserved_by_ap_reset",
+          "event_log_launch_count",
+          "storage_self_test"
+        ]
       },
       "nightfury": {
+        "cr50_capability": [
+          "ec_hibernate_breaks_rdd"
+        ],
         "custom_usb_enable_pins": [],
+        "ec_capability": [
+          "battery",
+          "cbi",
+          "charging",
+          "keyboard",
+          "lid",
+          "smart_usb_charge",
+          "usb",
+          "x86"
+        ],
+        "minidiag_capability": [
+          "cbmem_preserved_by_ap_reset",
+          "event_log_launch_count",
+          "storage_self_test"
+        ],
         "usb_a_port_count": 0
       }
     },
@@ -1456,27 +2168,69 @@
     "mode_switcher_type": "menu_switcher",
     "models": {
       "cappy2": {
+        "cr50_capability": [],
         "custom_usb_enable_pins": [
           {
             "ioex": false,
             "name": "EN_USB_A0_VBUS"
           }
+        ],
+        "ec_capability": [
+          "battery",
+          "cbi",
+          "charging",
+          "keyboard",
+          "lid",
+          "smart_usb_charge",
+          "usb",
+          "x86"
+        ],
+        "minidiag_capability": [
+          "storage_self_test"
         ]
       },
       "habokay": {
+        "cr50_capability": [],
         "custom_usb_enable_pins": [
           {
             "ioex": false,
             "name": "EN_USB_A_5V"
           }
+        ],
+        "ec_capability": [
+          "battery",
+          "cbi",
+          "charging",
+          "keyboard",
+          "lid",
+          "smart_usb_charge",
+          "usb",
+          "x86"
+        ],
+        "minidiag_capability": [
+          "storage_self_test"
         ]
       },
       "haboki": {
+        "cr50_capability": [],
         "custom_usb_enable_pins": [
           {
             "ioex": false,
             "name": "EN_USB_A_5V"
           }
+        ],
+        "ec_capability": [
+          "battery",
+          "cbi",
+          "charging",
+          "keyboard",
+          "lid",
+          "smart_usb_charge",
+          "usb",
+          "x86"
+        ],
+        "minidiag_capability": [
+          "storage_self_test"
         ]
       }
     },
@@ -1567,9 +2321,33 @@
     "mode_switcher_type": "tablet_detachable_switcher",
     "models": {
       "kodama": {
+        "cr50_capability": [],
+        "ec_capability": [
+          "arm",
+          "battery",
+          "charging",
+          "lid"
+        ],
+        "minidiag_capability": [
+          "cbmem_preserved_by_ap_reset",
+          "event_log_launch_count",
+          "storage_self_test"
+        ],
         "usb_a_port_count": 0
       },
       "krane": {
+        "cr50_capability": [],
+        "ec_capability": [
+          "arm",
+          "battery",
+          "charging",
+          "lid"
+        ],
+        "minidiag_capability": [
+          "cbmem_preserved_by_ap_reset",
+          "event_log_launch_count",
+          "storage_self_test"
+        ],
         "usb_a_port_count": 0
       }
     },
@@ -1837,29 +2615,119 @@
     "mode_switcher_type": "keyboard_dev_switcher",
     "models": {
       "ampton": {
+        "cr50_capability": [
+          "rdd_leakage"
+        ],
+        "ec_capability": [
+          "battery",
+          "cbi",
+          "charging",
+          "keyboard",
+          "lid",
+          "smart_usb_charge",
+          "usb",
+          "x86"
+        ],
+        "minidiag_capability": [
+          "cbmem_preserved_by_ap_reset",
+          "event_log_launch_count",
+          "storage_self_test"
+        ],
         "usbc_voltage_on_shutdown_and_full_batt": 5
       },
       "bloog": {
-        "delay_reboot_to_ping": 60
+        "cr50_capability": [
+          "rdd_leakage"
+        ],
+        "delay_reboot_to_ping": 60,
+        "ec_capability": [
+          "battery",
+          "cbi",
+          "charging",
+          "keyboard",
+          "lid",
+          "smart_usb_charge",
+          "usb",
+          "x86"
+        ],
+        "minidiag_capability": [
+          "cbmem_preserved_by_ap_reset",
+          "event_log_launch_count",
+          "storage_self_test"
+        ]
       },
       "bluebird": {
+        "cr50_capability": [
+          "rdd_leakage"
+        ],
         "custom_usb_enable_pins": [
           {
             "ioex": false,
             "name": "EN_USB_A0_5V"
           }
         ],
+        "ec_capability": [
+          "battery",
+          "cbi",
+          "charging",
+          "keyboard",
+          "lid",
+          "smart_usb_charge",
+          "usb",
+          "x86"
+        ],
+        "minidiag_capability": [
+          "cbmem_preserved_by_ap_reset",
+          "event_log_launch_count",
+          "storage_self_test"
+        ],
         "usbc_input_voltage_limit": 15
       },
       "bobba360": {
+        "cr50_capability": [
+          "rdd_leakage"
+        ],
+        "ec_capability": [
+          "battery",
+          "cbi",
+          "charging",
+          "keyboard",
+          "lid",
+          "smart_usb_charge",
+          "usb",
+          "x86"
+        ],
+        "minidiag_capability": [
+          "cbmem_preserved_by_ap_reset",
+          "event_log_launch_count",
+          "storage_self_test"
+        ],
         "usbc_input_voltage_limit": 15
       },
       "casta": {
+        "cr50_capability": [
+          "rdd_leakage"
+        ],
         "custom_usb_enable_pins": [
           {
             "ioex": false,
             "name": "EN_USB_A0_5V"
           }
+        ],
+        "ec_capability": [
+          "battery",
+          "cbi",
+          "charging",
+          "keyboard",
+          "lid",
+          "smart_usb_charge",
+          "usb",
+          "x86"
+        ],
+        "minidiag_capability": [
+          "cbmem_preserved_by_ap_reset",
+          "event_log_launch_count",
+          "storage_self_test"
         ],
         "usbc_input_voltage_limit": 15
       }
@@ -2321,6 +3189,15 @@
     "minios_enabled": false,
     "models": {
       "coachz": {
+        "cr50_capability": [],
+        "ec_capability": [
+          "arm",
+          "battery",
+          "charging",
+          "lid",
+          "usb"
+        ],
+        "minidiag_capability": [],
         "usbc_input_voltage_limit": 15
       }
     },
@@ -2352,6 +3229,16 @@
     "mode_switcher_type": "menu_switcher",
     "models": {
       "lazor": {
+        "cr50_capability": [],
+        "ec_capability": [
+          "arm",
+          "battery",
+          "charging",
+          "keyboard",
+          "lid",
+          "usb"
+        ],
+        "minidiag_capability": [],
         "usbc_input_voltage_limit": 15
       }
     },
@@ -2392,31 +3279,166 @@
     "mode_switcher_type": "menu_switcher",
     "models": {
       "chronicler": {
-        "firmware_screen": 16
+        "cr50_capability": [
+          "rdd_off_in_g3"
+        ],
+        "ec_capability": [
+          "battery",
+          "cbi",
+          "charging",
+          "keyboard",
+          "lid",
+          "usb",
+          "x86"
+        ],
+        "firmware_screen": 16,
+        "minidiag_capability": [
+          "storage_self_test"
+        ]
       },
       "collis": {
-        "max_charging_power": 45.0
+        "cr50_capability": [
+          "rdd_off_in_g3"
+        ],
+        "ec_capability": [
+          "battery",
+          "cbi",
+          "charging",
+          "keyboard",
+          "lid",
+          "usb",
+          "x86"
+        ],
+        "max_charging_power": 45.0,
+        "minidiag_capability": [
+          "storage_self_test"
+        ]
       },
       "copano": {
-        "max_charging_power": 45.0
+        "cr50_capability": [
+          "rdd_off_in_g3"
+        ],
+        "ec_capability": [
+          "battery",
+          "cbi",
+          "charging",
+          "keyboard",
+          "lid",
+          "usb",
+          "x86"
+        ],
+        "max_charging_power": 45.0,
+        "minidiag_capability": [
+          "storage_self_test"
+        ]
       },
       "delbin": {
-        "max_charging_power": 45.0
+        "cr50_capability": [
+          "rdd_off_in_g3"
+        ],
+        "ec_capability": [
+          "battery",
+          "cbi",
+          "charging",
+          "keyboard",
+          "lid",
+          "usb",
+          "x86"
+        ],
+        "max_charging_power": 45.0,
+        "minidiag_capability": [
+          "storage_self_test"
+        ]
       },
       "eldrid": {
-        "firmware_screen": 20
+        "cr50_capability": [
+          "rdd_off_in_g3"
+        ],
+        "ec_capability": [
+          "battery",
+          "cbi",
+          "charging",
+          "keyboard",
+          "lid",
+          "usb",
+          "x86"
+        ],
+        "firmware_screen": 20,
+        "minidiag_capability": [
+          "storage_self_test"
+        ]
       },
       "elemi": {
-        "hold_pwr_button_poweroff": 7
+        "cr50_capability": [
+          "rdd_off_in_g3"
+        ],
+        "ec_capability": [
+          "battery",
+          "cbi",
+          "charging",
+          "keyboard",
+          "lid",
+          "usb",
+          "x86"
+        ],
+        "hold_pwr_button_poweroff": 7,
+        "minidiag_capability": [
+          "storage_self_test"
+        ]
       },
       "halvor": {
-        "max_charging_power": 65.0
+        "cr50_capability": [
+          "rdd_off_in_g3"
+        ],
+        "ec_capability": [
+          "battery",
+          "cbi",
+          "charging",
+          "keyboard",
+          "lid",
+          "usb",
+          "x86"
+        ],
+        "max_charging_power": 65.0,
+        "minidiag_capability": [
+          "storage_self_test"
+        ]
       },
       "voema": {
-        "max_charging_power": 65.0
+        "cr50_capability": [
+          "rdd_off_in_g3"
+        ],
+        "ec_capability": [
+          "battery",
+          "cbi",
+          "charging",
+          "keyboard",
+          "lid",
+          "usb",
+          "x86"
+        ],
+        "max_charging_power": 65.0,
+        "minidiag_capability": [
+          "storage_self_test"
+        ]
       },
       "volta": {
-        "max_charging_power": 45.0
+        "cr50_capability": [
+          "rdd_off_in_g3"
+        ],
+        "ec_capability": [
+          "battery",
+          "cbi",
+          "charging",
+          "keyboard",
+          "lid",
+          "usb",
+          "x86"
+        ],
+        "max_charging_power": 45.0,
+        "minidiag_capability": [
+          "storage_self_test"
+        ]
       }
     },
     "platform": "volteer",
@@ -2462,6 +3484,9 @@
     "mode_switcher_type": "menu_switcher",
     "models": {
       "dalboz": {
+        "cr50_capability": [
+          "rdd_off_in_g3"
+        ],
         "custom_usb_enable_pins": [
           {
             "ioex": true,
@@ -2471,9 +3496,25 @@
             "ioex": true,
             "name": "EN_USB_A1_5V_DB_OPT1"
           }
+        ],
+        "ec_capability": [
+          "battery",
+          "cbi",
+          "charging",
+          "keyboard",
+          "lid",
+          "smart_usb_charge",
+          "usb",
+          "x86"
+        ],
+        "minidiag_capability": [
+          "cbmem_preserved_by_ap_reset"
         ]
       },
       "vilboz": {
+        "cr50_capability": [
+          "rdd_off_in_g3"
+        ],
         "custom_usb_enable_pins": [
           {
             "ioex": true,
@@ -2483,9 +3524,25 @@
             "ioex": false,
             "name": "EN_USB_A1_5V"
           }
+        ],
+        "ec_capability": [
+          "battery",
+          "cbi",
+          "charging",
+          "keyboard",
+          "lid",
+          "smart_usb_charge",
+          "usb",
+          "x86"
+        ],
+        "minidiag_capability": [
+          "cbmem_preserved_by_ap_reset"
         ]
       },
       "vilboz14": {
+        "cr50_capability": [
+          "rdd_off_in_g3"
+        ],
         "custom_usb_enable_pins": [
           {
             "ioex": true,
@@ -2495,9 +3552,25 @@
             "ioex": false,
             "name": "EN_USB_A1_5V"
           }
+        ],
+        "ec_capability": [
+          "battery",
+          "cbi",
+          "charging",
+          "keyboard",
+          "lid",
+          "smart_usb_charge",
+          "usb",
+          "x86"
+        ],
+        "minidiag_capability": [
+          "cbmem_preserved_by_ap_reset"
         ]
       },
       "vilboz360": {
+        "cr50_capability": [
+          "rdd_off_in_g3"
+        ],
         "custom_usb_enable_pins": [
           {
             "ioex": true,
@@ -2507,14 +3580,43 @@
             "ioex": false,
             "name": "EN_USB_A1_5V"
           }
+        ],
+        "ec_capability": [
+          "battery",
+          "cbi",
+          "charging",
+          "keyboard",
+          "lid",
+          "smart_usb_charge",
+          "usb",
+          "x86"
+        ],
+        "minidiag_capability": [
+          "cbmem_preserved_by_ap_reset"
         ]
       },
       "woomax": {
+        "cr50_capability": [
+          "rdd_off_in_g3"
+        ],
         "custom_usb_enable_pins": [
           {
             "ioex": true,
             "name": "EN_USB_A0_5V"
           }
+        ],
+        "ec_capability": [
+          "battery",
+          "cbi",
+          "charging",
+          "keyboard",
+          "lid",
+          "smart_usb_charge",
+          "usb",
+          "x86"
+        ],
+        "minidiag_capability": [
+          "cbmem_preserved_by_ap_reset"
         ]
       }
     },
