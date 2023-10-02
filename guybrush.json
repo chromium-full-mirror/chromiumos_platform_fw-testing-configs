@@ -1,50 +1,50 @@
 {
-    "platform": "guybrush",
-    "mode_switcher_type": "menu_switcher",
-    "chrome_ec": true,
-    "ec_capability": {
-        "adc_ectemp": false,
-        "arm": false,
-        "battery": true,
-        "cbi": true,
-        "charging": true,
-        "doubleboot": false,
-        "keyboard": true,
-        "lid": true,
-        "peci": false,
-        "smart_usb_charge": true,
-        "thermal": false,
-        "usb": true,
-        "usbpd_uart": false,
-        "x86": true
+  "ac_on_can_wake_ap_from_ulp": true,
+  "chrome_ec": true,
+  "cr50_capability": {
+    "deep_sleep_in_s0i3": true,
+    "ec_hibernate_breaks_rdd": false,
+    "rdd_leakage": false,
+    "rdd_off_in_g3": false,
+    "wp_on_in_g3": false
+  },
+  "custom_usb_enable_pins": [
+    {
+      "ioex": true,
+      "name": "EN_PP5000_USB_A0_VBUS"
     },
-    "minidiag_capability": {
-        "cbmem_preserved_by_ap_reset": false
-    },
-    "servo_prog_state_delay": 1.0,
-    "smm_store": false,
-    "firmware_screen": 15,
-    "delay_powerinfo_stable": 5,
-    "hold_pwr_button_poweroff": 4,
-    "custom_usb_enable_pins": [
-        {
-            "name": "EN_PP5000_USB_A0_VBUS",
-            "ioex": true
-        },
-        {
-            "name": "EN_PP5000_USB_A1_VBUS_DB",
-            "ioex": true
-        }
-    ],
-    "max_charging_power": 100.0,
-    "ac_on_can_wake_ap_from_ulp": true,
-    "dark_resume_capable": true,
-    "cr50_capability": {
-        "ec_hibernate_breaks_rdd": false,
-        "wp_on_in_g3": false,
-        "rdd_off_in_g3": false,
-        "rdd_leakage": false,
-        "deep_sleep_in_s0i3": true
-    },
-    "s3_override_to_unsupported": true
+    {
+      "ioex": true,
+      "name": "EN_PP5000_USB_A1_VBUS_DB"
+    }
+  ],
+  "dark_resume_capable": true,
+  "delay_powerinfo_stable": 5,
+  "ec_capability": {
+    "adc_ectemp": false,
+    "arm": false,
+    "battery": true,
+    "cbi": true,
+    "charging": true,
+    "doubleboot": false,
+    "keyboard": true,
+    "lid": true,
+    "peci": false,
+    "smart_usb_charge": true,
+    "thermal": false,
+    "usb": true,
+    "usbpd_uart": false,
+    "x86": true
+  },
+  "firmware_screen": 15,
+  "hold_pwr_button_poweroff": 4,
+  "max_charging_power": 100.0,
+  "minidiag_capability": {
+    "cbmem_preserved_by_ap_reset": false
+  },
+  "mode_switcher_type": "menu_switcher",
+  "platform": "guybrush",
+  "s3_override_to_unsupported": true,
+  "servo_prog_state_delay": 1.0,
+  "smm_store": false
 }

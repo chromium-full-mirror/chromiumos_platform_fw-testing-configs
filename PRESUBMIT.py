@@ -113,12 +113,14 @@ def CommonCheck(input_api, output_api):
     try:
         input_api.no_diffs = True
         tests = input_api.canned_checks.GetUnitTestsInDirectory(
-                input_api, output_api,
-                input_api.PresubmitLocalPath(),
-                files_to_check=[r'.+_unittest\.py$'])
+            input_api,
+            output_api,
+            input_api.PresubmitLocalPath(),
+            files_to_check=[r".+_unittest\.py$"],
+        )
         results.extend(input_api.RunTests(tests))
     finally:
-            input_api.no_diffs = save
+        input_api.no_diffs = save
     return results
 
 

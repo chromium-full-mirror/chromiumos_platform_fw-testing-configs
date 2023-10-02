@@ -1,40 +1,40 @@
 {
-    "platform": "corsola",
-    "mode_switcher_type": "menu_switcher",
-    "chrome_ec": true,
-    "ec_capability": {
-        "adc_ectemp": false,
-        "arm": true,
-        "battery": true,
-        "cbi": true,
-        "charging": true,
-        "doubleboot": false,
-        "keyboard": true,
-        "lid": true,
-        "peci": false,
-        "smart_usb_charge": false,
-        "thermal": false,
-        "usb": true,
-        "usbpd_uart": false,
-        "x86": false
-    },
-    "minidiag_capability": {
-        "event_log_test_report": true
-    },
-    "firmware_screen": 20,
-    "ec_reboot_to_g3_delay": 10,
-    "ec_efs2": true,
-    "usbc_voltage_on_shutdown_and_full_batt": 9,
-    "custom_usb_enable_pins": [
-        {
-            "name": "en_pp5000_usb_a0_vbus",
-            "ioex": false
-        }
-    ],
-    "fw_update_build": "corsola-release/R109-15190.0.0",
-    "models": {
-        "voltorb": {
-            "usbc_voltage_on_shutdown_and_full_batt": 15
-        }
+  "chrome_ec": true,
+  "custom_usb_enable_pins": [
+    {
+      "ioex": false,
+      "name": "en_pp5000_usb_a0_vbus"
     }
+  ],
+  "ec_capability": {
+    "adc_ectemp": false,
+    "arm": true,
+    "battery": true,
+    "cbi": true,
+    "charging": true,
+    "doubleboot": false,
+    "keyboard": true,
+    "lid": true,
+    "peci": false,
+    "smart_usb_charge": false,
+    "thermal": false,
+    "usb": true,
+    "usbpd_uart": false,
+    "x86": false
+  },
+  "ec_efs2": true,
+  "ec_reboot_to_g3_delay": 10,
+  "firmware_screen": 20,
+  "fw_update_build": "corsola-release/R109-15190.0.0",
+  "minidiag_capability": {
+    "event_log_test_report": true
+  },
+  "mode_switcher_type": "menu_switcher",
+  "models": {
+    "voltorb": {
+      "usbc_voltage_on_shutdown_and_full_batt": 15
+    }
+  },
+  "platform": "corsola",
+  "usbc_voltage_on_shutdown_and_full_batt": 9
 }

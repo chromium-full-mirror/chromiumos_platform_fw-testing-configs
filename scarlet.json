@@ -1,16 +1,16 @@
 {
-    "platform": "scarlet",
-    "parent": "gru",
-    "mode_switcher_type": "tablet_detachable_switcher",
-    "has_lid": false,
-    "has_keyboard": false,
-    "ec_capability": {
-        "keyboard": false,
-        "lid": false
-    },
-    "hibernate": false,
-    "is_detachable": true,
-    "max_charging_power": 38.55,
-    "usb_a_port_count": -1,
-    "delay_reboot_to_ping": 80
+  "delay_reboot_to_ping": 80,
+  "ec_capability": {
+    "keyboard": false,
+    "lid": false
+  },
+  "has_keyboard": false,
+  "has_lid": false,
+  "hibernate": false,
+  "is_detachable": true,
+  "max_charging_power": 38.55,
+  "mode_switcher_type": "tablet_detachable_switcher",
+  "parent": "gru",
+  "platform": "scarlet",
+  "usb_a_port_count": -1
 }

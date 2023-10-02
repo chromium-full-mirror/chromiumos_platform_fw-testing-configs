@@ -1,78 +1,78 @@
 {
-    "platform": "volteer",
-    "mode_switcher_type": "menu_switcher",
-    "firmware_screen": 30,
-    "chrome_ec": true,
-    "ec_capability": {
-        "adc_ectemp": false,
-        "arm": false,
-        "battery": true,
-        "cbi": true,
-        "charging": true,
-        "doubleboot": false,
-        "keyboard": true,
-        "lid": true,
-        "peci": false,
-        "smart_usb_charge": false,
-        "thermal": false,
-        "usb": true,
-        "usbpd_uart": false,
-        "x86": true
+  "ac_on_can_wake_ap_from_ulp": true,
+  "chrome_ec": true,
+  "cr50_capability": {
+    "deep_sleep_in_s0i3": false,
+    "ec_hibernate_breaks_rdd": false,
+    "rdd_leakage": false,
+    "rdd_off_in_g3": true,
+    "wp_on_in_g3": false
+  },
+  "custom_max_tpm_init_us": 230000,
+  "custom_usb_enable_pins": [
+    {
+      "ioex": false,
+      "name": "EN_PP5000_USBA"
+    }
+  ],
+  "dark_resume_capable": true,
+  "delay_reboot_to_ping": 120,
+  "ec_capability": {
+    "adc_ectemp": false,
+    "arm": false,
+    "battery": true,
+    "cbi": true,
+    "charging": true,
+    "doubleboot": false,
+    "keyboard": true,
+    "lid": true,
+    "peci": false,
+    "smart_usb_charge": false,
+    "thermal": false,
+    "usb": true,
+    "usbpd_uart": false,
+    "x86": true
+  },
+  "ec_efs2": true,
+  "firmware_screen": 30,
+  "hold_pwr_button_nopowerd_shutdown": 14,
+  "minidiag_capability": {
+    "cbmem_preserved_by_ap_reset": false,
+    "event_log_launch_count": false
+  },
+  "minios_enabled": false,
+  "mode_switcher_type": "menu_switcher",
+  "models": {
+    "chronicler": {
+      "firmware_screen": 16
     },
-    "ec_efs2": true,
-    "spi_voltage": "pp3300",
-    "custom_usb_enable_pins": [
-        {
-            "name": "EN_PP5000_USBA",
-            "ioex": false
-        }
-    ],
-    "dark_resume_capable": true,
-    "smm_store": false,
-    "hold_pwr_button_nopowerd_shutdown": 14,
-    "delay_reboot_to_ping": 120,
-    "models": {
-        "collis": {
-            "max_charging_power": 45.0
-        },
-        "copano": {
-            "max_charging_power": 45.0
-        },
-	"elemi": {
-	    "hold_pwr_button_poweroff": 7
-	},
-        "delbin": {
-            "max_charging_power": 45.0
-        },
-        "halvor": {
-            "max_charging_power": 65.0
-        },
-        "voema": {
-            "max_charging_power": 65.0
-        },
-        "volta": {
-            "max_charging_power": 45.0
-        },
-        "chronicler": {
-            "firmware_screen": 16
-        },
-        "eldrid": {
-            "firmware_screen": 20
-        }
+    "collis": {
+      "max_charging_power": 45.0
     },
-    "cr50_capability": {
-        "ec_hibernate_breaks_rdd": false,
-        "wp_on_in_g3": false,
-        "rdd_off_in_g3": true,
-        "rdd_leakage": false,
-        "deep_sleep_in_s0i3": false
+    "copano": {
+      "max_charging_power": 45.0
     },
-    "custom_max_tpm_init_us": 230000,
-    "s3_override_to_unsupported" : true,
-    "minidiag_capability": {
-        "event_log_launch_count": false,
-        "cbmem_preserved_by_ap_reset": false
+    "delbin": {
+      "max_charging_power": 45.0
     },
-    "minios_enabled": false,
-    "ac_on_can_wake_ap_from_ulp": true
+    "eldrid": {
+      "firmware_screen": 20
+    },
+    "elemi": {
+      "hold_pwr_button_poweroff": 7
+    },
+    "halvor": {
+      "max_charging_power": 65.0
+    },
+    "voema": {
+      "max_charging_power": 65.0
+    },
+    "volta": {
+      "max_charging_power": 45.0
+    }
+  },
+  "platform": "volteer",
+  "s3_override_to_unsupported": true,
+  "smm_store": false,
+  "spi_voltage": "pp3300"
 }

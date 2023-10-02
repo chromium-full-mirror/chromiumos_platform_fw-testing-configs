@@ -1,8 +1,8 @@
 {
-	"platform": "coral",
-	"parent": "reef",
-	"suspend_cbmem": false,
-	"custom_max_tpm_init_us": 180000,
-	"rec_invalid_screen": 5,
-	"no_broken_screen_in_dev": true
+  "custom_max_tpm_init_us": 180000,
+  "no_broken_screen_in_dev": true,
+  "parent": "reef",
+  "platform": "coral",
+  "rec_invalid_screen": 5,
+  "suspend_cbmem": false
 }

@@ -1,5 +1,5 @@
 {
-	"platform": "kalista",
-	"parent": "fizz",
-	"delay_reboot_to_ping": 140
+  "delay_reboot_to_ping": 140,
+  "parent": "fizz",
+  "platform": "kalista"
 }

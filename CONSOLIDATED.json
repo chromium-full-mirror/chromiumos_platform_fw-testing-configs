@@ -1,2526 +1,2526 @@
 {
-	"DEFAULTS": {
-		"ac_on_can_wake_ap_from_ulp": false,
-		"ac_on_can_wake_ap_from_ulp.DOC": "True if the AC on event can wake the AP from ULP state",
-		"ap_access_ec_flash": true,
-		"ap_access_ec_flash.DOC": "True if AP can access the EC flash while Chrome OS is running",
-		"ap_up_after_cr50_reboot": true,
-		"ap_up_after_cr50_reboot.DOC": "True if AP is normally expected to be powered on after the Cr50 reboots (when AC power is connected)",
-		"broken_firmware_screen_requires_recovery": true,
-		"broken_firmware_screen_requires_recovery.DOC": "True if on the recovery screen esc+power+refresh needed to boot from usb. Deprecated. Use 'no_broken_screen_in_dev' instead.",
-		"charger_profile_override": false,
-		"charger_profile_override.DOC": "Whether the platform has a custom charger profile, which takes over the control of voltage/current limit",
-		"chrome_ec": false,
-		"chrome_ec.DOC": "Whether the platform has an EC",
-		"chrome_usbpd": false,
-		"chrome_usbpd.DOC": "Whether the platform supports USB power delivery",
-		"clear_dev_on_rec": false,
-		"clear_dev_on_rec.DOC": "True if dev mode get cleared upon entering rec mode",
-		"cr50_capability": [],
-		"cr50_capability.DOC": "List of capabilities of the CR50",
-		"custom_max_tpm_init_us": 0,
-		"custom_max_tpm_init_us.DOC": "Maximum amount of time allowed for TPM init. Use a non-zero amount if it's board specific",
-		"custom_usb_enable_pins": [],
-		"custom_usb_enable_pins.DOC": "List of USB-A enable GPIO pin names with optional io expander flags. From usb_port_enable[] in board.c.",
-		"dark_resume_capable": false,
-		"dark_resume_capable.DOC": "Whether the platform supports dark-resume",
-		"delay_powerinfo_stable": 0,
-		"delay_powerinfo_stable.DOC": "Delay between AP power-on and when powerinfo is stable. Some CPUs have an internal reset that transitions through different power states.",
-		"delay_reboot_to_ping": 60,
-		"delay_reboot_to_ping.DOC": "Worst case delay between boot and ready for ssh. I.e. booting from servo provided USB to rec mode.",
-		"dev_screen_timeout": 30,
-		"dev_screen_timeout.DOC": "The developer screen timeout fits our spec",
-		"dut_can_source_power_in_suspend": true,
-		"dut_can_source_power_in_suspend.DOC": "True if DUT will keep providing power to devices connected via USB-C when going to suspend",
-		"ec_boot_to_console": 1.2,
-		"ec_boot_to_console.DOC": "Delay between EC boot and ChromeEC console functional",
-		"ec_boot_to_pwr_button": 0.5,
-		"ec_boot_to_pwr_button.DOC": "Delay between EC boot and pressing power button",
-		"ec_boot_to_wp_en": 0,
-		"ec_boot_to_wp_en.DOC": "Delay for AP initiating an EC reboot in order to enable EC WP",
-		"ec_capability": [],
-		"ec_capability.DOC": "Map of capabilities of the Chrome EC",
-		"ec_efs2": false,
-		"ec_efs2.DOC": "Whether The EC uses EC-EFS2",
-		"ec_forwards_short_pp_press": false,
-		"ec_forwards_short_pp_press.DOC": "True if the EC will send short power button presses, such as those expected during CCD open, to the AP",
-		"ec_has_powerbtn_cmd": true,
-		"ec_has_powerbtn_cmd.DOC": "EC, if present, supports 'powerbtn' console command",
-		"ec_reboot_to_g3_delay": 0,
-		"ec_reboot_to_g3_delay.DOC": "Delay for waiting EC turning off the AP",
-		"ec_ro_vbus_bug": false,
-		"ec_ro_vbus_bug.DOC": "Whether The EC RO firmware has a bug that causes Vbus is not supplied in SRC.ACCESORY state",
-		"firmware_screen": 10,
-		"firmware_screen.DOC": "Delay between power-on and firmware screen",
-		"fw_update_build": null,
-		"fw_update_build.DOC": "Override firmware build to use for testing firmware update",
-		"gsc_can_wake_ec_with_reset": true,
-		"gsc_can_wake_ec_with_reset.DOC": "True if the GSC can wake the EC with its reset GPIO",
-		"gsc_off_in_ulp": false,
-		"gsc_off_in_ulp.DOC": "True if the GSC is unpowered in ULP",
-		"gsc_update_wait_for_reboot": 10,
-		"gsc_update_wait_for_reboot.DOC": "Number of seconds to wait for a gsc reboot after update",
-		"has_diagnostics_image": false,
-		"has_diagnostics_image.DOC": "True if altfw/diag is build into RW_LEGACY",
-		"has_eventlog": true,
-		"has_eventlog.DOC": "Whether the platform has eventlog support including proper timestamps. (Only for old boards! Never disable this 'temporarily, until we get around to implementing it'!)",
-		"has_keyboard": true,
-		"has_keyboard.DOC": "Whether the platform has a physical keyboard",
-		"has_lid": true,
-		"has_lid.DOC": "Whether the platform has a physical lid",
-		"has_powerbutton": true,
-		"has_powerbutton.DOC": "Whether the platform has a physical power button",
-		"hibernate": true,
-		"hibernate.DOC": "True if the device supports hibernation",
-		"hold_pwr_button_nopowerd_shutdown": 11,
-		"hold_pwr_button_nopowerd_shutdown.DOC": "Duration of holding down power button to shut down without powerd",
-		"hold_pwr_button_poweroff": 5,
-		"hold_pwr_button_poweroff.DOC": "Duration of holding power button to power off DUT normally",
-		"hold_pwr_button_poweron": 0.2,
-		"hold_pwr_button_poweron.DOC": "Duration of holding power button to power on DUT normally (also known as SHORT_DELAY in hdctools)",
-		"is_detachable": false,
-		"is_detachable.DOC": "Whether the device is a detachable",
-		"keypress_delay": 0.2,
-		"keypress_delay.DOC": "Delay between keypresses in firmware screen",
-		"lid_wake_from_power_off": true,
-		"lid_wake_from_power_off.DOC": "True if the lid can wake the system from a powered off state",
-		"max_charging_power": 60.0,
-		"max_charging_power.DOC": "Max charging power for DUT in watts",
-		"minidiag_capability": [
-			"cbmem_preserved_by_ap_reset",
-			"event_log_launch_count",
-			"storage_self_test"
-		],
-		"minidiag_capability.DOC": "List of capabilities of the minidiag, do not use these for devices which does not enable minidiag",
-		"minidiag_enabled": true,
-		"minidiag_enabled.DOC": "Whether minidiag is enabled",
-		"minios_enabled": true,
-		"minios_enabled.DOC": "Whether minios is enabled",
-		"minios_screen": 20,
-		"minios_screen.DOC": "Delay between selecting booting minios and minios screen",
-		"mode_switcher_type": "menu_switcher",
-		"mode_switcher_type.DOC": "Version of mode-switcher used for mode-aware reboot",
-		"models": {},
-		"models.DOC": "Model-specific attribute overrides for this platform. This field should not be used in a parent config.",
-		"no_broken_screen_in_dev": false,
-		"no_broken_screen_in_dev.DOC": "True if DUT reaches insert screen instead of broken screen when dev switch is on",
-		"parent": null,
-		"parent.DOC": "Name of the platform whose overrides to inherit",
-		"platform": null,
-		"platform.DOC": "Name of the board or model being tested",
-		"power_button_dev_switch": false,
-		"power_button_dev_switch.DOC": "Whether the power button switches to dev mode",
-		"powerup_ready": 10,
-		"powerup_ready.DOC": "Delay after /sbin/shutdown before pressing power button",
-		"rec_button_dev_switch": false,
-		"rec_button_dev_switch.DOC": "Whether the recovery button switches to dev mode",
-		"rec_force_mrc": true,
-		"rec_force_mrc.DOC": "True if the device supports power_state:rec_force_mrc, which forced memroy retraining in recovery mode",
-		"rec_invalid_screen": 2,
-		"rec_invalid_screen.DOC": "Delay to wait for the recovery invalid screen after plugging an invalid USB",
-		"rma_entered_automatically": true,
-		"rma_entered_automatically.DOC": "True if the will go into serial number screen automatically",
-		"s0ix_override_to_unsupported": false,
-		"s0ix_override_to_unsupported.DOC": "Tests check the dut state to determine if s0ix is supported. Overrid to unsupported. File a bug for why.",
-		"s3_override_to_unsupported": false,
-		"s3_override_to_unsupported.DOC": "Tests check the dut state to determine if s3 is supported. Overrid to unsupported. File a bug for why.",
-		"serial_firmware_boot_delay": 10,
-		"serial_firmware_boot_delay.DOC": "Extra time to add to `firmware_screen` delay if using serial port is enabled in AP firmware.",
-		"serial_number_length": 0,
-		"serial_number_length.DOC": "Length of serial number that can be set in firmware; if serial number cannot be set then 0",
-		"servo_prog_state_delay": 0,
-		"servo_prog_state_delay.DOC": "Time in seconds to wait after changingt servo state for programming",
-		"shutdown": 30,
-		"shutdown.DOC": "Delay for waiting for client to shutdown. Deprecated do not use.",
-		"shutdown_timeout": 60,
-		"shutdown_timeout.DOC": "Max time a DUT might take to power off. Used to verify that a DUT did not shutdown.",
-		"smm_store": true,
-		"smm_store.DOC": "Check SMMSTORE exists in FMap for x86 boards",
-		"software_sync": 6,
-		"software_sync.DOC": "Delay of EC software sync hash calculating time",
-		"software_sync_update": 15,
-		"software_sync_update.DOC": "Delay of EC software sync updating EC",
-		"spi_voltage": "pp1800",
-		"spi_voltage.DOC": "The voltage level to set on the servo's spi2_vref",
-		"suspend_cbmem": true,
-		"suspend_cbmem.DOC": "device supports cbmem after suspend",
-		"usb_a_port_count": null,
-		"usb_a_port_count.DOC": "The number of USB-A ports on the device to be tested. -1 means unknown, do not use -1 for new boards.",
-		"usb_hid_wake_enabled": true,
-		"usb_hid_wake_enabled.DOC": "True if wake from USB HID is supported",
-		"usb_image_boot_timeout": 180,
-		"usb_image_boot_timeout.DOC": "Timeout of confirming DUT doesn't boot on USB image in Recovery screen",
-		"usb_plug": 10,
-		"usb_plug.DOC": "Delay between power-on and plug USB",
-		"usb_unplug": 2,
-		"usb_unplug.DOC": "Delay between USB power-off and detected by the system",
-		"usbc_input_voltage_limit": 20,
-		"usbc_input_voltage_limit.DOC": "The max input voltage for USB Type-C port",
-		"usbc_voltage_on_shutdown_and_full_batt": 20,
-		"usbc_voltage_on_shutdown_and_full_batt.DOC": "Input voltage limit applied by DUT when it is in G3/S5 and battery is full. 20 volts means there is no limit"
-	},
-	"asuka": {
-		"cr50_capability": [],
-		"ec_capability": [
-			"battery",
-			"charging",
-			"doubleboot",
-			"keyboard",
-			"lid",
-			"usb",
-			"usbpd_uart",
-			"x86"
-		],
-		"minidiag_capability": [
-			"cbmem_preserved_by_ap_reset",
-			"event_log_launch_count",
-			"storage_self_test"
-		],
-		"parent": "kunimitsu",
-		"platform": "asuka"
-	},
-	"asurada": {
-		"chrome_ec": true,
-		"cr50_capability": [],
-		"custom_max_tpm_init_us": 240000,
-		"ec_capability": [
-			"arm",
-			"battery",
-			"charging",
-			"keyboard",
-			"lid",
-			"usb"
-		],
-		"ec_reboot_to_g3_delay": 10,
-		"firmware_screen": 20,
-		"minidiag_capability": [
-			"cbmem_preserved_by_ap_reset"
-		],
-		"minios_enabled": false,
-		"mode_switcher_type": "menu_switcher",
-		"models": {
-			"hayato": {
-				"custom_usb_enable_pins": [
-					{
-						"ioex": false,
-						"name": "EN_PP5000_USB_A0_VBUS"
-					}
-				],
-				"max_charging_power": 45.0
-			},
-			"spherion": {
-				"custom_usb_enable_pins": [
-					{
-						"ioex": false,
-						"name": "EN_PP5000_USB_A0_VBUS"
-					}
-				],
-				"max_charging_power": 65.0
-			}
-		},
-		"platform": "asurada",
-		"usbc_voltage_on_shutdown_and_full_batt": 9
-	},
-	"atlas": {
-		"chrome_ec": true,
-		"cr50_capability": [
-			"rdd_leakage",
-			"wp_on_in_g3"
-		],
-		"custom_max_tpm_init_us": 230000,
-		"dark_resume_capable": true,
-		"ec_capability": [
-			"battery",
-			"charging",
-			"keyboard",
-			"lid",
-			"x86"
-		],
-		"firmware_screen": 15,
-		"minidiag_capability": [
-			"cbmem_preserved_by_ap_reset",
-			"event_log_launch_count",
-			"storage_self_test"
-		],
-		"minidiag_enabled": false,
-		"minios_enabled": false,
-		"mode_switcher_type": "keyboard_dev_switcher",
-		"models": {
-			"atlas": {
-				"usb_a_port_count": 0
-			}
-		},
-		"platform": "atlas",
-		"servo_prog_state_delay": 10,
-		"spi_voltage": "pp3300",
-		"usb_a_port_count": -1
-	},
-	"bob": {
-		"cr50_capability": [],
-		"ec_capability": [
-			"arm",
-			"battery",
-			"charging",
-			"keyboard",
-			"lid"
-		],
-		"minidiag_capability": [
-			"cbmem_preserved_by_ap_reset",
-			"event_log_launch_count",
-			"storage_self_test"
-		],
-		"parent": "gru",
-		"platform": "bob"
-	},
-	"brask": {
-		"chrome_ec": true,
-		"cr50_capability": [],
-		"custom_usb_enable_pins": [
-			{
-				"ioex": false,
-				"name": "EN_PP5000_USBA"
-			}
-		],
-		"dark_resume_capable": true,
-		"ec_capability": [
-			"cbi",
-			"usb",
-			"x86"
-		],
-		"firmware_screen": 30,
-		"has_keyboard": false,
-		"has_lid": false,
-		"hibernate": false,
-		"hold_pwr_button_nopowerd_shutdown": 14,
-		"hold_pwr_button_poweron": 3,
-		"max_charging_power": 60.0,
-		"minidiag_capability": [
-			"event_log_launch_count",
-			"storage_self_test"
-		],
-		"mode_switcher_type": "menu_switcher",
-		"platform": "brask",
-		"rec_button_dev_switch": true,
-		"smm_store": false,
-		"spi_voltage": "pp3300"
-	},
-	"brya": {
-		"ac_on_can_wake_ap_from_ulp": true,
-		"chrome_ec": true,
-		"cr50_capability": [],
-		"custom_usb_enable_pins": [
-			{
-				"ioex": false,
-				"name": "EN_PP5000_USBA_R"
-			}
-		],
-		"dark_resume_capable": true,
-		"delay_reboot_to_ping": 120,
-		"ec_capability": [
-			"battery",
-			"cbi",
-			"charging",
-			"keyboard",
-			"lid",
-			"usb",
-			"x86"
-		],
-		"ec_efs2": true,
-		"firmware_screen": 30,
-		"hold_pwr_button_nopowerd_shutdown": 14,
-		"hold_pwr_button_poweron": 3,
-		"max_charging_power": 60.0,
-		"minidiag_capability": [
-			"event_log_launch_count",
-			"storage_self_test"
-		],
-		"mode_switcher_type": "menu_switcher",
-		"models": {
-			"banshee": {
-				"custom_usb_enable_pins": [],
-				"usb_a_port_count": 0
-			},
-			"vell": {
-				"custom_usb_enable_pins": [],
-				"usb_a_port_count": 0
-			}
-		},
-		"platform": "brya",
-		"smm_store": false,
-		"spi_voltage": "pp3300"
-	},
-	"caroline": {
-		"cr50_capability": [],
-		"ec_capability": [
-			"battery",
-			"charging",
-			"doubleboot",
-			"keyboard",
-			"lid",
-			"usbpd_uart",
-			"x86"
-		],
-		"minidiag_capability": [
-			"cbmem_preserved_by_ap_reset",
-			"event_log_launch_count",
-			"storage_self_test"
-		],
-		"parent": "glados",
-		"platform": "caroline"
-	},
-	"cave": {
-		"cr50_capability": [],
-		"ec_capability": [
-			"battery",
-			"charging",
-			"doubleboot",
-			"keyboard",
-			"lid",
-			"usbpd_uart",
-			"x86"
-		],
-		"minidiag_capability": [
-			"cbmem_preserved_by_ap_reset",
-			"event_log_launch_count",
-			"storage_self_test"
-		],
-		"parent": "glados",
-		"platform": "cave"
-	},
-	"chell": {
-		"cr50_capability": [],
-		"ec_capability": [
-			"battery",
-			"charging",
-			"doubleboot",
-			"keyboard",
-			"lid",
-			"usbpd_uart",
-			"x86"
-		],
-		"minidiag_capability": [
-			"cbmem_preserved_by_ap_reset",
-			"event_log_launch_count",
-			"storage_self_test"
-		],
-		"parent": "glados",
-		"platform": "chell"
-	},
-	"cherry": {
-		"chrome_ec": true,
-		"cr50_capability": [],
-		"custom_usb_enable_pins": [
-			{
-				"ioex": false,
-				"name": "EN_PP5000_USB_A0_VBUS_X"
-			}
-		],
-		"ec_capability": [
-			"arm",
-			"battery",
-			"cbi",
-			"charging",
-			"keyboard",
-			"lid",
-			"usb"
-		],
-		"ec_efs2": true,
-		"ec_reboot_to_g3_delay": 10,
-		"firmware_screen": 20,
-		"minidiag_capability": [
-			"cbmem_preserved_by_ap_reset",
-			"event_log_launch_count",
-			"storage_self_test"
-		],
-		"mode_switcher_type": "menu_switcher",
-		"models": {
-			"tomato": {
-				"minios_enabled": false
-			}
-		},
-		"platform": "cherry",
-		"usbc_voltage_on_shutdown_and_full_batt": 9
-	},
-	"cherry64": {
-		"cr50_capability": [],
-		"ec_capability": [
-			"arm",
-			"battery",
-			"cbi",
-			"charging",
-			"keyboard",
-			"lid",
-			"usb"
-		],
-		"minidiag_capability": [
-			"cbmem_preserved_by_ap_reset",
-			"event_log_launch_count",
-			"storage_self_test"
-		],
-		"parent": "cherry",
-		"platform": "cherry64"
-	},
-	"constitution": {
-		"chrome_ec": true,
-		"cr50_capability": [],
-		"custom_usb_enable_pins": [
-			{
-				"ioex": false,
-				"name": "EN_PP5000_USBA"
-			}
-		],
-		"dark_resume_capable": true,
-		"ec_capability": [
-			"cbi",
-			"usb",
-			"x86"
-		],
-		"firmware_screen": 30,
-		"has_keyboard": false,
-		"has_lid": false,
-		"hibernate": false,
-		"hold_pwr_button_nopowerd_shutdown": 14,
-		"hold_pwr_button_poweron": 3,
-		"keypress_delay": 20,
-		"max_charging_power": 60.0,
-		"minidiag_capability": [
-			"event_log_launch_count",
-			"storage_self_test"
-		],
-		"mode_switcher_type": "menu_switcher",
-		"platform": "constitution",
-		"rec_button_dev_switch": true,
-		"smm_store": false,
-		"spi_voltage": "pp3300"
-	},
-	"coral": {
-		"cr50_capability": [],
-		"custom_max_tpm_init_us": 180000,
-		"ec_capability": [
-			"battery",
-			"charging",
-			"keyboard",
-			"lid",
-			"smart_usb_charge",
-			"usb",
-			"x86"
-		],
-		"minidiag_capability": [
-			"cbmem_preserved_by_ap_reset",
-			"event_log_launch_count",
-			"storage_self_test"
-		],
-		"no_broken_screen_in_dev": true,
-		"parent": "reef",
-		"platform": "coral",
-		"rec_invalid_screen": 5,
-		"suspend_cbmem": false
-	},
-	"corsola": {
-		"chrome_ec": true,
-		"cr50_capability": [],
-		"custom_usb_enable_pins": [
-			{
-				"ioex": false,
-				"name": "en_pp5000_usb_a0_vbus"
-			}
-		],
-		"ec_capability": [
-			"arm",
-			"battery",
-			"cbi",
-			"charging",
-			"keyboard",
-			"lid",
-			"usb"
-		],
-		"ec_efs2": true,
-		"ec_reboot_to_g3_delay": 10,
-		"firmware_screen": 20,
-		"fw_update_build": "corsola-release/R109-15190.0.0",
-		"minidiag_capability": [
-			"cbmem_preserved_by_ap_reset",
-			"event_log_launch_count",
-			"event_log_test_report",
-			"storage_self_test"
-		],
-		"mode_switcher_type": "menu_switcher",
-		"models": {
-			"voltorb": {
-				"usbc_voltage_on_shutdown_and_full_batt": 15
-			}
-		},
-		"platform": "corsola",
-		"usbc_voltage_on_shutdown_and_full_batt": 9
-	},
-	"dedede": {
-		"ac_on_can_wake_ap_from_ulp": true,
-		"chrome_ec": true,
-		"cr50_capability": [],
-		"custom_max_tpm_init_us": 140000,
-		"custom_usb_enable_pins": [
-			{
-				"ioex": false,
-				"name": "EN_USB_A0_VBUS"
-			},
-			{
-				"ioex": false,
-				"name": "EN_USB_A1_VBUS"
-			}
-		],
-		"dark_resume_capable": true,
-		"delay_reboot_to_ping": 120,
-		"ec_capability": [
-			"battery",
-			"cbi",
-			"charging",
-			"keyboard",
-			"lid",
-			"smart_usb_charge",
-			"usb",
-			"x86"
-		],
-		"ec_efs2": true,
-		"firmware_screen": 30,
-		"gsc_off_in_ulp": true,
-		"hold_pwr_button_nopowerd_shutdown": 14,
-		"max_charging_power": 45.0,
-		"minidiag_capability": [],
-		"minios_enabled": false,
-		"mode_switcher_type": "menu_switcher",
-		"models": {
-			"beetley": {
-				"custom_usb_enable_pins": [
-					{
-						"ioex": false,
-						"name": "EN_USB_A0_VBUS"
-					},
-					{
-						"ioex": false,
-						"name": "EN_PP5000_U"
-					}
-				]
-			},
-			"blipper": {
-				"custom_usb_enable_pins": [
-					{
-						"ioex": false,
-						"name": "EN_USB_A0_VBUS"
-					},
-					{
-						"ioex": false,
-						"name": "EN_PP5000_U"
-					}
-				]
-			},
-			"bookem": {
-				"custom_usb_enable_pins": [
-					{
-						"ioex": false,
-						"name": "EN_USB_A0_VBUS"
-					},
-					{
-						"ioex": false,
-						"name": "EN_PP5000_U"
-					}
-				]
-			},
-			"boten": {
-				"custom_usb_enable_pins": [
-					{
-						"ioex": false,
-						"name": "EN_USB_A0_VBUS"
-					},
-					{
-						"ioex": false,
-						"name": "EN_PP5000_U"
-					}
-				]
-			},
-			"boxy": {
-				"custom_usb_enable_pins": [
-					{
-						"ioex": false,
-						"name": "EN_USB_A0_VBUS"
-					},
-					{
-						"ioex": false,
-						"name": "EN_USB_A1_VBUS"
-					}
-				],
-				"ec_capability": [
-					"cbi",
-					"usb",
-					"x86"
-				],
-				"has_keyboard": false,
-				"has_lid": false,
-				"hibernate": false,
-				"hold_pwr_button_poweron": 3,
-				"rec_button_dev_switch": true
-			},
-			"bugzzy": {
-				"custom_usb_enable_pins": [
-					{
-						"ioex": false,
-						"name": "EN_USB_A0_VBUS"
-					}
-				]
-			},
-			"cret": {
-				"custom_usb_enable_pins": [
-					{
-						"ioex": false,
-						"name": "EN_USB_A0_VBUS"
-					}
-				]
-			},
-			"cret360": {
-				"custom_usb_enable_pins": [
-					{
-						"ioex": false,
-						"name": "EN_USB_A0_VBUS"
-					}
-				]
-			},
-			"dibbi": {
-				"custom_usb_enable_pins": [
-					{
-						"ioex": false,
-						"name": "EN_USB_A0_VBUS"
-					},
-					{
-						"ioex": false,
-						"name": "EN_USB_A1_VBUS"
-					},
-					{
-						"ioex": false,
-						"name": "EN_USB_A2_VBUS"
-					},
-					{
-						"ioex": false,
-						"name": "EN_USB_A3_VBUS"
-					}
-				],
-				"ec_capability": [
-					"cbi",
-					"usb",
-					"x86"
-				],
-				"has_keyboard": false,
-				"has_lid": false,
-				"hibernate": false,
-				"hold_pwr_button_poweron": 3,
-				"rec_button_dev_switch": true
-			},
-			"drawcia": {
-				"custom_usb_enable_pins": [
-					{
-						"ioex": false,
-						"name": "EN_USB_A_5V"
-					}
-				]
-			},
-			"drawlat": {
-				"custom_usb_enable_pins": [
-					{
-						"ioex": false,
-						"name": "EN_USB_A_5V"
-					}
-				]
-			},
-			"drawman": {
-				"custom_usb_enable_pins": [
-					{
-						"ioex": false,
-						"name": "EN_USB_A_5V"
-					}
-				]
-			},
-			"drawper": {
-				"custom_usb_enable_pins": [
-					{
-						"ioex": false,
-						"name": "EN_USB_A_5V"
-					}
-				]
-			},
-			"galith": {
-				"custom_usb_enable_pins": [
-					{
-						"ioex": false,
-						"name": "EN_USB_A0_VBUS"
-					}
-				]
-			},
-			"galith360": {
-				"custom_usb_enable_pins": [
-					{
-						"ioex": false,
-						"name": "EN_USB_A0_VBUS"
-					}
-				]
-			},
-			"gallop": {
-				"custom_usb_enable_pins": [
-					{
-						"ioex": false,
-						"name": "EN_USB_A0_VBUS"
-					},
-					{
-						"ioex": false,
-						"name": "EN_PP5000_U"
-					}
-				]
-			},
-			"galnat": {
-				"custom_usb_enable_pins": [
-					{
-						"ioex": false,
-						"name": "EN_USB_A0_VBUS"
-					}
-				]
-			},
-			"galnat360": {
-				"custom_usb_enable_pins": [
-					{
-						"ioex": false,
-						"name": "EN_USB_A0_VBUS"
-					}
-				]
-			},
-			"galtic": {
-				"custom_usb_enable_pins": [
-					{
-						"ioex": false,
-						"name": "EN_USB_A0_VBUS"
-					},
-					{
-						"ioex": false,
-						"name": "EN_PP5000_U"
-					}
-				]
-			},
-			"galtic360": {
-				"custom_usb_enable_pins": [
-					{
-						"ioex": false,
-						"name": "EN_USB_A0_VBUS"
-					}
-				]
-			},
-			"kracko": {
-				"custom_usb_enable_pins": [
-					{
-						"ioex": false,
-						"name": "EN_USB_A_5V"
-					}
-				]
-			},
-			"kracko360": {
-				"custom_usb_enable_pins": [
-					{
-						"ioex": false,
-						"name": "EN_USB_A_5V"
-					}
-				],
-				"delay_reboot_to_ping": 80
-			},
-			"landia": {
-				"custom_usb_enable_pins": [
-					{
-						"ioex": false,
-						"name": "EN_USB_A_5V"
-					}
-				]
-			},
-			"landrid": {
-				"custom_usb_enable_pins": [
-					{
-						"ioex": false,
-						"name": "EN_USB_A_5V"
-					}
-				]
-			},
-			"lantis": {
-				"custom_usb_enable_pins": [
-					{
-						"ioex": false,
-						"name": "EN_USB_A_5V"
-					}
-				]
-			},
-			"madoo": {
-				"custom_usb_enable_pins": [
-					{
-						"ioex": false,
-						"name": "EN_PP5000_U"
-					}
-				],
-				"usb_a_port_count": 0
-			},
-			"pasara": {
-				"custom_usb_enable_pins": [
-					{
-						"ioex": false,
-						"name": "EN_USB_A0_VBUS"
-					}
-				]
-			},
-			"peezer": {
-				"custom_usb_enable_pins": [
-					{
-						"ioex": false,
-						"name": "EN_USB_A0_VBUS"
-					}
-				]
-			},
-			"pirette": {
-				"custom_usb_enable_pins": [
-					{
-						"ioex": false,
-						"name": "EN_USB_A0_VBUS"
-					}
-				]
-			},
-			"pirika": {
-				"custom_usb_enable_pins": [
-					{
-						"ioex": false,
-						"name": "EN_USB_A0_VBUS"
-					}
-				]
-			},
-			"sasuke": {
-				"custom_usb_enable_pins": [
-					{
-						"ioex": false,
-						"name": "EN_USB_A0_VBUS"
-					}
-				]
-			},
-			"sasukette": {
-				"custom_usb_enable_pins": [
-					{
-						"ioex": false,
-						"name": "EN_USB_A0_VBUS"
-					}
-				]
-			},
-			"storo": {
-				"custom_usb_enable_pins": [
-					{
-						"ioex": false,
-						"name": "EN_USB_A0_VBUS"
-					}
-				]
-			},
-			"storo360": {
-				"custom_usb_enable_pins": [
-					{
-						"ioex": false,
-						"name": "EN_USB_A0_VBUS"
-					}
-				]
-			},
-			"taranza": {
-				"custom_usb_enable_pins": [
-					{
-						"ioex": false,
-						"name": "EN_USB_A0_VBUS"
-					},
-					{
-						"ioex": false,
-						"name": "EN_USB_A1_VBUS"
-					},
-					{
-						"ioex": false,
-						"name": "EN_USB_A2_VBUS"
-					},
-					{
-						"ioex": false,
-						"name": "EN_USB_A3_VBUS"
-					},
-					{
-						"ioex": false,
-						"name": "EN_USB_A4_VBUS"
-					}
-				],
-				"ec_capability": [
-					"cbi",
-					"usb",
-					"x86"
-				],
-				"has_keyboard": false,
-				"has_lid": false,
-				"hibernate": false,
-				"hold_pwr_button_poweron": 3,
-				"rec_button_dev_switch": true
-			}
-		},
-		"platform": "dedede",
-		"smm_store": false,
-		"spi_voltage": "pp3300",
-		"usbc_input_voltage_limit": 15
-	},
-	"draco": {
-		"ac_on_can_wake_ap_from_ulp": true,
-		"chrome_ec": true,
-		"cr50_capability": [],
-		"custom_usb_enable_pins": [
-			{
-				"ioex": false,
-				"name": "EN_PP5000_USBA_R"
-			}
-		],
-		"dark_resume_capable": true,
-		"ec_capability": [
-			"battery",
-			"cbi",
-			"charging",
-			"keyboard",
-			"lid",
-			"usb",
-			"x86"
-		],
-		"hold_pwr_button_nopowerd_shutdown": 14,
-		"hold_pwr_button_poweron": 3,
-		"max_charging_power": 60.0,
-		"minidiag_capability": [
-			"cbmem_preserved_by_ap_reset",
-			"event_log_launch_count",
-			"storage_self_test"
-		],
-		"mode_switcher_type": "menu_switcher",
-		"platform": "draco",
-		"smm_store": false,
-		"spi_voltage": "pp3300"
-	},
-	"drallion": {
-		"ap_access_ec_flash": false,
-		"ap_up_after_cr50_reboot": false,
-		"chrome_ec": false,
-		"cr50_capability": [],
-		"delay_reboot_to_ping": 70,
-		"ec_capability": [],
-		"ec_forwards_short_pp_press": true,
-		"firmware_screen": 15,
-		"has_diagnostics_image": true,
-		"has_keyboard": false,
-		"has_lid": true,
-		"hold_pwr_button_poweroff": 10,
-		"hold_pwr_button_poweron": 1.2,
-		"minidiag_capability": [
-			"cbmem_preserved_by_ap_reset",
-			"event_log_launch_count",
-			"storage_self_test"
-		],
-		"minidiag_enabled": false,
-		"minios_enabled": false,
-		"mode_switcher_type": "keyboard_dev_switcher",
-		"platform": "drallion",
-		"power_button_dev_switch": true,
-		"rec_force_mrc": false,
-		"serial_number_length": 7,
-		"smm_store": false,
-		"spi_voltage": "pp3300",
-		"usb_a_port_count": -1
-	},
-	"elm": {
-		"cr50_capability": [],
-		"ec_capability": [
-			"arm",
-			"battery",
-			"charging",
-			"keyboard",
-			"lid"
-		],
-		"ec_ro_vbus_bug": true,
-		"max_charging_power": 45.0,
-		"minidiag_capability": [
-			"cbmem_preserved_by_ap_reset",
-			"event_log_launch_count",
-			"storage_self_test"
-		],
-		"parent": "oak",
-		"platform": "elm",
-		"usb_a_port_count": -1
-	},
-	"endeavour": {
-		"cr50_capability": [],
-		"ec_capability": [
-			"x86"
-		],
-		"minidiag_capability": [
-			"cbmem_preserved_by_ap_reset",
-			"event_log_launch_count",
-			"storage_self_test"
-		],
-		"parent": "fizz",
-		"platform": "endeavour"
-	},
-	"eve": {
-		"chrome_ec": true,
-		"cr50_capability": [
-			"rdd_leakage",
-			"wp_on_in_g3"
-		],
-		"dark_resume_capable": true,
-		"delay_reboot_to_ping": 60,
-		"dut_can_source_power_in_suspend": false,
-		"ec_capability": [
-			"battery",
-			"charging",
-			"doubleboot",
-			"keyboard",
-			"lid",
-			"x86"
-		],
-		"ec_ro_vbus_bug": true,
-		"firmware_screen": 15,
-		"max_charging_power": 45.0,
-		"minidiag_capability": [
-			"cbmem_preserved_by_ap_reset",
-			"event_log_launch_count",
-			"storage_self_test"
-		],
-		"minidiag_enabled": false,
-		"minios_enabled": false,
-		"mode_switcher_type": "keyboard_dev_switcher",
-		"models": {
-			"eve": {
-				"usb_a_port_count": 0
-			}
-		},
-		"no_broken_screen_in_dev": true,
-		"platform": "eve",
-		"rec_invalid_screen": 5,
-		"servo_prog_state_delay": 10,
-		"smm_store": false,
-		"spi_voltage": "pp3300",
-		"usb_a_port_count": -1
-	},
-	"fizz": {
-		"chrome_ec": true,
-		"cr50_capability": [],
-		"delay_reboot_to_ping": 60,
-		"ec_capability": [
-			"x86"
-		],
-		"ec_forwards_short_pp_press": true,
-		"firmware_screen": 15,
-		"has_keyboard": false,
-		"has_lid": false,
-		"hibernate": false,
-		"max_charging_power": 100.0,
-		"minidiag_capability": [
-			"cbmem_preserved_by_ap_reset",
-			"event_log_launch_count",
-			"storage_self_test"
-		],
-		"minidiag_enabled": false,
-		"minios_enabled": false,
-		"mode_switcher_type": "keyboard_dev_switcher",
-		"models": {
-			"jax": {
-				"delay_reboot_to_ping": 80
-			},
-			"kench": {
-				"delay_reboot_to_ping": 80
-			},
-			"sion": {
-				"delay_reboot_to_ping": 140
-			},
-			"teemo": {
-				"delay_reboot_to_ping": 130
-			}
-		},
-		"no_broken_screen_in_dev": true,
-		"platform": "fizz",
-		"rec_button_dev_switch": true,
-		"smm_store": false,
-		"spi_voltage": "pp3300",
-		"usb_a_port_count": -1
-	},
-	"geralt": {
-		"chrome_ec": true,
-		"cr50_capability": [],
-		"ec_capability": [
-			"arm",
-			"battery",
-			"cbi",
-			"charging",
-			"keyboard",
-			"lid",
-			"usb"
-		],
-		"ec_efs2": true,
-		"firmware_screen": 20,
-		"is_detachable": true,
-		"minidiag_capability": [
-			"event_log_launch_count",
-			"event_log_test_report",
-			"storage_self_test"
-		],
-		"mode_switcher_type": "menu_switcher",
-		"platform": "geralt",
-		"usbc_voltage_on_shutdown_and_full_batt": 9
-	},
-	"glados": {
-		"chrome_ec": true,
-		"chrome_usbpd": true,
-		"cr50_capability": [],
-		"dark_resume_capable": true,
-		"ec_capability": [
-			"battery",
-			"charging",
-			"doubleboot",
-			"keyboard",
-			"lid",
-			"usbpd_uart",
-			"x86"
-		],
-		"ec_ro_vbus_bug": true,
-		"minidiag_capability": [
-			"cbmem_preserved_by_ap_reset",
-			"event_log_launch_count",
-			"storage_self_test"
-		],
-		"minidiag_enabled": false,
-		"minios_enabled": false,
-		"mode_switcher_type": "keyboard_dev_switcher",
-		"no_broken_screen_in_dev": true,
-		"platform": "glados",
-		"servo_prog_state_delay": 10,
-		"smm_store": false,
-		"spi_voltage": "pp3300",
-		"usb_a_port_count": -1
-	},
-	"gru": {
-		"chrome_ec": true,
-		"cr50_capability": [],
-		"ec_boot_to_console": 0.2,
-		"ec_capability": [
-			"arm",
-			"battery",
-			"charging",
-			"keyboard",
-			"lid"
-		],
-		"ec_ro_vbus_bug": true,
-		"firmware_screen": 7,
-		"minidiag_capability": [
-			"cbmem_preserved_by_ap_reset",
-			"event_log_launch_count",
-			"storage_self_test"
-		],
-		"minidiag_enabled": false,
-		"minios_enabled": false,
-		"mode_switcher_type": "keyboard_dev_switcher",
-		"no_broken_screen_in_dev": true,
-		"platform": "gru",
-		"software_sync_update": 6,
-		"usb_a_port_count": -1,
-		"usb_hid_wake_enabled": false
-	},
-	"grunt": {
-		"chrome_ec": true,
-		"cr50_capability": [],
-		"ec_capability": [
-			"battery",
-			"charging",
-			"keyboard",
-			"lid",
-			"x86"
-		],
-		"gsc_can_wake_ec_with_reset": false,
-		"max_charging_power": 45.0,
-		"minidiag_capability": [
-			"cbmem_preserved_by_ap_reset",
-			"event_log_launch_count",
-			"storage_self_test"
-		],
-		"minidiag_enabled": false,
-		"minios_enabled": false,
-		"mode_switcher_type": "keyboard_dev_switcher",
-		"models": {
-			"careena": {
-				"delay_reboot_to_ping": 80
-			},
-			"liara": {
-				"hold_pwr_button_poweroff": 6,
-				"usbc_voltage_on_shutdown_and_full_batt": 5
-			}
-		},
-		"platform": "grunt",
-		"rec_invalid_screen": 5,
-		"servo_prog_state_delay": 10,
-		"smm_store": false,
-		"usb_a_port_count": -1
-	},
-	"guybrush": {
-		"ac_on_can_wake_ap_from_ulp": true,
-		"chrome_ec": true,
-		"cr50_capability": [
-			"deep_sleep_in_s0i3"
-		],
-		"custom_usb_enable_pins": [
-			{
-				"ioex": true,
-				"name": "EN_PP5000_USB_A0_VBUS"
-			},
-			{
-				"ioex": true,
-				"name": "EN_PP5000_USB_A1_VBUS_DB"
-			}
-		],
-		"dark_resume_capable": true,
-		"delay_powerinfo_stable": 5,
-		"ec_capability": [
-			"battery",
-			"cbi",
-			"charging",
-			"keyboard",
-			"lid",
-			"smart_usb_charge",
-			"usb",
-			"x86"
-		],
-		"firmware_screen": 15,
-		"hold_pwr_button_poweroff": 4,
-		"max_charging_power": 100.0,
-		"minidiag_capability": [
-			"event_log_launch_count",
-			"storage_self_test"
-		],
-		"mode_switcher_type": "menu_switcher",
-		"platform": "guybrush",
-		"s3_override_to_unsupported": true,
-		"servo_prog_state_delay": 1.0,
-		"smm_store": false
-	},
-	"hana": {
-		"cr50_capability": [],
-		"ec_capability": [
-			"arm",
-			"battery",
-			"charging",
-			"keyboard",
-			"lid"
-		],
-		"minidiag_capability": [
-			"cbmem_preserved_by_ap_reset",
-			"event_log_launch_count",
-			"storage_self_test"
-		],
-		"parent": "oak",
-		"platform": "hana"
-	},
-	"hatch": {
-		"ac_on_can_wake_ap_from_ulp": true,
-		"chrome_ec": true,
-		"cr50_capability": [
-			"ec_hibernate_breaks_rdd"
-		],
-		"custom_max_tpm_init_us": 230000,
-		"custom_usb_enable_pins": [
-			{
-				"ioex": false,
-				"name": "EN_USB_A_5V"
-			}
-		],
-		"dark_resume_capable": true,
-		"ec_capability": [
-			"battery",
-			"cbi",
-			"charging",
-			"keyboard",
-			"lid",
-			"smart_usb_charge",
-			"usb",
-			"x86"
-		],
-		"firmware_screen": 15,
-		"minidiag_capability": [
-			"cbmem_preserved_by_ap_reset",
-			"event_log_launch_count",
-			"storage_self_test"
-		],
-		"minidiag_enabled": false,
-		"minios_enabled": false,
-		"mode_switcher_type": "keyboard_dev_switcher",
-		"models": {
-			"dratini": {
-				"usbc_voltage_on_shutdown_and_full_batt": 5
-			},
-			"helios": {
-				"custom_usb_enable_pins": [],
-				"usb_a_port_count": 0
-			},
-			"jinlon": {
-				"usbc_voltage_on_shutdown_and_full_batt": 5
-			},
-			"kindred": {
-				"delay_reboot_to_ping": 120
-			},
-			"kled": {
-				"usbc_input_voltage_limit": 15
-			},
-			"kohaku": {
-				"custom_usb_enable_pins": [],
-				"usb_a_port_count": 0
-			},
-			"mushu": {
-				"max_charging_power": 100.0
-			},
-			"nightfury": {
-				"custom_usb_enable_pins": [],
-				"usb_a_port_count": 0
-			}
-		},
-		"platform": "hatch",
-		"smm_store": false,
-		"spi_voltage": "pp3300"
-	},
-	"jacuzzi": {
-		"charger_profile_override": true,
-		"chrome_ec": true,
-		"cr50_capability": [],
-		"ec_boot_to_console": 2,
-		"ec_capability": [
-			"arm",
-			"battery",
-			"charging",
-			"keyboard",
-			"lid"
-		],
-		"ec_reboot_to_g3_delay": 10,
-		"has_keyboard": true,
-		"is_detachable": false,
-		"minidiag_capability": [
-			"cbmem_preserved_by_ap_reset",
-			"event_log_launch_count",
-			"storage_self_test"
-		],
-		"mode_switcher_type": "keyboard_dev_switcher",
-		"parent": "kukui",
-		"platform": "jacuzzi",
-		"usb_a_port_count": -1,
-		"usbc_input_voltage_limit": 20
-	},
-	"kalista": {
-		"cr50_capability": [],
-		"delay_reboot_to_ping": 140,
-		"ec_capability": [
-			"x86"
-		],
-		"minidiag_capability": [
-			"cbmem_preserved_by_ap_reset",
-			"event_log_launch_count",
-			"storage_self_test"
-		],
-		"parent": "fizz",
-		"platform": "kalista"
-	},
-	"keeby": {
-		"chrome_ec": true,
-		"cr50_capability": [],
-		"custom_usb_enable_pins": [
-			{
-				"ioex": false,
-				"name": "EN_USB_A0_VBUS"
-			},
-			{
-				"ioex": false,
-				"name": "EN_USB_A1_VBUS"
-			}
-		],
-		"dark_resume_capable": true,
-		"ec_capability": [
-			"battery",
-			"cbi",
-			"charging",
-			"keyboard",
-			"lid",
-			"smart_usb_charge",
-			"usb",
-			"x86"
-		],
-		"firmware_screen": 15,
-		"hold_pwr_button_nopowerd_shutdown": 14,
-		"max_charging_power": 45.0,
-		"minidiag_capability": [
-			"storage_self_test"
-		],
-		"minios_enabled": false,
-		"mode_switcher_type": "menu_switcher",
-		"models": {
-			"cappy2": {
-				"custom_usb_enable_pins": [
-					{
-						"ioex": false,
-						"name": "EN_USB_A0_VBUS"
-					}
-				]
-			},
-			"habokay": {
-				"custom_usb_enable_pins": [
-					{
-						"ioex": false,
-						"name": "EN_USB_A_5V"
-					}
-				]
-			},
-			"haboki": {
-				"custom_usb_enable_pins": [
-					{
-						"ioex": false,
-						"name": "EN_USB_A_5V"
-					}
-				]
-			}
-		},
-		"platform": "keeby",
-		"smm_store": false,
-		"spi_voltage": "pp3300",
-		"usbc_input_voltage_limit": 15
-	},
-	"kevin": {
-		"cr50_capability": [],
-		"ec_capability": [
-			"arm",
-			"battery",
-			"charging",
-			"keyboard",
-			"lid"
-		],
-		"minidiag_capability": [
-			"cbmem_preserved_by_ap_reset",
-			"event_log_launch_count",
-			"storage_self_test"
-		],
-		"parent": "gru",
-		"platform": "kevin"
-	},
-	"kevin64": {
-		"cr50_capability": [],
-		"ec_capability": [
-			"arm",
-			"battery",
-			"charging",
-			"keyboard",
-			"lid"
-		],
-		"minidiag_capability": [
-			"cbmem_preserved_by_ap_reset",
-			"event_log_launch_count",
-			"storage_self_test"
-		],
-		"parent": "kevin",
-		"platform": "kevin64"
-	},
-	"kevin_tpm2": {
-		"cr50_capability": [],
-		"ec_capability": [
-			"arm",
-			"battery",
-			"charging",
-			"keyboard",
-			"lid"
-		],
-		"minidiag_capability": [
-			"cbmem_preserved_by_ap_reset",
-			"event_log_launch_count",
-			"storage_self_test"
-		],
-		"parent": "gru",
-		"platform": "kevin_tpm2"
-	},
-	"kukui": {
-		"charger_profile_override": true,
-		"chrome_ec": true,
-		"cr50_capability": [],
-		"delay_reboot_to_ping": 120,
-		"ec_boot_to_console": 2,
-		"ec_boot_to_wp_en": 2,
-		"ec_capability": [
-			"arm",
-			"battery",
-			"charging",
-			"lid"
-		],
-		"ec_reboot_to_g3_delay": 10,
-		"has_keyboard": false,
-		"hibernate": false,
-		"hold_pwr_button_poweroff": 6,
-		"hold_pwr_button_poweron": 1.2,
-		"is_detachable": true,
-		"keypress_delay": 3,
-		"max_charging_power": 45.0,
-		"minidiag_capability": [
-			"cbmem_preserved_by_ap_reset",
-			"event_log_launch_count",
-			"storage_self_test"
-		],
-		"minidiag_enabled": false,
-		"minios_enabled": false,
-		"mode_switcher_type": "tablet_detachable_switcher",
-		"models": {
-			"kodama": {
-				"usb_a_port_count": 0
-			},
-			"krane": {
-				"usb_a_port_count": 0
-			}
-		},
-		"platform": "kukui",
-		"usb_a_port_count": -1,
-		"usbc_input_voltage_limit": 12
-	},
-	"kunimitsu": {
-		"chrome_ec": true,
-		"cr50_capability": [],
-		"dark_resume_capable": true,
-		"ec_boot_to_console": 0.2,
-		"ec_capability": [
-			"battery",
-			"charging",
-			"doubleboot",
-			"keyboard",
-			"lid",
-			"usb",
-			"usbpd_uart",
-			"x86"
-		],
-		"ec_ro_vbus_bug": true,
-		"minidiag_capability": [
-			"cbmem_preserved_by_ap_reset",
-			"event_log_launch_count",
-			"storage_self_test"
-		],
-		"minidiag_enabled": false,
-		"minios_enabled": false,
-		"mode_switcher_type": "keyboard_dev_switcher",
-		"platform": "kunimitsu",
-		"smm_store": false,
-		"spi_voltage": "pp3300",
-		"usb_a_port_count": -1
-	},
-	"lars": {
-		"cr50_capability": [],
-		"ec_capability": [
-			"battery",
-			"charging",
-			"doubleboot",
-			"keyboard",
-			"lid",
-			"usb",
-			"usbpd_uart",
-			"x86"
-		],
-		"minidiag_capability": [
-			"cbmem_preserved_by_ap_reset",
-			"event_log_launch_count",
-			"storage_self_test"
-		],
-		"parent": "kunimitsu",
-		"platform": "lars"
-	},
-	"nami": {
-		"ac_on_can_wake_ap_from_ulp": true,
-		"chrome_ec": true,
-		"cr50_capability": [
-			"rdd_leakage"
-		],
-		"custom_max_tpm_init_us": 240000,
-		"dark_resume_capable": true,
-		"ec_capability": [
-			"battery",
-			"charging",
-			"keyboard",
-			"lid",
-			"x86"
-		],
-		"firmware_screen": 15,
-		"gsc_can_wake_ec_with_reset": false,
-		"max_charging_power": 70.0,
-		"minidiag_capability": [
-			"cbmem_preserved_by_ap_reset",
-			"event_log_launch_count",
-			"storage_self_test"
-		],
-		"minidiag_enabled": false,
-		"minios_enabled": false,
-		"mode_switcher_type": "keyboard_dev_switcher",
-		"platform": "nami",
-		"rec_invalid_screen": 5,
-		"servo_prog_state_delay": 10,
-		"smm_store": false,
-		"spi_voltage": "pp3300",
-		"usb_a_port_count": -1
-	},
-	"nasher": {
-		"cr50_capability": [],
-		"ec_capability": [
-			"battery",
-			"charging",
-			"keyboard",
-			"lid",
-			"smart_usb_charge",
-			"usb",
-			"x86"
-		],
-		"minidiag_capability": [
-			"cbmem_preserved_by_ap_reset",
-			"event_log_launch_count",
-			"storage_self_test"
-		],
-		"parent": "reef",
-		"platform": "nasher"
-	},
-	"nautilus": {
-		"chrome_ec": true,
-		"cr50_capability": [],
-		"dark_resume_capable": true,
-		"delay_reboot_to_ping": 40,
-		"ec_capability": [
-			"battery",
-			"charging",
-			"keyboard",
-			"lid",
-			"x86"
-		],
-		"firmware_screen": 15,
-		"max_charging_power": 45.0,
-		"minidiag_capability": [
-			"cbmem_preserved_by_ap_reset",
-			"event_log_launch_count",
-			"storage_self_test"
-		],
-		"minidiag_enabled": false,
-		"minios_enabled": false,
-		"mode_switcher_type": "keyboard_dev_switcher",
-		"platform": "nautilus",
-		"servo_prog_state_delay": 10,
-		"smm_store": false,
-		"spi_voltage": "pp3300",
-		"usb_a_port_count": -1
-	},
-	"nissa": {
-		"ac_on_can_wake_ap_from_ulp": true,
-		"chrome_ec": true,
-		"cr50_capability": [],
-		"custom_usb_enable_pins": [
-			{
-				"ioex": false,
-				"name": "en_usb_a0_vbus"
-			}
-		],
-		"dark_resume_capable": true,
-		"ec_capability": [
-			"battery",
-			"cbi",
-			"charging",
-			"keyboard",
-			"lid",
-			"usb",
-			"x86"
-		],
-		"ec_efs2": true,
-		"firmware_screen": 30,
-		"fw_update_build": "nissa-release/R109-15213.0.0",
-		"hold_pwr_button_nopowerd_shutdown": 14,
-		"hold_pwr_button_poweron": 1.2,
-		"max_charging_power": 45.0,
-		"minidiag_capability": [
-			"event_log_launch_count",
-			"storage_self_test"
-		],
-		"mode_switcher_type": "menu_switcher",
-		"platform": "nissa",
-		"smm_store": false,
-		"spi_voltage": "pp3300",
-		"usbc_input_voltage_limit": 15
-	},
-	"nocturne": {
-		"chrome_ec": true,
-		"cr50_capability": [
-			"rdd_off_in_g3",
-			"wp_on_in_g3"
-		],
-		"delay_reboot_to_ping": 120,
-		"ec_capability": [
-			"battery",
-			"charging",
-			"lid",
-			"x86"
-		],
-		"has_keyboard": false,
-		"has_lid": true,
-		"is_detachable": true,
-		"keypress_delay": 5,
-		"max_charging_power": 45.0,
-		"minidiag_capability": [
-			"cbmem_preserved_by_ap_reset",
-			"event_log_launch_count",
-			"storage_self_test"
-		],
-		"minidiag_enabled": false,
-		"minios_enabled": false,
-		"mode_switcher_type": "tablet_detachable_switcher",
-		"platform": "nocturne",
-		"usb_a_port_count": -1,
-		"usb_image_boot_timeout": 120,
-		"usbc_voltage_on_shutdown_and_full_batt": 9
-	},
-	"oak": {
-		"chrome_ec": true,
-		"cr50_capability": [],
-		"ec_capability": [
-			"arm",
-			"battery",
-			"charging",
-			"keyboard",
-			"lid"
-		],
-		"ec_has_powerbtn_cmd": false,
-		"minidiag_capability": [
-			"cbmem_preserved_by_ap_reset",
-			"event_log_launch_count",
-			"storage_self_test"
-		],
-		"minidiag_enabled": false,
-		"minios_enabled": false,
-		"mode_switcher_type": "keyboard_dev_switcher",
-		"no_broken_screen_in_dev": true,
-		"platform": "oak",
-		"usb_a_port_count": -1
-	},
-	"octopus": {
-		"ac_on_can_wake_ap_from_ulp": true,
-		"chrome_ec": true,
-		"cr50_capability": [
-			"rdd_leakage"
-		],
-		"custom_max_tpm_init_us": 240000,
-		"custom_usb_enable_pins": [
-			{
-				"ioex": false,
-				"name": "EN_USB_A0_5V"
-			},
-			{
-				"ioex": false,
-				"name": "EN_USB_A1_5V"
-			}
-		],
-		"delay_reboot_to_ping": 120,
-		"ec_boot_to_console": 0.3,
-		"ec_capability": [
-			"battery",
-			"cbi",
-			"charging",
-			"keyboard",
-			"lid",
-			"smart_usb_charge",
-			"usb",
-			"x86"
-		],
-		"firmware_screen": 30,
-		"max_charging_power": 45.0,
-		"minidiag_capability": [
-			"cbmem_preserved_by_ap_reset",
-			"event_log_launch_count",
-			"storage_self_test"
-		],
-		"minidiag_enabled": false,
-		"minios_enabled": false,
-		"mode_switcher_type": "keyboard_dev_switcher",
-		"models": {
-			"ampton": {
-				"usbc_voltage_on_shutdown_and_full_batt": 5
-			},
-			"bloog": {
-				"delay_reboot_to_ping": 60
-			},
-			"bluebird": {
-				"custom_usb_enable_pins": [
-					{
-						"ioex": false,
-						"name": "EN_USB_A0_5V"
-					}
-				],
-				"usbc_input_voltage_limit": 15
-			},
-			"bobba360": {
-				"usbc_input_voltage_limit": 15
-			},
-			"casta": {
-				"custom_usb_enable_pins": [
-					{
-						"ioex": false,
-						"name": "EN_USB_A0_5V"
-					}
-				],
-				"usbc_input_voltage_limit": 15
-			}
-		},
-		"platform": "octopus",
-		"rec_invalid_screen": 5,
-		"smm_store": false,
-		"spi_voltage": "pp1800",
-		"usb_plug": 45
-	},
-	"poppy": {
-		"chrome_ec": true,
-		"cr50_capability": [],
-		"ec_capability": [
-			"battery",
-			"charging",
-			"lid",
-			"x86"
-		],
-		"firmware_screen": 15,
-		"has_keyboard": false,
-		"has_lid": true,
-		"is_detachable": true,
-		"keypress_delay": 1,
-		"max_charging_power": 45.0,
-		"minidiag_capability": [
-			"cbmem_preserved_by_ap_reset",
-			"event_log_launch_count",
-			"storage_self_test"
-		],
-		"minidiag_enabled": false,
-		"minios_enabled": false,
-		"mode_switcher_type": "tablet_detachable_switcher",
-		"platform": "poppy",
-		"smm_store": false,
-		"usb_a_port_count": -1,
-		"usb_image_boot_timeout": 60
-	},
-	"puff": {
-		"chrome_ec": true,
-		"cr50_capability": [],
-		"custom_usb_enable_pins": [
-			{
-				"ioex": false,
-				"name": "EN_PP5000_USB_VBUS"
-			}
-		],
-		"delay_powerinfo_stable": 6,
-		"delay_reboot_to_ping": 60,
-		"ec_capability": [
-			"cbi",
-			"usb",
-			"x86"
-		],
-		"ec_efs2": true,
-		"ec_forwards_short_pp_press": true,
-		"firmware_screen": 15,
-		"has_keyboard": false,
-		"has_lid": false,
-		"hibernate": false,
-		"max_charging_power": 100.0,
-		"minidiag_capability": [
-			"cbmem_preserved_by_ap_reset",
-			"event_log_launch_count",
-			"storage_self_test"
-		],
-		"minidiag_enabled": false,
-		"minios_enabled": false,
-		"mode_switcher_type": "menu_switcher",
-		"platform": "puff",
-		"rec_button_dev_switch": true,
-		"s0ix_override_to_unsupported": true,
-		"s3_override_to_unsupported": true,
-		"smm_store": false,
-		"spi_voltage": "pp3300"
-	},
-	"pyro": {
-		"cr50_capability": [],
-		"ec_capability": [
-			"battery",
-			"charging",
-			"keyboard",
-			"lid",
-			"smart_usb_charge",
-			"usb",
-			"x86"
-		],
-		"minidiag_capability": [
-			"cbmem_preserved_by_ap_reset",
-			"event_log_launch_count",
-			"storage_self_test"
-		],
-		"parent": "reef",
-		"platform": "pyro"
-	},
-	"rammus": {
-		"chrome_ec": true,
-		"cr50_capability": [],
-		"dark_resume_capable": true,
-		"ec_capability": [
-			"battery",
-			"charging",
-			"keyboard",
-			"lid",
-			"x86"
-		],
-		"firmware_screen": 15,
-		"max_charging_power": 45.0,
-		"minidiag_capability": [
-			"cbmem_preserved_by_ap_reset",
-			"event_log_launch_count",
-			"storage_self_test"
-		],
-		"minidiag_enabled": false,
-		"minios_enabled": false,
-		"mode_switcher_type": "keyboard_dev_switcher",
-		"platform": "rammus",
-		"servo_prog_state_delay": 10,
-		"smm_store": false,
-		"spi_voltage": "pp3300",
-		"usb_a_port_count": -1
-	},
-	"reef": {
-		"chrome_ec": true,
-		"cr50_capability": [],
-		"delay_reboot_to_ping": 80,
-		"ec_boot_to_console": 0.3,
-		"ec_capability": [
-			"battery",
-			"charging",
-			"keyboard",
-			"lid",
-			"smart_usb_charge",
-			"usb",
-			"x86"
-		],
-		"ec_ro_vbus_bug": true,
-		"firmware_screen": 25,
-		"max_charging_power": 45.0,
-		"minidiag_capability": [
-			"cbmem_preserved_by_ap_reset",
-			"event_log_launch_count",
-			"storage_self_test"
-		],
-		"minidiag_enabled": false,
-		"minios_enabled": false,
-		"mode_switcher_type": "keyboard_dev_switcher",
-		"no_broken_screen_in_dev": true,
-		"platform": "reef",
-		"smm_store": false,
-		"spi_voltage": "pp1800",
-		"usb_a_port_count": -1,
-		"usb_plug": 45
-	},
-	"reef_uni": {
-		"cr50_capability": [],
-		"ec_capability": [
-			"battery",
-			"charging",
-			"keyboard",
-			"lid",
-			"smart_usb_charge",
-			"usb",
-			"x86"
-		],
-		"minidiag_capability": [
-			"cbmem_preserved_by_ap_reset",
-			"event_log_launch_count",
-			"storage_self_test"
-		],
-		"parent": "reef",
-		"platform": "reef_uni"
-	},
-	"rex": {
-		"ac_on_can_wake_ap_from_ulp": true,
-		"chrome_ec": true,
-		"cr50_capability": [],
-		"custom_usb_enable_pins": [
-			{
-				"ioex": false,
-				"name": "en_pp5000_usba_r"
-			}
-		],
-		"dark_resume_capable": true,
-		"delay_reboot_to_ping": 90,
-		"ec_capability": [
-			"battery",
-			"cbi",
-			"charging",
-			"keyboard",
-			"lid",
-			"usb",
-			"x86"
-		],
-		"firmware_screen": 20,
-		"hold_pwr_button_nopowerd_shutdown": 14,
-		"max_charging_power": 60.0,
-		"minidiag_capability": [
-			"cbmem_preserved_by_ap_reset",
-			"event_log_launch_count",
-			"storage_self_test"
-		],
-		"mode_switcher_type": "menu_switcher",
-		"platform": "rex",
-		"smm_store": false,
-		"spi_voltage": "pp3300"
-	},
-	"sand": {
-		"cr50_capability": [],
-		"ec_capability": [
-			"battery",
-			"charging",
-			"keyboard",
-			"lid",
-			"smart_usb_charge",
-			"usb",
-			"x86"
-		],
-		"minidiag_capability": [
-			"cbmem_preserved_by_ap_reset",
-			"event_log_launch_count",
-			"storage_self_test"
-		],
-		"parent": "reef",
-		"platform": "sand"
-	},
-	"sarien": {
-		"ap_access_ec_flash": false,
-		"ap_up_after_cr50_reboot": false,
-		"chrome_ec": false,
-		"cr50_capability": [],
-		"delay_reboot_to_ping": 120,
-		"ec_capability": [],
-		"ec_forwards_short_pp_press": true,
-		"firmware_screen": 18,
-		"gsc_update_wait_for_reboot": 25,
-		"has_diagnostics_image": true,
-		"has_keyboard": false,
-		"has_lid": true,
-		"hold_pwr_button_poweroff": 10,
-		"hold_pwr_button_poweron": 1.2,
-		"lid_wake_from_power_off": false,
-		"minidiag_capability": [
-			"cbmem_preserved_by_ap_reset",
-			"event_log_launch_count",
-			"storage_self_test"
-		],
-		"minidiag_enabled": false,
-		"minios_enabled": false,
-		"mode_switcher_type": "keyboard_dev_switcher",
-		"platform": "sarien",
-		"power_button_dev_switch": true,
-		"rec_force_mrc": false,
-		"rec_invalid_screen": 5,
-		"rma_entered_automatically": false,
-		"serial_number_length": 7,
-		"smm_store": false,
-		"spi_voltage": "pp3300",
-		"usb_a_port_count": -1
-	},
-	"scarlet": {
-		"cr50_capability": [],
-		"delay_reboot_to_ping": 80,
-		"ec_capability": [
-			"arm",
-			"battery",
-			"charging"
-		],
-		"has_keyboard": false,
-		"has_lid": false,
-		"hibernate": false,
-		"is_detachable": true,
-		"max_charging_power": 38.55,
-		"minidiag_capability": [
-			"cbmem_preserved_by_ap_reset",
-			"event_log_launch_count",
-			"storage_self_test"
-		],
-		"mode_switcher_type": "tablet_detachable_switcher",
-		"parent": "gru",
-		"platform": "scarlet",
-		"usb_a_port_count": -1
-	},
-	"sentry": {
-		"cr50_capability": [],
-		"ec_capability": [
-			"battery",
-			"charging",
-			"doubleboot",
-			"keyboard",
-			"lid",
-			"usb",
-			"usbpd_uart",
-			"x86"
-		],
-		"minidiag_capability": [
-			"cbmem_preserved_by_ap_reset",
-			"event_log_launch_count",
-			"storage_self_test"
-		],
-		"parent": "kunimitsu",
-		"platform": "sentry"
-	},
-	"shotzo": {
-		"chrome_ec": true,
-		"cr50_capability": [],
-		"custom_usb_enable_pins": [
-			{
-				"ioex": false,
-				"name": "EN_PP5000_USB_VBUS"
-			}
-		],
-		"dark_resume_capable": true,
-		"ec_capability": [
-			"cbi",
-			"usb",
-			"x86"
-		],
-		"firmware_screen": 15,
-		"has_keyboard": false,
-		"has_lid": false,
-		"hibernate": false,
-		"hold_pwr_button_nopowerd_shutdown": 14,
-		"hold_pwr_button_poweron": 3,
-		"max_charging_power": 45.0,
-		"minidiag_capability": [
-			"cbmem_preserved_by_ap_reset",
-			"event_log_launch_count",
-			"storage_self_test"
-		],
-		"minios_enabled": false,
-		"mode_switcher_type": "menu_switcher",
-		"platform": "shotzo",
-		"rec_button_dev_switch": true,
-		"smm_store": false,
-		"spi_voltage": "pp3300",
-		"usbc_input_voltage_limit": 15
-	},
-	"skyrim": {
-		"ac_on_can_wake_ap_from_ulp": true,
-		"chrome_ec": true,
-		"cr50_capability": [],
-		"custom_usb_enable_pins": [
-			{
-				"ioex": false,
-				"name": "EN_PP5000_USB_A0_VBUS"
-			},
-			{
-				"ioex": false,
-				"name": "EN_PP5000_USB_A1_VBUS"
-			}
-		],
-		"delay_powerinfo_stable": 5,
-		"ec_boot_to_console": 1.2,
-		"ec_capability": [
-			"battery",
-			"cbi",
-			"charging",
-			"keyboard",
-			"lid",
-			"smart_usb_charge",
-			"usb",
-			"x86"
-		],
-		"ec_efs2": true,
-		"firmware_screen": 15,
-		"fw_update_build": "skyrim-release/R110-15268.0.0",
-		"hold_pwr_button_poweroff": 3,
-		"max_charging_power": 100.0,
-		"minidiag_capability": [
-			"event_log_launch_count",
-			"storage_self_test"
-		],
-		"minios_enabled": true,
-		"mode_switcher_type": "menu_switcher",
-		"platform": "skyrim",
-		"rec_force_mrc": false,
-		"s3_override_to_unsupported": true,
-		"serial_firmware_boot_delay": 10,
-		"servo_prog_state_delay": 1.0,
-		"smm_store": false
-	},
-	"snappy": {
-		"cr50_capability": [],
-		"ec_capability": [
-			"battery",
-			"charging",
-			"keyboard",
-			"lid",
-			"smart_usb_charge",
-			"usb",
-			"x86"
-		],
-		"minidiag_capability": [
-			"cbmem_preserved_by_ap_reset",
-			"event_log_launch_count",
-			"storage_self_test"
-		],
-		"parent": "reef",
-		"platform": "snappy"
-	},
-	"soraka": {
-		"cr50_capability": [],
-		"custom_max_tpm_init_us": 230000,
-		"delay_reboot_to_ping": 120,
-		"ec_capability": [
-			"battery",
-			"charging",
-			"lid",
-			"x86"
-		],
-		"minidiag_capability": [
-			"cbmem_preserved_by_ap_reset",
-			"event_log_launch_count",
-			"storage_self_test"
-		],
-		"parent": "poppy",
-		"platform": "soraka"
-	},
-	"staryu": {
-		"cr50_capability": [],
-		"custom_usb_enable_pins": [],
-		"ec_capability": [
-			"arm",
-			"battery",
-			"cbi",
-			"charging",
-			"keyboard",
-			"lid",
-			"usb"
-		],
-		"is_detachable": true,
-		"minidiag_capability": [
-			"cbmem_preserved_by_ap_reset",
-			"event_log_launch_count",
-			"event_log_test_report",
-			"storage_self_test"
-		],
-		"mode_switcher_type": "menu_switcher",
-		"parent": "corsola",
-		"platform": "staryu",
-		"usb_a_port_count": 0
-	},
-	"strongbad": {
-		"ac_on_can_wake_ap_from_ulp": true,
-		"charger_profile_override": true,
-		"chrome_ec": true,
-		"cr50_capability": [],
-		"ec_capability": [
-			"arm",
-			"battery",
-			"charging",
-			"lid",
-			"usb"
-		],
-		"has_keyboard": false,
-		"is_detachable": true,
-		"minidiag_capability": [],
-		"minios_enabled": false,
-		"models": {
-			"coachz": {
-				"usbc_input_voltage_limit": 15
-			}
-		},
-		"platform": "strongbad",
-		"s0ix_override_to_unsupported": true,
-		"usb_a_port_count": -1
-	},
-	"trogdor": {
-		"ac_on_can_wake_ap_from_ulp": true,
-		"charger_profile_override": true,
-		"chrome_ec": true,
-		"cr50_capability": [],
-		"custom_usb_enable_pins": [
-			{
-				"ioex": false,
-				"name": "EN_USB_A_5V"
-			}
-		],
-		"ec_capability": [
-			"arm",
-			"battery",
-			"charging",
-			"keyboard",
-			"lid",
-			"usb"
-		],
-		"minidiag_capability": [],
-		"minios_enabled": false,
-		"mode_switcher_type": "menu_switcher",
-		"models": {
-			"lazor": {
-				"usbc_input_voltage_limit": 15
-			}
-		},
-		"platform": "trogdor",
-		"s0ix_override_to_unsupported": true
-	},
-	"volteer": {
-		"ac_on_can_wake_ap_from_ulp": true,
-		"chrome_ec": true,
-		"cr50_capability": [
-			"rdd_off_in_g3"
-		],
-		"custom_max_tpm_init_us": 230000,
-		"custom_usb_enable_pins": [
-			{
-				"ioex": false,
-				"name": "EN_PP5000_USBA"
-			}
-		],
-		"dark_resume_capable": true,
-		"delay_reboot_to_ping": 120,
-		"ec_capability": [
-			"battery",
-			"cbi",
-			"charging",
-			"keyboard",
-			"lid",
-			"usb",
-			"x86"
-		],
-		"ec_efs2": true,
-		"firmware_screen": 30,
-		"hold_pwr_button_nopowerd_shutdown": 14,
-		"minidiag_capability": [
-			"storage_self_test"
-		],
-		"minios_enabled": false,
-		"mode_switcher_type": "menu_switcher",
-		"models": {
-			"chronicler": {
-				"firmware_screen": 16
-			},
-			"collis": {
-				"max_charging_power": 45.0
-			},
-			"copano": {
-				"max_charging_power": 45.0
-			},
-			"delbin": {
-				"max_charging_power": 45.0
-			},
-			"eldrid": {
-				"firmware_screen": 20
-			},
-			"elemi": {
-				"hold_pwr_button_poweroff": 7
-			},
-			"halvor": {
-				"max_charging_power": 65.0
-			},
-			"voema": {
-				"max_charging_power": 65.0
-			},
-			"volta": {
-				"max_charging_power": 45.0
-			}
-		},
-		"platform": "volteer",
-		"s3_override_to_unsupported": true,
-		"smm_store": false,
-		"spi_voltage": "pp3300"
-	},
-	"zork": {
-		"ac_on_can_wake_ap_from_ulp": true,
-		"chrome_ec": true,
-		"cr50_capability": [
-			"rdd_off_in_g3"
-		],
-		"custom_usb_enable_pins": [
-			{
-				"ioex": true,
-				"name": "EN_USB_A0_5V"
-			},
-			{
-				"ioex": true,
-				"name": "EN_USB_A1_5V_DB"
-			}
-		],
-		"delay_powerinfo_stable": 5,
-		"ec_capability": [
-			"battery",
-			"cbi",
-			"charging",
-			"keyboard",
-			"lid",
-			"smart_usb_charge",
-			"usb",
-			"x86"
-		],
-		"ec_efs2": true,
-		"firmware_screen": 15,
-		"hold_pwr_button_poweroff": 10,
-		"max_charging_power": 65.0,
-		"minidiag_capability": [
-			"cbmem_preserved_by_ap_reset"
-		],
-		"minios_enabled": false,
-		"mode_switcher_type": "menu_switcher",
-		"models": {
-			"dalboz": {
-				"custom_usb_enable_pins": [
-					{
-						"ioex": true,
-						"name": "EN_USB_A0_5V"
-					},
-					{
-						"ioex": true,
-						"name": "EN_USB_A1_5V_DB_OPT1"
-					}
-				]
-			},
-			"vilboz": {
-				"custom_usb_enable_pins": [
-					{
-						"ioex": true,
-						"name": "EN_USB_A0_5V"
-					},
-					{
-						"ioex": false,
-						"name": "EN_USB_A1_5V"
-					}
-				]
-			},
-			"vilboz14": {
-				"custom_usb_enable_pins": [
-					{
-						"ioex": true,
-						"name": "EN_USB_A0_5V"
-					},
-					{
-						"ioex": false,
-						"name": "EN_USB_A1_5V"
-					}
-				]
-			},
-			"vilboz360": {
-				"custom_usb_enable_pins": [
-					{
-						"ioex": true,
-						"name": "EN_USB_A0_5V"
-					},
-					{
-						"ioex": false,
-						"name": "EN_USB_A1_5V"
-					}
-				]
-			},
-			"woomax": {
-				"custom_usb_enable_pins": [
-					{
-						"ioex": true,
-						"name": "EN_USB_A0_5V"
-					}
-				]
-			}
-		},
-		"platform": "zork",
-		"servo_prog_state_delay": 1.0,
-		"smm_store": false,
-		"usb_image_boot_timeout": 240
-	}
+  "DEFAULTS": {
+    "ac_on_can_wake_ap_from_ulp": false,
+    "ac_on_can_wake_ap_from_ulp.DOC": "True if the AC on event can wake the AP from ULP state",
+    "ap_access_ec_flash": true,
+    "ap_access_ec_flash.DOC": "True if AP can access the EC flash while Chrome OS is running",
+    "ap_up_after_cr50_reboot": true,
+    "ap_up_after_cr50_reboot.DOC": "True if AP is normally expected to be powered on after the Cr50 reboots (when AC power is connected)",
+    "broken_firmware_screen_requires_recovery": true,
+    "broken_firmware_screen_requires_recovery.DOC": "True if on the recovery screen esc+power+refresh needed to boot from usb. Deprecated. Use 'no_broken_screen_in_dev' instead.",
+    "charger_profile_override": false,
+    "charger_profile_override.DOC": "Whether the platform has a custom charger profile, which takes over the control of voltage/current limit",
+    "chrome_ec": false,
+    "chrome_ec.DOC": "Whether the platform has an EC",
+    "chrome_usbpd": false,
+    "chrome_usbpd.DOC": "Whether the platform supports USB power delivery",
+    "clear_dev_on_rec": false,
+    "clear_dev_on_rec.DOC": "True if dev mode get cleared upon entering rec mode",
+    "cr50_capability": [],
+    "cr50_capability.DOC": "List of capabilities of the CR50",
+    "custom_max_tpm_init_us": 0,
+    "custom_max_tpm_init_us.DOC": "Maximum amount of time allowed for TPM init. Use a non-zero amount if it's board specific",
+    "custom_usb_enable_pins": [],
+    "custom_usb_enable_pins.DOC": "List of USB-A enable GPIO pin names with optional io expander flags. From usb_port_enable[] in board.c.",
+    "dark_resume_capable": false,
+    "dark_resume_capable.DOC": "Whether the platform supports dark-resume",
+    "delay_powerinfo_stable": 0,
+    "delay_powerinfo_stable.DOC": "Delay between AP power-on and when powerinfo is stable. Some CPUs have an internal reset that transitions through different power states.",
+    "delay_reboot_to_ping": 60,
+    "delay_reboot_to_ping.DOC": "Worst case delay between boot and ready for ssh. I.e. booting from servo provided USB to rec mode.",
+    "dev_screen_timeout": 30,
+    "dev_screen_timeout.DOC": "The developer screen timeout fits our spec",
+    "dut_can_source_power_in_suspend": true,
+    "dut_can_source_power_in_suspend.DOC": "True if DUT will keep providing power to devices connected via USB-C when going to suspend",
+    "ec_boot_to_console": 1.2,
+    "ec_boot_to_console.DOC": "Delay between EC boot and ChromeEC console functional",
+    "ec_boot_to_pwr_button": 0.5,
+    "ec_boot_to_pwr_button.DOC": "Delay between EC boot and pressing power button",
+    "ec_boot_to_wp_en": 0,
+    "ec_boot_to_wp_en.DOC": "Delay for AP initiating an EC reboot in order to enable EC WP",
+    "ec_capability": [],
+    "ec_capability.DOC": "Map of capabilities of the Chrome EC",
+    "ec_efs2": false,
+    "ec_efs2.DOC": "Whether The EC uses EC-EFS2",
+    "ec_forwards_short_pp_press": false,
+    "ec_forwards_short_pp_press.DOC": "True if the EC will send short power button presses, such as those expected during CCD open, to the AP",
+    "ec_has_powerbtn_cmd": true,
+    "ec_has_powerbtn_cmd.DOC": "EC, if present, supports 'powerbtn' console command",
+    "ec_reboot_to_g3_delay": 0,
+    "ec_reboot_to_g3_delay.DOC": "Delay for waiting EC turning off the AP",
+    "ec_ro_vbus_bug": false,
+    "ec_ro_vbus_bug.DOC": "Whether The EC RO firmware has a bug that causes Vbus is not supplied in SRC.ACCESORY state",
+    "firmware_screen": 10,
+    "firmware_screen.DOC": "Delay between power-on and firmware screen",
+    "fw_update_build": null,
+    "fw_update_build.DOC": "Override firmware build to use for testing firmware update",
+    "gsc_can_wake_ec_with_reset": true,
+    "gsc_can_wake_ec_with_reset.DOC": "True if the GSC can wake the EC with its reset GPIO",
+    "gsc_off_in_ulp": false,
+    "gsc_off_in_ulp.DOC": "True if the GSC is unpowered in ULP",
+    "gsc_update_wait_for_reboot": 10,
+    "gsc_update_wait_for_reboot.DOC": "Number of seconds to wait for a gsc reboot after update",
+    "has_diagnostics_image": false,
+    "has_diagnostics_image.DOC": "True if altfw/diag is build into RW_LEGACY",
+    "has_eventlog": true,
+    "has_eventlog.DOC": "Whether the platform has eventlog support including proper timestamps. (Only for old boards! Never disable this 'temporarily, until we get around to implementing it'!)",
+    "has_keyboard": true,
+    "has_keyboard.DOC": "Whether the platform has a physical keyboard",
+    "has_lid": true,
+    "has_lid.DOC": "Whether the platform has a physical lid",
+    "has_powerbutton": true,
+    "has_powerbutton.DOC": "Whether the platform has a physical power button",
+    "hibernate": true,
+    "hibernate.DOC": "True if the device supports hibernation",
+    "hold_pwr_button_nopowerd_shutdown": 11,
+    "hold_pwr_button_nopowerd_shutdown.DOC": "Duration of holding down power button to shut down without powerd",
+    "hold_pwr_button_poweroff": 5,
+    "hold_pwr_button_poweroff.DOC": "Duration of holding power button to power off DUT normally",
+    "hold_pwr_button_poweron": 0.2,
+    "hold_pwr_button_poweron.DOC": "Duration of holding power button to power on DUT normally (also known as SHORT_DELAY in hdctools)",
+    "is_detachable": false,
+    "is_detachable.DOC": "Whether the device is a detachable",
+    "keypress_delay": 0.2,
+    "keypress_delay.DOC": "Delay between keypresses in firmware screen",
+    "lid_wake_from_power_off": true,
+    "lid_wake_from_power_off.DOC": "True if the lid can wake the system from a powered off state",
+    "max_charging_power": 60.0,
+    "max_charging_power.DOC": "Max charging power for DUT in watts",
+    "minidiag_capability": [
+      "cbmem_preserved_by_ap_reset",
+      "event_log_launch_count",
+      "storage_self_test"
+    ],
+    "minidiag_capability.DOC": "List of capabilities of the minidiag, do not use these for devices which does not enable minidiag",
+    "minidiag_enabled": true,
+    "minidiag_enabled.DOC": "Whether minidiag is enabled",
+    "minios_enabled": true,
+    "minios_enabled.DOC": "Whether minios is enabled",
+    "minios_screen": 20,
+    "minios_screen.DOC": "Delay between selecting booting minios and minios screen",
+    "mode_switcher_type": "menu_switcher",
+    "mode_switcher_type.DOC": "Version of mode-switcher used for mode-aware reboot",
+    "models": {},
+    "models.DOC": "Model-specific attribute overrides for this platform. This field should not be used in a parent config.",
+    "no_broken_screen_in_dev": false,
+    "no_broken_screen_in_dev.DOC": "True if DUT reaches insert screen instead of broken screen when dev switch is on",
+    "parent": null,
+    "parent.DOC": "Name of the platform whose overrides to inherit",
+    "platform": null,
+    "platform.DOC": "Name of the board or model being tested",
+    "power_button_dev_switch": false,
+    "power_button_dev_switch.DOC": "Whether the power button switches to dev mode",
+    "powerup_ready": 10,
+    "powerup_ready.DOC": "Delay after /sbin/shutdown before pressing power button",
+    "rec_button_dev_switch": false,
+    "rec_button_dev_switch.DOC": "Whether the recovery button switches to dev mode",
+    "rec_force_mrc": true,
+    "rec_force_mrc.DOC": "True if the device supports power_state:rec_force_mrc, which forced memroy retraining in recovery mode",
+    "rec_invalid_screen": 2,
+    "rec_invalid_screen.DOC": "Delay to wait for the recovery invalid screen after plugging an invalid USB",
+    "rma_entered_automatically": true,
+    "rma_entered_automatically.DOC": "True if the will go into serial number screen automatically",
+    "s0ix_override_to_unsupported": false,
+    "s0ix_override_to_unsupported.DOC": "Tests check the dut state to determine if s0ix is supported. Overrid to unsupported. File a bug for why.",
+    "s3_override_to_unsupported": false,
+    "s3_override_to_unsupported.DOC": "Tests check the dut state to determine if s3 is supported. Overrid to unsupported. File a bug for why.",
+    "serial_firmware_boot_delay": 10,
+    "serial_firmware_boot_delay.DOC": "Extra time to add to `firmware_screen` delay if using serial port is enabled in AP firmware.",
+    "serial_number_length": 0,
+    "serial_number_length.DOC": "Length of serial number that can be set in firmware; if serial number cannot be set then 0",
+    "servo_prog_state_delay": 0,
+    "servo_prog_state_delay.DOC": "Time in seconds to wait after changingt servo state for programming",
+    "shutdown": 30,
+    "shutdown.DOC": "Delay for waiting for client to shutdown. Deprecated do not use.",
+    "shutdown_timeout": 60,
+    "shutdown_timeout.DOC": "Max time a DUT might take to power off. Used to verify that a DUT did not shutdown.",
+    "smm_store": true,
+    "smm_store.DOC": "Check SMMSTORE exists in FMap for x86 boards",
+    "software_sync": 6,
+    "software_sync.DOC": "Delay of EC software sync hash calculating time",
+    "software_sync_update": 15,
+    "software_sync_update.DOC": "Delay of EC software sync updating EC",
+    "spi_voltage": "pp1800",
+    "spi_voltage.DOC": "The voltage level to set on the servo's spi2_vref",
+    "suspend_cbmem": true,
+    "suspend_cbmem.DOC": "device supports cbmem after suspend",
+    "usb_a_port_count": null,
+    "usb_a_port_count.DOC": "The number of USB-A ports on the device to be tested. -1 means unknown, do not use -1 for new boards.",
+    "usb_hid_wake_enabled": true,
+    "usb_hid_wake_enabled.DOC": "True if wake from USB HID is supported",
+    "usb_image_boot_timeout": 180,
+    "usb_image_boot_timeout.DOC": "Timeout of confirming DUT doesn't boot on USB image in Recovery screen",
+    "usb_plug": 10,
+    "usb_plug.DOC": "Delay between power-on and plug USB",
+    "usb_unplug": 2,
+    "usb_unplug.DOC": "Delay between USB power-off and detected by the system",
+    "usbc_input_voltage_limit": 20,
+    "usbc_input_voltage_limit.DOC": "The max input voltage for USB Type-C port",
+    "usbc_voltage_on_shutdown_and_full_batt": 20,
+    "usbc_voltage_on_shutdown_and_full_batt.DOC": "Input voltage limit applied by DUT when it is in G3/S5 and battery is full. 20 volts means there is no limit"
+  },
+  "asuka": {
+    "cr50_capability": [],
+    "ec_capability": [
+      "battery",
+      "charging",
+      "doubleboot",
+      "keyboard",
+      "lid",
+      "usb",
+      "usbpd_uart",
+      "x86"
+    ],
+    "minidiag_capability": [
+      "cbmem_preserved_by_ap_reset",
+      "event_log_launch_count",
+      "storage_self_test"
+    ],
+    "parent": "kunimitsu",
+    "platform": "asuka"
+  },
+  "asurada": {
+    "chrome_ec": true,
+    "cr50_capability": [],
+    "custom_max_tpm_init_us": 240000,
+    "ec_capability": [
+      "arm",
+      "battery",
+      "charging",
+      "keyboard",
+      "lid",
+      "usb"
+    ],
+    "ec_reboot_to_g3_delay": 10,
+    "firmware_screen": 20,
+    "minidiag_capability": [
+      "cbmem_preserved_by_ap_reset"
+    ],
+    "minios_enabled": false,
+    "mode_switcher_type": "menu_switcher",
+    "models": {
+      "hayato": {
+        "custom_usb_enable_pins": [
+          {
+            "ioex": false,
+            "name": "EN_PP5000_USB_A0_VBUS"
+          }
+        ],
+        "max_charging_power": 45.0
+      },
+      "spherion": {
+        "custom_usb_enable_pins": [
+          {
+            "ioex": false,
+            "name": "EN_PP5000_USB_A0_VBUS"
+          }
+        ],
+        "max_charging_power": 65.0
+      }
+    },
+    "platform": "asurada",
+    "usbc_voltage_on_shutdown_and_full_batt": 9
+  },
+  "atlas": {
+    "chrome_ec": true,
+    "cr50_capability": [
+      "rdd_leakage",
+      "wp_on_in_g3"
+    ],
+    "custom_max_tpm_init_us": 230000,
+    "dark_resume_capable": true,
+    "ec_capability": [
+      "battery",
+      "charging",
+      "keyboard",
+      "lid",
+      "x86"
+    ],
+    "firmware_screen": 15,
+    "minidiag_capability": [
+      "cbmem_preserved_by_ap_reset",
+      "event_log_launch_count",
+      "storage_self_test"
+    ],
+    "minidiag_enabled": false,
+    "minios_enabled": false,
+    "mode_switcher_type": "keyboard_dev_switcher",
+    "models": {
+      "atlas": {
+        "usb_a_port_count": 0
+      }
+    },
+    "platform": "atlas",
+    "servo_prog_state_delay": 10,
+    "spi_voltage": "pp3300",
+    "usb_a_port_count": -1
+  },
+  "bob": {
+    "cr50_capability": [],
+    "ec_capability": [
+      "arm",
+      "battery",
+      "charging",
+      "keyboard",
+      "lid"
+    ],
+    "minidiag_capability": [
+      "cbmem_preserved_by_ap_reset",
+      "event_log_launch_count",
+      "storage_self_test"
+    ],
+    "parent": "gru",
+    "platform": "bob"
+  },
+  "brask": {
+    "chrome_ec": true,
+    "cr50_capability": [],
+    "custom_usb_enable_pins": [
+      {
+        "ioex": false,
+        "name": "EN_PP5000_USBA"
+      }
+    ],
+    "dark_resume_capable": true,
+    "ec_capability": [
+      "cbi",
+      "usb",
+      "x86"
+    ],
+    "firmware_screen": 30,
+    "has_keyboard": false,
+    "has_lid": false,
+    "hibernate": false,
+    "hold_pwr_button_nopowerd_shutdown": 14,
+    "hold_pwr_button_poweron": 3,
+    "max_charging_power": 60.0,
+    "minidiag_capability": [
+      "event_log_launch_count",
+      "storage_self_test"
+    ],
+    "mode_switcher_type": "menu_switcher",
+    "platform": "brask",
+    "rec_button_dev_switch": true,
+    "smm_store": false,
+    "spi_voltage": "pp3300"
+  },
+  "brya": {
+    "ac_on_can_wake_ap_from_ulp": true,
+    "chrome_ec": true,
+    "cr50_capability": [],
+    "custom_usb_enable_pins": [
+      {
+        "ioex": false,
+        "name": "EN_PP5000_USBA_R"
+      }
+    ],
+    "dark_resume_capable": true,
+    "delay_reboot_to_ping": 120,
+    "ec_capability": [
+      "battery",
+      "cbi",
+      "charging",
+      "keyboard",
+      "lid",
+      "usb",
+      "x86"
+    ],
+    "ec_efs2": true,
+    "firmware_screen": 30,
+    "hold_pwr_button_nopowerd_shutdown": 14,
+    "hold_pwr_button_poweron": 3,
+    "max_charging_power": 60.0,
+    "minidiag_capability": [
+      "event_log_launch_count",
+      "storage_self_test"
+    ],
+    "mode_switcher_type": "menu_switcher",
+    "models": {
+      "banshee": {
+        "custom_usb_enable_pins": [],
+        "usb_a_port_count": 0
+      },
+      "vell": {
+        "custom_usb_enable_pins": [],
+        "usb_a_port_count": 0
+      }
+    },
+    "platform": "brya",
+    "smm_store": false,
+    "spi_voltage": "pp3300"
+  },
+  "caroline": {
+    "cr50_capability": [],
+    "ec_capability": [
+      "battery",
+      "charging",
+      "doubleboot",
+      "keyboard",
+      "lid",
+      "usbpd_uart",
+      "x86"
+    ],
+    "minidiag_capability": [
+      "cbmem_preserved_by_ap_reset",
+      "event_log_launch_count",
+      "storage_self_test"
+    ],
+    "parent": "glados",
+    "platform": "caroline"
+  },
+  "cave": {
+    "cr50_capability": [],
+    "ec_capability": [
+      "battery",
+      "charging",
+      "doubleboot",
+      "keyboard",
+      "lid",
+      "usbpd_uart",
+      "x86"
+    ],
+    "minidiag_capability": [
+      "cbmem_preserved_by_ap_reset",
+      "event_log_launch_count",
+      "storage_self_test"
+    ],
+    "parent": "glados",
+    "platform": "cave"
+  },
+  "chell": {
+    "cr50_capability": [],
+    "ec_capability": [
+      "battery",
+      "charging",
+      "doubleboot",
+      "keyboard",
+      "lid",
+      "usbpd_uart",
+      "x86"
+    ],
+    "minidiag_capability": [
+      "cbmem_preserved_by_ap_reset",
+      "event_log_launch_count",
+      "storage_self_test"
+    ],
+    "parent": "glados",
+    "platform": "chell"
+  },
+  "cherry": {
+    "chrome_ec": true,
+    "cr50_capability": [],
+    "custom_usb_enable_pins": [
+      {
+        "ioex": false,
+        "name": "EN_PP5000_USB_A0_VBUS_X"
+      }
+    ],
+    "ec_capability": [
+      "arm",
+      "battery",
+      "cbi",
+      "charging",
+      "keyboard",
+      "lid",
+      "usb"
+    ],
+    "ec_efs2": true,
+    "ec_reboot_to_g3_delay": 10,
+    "firmware_screen": 20,
+    "minidiag_capability": [
+      "cbmem_preserved_by_ap_reset",
+      "event_log_launch_count",
+      "storage_self_test"
+    ],
+    "mode_switcher_type": "menu_switcher",
+    "models": {
+      "tomato": {
+        "minios_enabled": false
+      }
+    },
+    "platform": "cherry",
+    "usbc_voltage_on_shutdown_and_full_batt": 9
+  },
+  "cherry64": {
+    "cr50_capability": [],
+    "ec_capability": [
+      "arm",
+      "battery",
+      "cbi",
+      "charging",
+      "keyboard",
+      "lid",
+      "usb"
+    ],
+    "minidiag_capability": [
+      "cbmem_preserved_by_ap_reset",
+      "event_log_launch_count",
+      "storage_self_test"
+    ],
+    "parent": "cherry",
+    "platform": "cherry64"
+  },
+  "constitution": {
+    "chrome_ec": true,
+    "cr50_capability": [],
+    "custom_usb_enable_pins": [
+      {
+        "ioex": false,
+        "name": "EN_PP5000_USBA"
+      }
+    ],
+    "dark_resume_capable": true,
+    "ec_capability": [
+      "cbi",
+      "usb",
+      "x86"
+    ],
+    "firmware_screen": 30,
+    "has_keyboard": false,
+    "has_lid": false,
+    "hibernate": false,
+    "hold_pwr_button_nopowerd_shutdown": 14,
+    "hold_pwr_button_poweron": 3,
+    "keypress_delay": 20,
+    "max_charging_power": 60.0,
+    "minidiag_capability": [
+      "event_log_launch_count",
+      "storage_self_test"
+    ],
+    "mode_switcher_type": "menu_switcher",
+    "platform": "constitution",
+    "rec_button_dev_switch": true,
+    "smm_store": false,
+    "spi_voltage": "pp3300"
+  },
+  "coral": {
+    "cr50_capability": [],
+    "custom_max_tpm_init_us": 180000,
+    "ec_capability": [
+      "battery",
+      "charging",
+      "keyboard",
+      "lid",
+      "smart_usb_charge",
+      "usb",
+      "x86"
+    ],
+    "minidiag_capability": [
+      "cbmem_preserved_by_ap_reset",
+      "event_log_launch_count",
+      "storage_self_test"
+    ],
+    "no_broken_screen_in_dev": true,
+    "parent": "reef",
+    "platform": "coral",
+    "rec_invalid_screen": 5,
+    "suspend_cbmem": false
+  },
+  "corsola": {
+    "chrome_ec": true,
+    "cr50_capability": [],
+    "custom_usb_enable_pins": [
+      {
+        "ioex": false,
+        "name": "en_pp5000_usb_a0_vbus"
+      }
+    ],
+    "ec_capability": [
+      "arm",
+      "battery",
+      "cbi",
+      "charging",
+      "keyboard",
+      "lid",
+      "usb"
+    ],
+    "ec_efs2": true,
+    "ec_reboot_to_g3_delay": 10,
+    "firmware_screen": 20,
+    "fw_update_build": "corsola-release/R109-15190.0.0",
+    "minidiag_capability": [
+      "cbmem_preserved_by_ap_reset",
+      "event_log_launch_count",
+      "event_log_test_report",
+      "storage_self_test"
+    ],
+    "mode_switcher_type": "menu_switcher",
+    "models": {
+      "voltorb": {
+        "usbc_voltage_on_shutdown_and_full_batt": 15
+      }
+    },
+    "platform": "corsola",
+    "usbc_voltage_on_shutdown_and_full_batt": 9
+  },
+  "dedede": {
+    "ac_on_can_wake_ap_from_ulp": true,
+    "chrome_ec": true,
+    "cr50_capability": [],
+    "custom_max_tpm_init_us": 140000,
+    "custom_usb_enable_pins": [
+      {
+        "ioex": false,
+        "name": "EN_USB_A0_VBUS"
+      },
+      {
+        "ioex": false,
+        "name": "EN_USB_A1_VBUS"
+      }
+    ],
+    "dark_resume_capable": true,
+    "delay_reboot_to_ping": 120,
+    "ec_capability": [
+      "battery",
+      "cbi",
+      "charging",
+      "keyboard",
+      "lid",
+      "smart_usb_charge",
+      "usb",
+      "x86"
+    ],
+    "ec_efs2": true,
+    "firmware_screen": 30,
+    "gsc_off_in_ulp": true,
+    "hold_pwr_button_nopowerd_shutdown": 14,
+    "max_charging_power": 45.0,
+    "minidiag_capability": [],
+    "minios_enabled": false,
+    "mode_switcher_type": "menu_switcher",
+    "models": {
+      "beetley": {
+        "custom_usb_enable_pins": [
+          {
+            "ioex": false,
+            "name": "EN_USB_A0_VBUS"
+          },
+          {
+            "ioex": false,
+            "name": "EN_PP5000_U"
+          }
+        ]
+      },
+      "blipper": {
+        "custom_usb_enable_pins": [
+          {
+            "ioex": false,
+            "name": "EN_USB_A0_VBUS"
+          },
+          {
+            "ioex": false,
+            "name": "EN_PP5000_U"
+          }
+        ]
+      },
+      "bookem": {
+        "custom_usb_enable_pins": [
+          {
+            "ioex": false,
+            "name": "EN_USB_A0_VBUS"
+          },
+          {
+            "ioex": false,
+            "name": "EN_PP5000_U"
+          }
+        ]
+      },
+      "boten": {
+        "custom_usb_enable_pins": [
+          {
+            "ioex": false,
+            "name": "EN_USB_A0_VBUS"
+          },
+          {
+            "ioex": false,
+            "name": "EN_PP5000_U"
+          }
+        ]
+      },
+      "boxy": {
+        "custom_usb_enable_pins": [
+          {
+            "ioex": false,
+            "name": "EN_USB_A0_VBUS"
+          },
+          {
+            "ioex": false,
+            "name": "EN_USB_A1_VBUS"
+          }
+        ],
+        "ec_capability": [
+          "cbi",
+          "usb",
+          "x86"
+        ],
+        "has_keyboard": false,
+        "has_lid": false,
+        "hibernate": false,
+        "hold_pwr_button_poweron": 3,
+        "rec_button_dev_switch": true
+      },
+      "bugzzy": {
+        "custom_usb_enable_pins": [
+          {
+            "ioex": false,
+            "name": "EN_USB_A0_VBUS"
+          }
+        ]
+      },
+      "cret": {
+        "custom_usb_enable_pins": [
+          {
+            "ioex": false,
+            "name": "EN_USB_A0_VBUS"
+          }
+        ]
+      },
+      "cret360": {
+        "custom_usb_enable_pins": [
+          {
+            "ioex": false,
+            "name": "EN_USB_A0_VBUS"
+          }
+        ]
+      },
+      "dibbi": {
+        "custom_usb_enable_pins": [
+          {
+            "ioex": false,
+            "name": "EN_USB_A0_VBUS"
+          },
+          {
+            "ioex": false,
+            "name": "EN_USB_A1_VBUS"
+          },
+          {
+            "ioex": false,
+            "name": "EN_USB_A2_VBUS"
+          },
+          {
+            "ioex": false,
+            "name": "EN_USB_A3_VBUS"
+          }
+        ],
+        "ec_capability": [
+          "cbi",
+          "usb",
+          "x86"
+        ],
+        "has_keyboard": false,
+        "has_lid": false,
+        "hibernate": false,
+        "hold_pwr_button_poweron": 3,
+        "rec_button_dev_switch": true
+      },
+      "drawcia": {
+        "custom_usb_enable_pins": [
+          {
+            "ioex": false,
+            "name": "EN_USB_A_5V"
+          }
+        ]
+      },
+      "drawlat": {
+        "custom_usb_enable_pins": [
+          {
+            "ioex": false,
+            "name": "EN_USB_A_5V"
+          }
+        ]
+      },
+      "drawman": {
+        "custom_usb_enable_pins": [
+          {
+            "ioex": false,
+            "name": "EN_USB_A_5V"
+          }
+        ]
+      },
+      "drawper": {
+        "custom_usb_enable_pins": [
+          {
+            "ioex": false,
+            "name": "EN_USB_A_5V"
+          }
+        ]
+      },
+      "galith": {
+        "custom_usb_enable_pins": [
+          {
+            "ioex": false,
+            "name": "EN_USB_A0_VBUS"
+          }
+        ]
+      },
+      "galith360": {
+        "custom_usb_enable_pins": [
+          {
+            "ioex": false,
+            "name": "EN_USB_A0_VBUS"
+          }
+        ]
+      },
+      "gallop": {
+        "custom_usb_enable_pins": [
+          {
+            "ioex": false,
+            "name": "EN_USB_A0_VBUS"
+          },
+          {
+            "ioex": false,
+            "name": "EN_PP5000_U"
+          }
+        ]
+      },
+      "galnat": {
+        "custom_usb_enable_pins": [
+          {
+            "ioex": false,
+            "name": "EN_USB_A0_VBUS"
+          }
+        ]
+      },
+      "galnat360": {
+        "custom_usb_enable_pins": [
+          {
+            "ioex": false,
+            "name": "EN_USB_A0_VBUS"
+          }
+        ]
+      },
+      "galtic": {
+        "custom_usb_enable_pins": [
+          {
+            "ioex": false,
+            "name": "EN_USB_A0_VBUS"
+          },
+          {
+            "ioex": false,
+            "name": "EN_PP5000_U"
+          }
+        ]
+      },
+      "galtic360": {
+        "custom_usb_enable_pins": [
+          {
+            "ioex": false,
+            "name": "EN_USB_A0_VBUS"
+          }
+        ]
+      },
+      "kracko": {
+        "custom_usb_enable_pins": [
+          {
+            "ioex": false,
+            "name": "EN_USB_A_5V"
+          }
+        ]
+      },
+      "kracko360": {
+        "custom_usb_enable_pins": [
+          {
+            "ioex": false,
+            "name": "EN_USB_A_5V"
+          }
+        ],
+        "delay_reboot_to_ping": 80
+      },
+      "landia": {
+        "custom_usb_enable_pins": [
+          {
+            "ioex": false,
+            "name": "EN_USB_A_5V"
+          }
+        ]
+      },
+      "landrid": {
+        "custom_usb_enable_pins": [
+          {
+            "ioex": false,
+            "name": "EN_USB_A_5V"
+          }
+        ]
+      },
+      "lantis": {
+        "custom_usb_enable_pins": [
+          {
+            "ioex": false,
+            "name": "EN_USB_A_5V"
+          }
+        ]
+      },
+      "madoo": {
+        "custom_usb_enable_pins": [
+          {
+            "ioex": false,
+            "name": "EN_PP5000_U"
+          }
+        ],
+        "usb_a_port_count": 0
+      },
+      "pasara": {
+        "custom_usb_enable_pins": [
+          {
+            "ioex": false,
+            "name": "EN_USB_A0_VBUS"
+          }
+        ]
+      },
+      "peezer": {
+        "custom_usb_enable_pins": [
+          {
+            "ioex": false,
+            "name": "EN_USB_A0_VBUS"
+          }
+        ]
+      },
+      "pirette": {
+        "custom_usb_enable_pins": [
+          {
+            "ioex": false,
+            "name": "EN_USB_A0_VBUS"
+          }
+        ]
+      },
+      "pirika": {
+        "custom_usb_enable_pins": [
+          {
+            "ioex": false,
+            "name": "EN_USB_A0_VBUS"
+          }
+        ]
+      },
+      "sasuke": {
+        "custom_usb_enable_pins": [
+          {
+            "ioex": false,
+            "name": "EN_USB_A0_VBUS"
+          }
+        ]
+      },
+      "sasukette": {
+        "custom_usb_enable_pins": [
+          {
+            "ioex": false,
+            "name": "EN_USB_A0_VBUS"
+          }
+        ]
+      },
+      "storo": {
+        "custom_usb_enable_pins": [
+          {
+            "ioex": false,
+            "name": "EN_USB_A0_VBUS"
+          }
+        ]
+      },
+      "storo360": {
+        "custom_usb_enable_pins": [
+          {
+            "ioex": false,
+            "name": "EN_USB_A0_VBUS"
+          }
+        ]
+      },
+      "taranza": {
+        "custom_usb_enable_pins": [
+          {
+            "ioex": false,
+            "name": "EN_USB_A0_VBUS"
+          },
+          {
+            "ioex": false,
+            "name": "EN_USB_A1_VBUS"
+          },
+          {
+            "ioex": false,
+            "name": "EN_USB_A2_VBUS"
+          },
+          {
+            "ioex": false,
+            "name": "EN_USB_A3_VBUS"
+          },
+          {
+            "ioex": false,
+            "name": "EN_USB_A4_VBUS"
+          }
+        ],
+        "ec_capability": [
+          "cbi",
+          "usb",
+          "x86"
+        ],
+        "has_keyboard": false,
+        "has_lid": false,
+        "hibernate": false,
+        "hold_pwr_button_poweron": 3,
+        "rec_button_dev_switch": true
+      }
+    },
+    "platform": "dedede",
+    "smm_store": false,
+    "spi_voltage": "pp3300",
+    "usbc_input_voltage_limit": 15
+  },
+  "draco": {
+    "ac_on_can_wake_ap_from_ulp": true,
+    "chrome_ec": true,
+    "cr50_capability": [],
+    "custom_usb_enable_pins": [
+      {
+        "ioex": false,
+        "name": "EN_PP5000_USBA_R"
+      }
+    ],
+    "dark_resume_capable": true,
+    "ec_capability": [
+      "battery",
+      "cbi",
+      "charging",
+      "keyboard",
+      "lid",
+      "usb",
+      "x86"
+    ],
+    "hold_pwr_button_nopowerd_shutdown": 14,
+    "hold_pwr_button_poweron": 3,
+    "max_charging_power": 60.0,
+    "minidiag_capability": [
+      "cbmem_preserved_by_ap_reset",
+      "event_log_launch_count",
+      "storage_self_test"
+    ],
+    "mode_switcher_type": "menu_switcher",
+    "platform": "draco",
+    "smm_store": false,
+    "spi_voltage": "pp3300"
+  },
+  "drallion": {
+    "ap_access_ec_flash": false,
+    "ap_up_after_cr50_reboot": false,
+    "chrome_ec": false,
+    "cr50_capability": [],
+    "delay_reboot_to_ping": 70,
+    "ec_capability": [],
+    "ec_forwards_short_pp_press": true,
+    "firmware_screen": 15,
+    "has_diagnostics_image": true,
+    "has_keyboard": false,
+    "has_lid": true,
+    "hold_pwr_button_poweroff": 10,
+    "hold_pwr_button_poweron": 1.2,
+    "minidiag_capability": [
+      "cbmem_preserved_by_ap_reset",
+      "event_log_launch_count",
+      "storage_self_test"
+    ],
+    "minidiag_enabled": false,
+    "minios_enabled": false,
+    "mode_switcher_type": "keyboard_dev_switcher",
+    "platform": "drallion",
+    "power_button_dev_switch": true,
+    "rec_force_mrc": false,
+    "serial_number_length": 7,
+    "smm_store": false,
+    "spi_voltage": "pp3300",
+    "usb_a_port_count": -1
+  },
+  "elm": {
+    "cr50_capability": [],
+    "ec_capability": [
+      "arm",
+      "battery",
+      "charging",
+      "keyboard",
+      "lid"
+    ],
+    "ec_ro_vbus_bug": true,
+    "max_charging_power": 45.0,
+    "minidiag_capability": [
+      "cbmem_preserved_by_ap_reset",
+      "event_log_launch_count",
+      "storage_self_test"
+    ],
+    "parent": "oak",
+    "platform": "elm",
+    "usb_a_port_count": -1
+  },
+  "endeavour": {
+    "cr50_capability": [],
+    "ec_capability": [
+      "x86"
+    ],
+    "minidiag_capability": [
+      "cbmem_preserved_by_ap_reset",
+      "event_log_launch_count",
+      "storage_self_test"
+    ],
+    "parent": "fizz",
+    "platform": "endeavour"
+  },
+  "eve": {
+    "chrome_ec": true,
+    "cr50_capability": [
+      "rdd_leakage",
+      "wp_on_in_g3"
+    ],
+    "dark_resume_capable": true,
+    "delay_reboot_to_ping": 60,
+    "dut_can_source_power_in_suspend": false,
+    "ec_capability": [
+      "battery",
+      "charging",
+      "doubleboot",
+      "keyboard",
+      "lid",
+      "x86"
+    ],
+    "ec_ro_vbus_bug": true,
+    "firmware_screen": 15,
+    "max_charging_power": 45.0,
+    "minidiag_capability": [
+      "cbmem_preserved_by_ap_reset",
+      "event_log_launch_count",
+      "storage_self_test"
+    ],
+    "minidiag_enabled": false,
+    "minios_enabled": false,
+    "mode_switcher_type": "keyboard_dev_switcher",
+    "models": {
+      "eve": {
+        "usb_a_port_count": 0
+      }
+    },
+    "no_broken_screen_in_dev": true,
+    "platform": "eve",
+    "rec_invalid_screen": 5,
+    "servo_prog_state_delay": 10,
+    "smm_store": false,
+    "spi_voltage": "pp3300",
+    "usb_a_port_count": -1
+  },
+  "fizz": {
+    "chrome_ec": true,
+    "cr50_capability": [],
+    "delay_reboot_to_ping": 60,
+    "ec_capability": [
+      "x86"
+    ],
+    "ec_forwards_short_pp_press": true,
+    "firmware_screen": 15,
+    "has_keyboard": false,
+    "has_lid": false,
+    "hibernate": false,
+    "max_charging_power": 100.0,
+    "minidiag_capability": [
+      "cbmem_preserved_by_ap_reset",
+      "event_log_launch_count",
+      "storage_self_test"
+    ],
+    "minidiag_enabled": false,
+    "minios_enabled": false,
+    "mode_switcher_type": "keyboard_dev_switcher",
+    "models": {
+      "jax": {
+        "delay_reboot_to_ping": 80
+      },
+      "kench": {
+        "delay_reboot_to_ping": 80
+      },
+      "sion": {
+        "delay_reboot_to_ping": 140
+      },
+      "teemo": {
+        "delay_reboot_to_ping": 130
+      }
+    },
+    "no_broken_screen_in_dev": true,
+    "platform": "fizz",
+    "rec_button_dev_switch": true,
+    "smm_store": false,
+    "spi_voltage": "pp3300",
+    "usb_a_port_count": -1
+  },
+  "geralt": {
+    "chrome_ec": true,
+    "cr50_capability": [],
+    "ec_capability": [
+      "arm",
+      "battery",
+      "cbi",
+      "charging",
+      "keyboard",
+      "lid",
+      "usb"
+    ],
+    "ec_efs2": true,
+    "firmware_screen": 20,
+    "is_detachable": true,
+    "minidiag_capability": [
+      "event_log_launch_count",
+      "event_log_test_report",
+      "storage_self_test"
+    ],
+    "mode_switcher_type": "menu_switcher",
+    "platform": "geralt",
+    "usbc_voltage_on_shutdown_and_full_batt": 9
+  },
+  "glados": {
+    "chrome_ec": true,
+    "chrome_usbpd": true,
+    "cr50_capability": [],
+    "dark_resume_capable": true,
+    "ec_capability": [
+      "battery",
+      "charging",
+      "doubleboot",
+      "keyboard",
+      "lid",
+      "usbpd_uart",
+      "x86"
+    ],
+    "ec_ro_vbus_bug": true,
+    "minidiag_capability": [
+      "cbmem_preserved_by_ap_reset",
+      "event_log_launch_count",
+      "storage_self_test"
+    ],
+    "minidiag_enabled": false,
+    "minios_enabled": false,
+    "mode_switcher_type": "keyboard_dev_switcher",
+    "no_broken_screen_in_dev": true,
+    "platform": "glados",
+    "servo_prog_state_delay": 10,
+    "smm_store": false,
+    "spi_voltage": "pp3300",
+    "usb_a_port_count": -1
+  },
+  "gru": {
+    "chrome_ec": true,
+    "cr50_capability": [],
+    "ec_boot_to_console": 0.2,
+    "ec_capability": [
+      "arm",
+      "battery",
+      "charging",
+      "keyboard",
+      "lid"
+    ],
+    "ec_ro_vbus_bug": true,
+    "firmware_screen": 7,
+    "minidiag_capability": [
+      "cbmem_preserved_by_ap_reset",
+      "event_log_launch_count",
+      "storage_self_test"
+    ],
+    "minidiag_enabled": false,
+    "minios_enabled": false,
+    "mode_switcher_type": "keyboard_dev_switcher",
+    "no_broken_screen_in_dev": true,
+    "platform": "gru",
+    "software_sync_update": 6,
+    "usb_a_port_count": -1,
+    "usb_hid_wake_enabled": false
+  },
+  "grunt": {
+    "chrome_ec": true,
+    "cr50_capability": [],
+    "ec_capability": [
+      "battery",
+      "charging",
+      "keyboard",
+      "lid",
+      "x86"
+    ],
+    "gsc_can_wake_ec_with_reset": false,
+    "max_charging_power": 45.0,
+    "minidiag_capability": [
+      "cbmem_preserved_by_ap_reset",
+      "event_log_launch_count",
+      "storage_self_test"
+    ],
+    "minidiag_enabled": false,
+    "minios_enabled": false,
+    "mode_switcher_type": "keyboard_dev_switcher",
+    "models": {
+      "careena": {
+        "delay_reboot_to_ping": 80
+      },
+      "liara": {
+        "hold_pwr_button_poweroff": 6,
+        "usbc_voltage_on_shutdown_and_full_batt": 5
+      }
+    },
+    "platform": "grunt",
+    "rec_invalid_screen": 5,
+    "servo_prog_state_delay": 10,
+    "smm_store": false,
+    "usb_a_port_count": -1
+  },
+  "guybrush": {
+    "ac_on_can_wake_ap_from_ulp": true,
+    "chrome_ec": true,
+    "cr50_capability": [
+      "deep_sleep_in_s0i3"
+    ],
+    "custom_usb_enable_pins": [
+      {
+        "ioex": true,
+        "name": "EN_PP5000_USB_A0_VBUS"
+      },
+      {
+        "ioex": true,
+        "name": "EN_PP5000_USB_A1_VBUS_DB"
+      }
+    ],
+    "dark_resume_capable": true,
+    "delay_powerinfo_stable": 5,
+    "ec_capability": [
+      "battery",
+      "cbi",
+      "charging",
+      "keyboard",
+      "lid",
+      "smart_usb_charge",
+      "usb",
+      "x86"
+    ],
+    "firmware_screen": 15,
+    "hold_pwr_button_poweroff": 4,
+    "max_charging_power": 100.0,
+    "minidiag_capability": [
+      "event_log_launch_count",
+      "storage_self_test"
+    ],
+    "mode_switcher_type": "menu_switcher",
+    "platform": "guybrush",
+    "s3_override_to_unsupported": true,
+    "servo_prog_state_delay": 1.0,
+    "smm_store": false
+  },
+  "hana": {
+    "cr50_capability": [],
+    "ec_capability": [
+      "arm",
+      "battery",
+      "charging",
+      "keyboard",
+      "lid"
+    ],
+    "minidiag_capability": [
+      "cbmem_preserved_by_ap_reset",
+      "event_log_launch_count",
+      "storage_self_test"
+    ],
+    "parent": "oak",
+    "platform": "hana"
+  },
+  "hatch": {
+    "ac_on_can_wake_ap_from_ulp": true,
+    "chrome_ec": true,
+    "cr50_capability": [
+      "ec_hibernate_breaks_rdd"
+    ],
+    "custom_max_tpm_init_us": 230000,
+    "custom_usb_enable_pins": [
+      {
+        "ioex": false,
+        "name": "EN_USB_A_5V"
+      }
+    ],
+    "dark_resume_capable": true,
+    "ec_capability": [
+      "battery",
+      "cbi",
+      "charging",
+      "keyboard",
+      "lid",
+      "smart_usb_charge",
+      "usb",
+      "x86"
+    ],
+    "firmware_screen": 15,
+    "minidiag_capability": [
+      "cbmem_preserved_by_ap_reset",
+      "event_log_launch_count",
+      "storage_self_test"
+    ],
+    "minidiag_enabled": false,
+    "minios_enabled": false,
+    "mode_switcher_type": "keyboard_dev_switcher",
+    "models": {
+      "dratini": {
+        "usbc_voltage_on_shutdown_and_full_batt": 5
+      },
+      "helios": {
+        "custom_usb_enable_pins": [],
+        "usb_a_port_count": 0
+      },
+      "jinlon": {
+        "usbc_voltage_on_shutdown_and_full_batt": 5
+      },
+      "kindred": {
+        "delay_reboot_to_ping": 120
+      },
+      "kled": {
+        "usbc_input_voltage_limit": 15
+      },
+      "kohaku": {
+        "custom_usb_enable_pins": [],
+        "usb_a_port_count": 0
+      },
+      "mushu": {
+        "max_charging_power": 100.0
+      },
+      "nightfury": {
+        "custom_usb_enable_pins": [],
+        "usb_a_port_count": 0
+      }
+    },
+    "platform": "hatch",
+    "smm_store": false,
+    "spi_voltage": "pp3300"
+  },
+  "jacuzzi": {
+    "charger_profile_override": true,
+    "chrome_ec": true,
+    "cr50_capability": [],
+    "ec_boot_to_console": 2,
+    "ec_capability": [
+      "arm",
+      "battery",
+      "charging",
+      "keyboard",
+      "lid"
+    ],
+    "ec_reboot_to_g3_delay": 10,
+    "has_keyboard": true,
+    "is_detachable": false,
+    "minidiag_capability": [
+      "cbmem_preserved_by_ap_reset",
+      "event_log_launch_count",
+      "storage_self_test"
+    ],
+    "mode_switcher_type": "keyboard_dev_switcher",
+    "parent": "kukui",
+    "platform": "jacuzzi",
+    "usb_a_port_count": -1,
+    "usbc_input_voltage_limit": 20
+  },
+  "kalista": {
+    "cr50_capability": [],
+    "delay_reboot_to_ping": 140,
+    "ec_capability": [
+      "x86"
+    ],
+    "minidiag_capability": [
+      "cbmem_preserved_by_ap_reset",
+      "event_log_launch_count",
+      "storage_self_test"
+    ],
+    "parent": "fizz",
+    "platform": "kalista"
+  },
+  "keeby": {
+    "chrome_ec": true,
+    "cr50_capability": [],
+    "custom_usb_enable_pins": [
+      {
+        "ioex": false,
+        "name": "EN_USB_A0_VBUS"
+      },
+      {
+        "ioex": false,
+        "name": "EN_USB_A1_VBUS"
+      }
+    ],
+    "dark_resume_capable": true,
+    "ec_capability": [
+      "battery",
+      "cbi",
+      "charging",
+      "keyboard",
+      "lid",
+      "smart_usb_charge",
+      "usb",
+      "x86"
+    ],
+    "firmware_screen": 15,
+    "hold_pwr_button_nopowerd_shutdown": 14,
+    "max_charging_power": 45.0,
+    "minidiag_capability": [
+      "storage_self_test"
+    ],
+    "minios_enabled": false,
+    "mode_switcher_type": "menu_switcher",
+    "models": {
+      "cappy2": {
+        "custom_usb_enable_pins": [
+          {
+            "ioex": false,
+            "name": "EN_USB_A0_VBUS"
+          }
+        ]
+      },
+      "habokay": {
+        "custom_usb_enable_pins": [
+          {
+            "ioex": false,
+            "name": "EN_USB_A_5V"
+          }
+        ]
+      },
+      "haboki": {
+        "custom_usb_enable_pins": [
+          {
+            "ioex": false,
+            "name": "EN_USB_A_5V"
+          }
+        ]
+      }
+    },
+    "platform": "keeby",
+    "smm_store": false,
+    "spi_voltage": "pp3300",
+    "usbc_input_voltage_limit": 15
+  },
+  "kevin": {
+    "cr50_capability": [],
+    "ec_capability": [
+      "arm",
+      "battery",
+      "charging",
+      "keyboard",
+      "lid"
+    ],
+    "minidiag_capability": [
+      "cbmem_preserved_by_ap_reset",
+      "event_log_launch_count",
+      "storage_self_test"
+    ],
+    "parent": "gru",
+    "platform": "kevin"
+  },
+  "kevin64": {
+    "cr50_capability": [],
+    "ec_capability": [
+      "arm",
+      "battery",
+      "charging",
+      "keyboard",
+      "lid"
+    ],
+    "minidiag_capability": [
+      "cbmem_preserved_by_ap_reset",
+      "event_log_launch_count",
+      "storage_self_test"
+    ],
+    "parent": "kevin",
+    "platform": "kevin64"
+  },
+  "kevin_tpm2": {
+    "cr50_capability": [],
+    "ec_capability": [
+      "arm",
+      "battery",
+      "charging",
+      "keyboard",
+      "lid"
+    ],
+    "minidiag_capability": [
+      "cbmem_preserved_by_ap_reset",
+      "event_log_launch_count",
+      "storage_self_test"
+    ],
+    "parent": "gru",
+    "platform": "kevin_tpm2"
+  },
+  "kukui": {
+    "charger_profile_override": true,
+    "chrome_ec": true,
+    "cr50_capability": [],
+    "delay_reboot_to_ping": 120,
+    "ec_boot_to_console": 2,
+    "ec_boot_to_wp_en": 2,
+    "ec_capability": [
+      "arm",
+      "battery",
+      "charging",
+      "lid"
+    ],
+    "ec_reboot_to_g3_delay": 10,
+    "has_keyboard": false,
+    "hibernate": false,
+    "hold_pwr_button_poweroff": 6,
+    "hold_pwr_button_poweron": 1.2,
+    "is_detachable": true,
+    "keypress_delay": 3,
+    "max_charging_power": 45.0,
+    "minidiag_capability": [
+      "cbmem_preserved_by_ap_reset",
+      "event_log_launch_count",
+      "storage_self_test"
+    ],
+    "minidiag_enabled": false,
+    "minios_enabled": false,
+    "mode_switcher_type": "tablet_detachable_switcher",
+    "models": {
+      "kodama": {
+        "usb_a_port_count": 0
+      },
+      "krane": {
+        "usb_a_port_count": 0
+      }
+    },
+    "platform": "kukui",
+    "usb_a_port_count": -1,
+    "usbc_input_voltage_limit": 12
+  },
+  "kunimitsu": {
+    "chrome_ec": true,
+    "cr50_capability": [],
+    "dark_resume_capable": true,
+    "ec_boot_to_console": 0.2,
+    "ec_capability": [
+      "battery",
+      "charging",
+      "doubleboot",
+      "keyboard",
+      "lid",
+      "usb",
+      "usbpd_uart",
+      "x86"
+    ],
+    "ec_ro_vbus_bug": true,
+    "minidiag_capability": [
+      "cbmem_preserved_by_ap_reset",
+      "event_log_launch_count",
+      "storage_self_test"
+    ],
+    "minidiag_enabled": false,
+    "minios_enabled": false,
+    "mode_switcher_type": "keyboard_dev_switcher",
+    "platform": "kunimitsu",
+    "smm_store": false,
+    "spi_voltage": "pp3300",
+    "usb_a_port_count": -1
+  },
+  "lars": {
+    "cr50_capability": [],
+    "ec_capability": [
+      "battery",
+      "charging",
+      "doubleboot",
+      "keyboard",
+      "lid",
+      "usb",
+      "usbpd_uart",
+      "x86"
+    ],
+    "minidiag_capability": [
+      "cbmem_preserved_by_ap_reset",
+      "event_log_launch_count",
+      "storage_self_test"
+    ],
+    "parent": "kunimitsu",
+    "platform": "lars"
+  },
+  "nami": {
+    "ac_on_can_wake_ap_from_ulp": true,
+    "chrome_ec": true,
+    "cr50_capability": [
+      "rdd_leakage"
+    ],
+    "custom_max_tpm_init_us": 240000,
+    "dark_resume_capable": true,
+    "ec_capability": [
+      "battery",
+      "charging",
+      "keyboard",
+      "lid",
+      "x86"
+    ],
+    "firmware_screen": 15,
+    "gsc_can_wake_ec_with_reset": false,
+    "max_charging_power": 70.0,
+    "minidiag_capability": [
+      "cbmem_preserved_by_ap_reset",
+      "event_log_launch_count",
+      "storage_self_test"
+    ],
+    "minidiag_enabled": false,
+    "minios_enabled": false,
+    "mode_switcher_type": "keyboard_dev_switcher",
+    "platform": "nami",
+    "rec_invalid_screen": 5,
+    "servo_prog_state_delay": 10,
+    "smm_store": false,
+    "spi_voltage": "pp3300",
+    "usb_a_port_count": -1
+  },
+  "nasher": {
+    "cr50_capability": [],
+    "ec_capability": [
+      "battery",
+      "charging",
+      "keyboard",
+      "lid",
+      "smart_usb_charge",
+      "usb",
+      "x86"
+    ],
+    "minidiag_capability": [
+      "cbmem_preserved_by_ap_reset",
+      "event_log_launch_count",
+      "storage_self_test"
+    ],
+    "parent": "reef",
+    "platform": "nasher"
+  },
+  "nautilus": {
+    "chrome_ec": true,
+    "cr50_capability": [],
+    "dark_resume_capable": true,
+    "delay_reboot_to_ping": 40,
+    "ec_capability": [
+      "battery",
+      "charging",
+      "keyboard",
+      "lid",
+      "x86"
+    ],
+    "firmware_screen": 15,
+    "max_charging_power": 45.0,
+    "minidiag_capability": [
+      "cbmem_preserved_by_ap_reset",
+      "event_log_launch_count",
+      "storage_self_test"
+    ],
+    "minidiag_enabled": false,
+    "minios_enabled": false,
+    "mode_switcher_type": "keyboard_dev_switcher",
+    "platform": "nautilus",
+    "servo_prog_state_delay": 10,
+    "smm_store": false,
+    "spi_voltage": "pp3300",
+    "usb_a_port_count": -1
+  },
+  "nissa": {
+    "ac_on_can_wake_ap_from_ulp": true,
+    "chrome_ec": true,
+    "cr50_capability": [],
+    "custom_usb_enable_pins": [
+      {
+        "ioex": false,
+        "name": "en_usb_a0_vbus"
+      }
+    ],
+    "dark_resume_capable": true,
+    "ec_capability": [
+      "battery",
+      "cbi",
+      "charging",
+      "keyboard",
+      "lid",
+      "usb",
+      "x86"
+    ],
+    "ec_efs2": true,
+    "firmware_screen": 30,
+    "fw_update_build": "nissa-release/R109-15213.0.0",
+    "hold_pwr_button_nopowerd_shutdown": 14,
+    "hold_pwr_button_poweron": 1.2,
+    "max_charging_power": 45.0,
+    "minidiag_capability": [
+      "event_log_launch_count",
+      "storage_self_test"
+    ],
+    "mode_switcher_type": "menu_switcher",
+    "platform": "nissa",
+    "smm_store": false,
+    "spi_voltage": "pp3300",
+    "usbc_input_voltage_limit": 15
+  },
+  "nocturne": {
+    "chrome_ec": true,
+    "cr50_capability": [
+      "rdd_off_in_g3",
+      "wp_on_in_g3"
+    ],
+    "delay_reboot_to_ping": 120,
+    "ec_capability": [
+      "battery",
+      "charging",
+      "lid",
+      "x86"
+    ],
+    "has_keyboard": false,
+    "has_lid": true,
+    "is_detachable": true,
+    "keypress_delay": 5,
+    "max_charging_power": 45.0,
+    "minidiag_capability": [
+      "cbmem_preserved_by_ap_reset",
+      "event_log_launch_count",
+      "storage_self_test"
+    ],
+    "minidiag_enabled": false,
+    "minios_enabled": false,
+    "mode_switcher_type": "tablet_detachable_switcher",
+    "platform": "nocturne",
+    "usb_a_port_count": -1,
+    "usb_image_boot_timeout": 120,
+    "usbc_voltage_on_shutdown_and_full_batt": 9
+  },
+  "oak": {
+    "chrome_ec": true,
+    "cr50_capability": [],
+    "ec_capability": [
+      "arm",
+      "battery",
+      "charging",
+      "keyboard",
+      "lid"
+    ],
+    "ec_has_powerbtn_cmd": false,
+    "minidiag_capability": [
+      "cbmem_preserved_by_ap_reset",
+      "event_log_launch_count",
+      "storage_self_test"
+    ],
+    "minidiag_enabled": false,
+    "minios_enabled": false,
+    "mode_switcher_type": "keyboard_dev_switcher",
+    "no_broken_screen_in_dev": true,
+    "platform": "oak",
+    "usb_a_port_count": -1
+  },
+  "octopus": {
+    "ac_on_can_wake_ap_from_ulp": true,
+    "chrome_ec": true,
+    "cr50_capability": [
+      "rdd_leakage"
+    ],
+    "custom_max_tpm_init_us": 240000,
+    "custom_usb_enable_pins": [
+      {
+        "ioex": false,
+        "name": "EN_USB_A0_5V"
+      },
+      {
+        "ioex": false,
+        "name": "EN_USB_A1_5V"
+      }
+    ],
+    "delay_reboot_to_ping": 120,
+    "ec_boot_to_console": 0.3,
+    "ec_capability": [
+      "battery",
+      "cbi",
+      "charging",
+      "keyboard",
+      "lid",
+      "smart_usb_charge",
+      "usb",
+      "x86"
+    ],
+    "firmware_screen": 30,
+    "max_charging_power": 45.0,
+    "minidiag_capability": [
+      "cbmem_preserved_by_ap_reset",
+      "event_log_launch_count",
+      "storage_self_test"
+    ],
+    "minidiag_enabled": false,
+    "minios_enabled": false,
+    "mode_switcher_type": "keyboard_dev_switcher",
+    "models": {
+      "ampton": {
+        "usbc_voltage_on_shutdown_and_full_batt": 5
+      },
+      "bloog": {
+        "delay_reboot_to_ping": 60
+      },
+      "bluebird": {
+        "custom_usb_enable_pins": [
+          {
+            "ioex": false,
+            "name": "EN_USB_A0_5V"
+          }
+        ],
+        "usbc_input_voltage_limit": 15
+      },
+      "bobba360": {
+        "usbc_input_voltage_limit": 15
+      },
+      "casta": {
+        "custom_usb_enable_pins": [
+          {
+            "ioex": false,
+            "name": "EN_USB_A0_5V"
+          }
+        ],
+        "usbc_input_voltage_limit": 15
+      }
+    },
+    "platform": "octopus",
+    "rec_invalid_screen": 5,
+    "smm_store": false,
+    "spi_voltage": "pp1800",
+    "usb_plug": 45
+  },
+  "poppy": {
+    "chrome_ec": true,
+    "cr50_capability": [],
+    "ec_capability": [
+      "battery",
+      "charging",
+      "lid",
+      "x86"
+    ],
+    "firmware_screen": 15,
+    "has_keyboard": false,
+    "has_lid": true,
+    "is_detachable": true,
+    "keypress_delay": 1,
+    "max_charging_power": 45.0,
+    "minidiag_capability": [
+      "cbmem_preserved_by_ap_reset",
+      "event_log_launch_count",
+      "storage_self_test"
+    ],
+    "minidiag_enabled": false,
+    "minios_enabled": false,
+    "mode_switcher_type": "tablet_detachable_switcher",
+    "platform": "poppy",
+    "smm_store": false,
+    "usb_a_port_count": -1,
+    "usb_image_boot_timeout": 60
+  },
+  "puff": {
+    "chrome_ec": true,
+    "cr50_capability": [],
+    "custom_usb_enable_pins": [
+      {
+        "ioex": false,
+        "name": "EN_PP5000_USB_VBUS"
+      }
+    ],
+    "delay_powerinfo_stable": 6,
+    "delay_reboot_to_ping": 60,
+    "ec_capability": [
+      "cbi",
+      "usb",
+      "x86"
+    ],
+    "ec_efs2": true,
+    "ec_forwards_short_pp_press": true,
+    "firmware_screen": 15,
+    "has_keyboard": false,
+    "has_lid": false,
+    "hibernate": false,
+    "max_charging_power": 100.0,
+    "minidiag_capability": [
+      "cbmem_preserved_by_ap_reset",
+      "event_log_launch_count",
+      "storage_self_test"
+    ],
+    "minidiag_enabled": false,
+    "minios_enabled": false,
+    "mode_switcher_type": "menu_switcher",
+    "platform": "puff",
+    "rec_button_dev_switch": true,
+    "s0ix_override_to_unsupported": true,
+    "s3_override_to_unsupported": true,
+    "smm_store": false,
+    "spi_voltage": "pp3300"
+  },
+  "pyro": {
+    "cr50_capability": [],
+    "ec_capability": [
+      "battery",
+      "charging",
+      "keyboard",
+      "lid",
+      "smart_usb_charge",
+      "usb",
+      "x86"
+    ],
+    "minidiag_capability": [
+      "cbmem_preserved_by_ap_reset",
+      "event_log_launch_count",
+      "storage_self_test"
+    ],
+    "parent": "reef",
+    "platform": "pyro"
+  },
+  "rammus": {
+    "chrome_ec": true,
+    "cr50_capability": [],
+    "dark_resume_capable": true,
+    "ec_capability": [
+      "battery",
+      "charging",
+      "keyboard",
+      "lid",
+      "x86"
+    ],
+    "firmware_screen": 15,
+    "max_charging_power": 45.0,
+    "minidiag_capability": [
+      "cbmem_preserved_by_ap_reset",
+      "event_log_launch_count",
+      "storage_self_test"
+    ],
+    "minidiag_enabled": false,
+    "minios_enabled": false,
+    "mode_switcher_type": "keyboard_dev_switcher",
+    "platform": "rammus",
+    "servo_prog_state_delay": 10,
+    "smm_store": false,
+    "spi_voltage": "pp3300",
+    "usb_a_port_count": -1
+  },
+  "reef": {
+    "chrome_ec": true,
+    "cr50_capability": [],
+    "delay_reboot_to_ping": 80,
+    "ec_boot_to_console": 0.3,
+    "ec_capability": [
+      "battery",
+      "charging",
+      "keyboard",
+      "lid",
+      "smart_usb_charge",
+      "usb",
+      "x86"
+    ],
+    "ec_ro_vbus_bug": true,
+    "firmware_screen": 25,
+    "max_charging_power": 45.0,
+    "minidiag_capability": [
+      "cbmem_preserved_by_ap_reset",
+      "event_log_launch_count",
+      "storage_self_test"
+    ],
+    "minidiag_enabled": false,
+    "minios_enabled": false,
+    "mode_switcher_type": "keyboard_dev_switcher",
+    "no_broken_screen_in_dev": true,
+    "platform": "reef",
+    "smm_store": false,
+    "spi_voltage": "pp1800",
+    "usb_a_port_count": -1,
+    "usb_plug": 45
+  },
+  "reef_uni": {
+    "cr50_capability": [],
+    "ec_capability": [
+      "battery",
+      "charging",
+      "keyboard",
+      "lid",
+      "smart_usb_charge",
+      "usb",
+      "x86"
+    ],
+    "minidiag_capability": [
+      "cbmem_preserved_by_ap_reset",
+      "event_log_launch_count",
+      "storage_self_test"
+    ],
+    "parent": "reef",
+    "platform": "reef_uni"
+  },
+  "rex": {
+    "ac_on_can_wake_ap_from_ulp": true,
+    "chrome_ec": true,
+    "cr50_capability": [],
+    "custom_usb_enable_pins": [
+      {
+        "ioex": false,
+        "name": "en_pp5000_usba_r"
+      }
+    ],
+    "dark_resume_capable": true,
+    "delay_reboot_to_ping": 90,
+    "ec_capability": [
+      "battery",
+      "cbi",
+      "charging",
+      "keyboard",
+      "lid",
+      "usb",
+      "x86"
+    ],
+    "firmware_screen": 20,
+    "hold_pwr_button_nopowerd_shutdown": 14,
+    "max_charging_power": 60.0,
+    "minidiag_capability": [
+      "cbmem_preserved_by_ap_reset",
+      "event_log_launch_count",
+      "storage_self_test"
+    ],
+    "mode_switcher_type": "menu_switcher",
+    "platform": "rex",
+    "smm_store": false,
+    "spi_voltage": "pp3300"
+  },
+  "sand": {
+    "cr50_capability": [],
+    "ec_capability": [
+      "battery",
+      "charging",
+      "keyboard",
+      "lid",
+      "smart_usb_charge",
+      "usb",
+      "x86"
+    ],
+    "minidiag_capability": [
+      "cbmem_preserved_by_ap_reset",
+      "event_log_launch_count",
+      "storage_self_test"
+    ],
+    "parent": "reef",
+    "platform": "sand"
+  },
+  "sarien": {
+    "ap_access_ec_flash": false,
+    "ap_up_after_cr50_reboot": false,
+    "chrome_ec": false,
+    "cr50_capability": [],
+    "delay_reboot_to_ping": 120,
+    "ec_capability": [],
+    "ec_forwards_short_pp_press": true,
+    "firmware_screen": 18,
+    "gsc_update_wait_for_reboot": 25,
+    "has_diagnostics_image": true,
+    "has_keyboard": false,
+    "has_lid": true,
+    "hold_pwr_button_poweroff": 10,
+    "hold_pwr_button_poweron": 1.2,
+    "lid_wake_from_power_off": false,
+    "minidiag_capability": [
+      "cbmem_preserved_by_ap_reset",
+      "event_log_launch_count",
+      "storage_self_test"
+    ],
+    "minidiag_enabled": false,
+    "minios_enabled": false,
+    "mode_switcher_type": "keyboard_dev_switcher",
+    "platform": "sarien",
+    "power_button_dev_switch": true,
+    "rec_force_mrc": false,
+    "rec_invalid_screen": 5,
+    "rma_entered_automatically": false,
+    "serial_number_length": 7,
+    "smm_store": false,
+    "spi_voltage": "pp3300",
+    "usb_a_port_count": -1
+  },
+  "scarlet": {
+    "cr50_capability": [],
+    "delay_reboot_to_ping": 80,
+    "ec_capability": [
+      "arm",
+      "battery",
+      "charging"
+    ],
+    "has_keyboard": false,
+    "has_lid": false,
+    "hibernate": false,
+    "is_detachable": true,
+    "max_charging_power": 38.55,
+    "minidiag_capability": [
+      "cbmem_preserved_by_ap_reset",
+      "event_log_launch_count",
+      "storage_self_test"
+    ],
+    "mode_switcher_type": "tablet_detachable_switcher",
+    "parent": "gru",
+    "platform": "scarlet",
+    "usb_a_port_count": -1
+  },
+  "sentry": {
+    "cr50_capability": [],
+    "ec_capability": [
+      "battery",
+      "charging",
+      "doubleboot",
+      "keyboard",
+      "lid",
+      "usb",
+      "usbpd_uart",
+      "x86"
+    ],
+    "minidiag_capability": [
+      "cbmem_preserved_by_ap_reset",
+      "event_log_launch_count",
+      "storage_self_test"
+    ],
+    "parent": "kunimitsu",
+    "platform": "sentry"
+  },
+  "shotzo": {
+    "chrome_ec": true,
+    "cr50_capability": [],
+    "custom_usb_enable_pins": [
+      {
+        "ioex": false,
+        "name": "EN_PP5000_USB_VBUS"
+      }
+    ],
+    "dark_resume_capable": true,
+    "ec_capability": [
+      "cbi",
+      "usb",
+      "x86"
+    ],
+    "firmware_screen": 15,
+    "has_keyboard": false,
+    "has_lid": false,
+    "hibernate": false,
+    "hold_pwr_button_nopowerd_shutdown": 14,
+    "hold_pwr_button_poweron": 3,
+    "max_charging_power": 45.0,
+    "minidiag_capability": [
+      "cbmem_preserved_by_ap_reset",
+      "event_log_launch_count",
+      "storage_self_test"
+    ],
+    "minios_enabled": false,
+    "mode_switcher_type": "menu_switcher",
+    "platform": "shotzo",
+    "rec_button_dev_switch": true,
+    "smm_store": false,
+    "spi_voltage": "pp3300",
+    "usbc_input_voltage_limit": 15
+  },
+  "skyrim": {
+    "ac_on_can_wake_ap_from_ulp": true,
+    "chrome_ec": true,
+    "cr50_capability": [],
+    "custom_usb_enable_pins": [
+      {
+        "ioex": false,
+        "name": "EN_PP5000_USB_A0_VBUS"
+      },
+      {
+        "ioex": false,
+        "name": "EN_PP5000_USB_A1_VBUS"
+      }
+    ],
+    "delay_powerinfo_stable": 5,
+    "ec_boot_to_console": 1.2,
+    "ec_capability": [
+      "battery",
+      "cbi",
+      "charging",
+      "keyboard",
+      "lid",
+      "smart_usb_charge",
+      "usb",
+      "x86"
+    ],
+    "ec_efs2": true,
+    "firmware_screen": 15,
+    "fw_update_build": "skyrim-release/R110-15268.0.0",
+    "hold_pwr_button_poweroff": 3,
+    "max_charging_power": 100.0,
+    "minidiag_capability": [
+      "event_log_launch_count",
+      "storage_self_test"
+    ],
+    "minios_enabled": true,
+    "mode_switcher_type": "menu_switcher",
+    "platform": "skyrim",
+    "rec_force_mrc": false,
+    "s3_override_to_unsupported": true,
+    "serial_firmware_boot_delay": 10,
+    "servo_prog_state_delay": 1.0,
+    "smm_store": false
+  },
+  "snappy": {
+    "cr50_capability": [],
+    "ec_capability": [
+      "battery",
+      "charging",
+      "keyboard",
+      "lid",
+      "smart_usb_charge",
+      "usb",
+      "x86"
+    ],
+    "minidiag_capability": [
+      "cbmem_preserved_by_ap_reset",
+      "event_log_launch_count",
+      "storage_self_test"
+    ],
+    "parent": "reef",
+    "platform": "snappy"
+  },
+  "soraka": {
+    "cr50_capability": [],
+    "custom_max_tpm_init_us": 230000,
+    "delay_reboot_to_ping": 120,
+    "ec_capability": [
+      "battery",
+      "charging",
+      "lid",
+      "x86"
+    ],
+    "minidiag_capability": [
+      "cbmem_preserved_by_ap_reset",
+      "event_log_launch_count",
+      "storage_self_test"
+    ],
+    "parent": "poppy",
+    "platform": "soraka"
+  },
+  "staryu": {
+    "cr50_capability": [],
+    "custom_usb_enable_pins": [],
+    "ec_capability": [
+      "arm",
+      "battery",
+      "cbi",
+      "charging",
+      "keyboard",
+      "lid",
+      "usb"
+    ],
+    "is_detachable": true,
+    "minidiag_capability": [
+      "cbmem_preserved_by_ap_reset",
+      "event_log_launch_count",
+      "event_log_test_report",
+      "storage_self_test"
+    ],
+    "mode_switcher_type": "menu_switcher",
+    "parent": "corsola",
+    "platform": "staryu",
+    "usb_a_port_count": 0
+  },
+  "strongbad": {
+    "ac_on_can_wake_ap_from_ulp": true,
+    "charger_profile_override": true,
+    "chrome_ec": true,
+    "cr50_capability": [],
+    "ec_capability": [
+      "arm",
+      "battery",
+      "charging",
+      "lid",
+      "usb"
+    ],
+    "has_keyboard": false,
+    "is_detachable": true,
+    "minidiag_capability": [],
+    "minios_enabled": false,
+    "models": {
+      "coachz": {
+        "usbc_input_voltage_limit": 15
+      }
+    },
+    "platform": "strongbad",
+    "s0ix_override_to_unsupported": true,
+    "usb_a_port_count": -1
+  },
+  "trogdor": {
+    "ac_on_can_wake_ap_from_ulp": true,
+    "charger_profile_override": true,
+    "chrome_ec": true,
+    "cr50_capability": [],
+    "custom_usb_enable_pins": [
+      {
+        "ioex": false,
+        "name": "EN_USB_A_5V"
+      }
+    ],
+    "ec_capability": [
+      "arm",
+      "battery",
+      "charging",
+      "keyboard",
+      "lid",
+      "usb"
+    ],
+    "minidiag_capability": [],
+    "minios_enabled": false,
+    "mode_switcher_type": "menu_switcher",
+    "models": {
+      "lazor": {
+        "usbc_input_voltage_limit": 15
+      }
+    },
+    "platform": "trogdor",
+    "s0ix_override_to_unsupported": true
+  },
+  "volteer": {
+    "ac_on_can_wake_ap_from_ulp": true,
+    "chrome_ec": true,
+    "cr50_capability": [
+      "rdd_off_in_g3"
+    ],
+    "custom_max_tpm_init_us": 230000,
+    "custom_usb_enable_pins": [
+      {
+        "ioex": false,
+        "name": "EN_PP5000_USBA"
+      }
+    ],
+    "dark_resume_capable": true,
+    "delay_reboot_to_ping": 120,
+    "ec_capability": [
+      "battery",
+      "cbi",
+      "charging",
+      "keyboard",
+      "lid",
+      "usb",
+      "x86"
+    ],
+    "ec_efs2": true,
+    "firmware_screen": 30,
+    "hold_pwr_button_nopowerd_shutdown": 14,
+    "minidiag_capability": [
+      "storage_self_test"
+    ],
+    "minios_enabled": false,
+    "mode_switcher_type": "menu_switcher",
+    "models": {
+      "chronicler": {
+        "firmware_screen": 16
+      },
+      "collis": {
+        "max_charging_power": 45.0
+      },
+      "copano": {
+        "max_charging_power": 45.0
+      },
+      "delbin": {
+        "max_charging_power": 45.0
+      },
+      "eldrid": {
+        "firmware_screen": 20
+      },
+      "elemi": {
+        "hold_pwr_button_poweroff": 7
+      },
+      "halvor": {
+        "max_charging_power": 65.0
+      },
+      "voema": {
+        "max_charging_power": 65.0
+      },
+      "volta": {
+        "max_charging_power": 45.0
+      }
+    },
+    "platform": "volteer",
+    "s3_override_to_unsupported": true,
+    "smm_store": false,
+    "spi_voltage": "pp3300"
+  },
+  "zork": {
+    "ac_on_can_wake_ap_from_ulp": true,
+    "chrome_ec": true,
+    "cr50_capability": [
+      "rdd_off_in_g3"
+    ],
+    "custom_usb_enable_pins": [
+      {
+        "ioex": true,
+        "name": "EN_USB_A0_5V"
+      },
+      {
+        "ioex": true,
+        "name": "EN_USB_A1_5V_DB"
+      }
+    ],
+    "delay_powerinfo_stable": 5,
+    "ec_capability": [
+      "battery",
+      "cbi",
+      "charging",
+      "keyboard",
+      "lid",
+      "smart_usb_charge",
+      "usb",
+      "x86"
+    ],
+    "ec_efs2": true,
+    "firmware_screen": 15,
+    "hold_pwr_button_poweroff": 10,
+    "max_charging_power": 65.0,
+    "minidiag_capability": [
+      "cbmem_preserved_by_ap_reset"
+    ],
+    "minios_enabled": false,
+    "mode_switcher_type": "menu_switcher",
+    "models": {
+      "dalboz": {
+        "custom_usb_enable_pins": [
+          {
+            "ioex": true,
+            "name": "EN_USB_A0_5V"
+          },
+          {
+            "ioex": true,
+            "name": "EN_USB_A1_5V_DB_OPT1"
+          }
+        ]
+      },
+      "vilboz": {
+        "custom_usb_enable_pins": [
+          {
+            "ioex": true,
+            "name": "EN_USB_A0_5V"
+          },
+          {
+            "ioex": false,
+            "name": "EN_USB_A1_5V"
+          }
+        ]
+      },
+      "vilboz14": {
+        "custom_usb_enable_pins": [
+          {
+            "ioex": true,
+            "name": "EN_USB_A0_5V"
+          },
+          {
+            "ioex": false,
+            "name": "EN_USB_A1_5V"
+          }
+        ]
+      },
+      "vilboz360": {
+        "custom_usb_enable_pins": [
+          {
+            "ioex": true,
+            "name": "EN_USB_A0_5V"
+          },
+          {
+            "ioex": false,
+            "name": "EN_USB_A1_5V"
+          }
+        ]
+      },
+      "woomax": {
+        "custom_usb_enable_pins": [
+          {
+            "ioex": true,
+            "name": "EN_USB_A0_5V"
+          }
+        ]
+      }
+    },
+    "platform": "zork",
+    "servo_prog_state_delay": 1.0,
+    "smm_store": false,
+    "usb_image_boot_timeout": 240
+  }
 }

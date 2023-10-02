@@ -1,4 +1,4 @@
 {
-	"platform": "reef_uni",
-	"parent": "reef"
+  "parent": "reef",
+  "platform": "reef_uni"
 }

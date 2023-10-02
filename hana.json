@@ -1,4 +1,4 @@
 {
-	"platform": "hana",
-	"parent": "oak"
+  "parent": "oak",
+  "platform": "hana"
 }

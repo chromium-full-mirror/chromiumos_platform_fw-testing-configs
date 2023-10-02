@@ -1,4 +1,4 @@
 {
-	"platform": "caroline",
-	"parent": "glados"
+  "parent": "glados",
+  "platform": "caroline"
 }

@@ -1,49 +1,49 @@
 {
-    "platform": "fizz",
-    "mode_switcher_type": "keyboard_dev_switcher",
-    "firmware_screen": 15,
-    "has_lid": false,
-    "has_keyboard": false,
-    "hibernate": false,
-    "rec_button_dev_switch": true,
-    "spi_voltage": "pp3300",
-    "chrome_ec": true,
-    "ec_forwards_short_pp_press": true,
-    "ec_capability": {
-        "adc_ectemp": false,
-        "arm": false,
-        "battery": false,
-        "cbi": false,
-        "charging": false,
-        "doubleboot": false,
-        "keyboard": false,
-        "lid": false,
-        "peci": false,
-        "smart_usb_charge": false,
-        "thermal": false,
-        "usb": false,
-        "usbpd_uart": false,
-        "x86": true
+  "chrome_ec": true,
+  "delay_reboot_to_ping": 60,
+  "ec_capability": {
+    "adc_ectemp": false,
+    "arm": false,
+    "battery": false,
+    "cbi": false,
+    "charging": false,
+    "doubleboot": false,
+    "keyboard": false,
+    "lid": false,
+    "peci": false,
+    "smart_usb_charge": false,
+    "thermal": false,
+    "usb": false,
+    "usbpd_uart": false,
+    "x86": true
+  },
+  "ec_forwards_short_pp_press": true,
+  "firmware_screen": 15,
+  "has_keyboard": false,
+  "has_lid": false,
+  "hibernate": false,
+  "max_charging_power": 100.0,
+  "minidiag_enabled": false,
+  "minios_enabled": false,
+  "mode_switcher_type": "keyboard_dev_switcher",
+  "models": {
+    "jax": {
+      "delay_reboot_to_ping": 80
     },
-    "delay_reboot_to_ping": 60,
-    "models": {
-        "teemo":{
-            "delay_reboot_to_ping": 130
-        },
-        "sion":{
-            "delay_reboot_to_ping": 140
-        },
-        "jax" :{
-            "delay_reboot_to_ping": 80
-        },
-        "kench":{
-            "delay_reboot_to_ping": 80
-        }
+    "kench": {
+      "delay_reboot_to_ping": 80
     },
-    "smm_store": false,
-    "max_charging_power": 100.0,
-    "usb_a_port_count": -1,
-    "minidiag_enabled": false,
-    "minios_enabled": false,
-    "no_broken_screen_in_dev": true
+    "sion": {
+      "delay_reboot_to_ping": 140
+    },
+    "teemo": {
+      "delay_reboot_to_ping": 130
+    }
+  },
+  "no_broken_screen_in_dev": true,
+  "platform": "fizz",
+  "rec_button_dev_switch": true,
+  "smm_store": false,
+  "spi_voltage": "pp3300",
+  "usb_a_port_count": -1
 }

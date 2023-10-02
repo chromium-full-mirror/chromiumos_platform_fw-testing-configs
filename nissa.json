@@ -1,41 +1,41 @@
 {
-    "platform": "nissa",
-    "mode_switcher_type": "menu_switcher",
-    "chrome_ec": true,
-    "ec_capability": {
-        "adc_ectemp": false,
-        "arm": false,
-        "battery": true,
-        "cbi": true,
-        "charging": true,
-        "doubleboot": false,
-        "keyboard": true,
-        "lid": true,
-        "peci": false,
-        "smart_usb_charge": false,
-        "thermal": false,
-        "usb": true,
-        "usbpd_uart": false,
-        "x86": true
-    },
-    "ec_efs2": true,
-    "firmware_screen": 30,
-    "spi_voltage": "pp3300",
-    "custom_usb_enable_pins": [
-        {
-            "name": "en_usb_a0_vbus",
-            "ioex": false
-        }
-    ],
-    "minidiag_capability": {
-        "cbmem_preserved_by_ap_reset": false
-    },
-    "dark_resume_capable": true,
-    "smm_store": false,
-    "hold_pwr_button_nopowerd_shutdown": 14,
-    "hold_pwr_button_poweron": 1.2,
-    "ac_on_can_wake_ap_from_ulp": true,
-    "usbc_input_voltage_limit": 15,
-    "max_charging_power": 45.0,
-    "fw_update_build": "nissa-release/R109-15213.0.0"
+  "ac_on_can_wake_ap_from_ulp": true,
+  "chrome_ec": true,
+  "custom_usb_enable_pins": [
+    {
+      "ioex": false,
+      "name": "en_usb_a0_vbus"
+    }
+  ],
+  "dark_resume_capable": true,
+  "ec_capability": {
+    "adc_ectemp": false,
+    "arm": false,
+    "battery": true,
+    "cbi": true,
+    "charging": true,
+    "doubleboot": false,
+    "keyboard": true,
+    "lid": true,
+    "peci": false,
+    "smart_usb_charge": false,
+    "thermal": false,
+    "usb": true,
+    "usbpd_uart": false,
+    "x86": true
+  },
+  "ec_efs2": true,
+  "firmware_screen": 30,
+  "fw_update_build": "nissa-release/R109-15213.0.0",
+  "hold_pwr_button_nopowerd_shutdown": 14,
+  "hold_pwr_button_poweron": 1.2,
+  "max_charging_power": 45.0,
+  "minidiag_capability": {
+    "cbmem_preserved_by_ap_reset": false
+  },
+  "mode_switcher_type": "menu_switcher",
+  "platform": "nissa",
+  "smm_store": false,
+  "spi_voltage": "pp3300",
+  "usbc_input_voltage_limit": 15
 }

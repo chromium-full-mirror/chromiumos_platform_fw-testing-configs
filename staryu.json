@@ -1,8 +1,8 @@
 {
-    "platform": "staryu",
-    "parent": "corsola",
-    "mode_switcher_type": "menu_switcher",
-    "is_detachable": true,
-    "custom_usb_enable_pins": [],
-    "usb_a_port_count": 0
+  "custom_usb_enable_pins": [],
+  "is_detachable": true,
+  "mode_switcher_type": "menu_switcher",
+  "parent": "corsola",
+  "platform": "staryu",
+  "usb_a_port_count": 0
 }

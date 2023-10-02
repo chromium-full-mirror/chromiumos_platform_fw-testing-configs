@@ -1,78 +1,78 @@
 {
-    "platform": "octopus",
-    "mode_switcher_type": "keyboard_dev_switcher",
-    "chrome_ec": true,
-    "ec_boot_to_console": 0.3,
-    "firmware_screen": 30,
-    "delay_reboot_to_ping": 120,
-    "ec_capability": {
-        "adc_ectemp": false,
-        "arm": false,
-        "battery": true,
-        "cbi": true,
-        "charging": true,
-        "doubleboot": false,
-        "keyboard": true,
-        "lid": true,
-        "peci": false,
-        "smart_usb_charge": true,
-        "thermal": false,
-        "usb": true,
-        "usbpd_uart": false,
-        "x86": true
+  "ac_on_can_wake_ap_from_ulp": true,
+  "chrome_ec": true,
+  "cr50_capability": {
+    "ec_hibernate_breaks_rdd": false,
+    "rdd_leakage": true,
+    "rdd_off_in_g3": false,
+    "wp_on_in_g3": false
+  },
+  "custom_max_tpm_init_us": 240000,
+  "custom_usb_enable_pins": [
+    {
+      "ioex": false,
+      "name": "EN_USB_A0_5V"
     },
-    "cr50_capability": {
-        "ec_hibernate_breaks_rdd": false,
-        "wp_on_in_g3": false,
-        "rdd_off_in_g3": false,
-        "rdd_leakage": true
+    {
+      "ioex": false,
+      "name": "EN_USB_A1_5V"
+    }
+  ],
+  "delay_reboot_to_ping": 120,
+  "ec_boot_to_console": 0.3,
+  "ec_capability": {
+    "adc_ectemp": false,
+    "arm": false,
+    "battery": true,
+    "cbi": true,
+    "charging": true,
+    "doubleboot": false,
+    "keyboard": true,
+    "lid": true,
+    "peci": false,
+    "smart_usb_charge": true,
+    "thermal": false,
+    "usb": true,
+    "usbpd_uart": false,
+    "x86": true
+  },
+  "firmware_screen": 30,
+  "max_charging_power": 45.0,
+  "minidiag_enabled": false,
+  "minios_enabled": false,
+  "mode_switcher_type": "keyboard_dev_switcher",
+  "models": {
+    "ampton": {
+      "usbc_voltage_on_shutdown_and_full_batt": 5
     },
-    "custom_max_tpm_init_us": 240000,
-    "usb_plug": 45,
-    "spi_voltage": "pp1800",
-    "custom_usb_enable_pins": [
+    "bloog": {
+      "delay_reboot_to_ping": 60
+    },
+    "bluebird": {
+      "custom_usb_enable_pins": [
         {
-            "name": "EN_USB_A0_5V",
-            "ioex": false
-        },
-        {
-            "name": "EN_USB_A1_5V",
-            "ioex": false
+          "ioex": false,
+          "name": "EN_USB_A0_5V"
         }
-    ],
-    "smm_store": false,
-    "ac_on_can_wake_ap_from_ulp": true,
-    "models": {
-        "ampton": {
-            "usbc_voltage_on_shutdown_and_full_batt": 5
-        },
-        "bloog": {
-            "delay_reboot_to_ping": 60
-        },
-        "bluebird": {
-            "usbc_input_voltage_limit": 15,
-            "custom_usb_enable_pins": [
-                {
-                    "name": "EN_USB_A0_5V",
-                    "ioex": false
-                }
-            ]
-        },
-        "bobba360": {
-            "usbc_input_voltage_limit": 15
-        },
-        "casta": {
-            "usbc_input_voltage_limit": 15,
-            "custom_usb_enable_pins": [
-                {
-                    "name": "EN_USB_A0_5V",
-                    "ioex": false
-                }
-            ]
-        }
+      ],
+      "usbc_input_voltage_limit": 15
     },
-    "max_charging_power": 45.0,
-    "minidiag_enabled": false,
-    "minios_enabled": false,
-    "rec_invalid_screen": 5
+    "bobba360": {
+      "usbc_input_voltage_limit": 15
+    },
+    "casta": {
+      "custom_usb_enable_pins": [
+        {
+          "ioex": false,
+          "name": "EN_USB_A0_5V"
+        }
+      ],
+      "usbc_input_voltage_limit": 15
+    }
+  },
+  "platform": "octopus",
+  "rec_invalid_screen": 5,
+  "smm_store": false,
+  "spi_voltage": "pp1800",
+  "usb_plug": 45
 }

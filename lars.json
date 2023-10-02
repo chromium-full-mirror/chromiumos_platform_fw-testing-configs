@@ -1,4 +1,4 @@
 {
-	"platform": "lars",
-	"parent": "kunimitsu"
+  "parent": "kunimitsu",
+  "platform": "lars"
 }

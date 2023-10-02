@@ -1,50 +1,50 @@
 {
-    "platform": "asurada",
-    "mode_switcher_type": "menu_switcher",
-    "chrome_ec": true,
-    "ec_capability": {
-        "adc_ectemp": false,
-        "arm": true,
-        "battery": true,
-        "cbi": false,
-        "charging": true,
-        "doubleboot": false,
-        "keyboard": true,
-        "lid": true,
-        "peci": false,
-        "smart_usb_charge": false,
-        "thermal": false,
-        "usb": true,
-        "usbpd_uart": false,
-        "x86": false
-    },
-    "firmware_screen": 20,
-    "ec_reboot_to_g3_delay": 10,
-    "usbc_voltage_on_shutdown_and_full_batt": 9,
-    "custom_max_tpm_init_us": 240000,
-    "models": {
-        "hayato": {
-            "max_charging_power": 45.0,
-            "custom_usb_enable_pins": [
-                {
-                    "name": "EN_PP5000_USB_A0_VBUS",
-                    "ioex": false
-                }
-            ]
-        },
-        "spherion": {
-            "max_charging_power": 65.0,
-            "custom_usb_enable_pins": [
-                {
-                    "name": "EN_PP5000_USB_A0_VBUS",
-                    "ioex": false
-                }
-            ]
+  "chrome_ec": true,
+  "custom_max_tpm_init_us": 240000,
+  "ec_capability": {
+    "adc_ectemp": false,
+    "arm": true,
+    "battery": true,
+    "cbi": false,
+    "charging": true,
+    "doubleboot": false,
+    "keyboard": true,
+    "lid": true,
+    "peci": false,
+    "smart_usb_charge": false,
+    "thermal": false,
+    "usb": true,
+    "usbpd_uart": false,
+    "x86": false
+  },
+  "ec_reboot_to_g3_delay": 10,
+  "firmware_screen": 20,
+  "minidiag_capability": {
+    "event_log_launch_count": false,
+    "storage_self_test": false
+  },
+  "minios_enabled": false,
+  "mode_switcher_type": "menu_switcher",
+  "models": {
+    "hayato": {
+      "custom_usb_enable_pins": [
+        {
+          "ioex": false,
+          "name": "EN_PP5000_USB_A0_VBUS"
         }
+      ],
+      "max_charging_power": 45.0
     },
-    "minidiag_capability": {
-        "storage_self_test": false,
-        "event_log_launch_count": false
-    },
-    "minios_enabled": false
+    "spherion": {
+      "custom_usb_enable_pins": [
+        {
+          "ioex": false,
+          "name": "EN_PP5000_USB_A0_VBUS"
+        }
+      ],
+      "max_charging_power": 65.0
+    }
+  },
+  "platform": "asurada",
+  "usbc_voltage_on_shutdown_and_full_batt": 9
 }

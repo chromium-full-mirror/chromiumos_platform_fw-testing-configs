@@ -1,43 +1,43 @@
 {
-    "platform": "puff",
-    "mode_switcher_type": "menu_switcher",
-    "firmware_screen": 15,
-    "has_lid": false,
-    "has_keyboard": false,
-    "rec_button_dev_switch": true,
-    "spi_voltage": "pp3300",
-    "chrome_ec": true,
-    "ec_capability": {
-        "adc_ectemp": false,
-        "arm": false,
-        "battery": false,
-        "cbi": true,
-        "charging": false,
-        "doubleboot": false,
-        "keyboard": false,
-        "lid": false,
-        "peci": false,
-        "smart_usb_charge": false,
-        "thermal": false,
-        "usb": true,
-        "usbpd_uart": false,
-        "x86": true
-    },
-    "ec_forwards_short_pp_press": true,
-    "ec_efs2": true,
-    "hibernate": false,
-    "delay_powerinfo_stable": 6,
-    "delay_reboot_to_ping": 60,
-    "custom_usb_enable_pins": [
-        {
-            "name": "EN_PP5000_USB_VBUS",
-            "ioex": false
-        }
-    ],
-    "smm_store": false,
-    "max_charging_power": 100.0,
-    "minidiag_enabled": false,
-    "minios_enabled": false,
-    "s0ix_override_to_unsupported" : true,
-    "s3_override_to_unsupported": true
+  "chrome_ec": true,
+  "custom_usb_enable_pins": [
+    {
+      "ioex": false,
+      "name": "EN_PP5000_USB_VBUS"
+    }
+  ],
+  "delay_powerinfo_stable": 6,
+  "delay_reboot_to_ping": 60,
+  "ec_capability": {
+    "adc_ectemp": false,
+    "arm": false,
+    "battery": false,
+    "cbi": true,
+    "charging": false,
+    "doubleboot": false,
+    "keyboard": false,
+    "lid": false,
+    "peci": false,
+    "smart_usb_charge": false,
+    "thermal": false,
+    "usb": true,
+    "usbpd_uart": false,
+    "x86": true
+  },
+  "ec_efs2": true,
+  "ec_forwards_short_pp_press": true,
+  "firmware_screen": 15,
+  "has_keyboard": false,
+  "has_lid": false,
+  "hibernate": false,
+  "max_charging_power": 100.0,
+  "minidiag_enabled": false,
+  "minios_enabled": false,
+  "mode_switcher_type": "menu_switcher",
+  "platform": "puff",
+  "rec_button_dev_switch": true,
+  "s0ix_override_to_unsupported": true,
+  "s3_override_to_unsupported": true,
+  "smm_store": false,
+  "spi_voltage": "pp3300"
 }

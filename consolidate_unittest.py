@@ -93,36 +93,36 @@ class TestLoadJSON(unittest.TestCase):
         with open(a_filename, "w", encoding="utf-8") as a_file:
             a_file.write(
                 "{\n"
-                + '\t"platform": "a",\n'
-                + '\t"ec_capability": {'
-                + '\t\t"adc_ectemp": false,\n'
-                + '\t\t"arm": false,\n'
-                + '\t\t"battery": false,\n'
-                + '\t\t"cbi": false,\n'
-                + '\t\t"charging": false,\n'
-                + '\t\t"doubleboot": false,\n'
-                + '\t\t"keyboard": false,\n'
-                + '\t\t"lid": false,\n'
-                + '\t\t"peci": false,\n'
-                + '\t\t"smart_usb_charge": false,\n'
-                + '\t\t"thermal": false,\n'
-                + '\t\t"usb": true,\n'
-                + '\t\t"usbpd_uart": false,\n'  # set as True for test
-                + '\t\t"x86": true\n'
-                + "\t},\n"  # set as True for test
-                + '\t"cr50_capability": {'
-                + '\t\t"ec_hibernate_breaks_rdd": false,\n'
-                + '\t\t"wp_on_in_g3": true,\n'
-                + '\t\t"rdd_off_in_g3": false,\n'  # set as True for test
-                + '\t\t"rdd_leakage": true\n'
-                + "\t},\n"  # set as True for test
-                + '\t"minidiag_capability": {'
-                + '\t\t"cbmem_preserved_by_ap_reset": true,\n'
-                + '\t\t"storage_self_test": false,\n'
-                + '\t\t"event_log_launch_count": true\n'
+                + '  "platform": "a",\n'
+                + '  "ec_capability": {'
+                + '    "adc_ectemp": false,\n'
+                + '    "arm": false,\n'
+                + '    "battery": false,\n'
+                + '    "cbi": false,\n'
+                + '    "charging": false,\n'
+                + '    "doubleboot": false,\n'
+                + '    "keyboard": false,\n'
+                + '    "lid": false,\n'
+                + '    "peci": false,\n'
+                + '    "smart_usb_charge": false,\n'
+                + '    "thermal": false,\n'
+                + '    "usb": true,\n'
+                + '    "usbpd_uart": false,\n'  # set as True for test
+                + '    "x86": true\n'
+                + "  },\n"  # set as True for test
+                + '  "cr50_capability": {'
+                + '    "ec_hibernate_breaks_rdd": false,\n'
+                + '    "wp_on_in_g3": true,\n'
+                + '    "rdd_off_in_g3": false,\n'  # set as True for test
+                + '    "rdd_leakage": true\n'
+                + "  },\n"  # set as True for test
+                + '  "minidiag_capability": {'
+                + '    "cbmem_preserved_by_ap_reset": true,\n'
+                + '    "storage_self_test": false,\n'
+                + '    "event_log_launch_count": true\n'
                 +
                 # set as True for test
-                "\t}\n"
+                "  }\n"
                 + "}"
             )
         defaults_filename = os.path.join(
@@ -131,41 +131,41 @@ class TestLoadJSON(unittest.TestCase):
         with open(defaults_filename, "w", encoding="utf-8") as defaults_file:
             defaults_file.write(
                 "{\n"
-                + '\t"platform": null,\n'
-                + '\t"platform_DOC": "foo",\n'
-                + '\t"ec_capability": {'
-                + '\t\t"adc_ectemp": null,\n'
-                + '\t\t"arm": null,\n'
-                + '\t\t"battery": null,\n'
-                + '\t\t"cbi": null,\n'
-                + '\t\t"charging": null,\n'
-                + '\t\t"doubleboot": null,\n'
-                + '\t\t"keyboard": null,\n'
-                + '\t\t"lid": null,\n'
-                + '\t\t"peci": null,\n'
-                + '\t\t"smart_usb_charge": null,\n'
-                + '\t\t"thermal": null,\n'
-                + '\t\t"usb": null,\n'
-                + '\t\t"usbpd_uart": null,\n'
-                + '\t\t"x86": null,\n'
-                + '\t\t"default_true": true,\n'
-                + '\t\t"default_false": false\n'
-                + "\t},\n"
-                + '\t"cr50_capability": {'
-                + '\t\t"ec_hibernate_breaks_rdd": null,\n'
-                + '\t\t"wp_on_in_g3": null,\n'
-                + '\t\t"rdd_off_in_g3": null,\n'
-                + '\t\t"rdd_leakage": null,\n'
-                + '\t\t"default_true": true,\n'
-                + '\t\t"default_false": false\n'
-                + "\t},\n"
-                + '\t"minidiag_capability": {'
-                + '\t\t"cbmem_preserved_by_ap_reset": null,\n'
-                + '\t\t"storage_self_test": null,\n'
-                + '\t\t"event_log_launch_count": null,\n'
-                + '\t\t"default_true": true,\n'
-                + '\t\t"default_false": false\n'
-                + "\t}\n"
+                + '  "platform": null,\n'
+                + '  "platform_DOC": "foo",\n'
+                + '  "ec_capability": {'
+                + '    "adc_ectemp": null,\n'
+                + '    "arm": null,\n'
+                + '    "battery": null,\n'
+                + '    "cbi": null,\n'
+                + '    "charging": null,\n'
+                + '    "doubleboot": null,\n'
+                + '    "keyboard": null,\n'
+                + '    "lid": null,\n'
+                + '    "peci": null,\n'
+                + '    "smart_usb_charge": null,\n'
+                + '    "thermal": null,\n'
+                + '    "usb": null,\n'
+                + '    "usbpd_uart": null,\n'
+                + '    "x86": null,\n'
+                + '    "default_true": true,\n'
+                + '    "default_false": false\n'
+                + "  },\n"
+                + '  "cr50_capability": {'
+                + '    "ec_hibernate_breaks_rdd": null,\n'
+                + '    "wp_on_in_g3": null,\n'
+                + '    "rdd_off_in_g3": null,\n'
+                + '    "rdd_leakage": null,\n'
+                + '    "default_true": true,\n'
+                + '    "default_false": false\n'
+                + "  },\n"
+                + '  "minidiag_capability": {'
+                + '    "cbmem_preserved_by_ap_reset": null,\n'
+                + '    "storage_self_test": null,\n'
+                + '    "event_log_launch_count": null,\n'
+                + '    "default_true": true,\n'
+                + '    "default_false": false\n'
+                + "  }\n"
                 + "}"
             )
 
@@ -219,7 +219,7 @@ class TestWriteOutput(unittest.TestCase):
         # Verify file contents
         with open(TestWriteOutput.output_fp, encoding="utf-8") as output_file:
             output_contents = output_file.readlines()
-        expected = ["{\n", '\t"bar": "baz",\n', '\t"foo": "bar"\n', "}"]
+        expected = ["{\n", '  "bar": "baz",\n', '  "foo": "bar"\n', "}\n"]
         self.assertEqual(output_contents, expected)
 
         # Verify that file is read-only

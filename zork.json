@@ -1,110 +1,110 @@
 {
-    "platform": "zork",
-    "mode_switcher_type": "menu_switcher",
-    "chrome_ec": true,
-    "ec_capability": {
-        "adc_ectemp": false,
-        "arm": false,
-        "battery": true,
-        "cbi": true,
-        "charging": true,
-        "doubleboot": false,
-        "keyboard": true,
-        "lid": true,
-        "peci": false,
-        "smart_usb_charge": true,
-        "thermal": false,
-        "usb": true,
-        "usbpd_uart": false,
-        "x86": true
+  "ac_on_can_wake_ap_from_ulp": true,
+  "chrome_ec": true,
+  "cr50_capability": {
+    "deep_sleep_in_s0i3": false,
+    "ec_hibernate_breaks_rdd": false,
+    "rdd_leakage": false,
+    "rdd_off_in_g3": true,
+    "wp_on_in_g3": false
+  },
+  "custom_usb_enable_pins": [
+    {
+      "ioex": true,
+      "name": "EN_USB_A0_5V"
     },
-    "ec_efs2": true,
-    "hold_pwr_button_poweroff": 10,
-    "servo_prog_state_delay": 1.0,
-    "smm_store": false,
-    "firmware_screen": 15,
-    "usb_image_boot_timeout": 240,
-    "delay_powerinfo_stable": 5,
-    "custom_usb_enable_pins": [
+    {
+      "ioex": true,
+      "name": "EN_USB_A1_5V_DB"
+    }
+  ],
+  "delay_powerinfo_stable": 5,
+  "ec_capability": {
+    "adc_ectemp": false,
+    "arm": false,
+    "battery": true,
+    "cbi": true,
+    "charging": true,
+    "doubleboot": false,
+    "keyboard": true,
+    "lid": true,
+    "peci": false,
+    "smart_usb_charge": true,
+    "thermal": false,
+    "usb": true,
+    "usbpd_uart": false,
+    "x86": true
+  },
+  "ec_efs2": true,
+  "firmware_screen": 15,
+  "hold_pwr_button_poweroff": 10,
+  "max_charging_power": 65.0,
+  "minidiag_capability": {
+    "event_log_launch_count": false,
+    "storage_self_test": false
+  },
+  "minios_enabled": false,
+  "mode_switcher_type": "menu_switcher",
+  "models": {
+    "dalboz": {
+      "custom_usb_enable_pins": [
         {
-            "name": "EN_USB_A0_5V",
-            "ioex": true
+          "ioex": true,
+          "name": "EN_USB_A0_5V"
         },
         {
-            "name": "EN_USB_A1_5V_DB",
-            "ioex": true
+          "ioex": true,
+          "name": "EN_USB_A1_5V_DB_OPT1"
         }
-    ],
-    "max_charging_power": 65.0,
-    "cr50_capability": {
-        "ec_hibernate_breaks_rdd": false,
-        "wp_on_in_g3": false,
-        "rdd_off_in_g3": true,
-        "rdd_leakage": false,
-        "deep_sleep_in_s0i3": false
+      ]
     },
-    "models": {
-        "dalboz": {
-            "custom_usb_enable_pins": [
-                {
-                    "name": "EN_USB_A0_5V",
-                    "ioex": true
-                },
-                {
-                    "name": "EN_USB_A1_5V_DB_OPT1",
-                    "ioex": true
-                }
-            ]
+    "vilboz": {
+      "custom_usb_enable_pins": [
+        {
+          "ioex": true,
+          "name": "EN_USB_A0_5V"
         },
-        "vilboz": {
-            "custom_usb_enable_pins": [
-                {
-                    "name": "EN_USB_A0_5V",
-                    "ioex": true
-                },
-                {
-                    "name": "EN_USB_A1_5V",
-                    "ioex": false
-                }
-            ]
-        },
-        "vilboz14": {
-            "custom_usb_enable_pins": [
-                {
-                    "name": "EN_USB_A0_5V",
-                    "ioex": true
-                },
-                {
-                    "name": "EN_USB_A1_5V",
-                    "ioex": false
-                }
-            ]
-        },
-        "vilboz360": {
-            "custom_usb_enable_pins": [
-                {
-                    "name": "EN_USB_A0_5V",
-                    "ioex": true
-                },
-                {
-                    "name": "EN_USB_A1_5V",
-                    "ioex": false
-                }
-            ]
-        },
-        "woomax": {
-            "custom_usb_enable_pins": [
-                {
-                    "name": "EN_USB_A0_5V",
-                    "ioex": true
-                }
-            ]
+        {
+          "ioex": false,
+          "name": "EN_USB_A1_5V"
         }
+      ]
     },
-    "minidiag_capability": {
-	"storage_self_test": false,
-        "event_log_launch_count": false
+    "vilboz14": {
+      "custom_usb_enable_pins": [
+        {
+          "ioex": true,
+          "name": "EN_USB_A0_5V"
+        },
+        {
+          "ioex": false,
+          "name": "EN_USB_A1_5V"
+        }
+      ]
     },
-    "minios_enabled": false,
-    "ac_on_can_wake_ap_from_ulp": true
+    "vilboz360": {
+      "custom_usb_enable_pins": [
+        {
+          "ioex": true,
+          "name": "EN_USB_A0_5V"
+        },
+        {
+          "ioex": false,
+          "name": "EN_USB_A1_5V"
+        }
+      ]
+    },
+    "woomax": {
+      "custom_usb_enable_pins": [
+        {
+          "ioex": true,
+          "name": "EN_USB_A0_5V"
+        }
+      ]
+    }
+  },
+  "platform": "zork",
+  "servo_prog_state_delay": 1.0,
+  "smm_store": false,
+  "usb_image_boot_timeout": 240
 }

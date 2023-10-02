@@ -1,4 +1,4 @@
 {
-    "platform": "cherry64",
-    "parent": "cherry"
+  "parent": "cherry",
+  "platform": "cherry64"
 }

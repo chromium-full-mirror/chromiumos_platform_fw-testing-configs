@@ -1,4 +1,4 @@
 {
-	"platform": "pyro",
-	"parent": "reef"
+  "parent": "reef",
+  "platform": "pyro"
 }

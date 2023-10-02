@@ -1,41 +1,41 @@
 {
-    "platform": "brask",
-    "mode_switcher_type": "menu_switcher",
-    "chrome_ec": true,
-    "ec_capability": {
-        "adc_ectemp": false,
-        "arm": false,
-        "battery": false,
-        "cbi": true,
-        "charging": false,
-        "doubleboot": false,
-        "keyboard": false,
-        "lid": false,
-        "peci": false,
-        "smart_usb_charge": false,
-        "thermal": false,
-        "usb": true,
-        "usbpd_uart": false,
-        "x86": true
-    },
-    "minidiag_capability": {
-        "cbmem_preserved_by_ap_reset": false
-    },
-    "firmware_screen": 30,
-    "spi_voltage": "pp3300",
-    "custom_usb_enable_pins": [
-        {
-            "name": "EN_PP5000_USBA",
-            "ioex": false
-        }
-    ],
-    "dark_resume_capable": true,
-    "smm_store": false,
-    "hold_pwr_button_nopowerd_shutdown": 14,
-    "hold_pwr_button_poweron": 3,
-    "max_charging_power": 60.0,
-    "has_lid": false,
-    "has_keyboard": false,
-    "hibernate": false,
-    "rec_button_dev_switch": true
+  "chrome_ec": true,
+  "custom_usb_enable_pins": [
+    {
+      "ioex": false,
+      "name": "EN_PP5000_USBA"
+    }
+  ],
+  "dark_resume_capable": true,
+  "ec_capability": {
+    "adc_ectemp": false,
+    "arm": false,
+    "battery": false,
+    "cbi": true,
+    "charging": false,
+    "doubleboot": false,
+    "keyboard": false,
+    "lid": false,
+    "peci": false,
+    "smart_usb_charge": false,
+    "thermal": false,
+    "usb": true,
+    "usbpd_uart": false,
+    "x86": true
+  },
+  "firmware_screen": 30,
+  "has_keyboard": false,
+  "has_lid": false,
+  "hibernate": false,
+  "hold_pwr_button_nopowerd_shutdown": 14,
+  "hold_pwr_button_poweron": 3,
+  "max_charging_power": 60.0,
+  "minidiag_capability": {
+    "cbmem_preserved_by_ap_reset": false
+  },
+  "mode_switcher_type": "menu_switcher",
+  "platform": "brask",
+  "rec_button_dev_switch": true,
+  "smm_store": false,
+  "spi_voltage": "pp3300"
 }

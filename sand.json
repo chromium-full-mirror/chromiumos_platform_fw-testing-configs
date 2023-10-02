@@ -1,4 +1,4 @@
 {
-	"platform": "sand",
-	"parent": "reef"
+  "parent": "reef",
+  "platform": "sand"
 }

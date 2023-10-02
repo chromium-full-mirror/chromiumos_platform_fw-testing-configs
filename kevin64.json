@@ -1,4 +1,4 @@
 {
-	"platform": "kevin64",
-	"parent": "kevin"
+  "parent": "kevin",
+  "platform": "kevin64"
 }

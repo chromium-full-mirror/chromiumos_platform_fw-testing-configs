@@ -111,7 +111,9 @@ class Condition:
         except ValueError:
             msg = "field %s, expected value %s" % (self.field, self.value)
             raise NotNumericError(msg)
-        return eval("%s %s %s" % (actual_value, self.operator, expected_value))
+        return eval(  # pylint: disable=eval-used
+            "%s %s %s" % (actual_value, self.operator, expected_value)
+        )
 
     def __repr__(self):
         """Represent this condition as a string."""

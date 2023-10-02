@@ -1,4 +1,4 @@
 {
-	"platform": "snappy",
-	"parent": "reef"
+  "parent": "reef",
+  "platform": "snappy"
 }

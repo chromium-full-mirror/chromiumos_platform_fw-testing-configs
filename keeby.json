@@ -1,69 +1,69 @@
 {
-    "platform": "keeby",
-    "mode_switcher_type": "menu_switcher",
-    "chrome_ec": true,
-    "ec_capability": {
-        "adc_ectemp": false,
-        "arm": false,
-        "battery": true,
-        "cbi": true,
-        "charging": true,
-        "doubleboot": false,
-        "keyboard": true,
-        "lid": true,
-        "peci": false,
-        "smart_usb_charge": true,
-        "thermal": false,
-        "usb": true,
-        "usbpd_uart": false,
-        "x86": true
+  "chrome_ec": true,
+  "custom_usb_enable_pins": [
+    {
+      "ioex": false,
+      "name": "EN_USB_A0_VBUS"
     },
-    "firmware_screen": 15,
-    "spi_voltage": "pp3300",
-    "dark_resume_capable": true,
-    "smm_store": false,
-    "hold_pwr_button_nopowerd_shutdown": 14,
-    "usbc_input_voltage_limit": 15,
-    "max_charging_power": 45.0,
-    "custom_usb_enable_pins": [
+    {
+      "ioex": false,
+      "name": "EN_USB_A1_VBUS"
+    }
+  ],
+  "dark_resume_capable": true,
+  "ec_capability": {
+    "adc_ectemp": false,
+    "arm": false,
+    "battery": true,
+    "cbi": true,
+    "charging": true,
+    "doubleboot": false,
+    "keyboard": true,
+    "lid": true,
+    "peci": false,
+    "smart_usb_charge": true,
+    "thermal": false,
+    "usb": true,
+    "usbpd_uart": false,
+    "x86": true
+  },
+  "firmware_screen": 15,
+  "hold_pwr_button_nopowerd_shutdown": 14,
+  "max_charging_power": 45.0,
+  "minidiag_capability": {
+    "cbmem_preserved_by_ap_reset": false,
+    "event_log_launch_count": false
+  },
+  "minios_enabled": false,
+  "mode_switcher_type": "menu_switcher",
+  "models": {
+    "cappy2": {
+      "custom_usb_enable_pins": [
         {
-            "name": "EN_USB_A0_VBUS",
-            "ioex": false
-        },
-        {
-            "name": "EN_USB_A1_VBUS",
-            "ioex": false
+          "ioex": false,
+          "name": "EN_USB_A0_VBUS"
         }
-    ],
-    "models": {
-           "haboki": {
-              "custom_usb_enable_pins": [
-                 {
-                    "name": "EN_USB_A_5V",
-                    "ioex": false
-                 }
-              ]
-            },
-           "habokay": {
-              "custom_usb_enable_pins": [
-                 {
-                    "name": "EN_USB_A_5V",
-                    "ioex": false
-                 }
-              ]
-            },
-    	"cappy2": {
-		"custom_usb_enable_pins": [
-			{
-				"name": "EN_USB_A0_VBUS",
-				"ioex": false
-			}
-		]
-	}
+      ]
     },
-    "minidiag_capability": {
-        "event_log_launch_count": false,
-        "cbmem_preserved_by_ap_reset": false
+    "habokay": {
+      "custom_usb_enable_pins": [
+        {
+          "ioex": false,
+          "name": "EN_USB_A_5V"
+        }
+      ]
     },
-    "minios_enabled": false
+    "haboki": {
+      "custom_usb_enable_pins": [
+        {
+          "ioex": false,
+          "name": "EN_USB_A_5V"
+        }
+      ]
+    }
+  },
+  "platform": "keeby",
+  "smm_store": false,
+  "spi_voltage": "pp3300",
+  "usbc_input_voltage_limit": 15
 }

@@ -1,45 +1,45 @@
 {
-    "platform": "kukui",
-    "keypress_delay": 3,
-    "mode_switcher_type": "tablet_detachable_switcher",
-    "has_keyboard": false,
-    "chrome_ec": true,
-    "ec_capability": {
-        "adc_ectemp": false,
-        "arm": true,
-        "battery": true,
-        "cbi": false,
-        "charging": true,
-        "doubleboot": false,
-        "keyboard": false,
-        "lid": true,
-        "peci": false,
-        "smart_usb_charge": false,
-        "thermal": false,
-        "usb": false,
-        "usbpd_uart": false,
-        "x86": false
+  "charger_profile_override": true,
+  "chrome_ec": true,
+  "delay_reboot_to_ping": 120,
+  "ec_boot_to_console": 2,
+  "ec_boot_to_wp_en": 2,
+  "ec_capability": {
+    "adc_ectemp": false,
+    "arm": true,
+    "battery": true,
+    "cbi": false,
+    "charging": true,
+    "doubleboot": false,
+    "keyboard": false,
+    "lid": true,
+    "peci": false,
+    "smart_usb_charge": false,
+    "thermal": false,
+    "usb": false,
+    "usbpd_uart": false,
+    "x86": false
+  },
+  "ec_reboot_to_g3_delay": 10,
+  "has_keyboard": false,
+  "hibernate": false,
+  "hold_pwr_button_poweroff": 6,
+  "hold_pwr_button_poweron": 1.2,
+  "is_detachable": true,
+  "keypress_delay": 3,
+  "max_charging_power": 45.0,
+  "minidiag_enabled": false,
+  "minios_enabled": false,
+  "mode_switcher_type": "tablet_detachable_switcher",
+  "models": {
+    "kodama": {
+      "usb_a_port_count": 0
     },
-    "is_detachable": true,
-    "hold_pwr_button_poweron": 1.2,
-    "hold_pwr_button_poweroff": 6,
-    "hibernate": false,
-    "ec_reboot_to_g3_delay": 10,
-    "ec_boot_to_console": 2,
-    "ec_boot_to_wp_en": 2,
-    "usbc_input_voltage_limit": 12,
-    "charger_profile_override": true,
-    "max_charging_power": 45.0,
-    "usb_a_port_count": -1,
-    "minidiag_enabled": false,
-    "minios_enabled": false,
-    "delay_reboot_to_ping": 120,
-    "models": {
-        "kodama": {
-            "usb_a_port_count": 0
-        },
-        "krane": {
-            "usb_a_port_count": 0
-        }
+    "krane": {
+      "usb_a_port_count": 0
     }
+  },
+  "platform": "kukui",
+  "usb_a_port_count": -1,
+  "usbc_input_voltage_limit": 12
 }

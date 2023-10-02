@@ -1,4 +1,4 @@
 {
-	"platform": "kevin_tpm2",
-	"parent": "gru"
+  "parent": "gru",
+  "platform": "kevin_tpm2"
 }

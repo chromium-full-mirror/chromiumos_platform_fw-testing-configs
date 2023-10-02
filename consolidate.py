@@ -277,7 +277,8 @@ def write_output(consolidated_json, output_path):
     if os.path.isfile(output_path):
         os.remove(output_path)
     with open(output_path, "w", encoding="utf-8") as output_file:
-        json.dump(consolidated_json, output_file, indent="\t", sort_keys=True)
+        json.dump(consolidated_json, output_file, indent="  ", sort_keys=True)
+        output_file.write("\n")
     os.chmod(output_path, stat.S_IRUSR | stat.S_IRGRP | stat.S_IROTH)
 
 

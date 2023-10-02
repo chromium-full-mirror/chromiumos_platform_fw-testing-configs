@@ -1,6 +1,6 @@
 {
-	"platform": "soraka",
-	"parent": "poppy",
-	"custom_max_tpm_init_us": 230000,
-	"delay_reboot_to_ping": 120
+  "custom_max_tpm_init_us": 230000,
+  "delay_reboot_to_ping": 120,
+  "parent": "poppy",
+  "platform": "soraka"
 }

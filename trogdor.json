@@ -1,41 +1,41 @@
 {
-    "platform": "trogdor",
-    "mode_switcher_type": "menu_switcher",
-    "chrome_ec": true,
-    "ec_capability": {
-        "adc_ectemp": false,
-        "arm": true,
-        "battery": true,
-        "cbi": false,
-        "charging": true,
-        "doubleboot": false,
-        "keyboard": true,
-        "lid": true,
-        "peci": false,
-        "smart_usb_charge": false,
-        "thermal": false,
-        "usb": true,
-        "usbpd_uart": false,
-        "x86": false
-    },
-    "s0ix_override_to_unsupported" : true,
-    "custom_usb_enable_pins": [
-        {
-            "name": "EN_USB_A_5V",
-            "ioex": false
-        }
-    ],
-    "charger_profile_override": true,
-    "ac_on_can_wake_ap_from_ulp": true,
-    "models": {
-        "lazor": {
-            "usbc_input_voltage_limit": 15
-        }
-    },
-    "minidiag_capability": {
-	"storage_self_test": false,
-        "event_log_launch_count": false,
-        "cbmem_preserved_by_ap_reset": false
-    },
-    "minios_enabled": false
+  "ac_on_can_wake_ap_from_ulp": true,
+  "charger_profile_override": true,
+  "chrome_ec": true,
+  "custom_usb_enable_pins": [
+    {
+      "ioex": false,
+      "name": "EN_USB_A_5V"
+    }
+  ],
+  "ec_capability": {
+    "adc_ectemp": false,
+    "arm": true,
+    "battery": true,
+    "cbi": false,
+    "charging": true,
+    "doubleboot": false,
+    "keyboard": true,
+    "lid": true,
+    "peci": false,
+    "smart_usb_charge": false,
+    "thermal": false,
+    "usb": true,
+    "usbpd_uart": false,
+    "x86": false
+  },
+  "minidiag_capability": {
+    "cbmem_preserved_by_ap_reset": false,
+    "event_log_launch_count": false,
+    "storage_self_test": false
+  },
+  "minios_enabled": false,
+  "mode_switcher_type": "menu_switcher",
+  "models": {
+    "lazor": {
+      "usbc_input_voltage_limit": 15
+    }
+  },
+  "platform": "trogdor",
+  "s0ix_override_to_unsupported": true
 }

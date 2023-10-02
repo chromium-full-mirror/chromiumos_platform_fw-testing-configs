@@ -1,16 +1,16 @@
 {
-    "platform": "jacuzzi",
-    "parent": "kukui",
-    "mode_switcher_type": "keyboard_dev_switcher",
-    "has_keyboard": true,
-    "chrome_ec": true,
-    "ec_capability": {
-        "keyboard": true
-    },
-    "is_detachable": false,
-    "ec_boot_to_console": 2,
-    "ec_reboot_to_g3_delay": 10,
-    "usbc_input_voltage_limit": 20,
-    "charger_profile_override": true,
-    "usb_a_port_count": -1
+  "charger_profile_override": true,
+  "chrome_ec": true,
+  "ec_boot_to_console": 2,
+  "ec_capability": {
+    "keyboard": true
+  },
+  "ec_reboot_to_g3_delay": 10,
+  "has_keyboard": true,
+  "is_detachable": false,
+  "mode_switcher_type": "keyboard_dev_switcher",
+  "parent": "kukui",
+  "platform": "jacuzzi",
+  "usb_a_port_count": -1,
+  "usbc_input_voltage_limit": 20
 }

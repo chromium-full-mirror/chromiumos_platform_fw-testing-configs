@@ -1,29 +1,29 @@
 {
-    "platform": "geralt",
-    "mode_switcher_type": "menu_switcher",
-    "is_detachable": true,
-    "chrome_ec": true,
-    "ec_capability": {
-        "adc_ectemp": false,
-        "arm": true,
-        "battery": true,
-        "cbi": true,
-        "charging": true,
-        "doubleboot": false,
-        "keyboard": true,
-        "lid": true,
-        "peci": false,
-        "smart_usb_charge": false,
-        "thermal": false,
-        "usb": true,
-        "usbpd_uart": false,
-        "x86": false
-    },
-    "ec_efs2": true,
-    "minidiag_capability": {
-        "cbmem_preserved_by_ap_reset": false,
-        "event_log_test_report": true
-    },
-    "firmware_screen": 20,
-    "usbc_voltage_on_shutdown_and_full_batt": 9
+  "chrome_ec": true,
+  "ec_capability": {
+    "adc_ectemp": false,
+    "arm": true,
+    "battery": true,
+    "cbi": true,
+    "charging": true,
+    "doubleboot": false,
+    "keyboard": true,
+    "lid": true,
+    "peci": false,
+    "smart_usb_charge": false,
+    "thermal": false,
+    "usb": true,
+    "usbpd_uart": false,
+    "x86": false
+  },
+  "ec_efs2": true,
+  "firmware_screen": 20,
+  "is_detachable": true,
+  "minidiag_capability": {
+    "cbmem_preserved_by_ap_reset": false,
+    "event_log_test_report": true
+  },
+  "mode_switcher_type": "menu_switcher",
+  "platform": "geralt",
+  "usbc_voltage_on_shutdown_and_full_batt": 9
 }

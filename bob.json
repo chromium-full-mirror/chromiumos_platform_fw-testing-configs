@@ -1,4 +1,4 @@
 {
-	"platform": "bob",
-	"parent": "gru"
+  "parent": "gru",
+  "platform": "bob"
 }

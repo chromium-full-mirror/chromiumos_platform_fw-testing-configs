@@ -1,4 +1,4 @@
 {
-	"platform": "asuka",
-	"parent": "kunimitsu"
+  "parent": "kunimitsu",
+  "platform": "asuka"
 }

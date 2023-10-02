@@ -1,4 +1,4 @@
 {
-	"platform": "endeavour",
-	"parent": "fizz"
+  "parent": "fizz",
+  "platform": "endeavour"
 }

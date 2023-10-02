@@ -1,4 +1,4 @@
 {
-	"platform": "nasher",
-	"parent": "reef"
+  "parent": "reef",
+  "platform": "nasher"
 }

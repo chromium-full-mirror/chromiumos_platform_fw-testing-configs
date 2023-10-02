@@ -1,38 +1,38 @@
 {
-    "platform": "grunt",
-    "mode_switcher_type": "keyboard_dev_switcher",
-    "chrome_ec": true,
-    "ec_capability": {
-        "adc_ectemp": false,
-        "arm": false,
-        "battery": true,
-        "cbi": false,
-        "charging": true,
-        "doubleboot": false,
-        "keyboard": true,
-        "lid": true,
-        "peci": false,
-        "smart_usb_charge": false,
-        "thermal": false,
-        "usb": false,
-        "usbpd_uart": false,
-        "x86": true
+  "chrome_ec": true,
+  "ec_capability": {
+    "adc_ectemp": false,
+    "arm": false,
+    "battery": true,
+    "cbi": false,
+    "charging": true,
+    "doubleboot": false,
+    "keyboard": true,
+    "lid": true,
+    "peci": false,
+    "smart_usb_charge": false,
+    "thermal": false,
+    "usb": false,
+    "usbpd_uart": false,
+    "x86": true
+  },
+  "gsc_can_wake_ec_with_reset": false,
+  "max_charging_power": 45.0,
+  "minidiag_enabled": false,
+  "minios_enabled": false,
+  "mode_switcher_type": "keyboard_dev_switcher",
+  "models": {
+    "careena": {
+      "delay_reboot_to_ping": 80
     },
-    "servo_prog_state_delay": 10,
-    "smm_store": false,
-    "gsc_can_wake_ec_with_reset": false,
-    "max_charging_power": 45.0,
-    "usb_a_port_count": -1,
-    "models": {
-        "liara": {
-            "usbc_voltage_on_shutdown_and_full_batt": 5,
-            "hold_pwr_button_poweroff": 6
-        },
-        "careena": {
-            "delay_reboot_to_ping": 80
-        }
-    },
-    "minidiag_enabled": false,
-    "minios_enabled": false,
-    "rec_invalid_screen": 5
+    "liara": {
+      "hold_pwr_button_poweroff": 6,
+      "usbc_voltage_on_shutdown_and_full_batt": 5
+    }
+  },
+  "platform": "grunt",
+  "rec_invalid_screen": 5,
+  "servo_prog_state_delay": 10,
+  "smm_store": false,
+  "usb_a_port_count": -1
 }
