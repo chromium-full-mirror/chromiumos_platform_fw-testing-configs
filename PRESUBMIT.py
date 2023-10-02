@@ -106,18 +106,19 @@ def CommonCheck(input_api, output_api):
     results = []
     results.extend(VerifyJson(input_api, output_api))
     results.extend(VerifyConsolidated(input_api, output_api))
-    results.extend(
-        input_api.canned_checks.RunUnitTests(
-            input_api,
-            output_api,
-            [
-                input_api.os_path.join(
-                    input_api.PresubmitLocalPath(), "consolidate_unittest.py"
-                )
-            ],
-            run_on_python2=False,
-        )
-    )
+    # Tests don't normally cause repo upload to fail, and the "warnings"
+    # that it emits are hidden. Setting no_diffs tricks the tests into failing
+    # instead of warning.
+    save = input_api.no_diffs
+    try:
+        input_api.no_diffs = True
+        tests = input_api.canned_checks.GetUnitTestsInDirectory(
+                input_api, output_api,
+                input_api.PresubmitLocalPath(),
+                files_to_check=[r'.+_unittest\.py$'])
+        results.extend(input_api.RunTests(tests))
+    finally:
+            input_api.no_diffs = save
     return results
 
 
