@@ -2,10 +2,7 @@
   "ac_on_can_wake_ap_from_ulp": true,
   "chrome_ec": true,
   "cr50_capability": {
-    "ec_hibernate_breaks_rdd": false,
-    "rdd_leakage": true,
-    "rdd_off_in_g3": false,
-    "wp_on_in_g3": false
+    "rdd_leakage": true
   },
   "custom_max_tpm_init_us": 240000,
   "custom_usb_enable_pins": [
@@ -73,6 +70,5 @@
   "platform": "octopus",
   "rec_invalid_screen": 5,
   "smm_store": false,
-  "spi_voltage": "pp1800",
   "usb_plug": 45
 }

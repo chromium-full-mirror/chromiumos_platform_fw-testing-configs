@@ -1,13 +1,6 @@
 {
   "ac_on_can_wake_ap_from_ulp": true,
   "chrome_ec": true,
-  "cr50_capability": {
-    "deep_sleep_in_s0i3": false,
-    "ec_hibernate_breaks_rdd": false,
-    "rdd_leakage": false,
-    "rdd_off_in_g3": false,
-    "wp_on_in_g3": false
-  },
   "custom_usb_enable_pins": [
     {
       "ioex": false,
@@ -19,7 +12,6 @@
     }
   ],
   "delay_powerinfo_stable": 5,
-  "ec_boot_to_console": 1.2,
   "ec_capability": {
     "adc_ectemp": false,
     "arm": false,
@@ -44,12 +36,9 @@
   "minidiag_capability": {
     "cbmem_preserved_by_ap_reset": false
   },
-  "minios_enabled": true,
-  "mode_switcher_type": "menu_switcher",
   "platform": "skyrim",
   "rec_force_mrc": false,
   "s3_override_to_unsupported": true,
-  "serial_firmware_boot_delay": 10,
   "servo_prog_state_delay": 1.0,
   "smm_store": false
 }

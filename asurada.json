@@ -24,7 +24,6 @@
     "storage_self_test": false
   },
   "minios_enabled": false,
-  "mode_switcher_type": "menu_switcher",
   "models": {
     "hayato": {
       "custom_usb_enable_pins": [

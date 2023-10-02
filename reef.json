@@ -27,7 +27,6 @@
   "no_broken_screen_in_dev": true,
   "platform": "reef",
   "smm_store": false,
-  "spi_voltage": "pp1800",
   "usb_a_port_count": -1,
   "usb_plug": 45
 }

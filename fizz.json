@@ -1,6 +1,5 @@
 {
   "chrome_ec": true,
-  "delay_reboot_to_ping": 60,
   "ec_capability": {
     "adc_ectemp": false,
     "arm": false,

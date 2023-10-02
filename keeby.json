@@ -35,7 +35,6 @@
     "event_log_launch_count": false
   },
   "minios_enabled": false,
-  "mode_switcher_type": "menu_switcher",
   "models": {
     "cappy2": {
       "custom_usb_enable_pins": [

@@ -1,9 +1,6 @@
 {
   "chrome_ec": true,
   "cr50_capability": {
-    "deep_sleep_in_s0i3": false,
-    "ec_hibernate_breaks_rdd": false,
-    "rdd_leakage": false,
     "rdd_off_in_g3": true,
     "wp_on_in_g3": true
   },
@@ -25,7 +22,6 @@
     "x86": true
   },
   "has_keyboard": false,
-  "has_lid": true,
   "is_detachable": true,
   "keypress_delay": 5,
   "max_charging_power": 45.0,

@@ -26,8 +26,6 @@
   },
   "hold_pwr_button_nopowerd_shutdown": 14,
   "hold_pwr_button_poweron": 3,
-  "max_charging_power": 60.0,
-  "mode_switcher_type": "menu_switcher",
   "platform": "draco",
   "smm_store": false,
   "spi_voltage": "pp3300"

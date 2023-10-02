@@ -41,7 +41,6 @@
     "storage_self_test": false
   },
   "minios_enabled": false,
-  "mode_switcher_type": "menu_switcher",
   "models": {
     "beetley": {
       "custom_usb_enable_pins": [
@@ -92,16 +91,6 @@
       ]
     },
     "boxy": {
-      "custom_usb_enable_pins": [
-        {
-          "ioex": false,
-          "name": "EN_USB_A0_VBUS"
-        },
-        {
-          "ioex": false,
-          "name": "EN_USB_A1_VBUS"
-        }
-      ],
       "ec_capability": {
         "adc_ectemp": false,
         "arm": false,
@@ -112,11 +101,7 @@
         "keyboard": false,
         "lid": false,
         "peci": false,
-        "smart_usb_charge": false,
-        "thermal": false,
-        "usb": true,
-        "usbpd_uart": false,
-        "x86": true
+        "smart_usb_charge": false
       },
       "has_keyboard": false,
       "has_lid": false,
@@ -177,11 +162,7 @@
         "keyboard": false,
         "lid": false,
         "peci": false,
-        "smart_usb_charge": false,
-        "thermal": false,
-        "usb": true,
-        "usbpd_uart": false,
-        "x86": true
+        "smart_usb_charge": false
       },
       "has_keyboard": false,
       "has_lid": false,
@@ -432,11 +413,7 @@
         "keyboard": false,
         "lid": false,
         "peci": false,
-        "smart_usb_charge": false,
-        "thermal": false,
-        "usb": true,
-        "usbpd_uart": false,
-        "x86": true
+        "smart_usb_charge": false
       },
       "has_keyboard": false,
       "has_lid": false,

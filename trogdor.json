@@ -30,7 +30,6 @@
     "storage_self_test": false
   },
   "minios_enabled": false,
-  "mode_switcher_type": "menu_switcher",
   "models": {
     "lazor": {
       "usbc_input_voltage_limit": 15

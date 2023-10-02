@@ -27,8 +27,6 @@
   },
   "firmware_screen": 20,
   "hold_pwr_button_nopowerd_shutdown": 14,
-  "max_charging_power": 60.0,
-  "mode_switcher_type": "menu_switcher",
   "platform": "rex",
   "smm_store": false,
   "spi_voltage": "pp3300"

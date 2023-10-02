@@ -1,9 +1,7 @@
 {
   "chrome_ec": true,
   "cr50_capability": {
-    "ec_hibernate_breaks_rdd": false,
     "rdd_leakage": true,
-    "rdd_off_in_g3": false,
     "wp_on_in_g3": true
   },
   "custom_max_tpm_init_us": 230000,

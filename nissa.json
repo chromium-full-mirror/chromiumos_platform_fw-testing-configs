@@ -33,7 +33,6 @@
   "minidiag_capability": {
     "cbmem_preserved_by_ap_reset": false
   },
-  "mode_switcher_type": "menu_switcher",
   "platform": "nissa",
   "smm_store": false,
   "spi_voltage": "pp3300",

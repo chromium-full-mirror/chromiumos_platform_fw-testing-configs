@@ -11,6 +11,5 @@
   "max_charging_power": 38.55,
   "mode_switcher_type": "tablet_detachable_switcher",
   "parent": "gru",
-  "platform": "scarlet",
-  "usb_a_port_count": -1
+  "platform": "scarlet"
 }

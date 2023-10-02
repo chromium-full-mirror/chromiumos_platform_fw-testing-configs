@@ -1,6 +1,5 @@
 {
   "custom_max_tpm_init_us": 180000,
-  "no_broken_screen_in_dev": true,
   "parent": "reef",
   "platform": "coral",
   "rec_invalid_screen": 5,

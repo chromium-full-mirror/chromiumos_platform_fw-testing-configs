@@ -25,7 +25,6 @@
   "ec_efs2": true,
   "ec_reboot_to_g3_delay": 10,
   "firmware_screen": 20,
-  "mode_switcher_type": "menu_switcher",
   "models": {
     "tomato": {
       "minios_enabled": false

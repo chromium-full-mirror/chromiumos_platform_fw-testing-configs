@@ -2,11 +2,7 @@
   "ac_on_can_wake_ap_from_ulp": true,
   "chrome_ec": true,
   "cr50_capability": {
-    "deep_sleep_in_s0i3": false,
-    "ec_hibernate_breaks_rdd": false,
-    "rdd_leakage": false,
-    "rdd_off_in_g3": true,
-    "wp_on_in_g3": false
+    "rdd_off_in_g3": true
   },
   "custom_max_tpm_init_us": 230000,
   "custom_usb_enable_pins": [
@@ -41,7 +37,6 @@
     "event_log_launch_count": false
   },
   "minios_enabled": false,
-  "mode_switcher_type": "menu_switcher",
   "models": {
     "chronicler": {
       "firmware_screen": 16

@@ -29,11 +29,9 @@
   "hibernate": false,
   "hold_pwr_button_nopowerd_shutdown": 14,
   "hold_pwr_button_poweron": 3,
-  "max_charging_power": 60.0,
   "minidiag_capability": {
     "cbmem_preserved_by_ap_reset": false
   },
-  "mode_switcher_type": "menu_switcher",
   "platform": "brask",
   "rec_button_dev_switch": true,
   "smm_store": false,

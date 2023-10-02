@@ -7,7 +7,6 @@
     }
   ],
   "delay_powerinfo_stable": 6,
-  "delay_reboot_to_ping": 60,
   "ec_capability": {
     "adc_ectemp": false,
     "arm": false,
@@ -33,7 +32,6 @@
   "max_charging_power": 100.0,
   "minidiag_enabled": false,
   "minios_enabled": false,
-  "mode_switcher_type": "menu_switcher",
   "platform": "puff",
   "rec_button_dev_switch": true,
   "s0ix_override_to_unsupported": true,

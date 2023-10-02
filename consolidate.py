@@ -239,11 +239,18 @@ def detect_invalid_fields(consolidated):
         for field in conf:
             if field in ["models"]:
                 continue
+            parent = conf.get("parent", "DEFAULTS")
             if field not in consolidated["DEFAULTS"]:
                 raise FormatException(
                     "Unexpected json field", platform=platform, field=field
                 )
             if isinstance(consolidated["DEFAULTS"][field], dict):
+                if len(conf[field]) == 0:
+                    raise FormatException(
+                        "Empty capabilities map",
+                        platform=platform,
+                        field=field,
+                    )
                 for subfield in conf[field]:
                     if subfield not in consolidated["DEFAULTS"][field]:
                         raise FormatException(
@@ -251,6 +258,41 @@ def detect_invalid_fields(consolidated):
                             platform=platform,
                             field=f"{field}.{subfield}",
                         )
+                    curr_parent = parent
+                    while (
+                        curr_parent
+                        and consolidated[curr_parent]
+                        .get(field, {})
+                        .get(subfield)
+                        is None
+                    ):
+                        curr_parent = consolidated[curr_parent].get("parent")
+                    if curr_parent and conf[field][subfield] == consolidated[
+                        curr_parent
+                    ].get(field, {}).get(subfield):
+                        raise FormatException(
+                            f"Redundant setting of {field}.{subfield}:"
+                            f"{conf[field][subfield]} (set in "
+                            f"{curr_parent}.json)",
+                            platform=platform,
+                            field=f"{field}.{subfield}",
+                        )
+            else:
+                curr_parent = parent
+                while (
+                    curr_parent and consolidated[curr_parent].get(field) is None
+                ):
+                    curr_parent = consolidated[curr_parent].get("parent")
+                if curr_parent and conf[field] == consolidated[curr_parent].get(
+                    field
+                ):
+                    raise FormatException(
+                        f"Redundant setting of {field}:{conf[field]} (set in "
+                        f"{curr_parent}.json)",
+                        platform=platform,
+                        field=field,
+                    )
+
         models = conf.get("models", {})
         for model, model_conf in models.items():
             for field in model_conf:
@@ -262,6 +304,13 @@ def detect_invalid_fields(consolidated):
                         model=model,
                     )
                 if isinstance(consolidated["DEFAULTS"][field], dict):
+                    if len(model_conf[field]) == 0:
+                        raise FormatException(
+                            "Empty capabilities map",
+                            platform=platform,
+                            field=field,
+                            model=model,
+                        )
                     for subfield in model_conf[field]:
                         if subfield not in consolidated["DEFAULTS"][field]:
                             raise FormatException(
@@ -270,6 +319,43 @@ def detect_invalid_fields(consolidated):
                                 field=f"{field}.{subfield}",
                                 model=model,
                             )
+                    curr_parent = platform
+                    while (
+                        curr_parent
+                        and consolidated[curr_parent]
+                        .get(field, {})
+                        .get(subfield)
+                        is None
+                    ):
+                        curr_parent = consolidated[curr_parent].get("parent")
+                    if curr_parent and model_conf[field][
+                        subfield
+                    ] == consolidated[curr_parent].get(field, {}).get(subfield):
+                        raise FormatException(
+                            f"Redundant setting of {field}.{subfield}:"
+                            f"{model_conf[field][subfield]} (set in "
+                            f"{curr_parent}.json)",
+                            platform=platform,
+                            field=f"{field}.{subfield}",
+                            model=model,
+                        )
+                else:
+                    curr_parent = platform
+                    while (
+                        curr_parent
+                        and consolidated[curr_parent].get(field) is None
+                    ):
+                        curr_parent = consolidated[curr_parent].get("parent")
+                    if curr_parent and model_conf[field] == consolidated[
+                        curr_parent
+                    ].get(field):
+                        raise FormatException(
+                            f"Redundant setting of {field}:{model_conf[field]} "
+                            f"(set in {curr_parent}.json)",
+                            platform=platform,
+                            field=field,
+                            model=model,
+                        )
 
 
 def copy_parent_data(consolidated):
