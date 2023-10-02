@@ -12,33 +12,23 @@
       "name": "EN_USB_A1_VBUS"
     }
   ],
-  "dark_resume_capable": true,
   "delay_reboot_to_ping": 120,
   "ec_capability": {
-    "adc_ectemp": false,
     "arm": false,
     "battery": true,
     "cbi": true,
     "charging": true,
-    "doubleboot": false,
     "keyboard": true,
     "lid": true,
-    "peci": false,
-    "smart_usb_charge": true,
-    "thermal": false,
-    "usb": true,
-    "usbpd_uart": false,
     "x86": true
   },
-  "ec_efs2": true,
   "firmware_screen": 30,
   "gsc_off_in_ulp": true,
   "hold_pwr_button_nopowerd_shutdown": 14,
   "max_charging_power": 45.0,
   "minidiag_capability": {
     "cbmem_preserved_by_ap_reset": false,
-    "event_log_launch_count": false,
-    "storage_self_test": false
+    "event_log_launch_count": false
   },
   "minios_enabled": false,
   "models": {
@@ -92,16 +82,12 @@
     },
     "boxy": {
       "ec_capability": {
-        "adc_ectemp": false,
         "arm": false,
         "battery": false,
         "cbi": true,
         "charging": false,
-        "doubleboot": false,
         "keyboard": false,
-        "lid": false,
-        "peci": false,
-        "smart_usb_charge": false
+        "lid": false
       },
       "has_keyboard": false,
       "has_lid": false,
@@ -153,16 +139,12 @@
         }
       ],
       "ec_capability": {
-        "adc_ectemp": false,
         "arm": false,
         "battery": false,
         "cbi": true,
         "charging": false,
-        "doubleboot": false,
         "keyboard": false,
-        "lid": false,
-        "peci": false,
-        "smart_usb_charge": false
+        "lid": false
       },
       "has_keyboard": false,
       "has_lid": false,
@@ -404,16 +386,12 @@
         }
       ],
       "ec_capability": {
-        "adc_ectemp": false,
         "arm": false,
         "battery": false,
         "cbi": true,
         "charging": false,
-        "doubleboot": false,
         "keyboard": false,
-        "lid": false,
-        "peci": false,
-        "smart_usb_charge": false
+        "lid": false
       },
       "has_keyboard": false,
       "has_lid": false,

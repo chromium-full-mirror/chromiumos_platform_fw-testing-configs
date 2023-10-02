@@ -7,23 +7,14 @@
     }
   ],
   "ec_capability": {
-    "adc_ectemp": false,
     "arm": true,
     "battery": true,
     "cbi": true,
     "charging": true,
-    "doubleboot": false,
     "keyboard": true,
     "lid": true,
-    "peci": false,
-    "smart_usb_charge": false,
-    "thermal": false,
-    "usb": true,
-    "usbpd_uart": false,
     "x86": false
   },
-  "ec_efs2": true,
-  "ec_reboot_to_g3_delay": 10,
   "firmware_screen": 20,
   "fw_update_build": "corsola-release/R109-15190.0.0",
   "minidiag_capability": {

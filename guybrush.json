@@ -14,22 +14,14 @@
       "name": "EN_PP5000_USB_A1_VBUS_DB"
     }
   ],
-  "dark_resume_capable": true,
   "delay_powerinfo_stable": 5,
   "ec_capability": {
-    "adc_ectemp": false,
     "arm": false,
     "battery": true,
     "cbi": true,
     "charging": true,
-    "doubleboot": false,
     "keyboard": true,
     "lid": true,
-    "peci": false,
-    "smart_usb_charge": true,
-    "thermal": false,
-    "usb": true,
-    "usbpd_uart": false,
     "x86": true
   },
   "firmware_screen": 15,

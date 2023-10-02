@@ -7,24 +7,15 @@
       "name": "en_usb_a0_vbus"
     }
   ],
-  "dark_resume_capable": true,
   "ec_capability": {
-    "adc_ectemp": false,
     "arm": false,
     "battery": true,
     "cbi": true,
     "charging": true,
-    "doubleboot": false,
     "keyboard": true,
     "lid": true,
-    "peci": false,
-    "smart_usb_charge": false,
-    "thermal": false,
-    "usb": true,
-    "usbpd_uart": false,
     "x86": true
   },
-  "ec_efs2": true,
   "firmware_screen": 30,
   "fw_update_build": "nissa-release/R109-15213.0.0",
   "hold_pwr_button_nopowerd_shutdown": 14,

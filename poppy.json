@@ -1,19 +1,12 @@
 {
   "chrome_ec": true,
   "ec_capability": {
-    "adc_ectemp": false,
     "arm": false,
     "battery": true,
     "cbi": false,
     "charging": true,
-    "doubleboot": false,
     "keyboard": false,
     "lid": true,
-    "peci": false,
-    "smart_usb_charge": false,
-    "thermal": false,
-    "usb": false,
-    "usbpd_uart": false,
     "x86": true
   },
   "firmware_screen": 15,

@@ -1,22 +1,14 @@
 {
   "chrome_ec": true,
   "ec_capability": {
-    "adc_ectemp": false,
     "arm": true,
     "battery": true,
     "cbi": true,
     "charging": true,
-    "doubleboot": false,
     "keyboard": true,
     "lid": true,
-    "peci": false,
-    "smart_usb_charge": false,
-    "thermal": false,
-    "usb": true,
-    "usbpd_uart": false,
     "x86": false
   },
-  "ec_efs2": true,
   "firmware_screen": 20,
   "is_detachable": true,
   "minidiag_capability": {

@@ -2,26 +2,17 @@
   "chrome_ec": true,
   "custom_max_tpm_init_us": 240000,
   "ec_capability": {
-    "adc_ectemp": false,
     "arm": true,
     "battery": true,
     "cbi": false,
     "charging": true,
-    "doubleboot": false,
     "keyboard": true,
     "lid": true,
-    "peci": false,
-    "smart_usb_charge": false,
-    "thermal": false,
-    "usb": true,
-    "usbpd_uart": false,
     "x86": false
   },
-  "ec_reboot_to_g3_delay": 10,
   "firmware_screen": 20,
   "minidiag_capability": {
-    "event_log_launch_count": false,
-    "storage_self_test": false
+    "event_log_launch_count": false
   },
   "minios_enabled": false,
   "models": {

@@ -7,21 +7,13 @@
       "name": "EN_PP5000_USBA_R"
     }
   ],
-  "dark_resume_capable": true,
   "ec_capability": {
-    "adc_ectemp": false,
     "arm": false,
     "battery": true,
     "cbi": true,
     "charging": true,
-    "doubleboot": false,
     "keyboard": true,
     "lid": true,
-    "peci": false,
-    "smart_usb_charge": false,
-    "thermal": false,
-    "usb": true,
-    "usbpd_uart": false,
     "x86": true
   },
   "hold_pwr_button_nopowerd_shutdown": 14,

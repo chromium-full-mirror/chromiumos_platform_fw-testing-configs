@@ -4,22 +4,14 @@
     "rdd_leakage": true,
     "wp_on_in_g3": true
   },
-  "dark_resume_capable": true,
   "dut_can_source_power_in_suspend": false,
   "ec_capability": {
-    "adc_ectemp": false,
     "arm": false,
     "battery": true,
     "cbi": false,
     "charging": true,
-    "doubleboot": true,
     "keyboard": true,
     "lid": true,
-    "peci": false,
-    "smart_usb_charge": false,
-    "thermal": false,
-    "usb": false,
-    "usbpd_uart": false,
     "x86": true
   },
   "ec_ro_vbus_bug": true,

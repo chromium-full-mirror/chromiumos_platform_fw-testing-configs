@@ -1,21 +1,13 @@
 {
   "chrome_ec": true,
-  "dark_resume_capable": true,
   "ec_boot_to_console": 0.2,
   "ec_capability": {
-    "adc_ectemp": false,
     "arm": false,
     "battery": true,
     "cbi": false,
     "charging": true,
-    "doubleboot": true,
     "keyboard": true,
     "lid": true,
-    "peci": false,
-    "smart_usb_charge": false,
-    "thermal": false,
-    "usb": true,
-    "usbpd_uart": true,
     "x86": true
   },
   "ec_ro_vbus_bug": true,

@@ -5,21 +5,13 @@
     "rdd_leakage": true
   },
   "custom_max_tpm_init_us": 240000,
-  "dark_resume_capable": true,
   "ec_capability": {
-    "adc_ectemp": false,
     "arm": false,
     "battery": true,
     "cbi": false,
     "charging": true,
-    "doubleboot": false,
     "keyboard": true,
     "lid": true,
-    "peci": false,
-    "smart_usb_charge": false,
-    "thermal": false,
-    "usb": false,
-    "usbpd_uart": false,
     "x86": true
   },
   "firmware_screen": 15,

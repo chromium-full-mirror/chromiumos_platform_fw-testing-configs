@@ -6,21 +6,13 @@
       "name": "EN_PP5000_USB_VBUS"
     }
   ],
-  "dark_resume_capable": true,
   "ec_capability": {
-    "adc_ectemp": false,
     "arm": false,
     "battery": false,
     "cbi": true,
     "charging": false,
-    "doubleboot": false,
     "keyboard": false,
     "lid": false,
-    "peci": false,
-    "smart_usb_charge": false,
-    "thermal": false,
-    "usb": true,
-    "usbpd_uart": false,
     "x86": true
   },
   "firmware_screen": 15,

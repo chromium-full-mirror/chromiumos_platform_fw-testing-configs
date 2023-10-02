@@ -114,7 +114,12 @@ def load_json(fwtc_dir, platforms):
     for platform in platforms:
         json_path = os.path.join(fwtc_dir, platform + ".json")
         with open(json_path, encoding="utf-8") as json_file:
-            j = json.load(json_file, object_pairs_hook=collections.OrderedDict)
+            try:
+                j = json.load(
+                    json_file, object_pairs_hook=collections.OrderedDict
+                )
+            except json.decoder.JSONDecodeError as e:
+                raise FormatException(f"error decoding file {json_path}") from e
         consolidated[platform] = j
     check_parent_cycles(consolidated)
     detect_invalid_fields(consolidated)

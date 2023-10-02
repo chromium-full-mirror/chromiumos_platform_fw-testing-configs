@@ -7,22 +7,14 @@
       "name": "en_pp5000_usba_r"
     }
   ],
-  "dark_resume_capable": true,
   "delay_reboot_to_ping": 90,
   "ec_capability": {
-    "adc_ectemp": false,
     "arm": false,
     "battery": true,
     "cbi": true,
     "charging": true,
-    "doubleboot": false,
     "keyboard": true,
     "lid": true,
-    "peci": false,
-    "smart_usb_charge": false,
-    "thermal": false,
-    "usb": true,
-    "usbpd_uart": false,
     "x86": true
   },
   "firmware_screen": 20,

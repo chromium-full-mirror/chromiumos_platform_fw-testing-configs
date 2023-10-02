@@ -16,28 +16,19 @@
   ],
   "delay_powerinfo_stable": 5,
   "ec_capability": {
-    "adc_ectemp": false,
     "arm": false,
     "battery": true,
     "cbi": true,
     "charging": true,
-    "doubleboot": false,
     "keyboard": true,
     "lid": true,
-    "peci": false,
-    "smart_usb_charge": true,
-    "thermal": false,
-    "usb": true,
-    "usbpd_uart": false,
     "x86": true
   },
-  "ec_efs2": true,
   "firmware_screen": 15,
   "hold_pwr_button_poweroff": 10,
   "max_charging_power": 65.0,
   "minidiag_capability": {
-    "event_log_launch_count": false,
-    "storage_self_test": false
+    "event_log_launch_count": false
   },
   "minios_enabled": false,
   "models": {

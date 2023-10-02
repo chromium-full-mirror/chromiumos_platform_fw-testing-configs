@@ -9,25 +9,17 @@
     }
   ],
   "ec_capability": {
-    "adc_ectemp": false,
     "arm": true,
     "battery": true,
     "cbi": false,
     "charging": true,
-    "doubleboot": false,
     "keyboard": true,
     "lid": true,
-    "peci": false,
-    "smart_usb_charge": false,
-    "thermal": false,
-    "usb": true,
-    "usbpd_uart": false,
     "x86": false
   },
   "minidiag_capability": {
     "cbmem_preserved_by_ap_reset": false,
-    "event_log_launch_count": false,
-    "storage_self_test": false
+    "event_log_launch_count": false
   },
   "minios_enabled": false,
   "models": {

@@ -1,22 +1,14 @@
 {
   "chrome_ec": true,
   "ec_capability": {
-    "adc_ectemp": false,
     "arm": true,
     "battery": true,
     "cbi": false,
     "charging": true,
-    "doubleboot": false,
     "keyboard": true,
     "lid": true,
-    "peci": false,
-    "smart_usb_charge": false,
-    "thermal": false,
-    "usb": false,
-    "usbpd_uart": false,
     "x86": false
   },
-  "ec_has_powerbtn_cmd": false,
   "minidiag_enabled": false,
   "minios_enabled": false,
   "mode_switcher_type": "keyboard_dev_switcher",
