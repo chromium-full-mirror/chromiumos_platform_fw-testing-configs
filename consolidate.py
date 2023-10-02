@@ -115,10 +115,40 @@ def load_json(fwtc_dir, platforms):
         with open(json_path, encoding="utf-8") as json_file:
             j = json.load(json_file, object_pairs_hook=collections.OrderedDict)
         consolidated[platform] = j
+    check_parent_cycles(consolidated)
+    detect_invalid_fields(consolidated)
     reformat_capability_map(consolidated, "ec_capability")
     reformat_capability_map(consolidated, "cr50_capability")
     reformat_capability_map(consolidated, "minidiag_capability")
     return consolidated
+
+
+def check_parent_cycles(consolidated):
+    """Check for cycles in the parent field references.
+
+    Args:
+        consolidated: Dict containing configs for each platform JSON file.
+
+    Returns:
+        None
+    """
+    for platform in consolidated:
+        curr_plat = platform
+        seen = {platform}
+        while True:
+            curr_plat = consolidated[curr_plat].get("parent") or "DEFAULTS"
+
+            # Check that there is no cycle of inheritance
+            if curr_plat not in seen:
+                seen.add(curr_plat)
+            elif curr_plat == "DEFAULTS":
+                break
+            else:
+                raise FormatException(
+                    "Circular parent from platform json",
+                    platform=platform,
+                    field="parent",
+                )
 
 
 def reformat_capability_map(consolidated, cap_field):
@@ -165,21 +195,8 @@ def reformat_capability_map(consolidated, cap_field):
     # Need separate loop to ensure incl, excl calculated for parent platforms
     for platform, (incl, excl, models) in platform_caps.items():
         curr_plat = platform
-        seen = {platform}
-        while True:
+        while curr_plat != "DEFAULTS":
             curr_plat = consolidated[curr_plat].get("parent") or "DEFAULTS"
-
-            # Check that there is no cycle of inheritance
-            if curr_plat not in seen:
-                seen.add(curr_plat)
-            elif curr_plat == "DEFAULTS":
-                break
-            else:
-                raise FormatException(
-                    "Circular parent from platform json",
-                    platform=platform,
-                    field="parent",
-                )
 
             par_incl, par_excl, _ = platform_caps.get(
                 curr_plat, (set(), set(), set())
@@ -218,6 +235,36 @@ def reformat_capability_map(consolidated, cap_field):
                 model_incl
             )
         consolidated[platform][cap_field] = sorted(incl)
+
+
+def detect_invalid_fields(consolidated):
+    """Verify that all fields are present in DEFAULTS.
+
+    Args:
+        consolidated: Dict containing configs for each platform JSON file.
+
+    Returns:
+        None
+    """
+    for platform, conf in consolidated.items():
+        if platform == "DEFAULTS":
+            continue
+
+        for field in conf:
+            if field in ["models"]:
+                continue
+            if field not in consolidated["DEFAULTS"]:
+                raise FormatException(
+                    "Unexpected json field", platform=platform, field=field
+                )
+            if isinstance(consolidated["DEFAULTS"][field], dict):
+                for subfield in conf[field]:
+                    if subfield not in consolidated["DEFAULTS"][field]:
+                        raise FormatException(
+                            "Unexpected json field",
+                            platform=platform,
+                            field=f"{field}.{subfield}",
+                        )
 
 
 def write_output(consolidated_json, output_path):

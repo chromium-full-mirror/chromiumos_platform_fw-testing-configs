@@ -932,6 +932,8 @@ class TestMain(unittest.TestCase):
                 {
                     "platform": None,
                     "platform_DOC": "foo",
+                    "firmware_screen": 42,
+                    "parent": None,
                     "ec_capability": {
                         "adc_ectemp": None,
                         "arm": None,
@@ -978,10 +980,12 @@ class TestMain(unittest.TestCase):
         "ec_capability": [
             "default_true"
         ],
+        "firmware_screen": 42,
         "minidiag_capability": [
             "event_log_launch_count",
             "storage_self_test"
         ],
+        "parent": null,
         "platform": null,
         "platform_DOC": "foo"
     },
@@ -1054,7 +1058,9 @@ class TestMain(unittest.TestCase):
 
             self.assertTrue(
                 expected_output == output_contents,
-                "".join(difflib.unified_diff(expected_output, output_contents)),
+                "\n".join(
+                    difflib.unified_diff(expected_output, output_contents)
+                ),
             )
 
         # Verify the final output is read-only.

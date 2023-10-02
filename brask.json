@@ -34,14 +34,6 @@
     "hold_pwr_button_nopowerd_shutdown": 14,
     "hold_pwr_button_poweron": 3,
     "max_charging_power": 60.0,
-    "ap_flash_ccd_programmer": "raiden_debug_spi:target=AP,custom_rst=True,serial=%s",
-    "ap_flash_ccd_pre_commands": [
-        "ec_uart_cmd:apshutdown",
-        "sleep:5"
-    ],
-    "ap_flash_ccd_post_commands": [
-        "power_state:reset"
-    ],
     "has_lid": false,
     "has_keyboard": false,
     "hibernate": false,
