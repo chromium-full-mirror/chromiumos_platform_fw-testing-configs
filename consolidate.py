@@ -121,6 +121,7 @@ def load_json(fwtc_dir, platforms):
     reformat_capability_map(consolidated, "ec_capability")
     reformat_capability_map(consolidated, "cr50_capability")
     reformat_capability_map(consolidated, "minidiag_capability")
+    copy_parent_data(consolidated)
     return consolidated
 
 
@@ -250,6 +251,42 @@ def detect_invalid_fields(consolidated):
                             platform=platform,
                             field=f"{field}.{subfield}",
                         )
+
+
+def copy_parent_data(consolidated):
+    """Copy all data from parent configs to child configs.
+
+    Args:
+        consolidated: Dict containing configs for each platform JSON file.
+
+    Returns:
+        None
+    """
+    for platform, conf in consolidated.items():
+        if platform == "DEFAULTS":
+            continue
+
+        logging.debug("%s before = %s", platform, conf)
+        curr_plat = platform
+        while curr_plat != "DEFAULTS":
+            curr_plat = consolidated[curr_plat].get("parent") or "DEFAULTS"
+            parent_conf = consolidated[curr_plat]
+            for k, v in parent_conf.items():
+                if k in ["models", "parent"] or k.endswith(".DOC"):
+                    continue
+                if k not in conf and v is not None:
+                    conf[k] = v
+        logging.debug("%s after = %s", platform, conf)
+
+        models = conf.get("models", {})
+        for model, model_conf in models.items():
+            logging.debug("%s.%s before = %s", platform, model, model_conf)
+            for k, v in conf.items():
+                if k in ["models", "parent"] or k.endswith(".DOC"):
+                    continue
+                if k not in model_conf and v is not None:
+                    model_conf[k] = v
+            logging.debug("%s.%s after = %s", platform, model, model_conf)
 
 
 def write_output(consolidated_json, output_path):

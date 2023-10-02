@@ -975,75 +975,77 @@ class TestMain(unittest.TestCase):
     def test_main(self):
         """Verify that the whole script works, end-to-end."""
         expected_str = """{
-    "DEFAULTS": {
-        "cr50_capability": [],
-        "ec_capability": [
-            "default_true"
-        ],
-        "firmware_screen": 42,
-        "minidiag_capability": [
-            "event_log_launch_count",
-            "storage_self_test"
-        ],
-        "parent": null,
-        "platform": null,
-        "platform.DOC": "foo"
-    },
-    "a": {
-        "cr50_capability": [],
-        "ec_capability": [
-            "adc_ectemp",
-            "arm",
-            "default_true",
-            "usb",
-            "x86"
-        ],
-        "firmware_screen": 0.5,
-        "minidiag_capability": [
-            "event_log_launch_count",
-            "storage_self_test"
-        ],
-        "platform": "a"
-    },
-    "b": {
-        "cr50_capability": [
-            "ec_hibernate_breaks_rdd",
-            "rdd_leakage"
-        ],
-        "ec_capability": [
-            "adc_ectemp",
-            "keyboard",
-            "lid",
-            "usb",
-            "x86"
-        ],
-        "minidiag_capability": [
-            "storage_self_test"
-        ],
-        "parent": "z",
-        "platform": "b"
-    },
-    "z": {
-        "cr50_capability": [
-            "rdd_leakage",
-            "rdd_off_in_g3"
-        ],
-        "ec_capability": [
-            "adc_ectemp",
-            "keyboard",
-            "lid",
-            "usb",
-            "x86"
-        ],
-        "firmware_screen": 10,
-        "minidiag_capability": [
-            "event_log_launch_count",
-            "storage_self_test"
-        ],
-        "parent": "a",
-        "platform": "z"
-    }
-}"""
+  "DEFAULTS": {
+    "cr50_capability": [],
+    "ec_capability": [
+      "default_true"
+    ],
+    "firmware_screen": 42,
+    "minidiag_capability": [
+      "event_log_launch_count",
+      "storage_self_test"
+    ],
+    "parent": null,
+    "platform": null,
+    "platform.DOC": "foo"
+  },
+  "a": {
+    "cr50_capability": [],
+    "ec_capability": [
+      "adc_ectemp",
+      "arm",
+      "default_true",
+      "usb",
+      "x86"
+    ],
+    "firmware_screen": 0.5,
+    "minidiag_capability": [
+      "event_log_launch_count",
+      "storage_self_test"
+    ],
+    "platform": "a"
+  },
+  "b": {
+    "cr50_capability": [
+      "ec_hibernate_breaks_rdd",
+      "rdd_leakage"
+    ],
+    "ec_capability": [
+      "adc_ectemp",
+      "keyboard",
+      "lid",
+      "usb",
+      "x86"
+    ],
+    "firmware_screen": 10,
+    "minidiag_capability": [
+      "storage_self_test"
+    ],
+    "parent": "z",
+    "platform": "b"
+  },
+  "z": {
+    "cr50_capability": [
+      "rdd_leakage",
+      "rdd_off_in_g3"
+    ],
+    "ec_capability": [
+      "adc_ectemp",
+      "keyboard",
+      "lid",
+      "usb",
+      "x86"
+    ],
+    "firmware_screen": 10,
+    "minidiag_capability": [
+      "event_log_launch_count",
+      "storage_self_test"
+    ],
+    "parent": "a",
+    "platform": "z"
+  }
+}
+"""
 
         # Run the script twice to verify idempotency.
         for _ in range(2):
@@ -1053,8 +1055,10 @@ class TestMain(unittest.TestCase):
 
             # Verify the output.
             with open(TestMain.output_fp, encoding="utf-8") as output_file:
-                output_contents = [s.strip() for s in output_file.readlines()]
-            expected_output = [s.strip() for s in expected_str.splitlines()]
+                output_contents = [
+                    s.rstrip("\n") for s in output_file.readlines()
+                ]
+            expected_output = expected_str.splitlines()
 
             if expected_output != output_contents:
                 self.fail(
@@ -1065,6 +1069,7 @@ class TestMain(unittest.TestCase):
                             output_contents,
                             fromfile="expected",
                             tofile="actual",
+                            lineterm="",
                         )
                     ),
                 )
