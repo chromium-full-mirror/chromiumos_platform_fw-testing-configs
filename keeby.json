@@ -1,5 +1,4 @@
 {
-  "chrome_ec": true,
   "custom_usb_enable_pins": [
     {
       "ioex": false,

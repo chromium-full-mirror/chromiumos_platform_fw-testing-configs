@@ -1,6 +1,5 @@
 {
   "charger_profile_override": true,
-  "chrome_ec": true,
   "delay_reboot_to_ping": 120,
   "ec_boot_to_console": 2,
   "ec_boot_to_wp_en": 2,

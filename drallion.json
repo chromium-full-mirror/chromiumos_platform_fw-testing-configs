@@ -1,6 +1,7 @@
 {
   "ap_access_ec_flash": false,
   "ap_up_after_cr50_reboot": false,
+  "chrome_ec": false,
   "delay_reboot_to_ping": 70,
   "ec_capability": {
     "arm": false,

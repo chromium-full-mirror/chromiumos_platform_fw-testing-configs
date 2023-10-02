@@ -1,5 +1,4 @@
 {
-  "chrome_ec": true,
   "ec_capability": {
     "arm": true,
     "battery": true,

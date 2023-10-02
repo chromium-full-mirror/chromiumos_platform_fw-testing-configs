@@ -1,5 +1,4 @@
 {
-  "chrome_ec": true,
   "custom_max_tpm_init_us": 240000,
   "ec_capability": {
     "arm": true,

@@ -1,5 +1,4 @@
 {
-  "chrome_ec": true,
   "ec_boot_to_console": 0.2,
   "ec_capability": {
     "arm": false,

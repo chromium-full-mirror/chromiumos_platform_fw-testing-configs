@@ -1,7 +1,6 @@
 {
   "ac_on_can_wake_ap_from_ulp": true,
   "charger_profile_override": true,
-  "chrome_ec": true,
   "custom_usb_enable_pins": [
     {
       "ioex": false,

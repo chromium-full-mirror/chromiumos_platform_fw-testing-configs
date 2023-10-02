@@ -1,5 +1,4 @@
 {
-  "chrome_ec": true,
   "delay_reboot_to_ping": 80,
   "ec_boot_to_console": 0.3,
   "ec_capability": {

@@ -1,6 +1,5 @@
 {
   "ac_on_can_wake_ap_from_ulp": true,
-  "chrome_ec": true,
   "cr50_capability": {
     "deep_sleep_in_s0i3": true
   },

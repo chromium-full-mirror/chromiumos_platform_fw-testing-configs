@@ -1,6 +1,5 @@
 {
   "ac_on_can_wake_ap_from_ulp": true,
-  "chrome_ec": true,
   "custom_max_tpm_init_us": 140000,
   "custom_usb_enable_pins": [
     {

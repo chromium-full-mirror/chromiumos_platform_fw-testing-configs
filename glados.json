@@ -1,5 +1,4 @@
 {
-  "chrome_ec": true,
   "chrome_usbpd": true,
   "ec_capability": {
     "arm": false,
