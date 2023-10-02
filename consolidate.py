@@ -175,6 +175,8 @@ def reformat_capability_map(consolidated, cap_field):
             curr_plat = consolidated[curr_plat].get("parent") or "DEFAULTS"
             parent_caps = consolidated[curr_plat].get(cap_field, {})
             for k, v in parent_caps.items():
+                if k.endswith(".DOC"):
+                    continue
                 if k not in caps:
                     caps[k] = v
                     if v is None:
@@ -184,7 +186,7 @@ def reformat_capability_map(consolidated, cap_field):
                             field=cap_field,
                         )
         logging.debug("%s after = %s", platform, caps)
-        incl = set(k for k, v in caps.items() if v)
+        incl = set(k for k, v in caps.items() if v and not k.endswith(".DOC"))
 
         # collect the capabilities for each model
         models_caps = {}
@@ -194,6 +196,8 @@ def reformat_capability_map(consolidated, cap_field):
             logging.debug("%s.%s before = %s", platform, model, model_caps)
             for k, v in caps.items():
                 if k not in model_caps:
+                    if k.endswith(".DOC"):
+                        continue
                     model_caps[k] = v
                     if v is None:
                         raise FormatException(
@@ -203,7 +207,9 @@ def reformat_capability_map(consolidated, cap_field):
                             model=model,
                         )
             logging.debug("%s.%s after = %s", platform, model, model_caps)
-            model_incl = set(k for k, v in model_caps.items() if v)
+            model_incl = set(
+                k for k, v in model_caps.items() if v and not k.endswith(".DOC")
+            )
             models_caps[model] = model_incl
 
         platform_caps[platform] = incl, models_caps
