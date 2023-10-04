@@ -2,6 +2,7 @@
   "ac_on_can_wake_ap_from_ulp": true,
   "custom_usb_enable_pins": [
     {
+      "activelow": false,
       "ioex": false,
       "name": "en_pp5000_usba_r"
     }
@@ -18,6 +19,17 @@
   },
   "firmware_screen": 20,
   "hold_pwr_button_nopowerd_shutdown": 14,
+  "models": {
+    "karis4es": {
+      "custom_usb_enable_pins": [
+        {
+          "activelow": true,
+          "ioex": false,
+          "name": "en_pp5000_usba_r"
+        }
+      ]
+    }
+  },
   "platform": "rex",
   "smm_store": false,
   "spi_voltage": "pp3300"
