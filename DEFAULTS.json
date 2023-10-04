@@ -157,7 +157,7 @@
   "usb_hid_wake_enabled": true,
   "usb_hid_wake_enabled.DOC": "True if wake from USB HID is supported",
   "usb_image_boot_timeout": 180,
-  "usb_image_boot_timeout.DOC": "Timeout of confirming DUT doesn't boot on USB image in Recovery screen",
+  "usb_image_boot_timeout.DOC": "Timeout of confirming DUT doesn't boot on USB image in Recovery, or Developer screen",
   "usb_plug": 10,
   "usb_plug.DOC": "Delay between power-on and plug USB",
   "usb_unplug": 2,
