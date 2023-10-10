@@ -9,6 +9,7 @@
     "x86": true
   },
   "gsc_can_wake_ec_with_reset": false,
+  "hold_pwr_button_poweroff": 6,
   "max_charging_power": 45.0,
   "minidiag_enabled": false,
   "minios_enabled": false,
@@ -18,7 +19,6 @@
       "delay_reboot_to_ping": 80
     },
     "liara": {
-      "hold_pwr_button_poweroff": 6,
       "usbc_voltage_on_shutdown_and_full_batt": 5
     }
   },
