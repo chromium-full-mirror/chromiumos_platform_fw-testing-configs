@@ -29,8 +29,6 @@
   "delay_powerinfo_stable.DOC": "Delay between AP power-on and when powerinfo is stable. Some CPUs have an internal reset that transitions through different power states.",
   "delay_reboot_to_ping": 60,
   "delay_reboot_to_ping.DOC": "Worst case delay between boot and ready for ssh. I.e. booting from servo provided USB to rec mode.",
-  "dev_screen_timeout": 30,
-  "dev_screen_timeout.DOC": "The developer screen timeout fits our spec",
   "dut_can_source_power_in_suspend": true,
   "dut_can_source_power_in_suspend.DOC": "True if DUT will keep providing power to devices connected via USB-C when going to suspend",
   "ec_boot_to_console": 1.2,
