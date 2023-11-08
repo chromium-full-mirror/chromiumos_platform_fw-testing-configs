@@ -27,9 +27,22 @@
       "custom_usb_enable_pins": [],
       "usb_a_port_count": 0
     },
+    "felwinter": {
+      "firmware_screen_rec_mode": 65
+    },
+    "gimble": {
+      "firmware_screen_rec_mode": 85
+    },
+    "kano": {
+      "firmware_screen_rec_mode": 85
+    },
     "vell": {
       "custom_usb_enable_pins": [],
+      "firmware_screen_rec_mode": 70,
       "usb_a_port_count": 0
+    },
+    "volmar": {
+      "firmware_screen_rec_mode": 80
     }
   },
   "platform": "brya",

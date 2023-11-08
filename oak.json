@@ -8,6 +8,7 @@
     "lid": true,
     "x86": false
   },
+  "firmware_screen_rec_mode": 10,
   "minidiag_enabled": false,
   "minios_enabled": false,
   "mode_switcher_type": "keyboard_dev_switcher",

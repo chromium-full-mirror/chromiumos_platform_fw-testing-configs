@@ -13,6 +13,7 @@
     "lid": true,
     "x86": true
   },
+  "firmware_screen_rec_mode": 10,
   "has_keyboard": false,
   "is_detachable": true,
   "keypress_delay": 5,

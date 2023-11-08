@@ -11,6 +11,7 @@
   },
   "ec_ro_vbus_bug": true,
   "firmware_screen": 7,
+  "firmware_screen_rec_mode": 7,
   "minidiag_enabled": false,
   "minios_enabled": false,
   "mode_switcher_type": "keyboard_dev_switcher",

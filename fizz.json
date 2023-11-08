@@ -10,6 +10,7 @@
   },
   "ec_forwards_short_pp_press": true,
   "firmware_screen": 15,
+  "firmware_screen_rec_mode": 15,
   "has_keyboard": false,
   "has_lid": false,
   "hibernate": false,

@@ -14,6 +14,7 @@
   },
   "ec_forwards_short_pp_press": true,
   "firmware_screen": 15,
+  "firmware_screen_rec_mode": 15,
   "has_diagnostics_image": true,
   "has_keyboard": false,
   "hold_pwr_button_poweroff": 10,

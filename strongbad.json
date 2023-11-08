@@ -10,6 +10,7 @@
     "lid": true,
     "x86": false
   },
+  "firmware_screen_rec_mode": 10,
   "has_keyboard": false,
   "is_detachable": true,
   "minidiag_capability": {
