@@ -15,6 +15,7 @@
     "x86": false
   },
   "firmware_screen": 20,
+  "firmware_screen_rec_mode": 20,
   "models": {
     "tomato": {
       "minios_enabled": false

@@ -38,6 +38,7 @@
       "max_charging_power": 45.0
     },
     "delbin": {
+      "firmware_screen_rec_mode": 75,
       "max_charging_power": 45.0
     },
     "eldrid": {

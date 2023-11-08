@@ -60,6 +60,8 @@
   "ec_ro_vbus_bug.DOC": "Whether The EC RO firmware has a bug that causes Vbus is not supplied in SRC.ACCESORY state",
   "firmware_screen": 10,
   "firmware_screen.DOC": "Delay between power-on and firmware screen",
+  "firmware_screen_rec_mode": 60,
+  "firmware_screen_rec_mode.DOC": "Delay between power-on and the recovery screen",
   "fw_update_build": null,
   "fw_update_build.DOC": "Override firmware build to use for testing firmware update",
   "gsc_can_wake_ec_with_reset": true,

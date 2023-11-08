@@ -14,6 +14,7 @@
   },
   "ec_forwards_short_pp_press": true,
   "firmware_screen": 18,
+  "firmware_screen_rec_mode": 18,
   "gsc_update_wait_for_reboot": 25,
   "has_diagnostics_image": true,
   "has_keyboard": false,

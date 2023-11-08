@@ -15,6 +15,7 @@
     "x86": true
   },
   "firmware_screen": 30,
+  "firmware_screen_rec_mode": 30,
   "has_keyboard": false,
   "has_lid": false,
   "hibernate": false,
