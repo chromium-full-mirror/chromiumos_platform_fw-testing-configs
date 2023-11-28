@@ -20,6 +20,15 @@
   "firmware_screen": 20,
   "hold_pwr_button_nopowerd_shutdown": 14,
   "models": {
+    "karis": {
+      "custom_usb_enable_pins": [
+        {
+          "activelow": true,
+          "ioex": false,
+          "name": "en_pp5000_usba_r"
+        }
+      ]
+    },
     "karis4es": {
       "custom_usb_enable_pins": [
         {
