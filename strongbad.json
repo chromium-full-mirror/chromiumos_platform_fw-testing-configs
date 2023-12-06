@@ -21,6 +21,12 @@
   "models": {
     "coachz": {
       "usbc_input_voltage_limit": 15
+    },
+    "homestar": {
+      "delay_reboot_to_ping": 65
+    },
+    "quackingstick": {
+      "delay_reboot_to_ping": 70
     }
   },
   "platform": "strongbad",

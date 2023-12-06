@@ -1,5 +1,10 @@
 {
   "custom_max_tpm_init_us": 180000,
+  "models": {
+    "babymega": {
+      "delay_reboot_to_ping": 90
+    }
+  },
   "parent": "reef",
   "platform": "coral",
   "rec_invalid_screen": 5,

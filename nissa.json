@@ -23,6 +23,17 @@
   "minidiag_capability": {
     "cbmem_preserved_by_ap_reset": false
   },
+  "models": {
+    "craaskvin": {
+      "delay_reboot_to_ping": 65
+    },
+    "pujjoteen": {
+      "delay_reboot_to_ping": 70
+    },
+    "xivu360": {
+      "delay_reboot_to_ping": 70
+    }
+  },
   "platform": "nissa",
   "smm_store": false,
   "spi_voltage": "pp3300",

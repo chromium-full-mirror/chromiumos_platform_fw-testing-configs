@@ -23,6 +23,9 @@
   },
   "minios_enabled": false,
   "models": {
+    "kingoftown": {
+      "delay_reboot_to_ping": 75
+    },
     "lazor": {
       "usbc_input_voltage_limit": 15
     }

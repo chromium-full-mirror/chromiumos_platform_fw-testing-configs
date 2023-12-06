@@ -20,6 +20,9 @@
     },
     "liara": {
       "usbc_voltage_on_shutdown_and_full_batt": 5
+    },
+    "treeya": {
+      "delay_reboot_to_ping": 70
     }
   },
   "platform": "grunt",

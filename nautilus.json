@@ -14,6 +14,11 @@
   "minidiag_enabled": false,
   "minios_enabled": false,
   "mode_switcher_type": "keyboard_dev_switcher",
+  "models": {
+    "nautilus": {
+      "delay_reboot_to_ping": 60
+    }
+  },
   "platform": "nautilus",
   "servo_prog_state_delay": 10,
   "smm_store": false,

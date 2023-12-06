@@ -18,6 +18,7 @@
   "firmware_screen_rec_mode": 20,
   "models": {
     "tomato": {
+      "delay_reboot_to_ping": 70,
       "minios_enabled": false
     }
   },
