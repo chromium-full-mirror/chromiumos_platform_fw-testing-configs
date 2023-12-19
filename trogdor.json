@@ -27,6 +27,7 @@
       "delay_reboot_to_ping": 75
     },
     "lazor": {
+      "delay_reboot_to_ping": 75,
       "usbc_input_voltage_limit": 15
     }
   },

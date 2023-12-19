@@ -62,7 +62,8 @@
           "ioex": false,
           "name": "EN_USB_A1_5V"
         }
-      ]
+      ],
+      "delay_reboot_to_ping": 65
     },
     "vilboz14": {
       "custom_usb_enable_pins": [
