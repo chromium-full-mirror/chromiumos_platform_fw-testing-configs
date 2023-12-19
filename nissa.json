@@ -27,10 +27,19 @@
     "craaskvin": {
       "delay_reboot_to_ping": 65
     },
+    "craasneto": {
+      "delay_reboot_to_ping": 70
+    },
     "pujjoteen": {
       "delay_reboot_to_ping": 70
     },
     "xivu360": {
+      "delay_reboot_to_ping": 70
+    },
+    "yavijo": {
+      "delay_reboot_to_ping": 70
+    },
+    "yavilla": {
       "delay_reboot_to_ping": 70
     }
   },
