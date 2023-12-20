@@ -21,6 +21,7 @@
   "has_keyboard": false,
   "has_lid": false,
   "hibernate": false,
+  "keypress_delay": 2,
   "max_charging_power": 100.0,
   "minidiag_enabled": false,
   "minios_enabled": false,

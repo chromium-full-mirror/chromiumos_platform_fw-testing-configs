@@ -10694,7 +10694,7 @@
     "hold_pwr_button_poweroff": 5,
     "hold_pwr_button_poweron": 0.2,
     "is_detachable": false,
-    "keypress_delay": 0.2,
+    "keypress_delay": 2,
     "lid_wake_from_power_off": true,
     "max_charging_power": 100.0,
     "minidiag_capability": [
