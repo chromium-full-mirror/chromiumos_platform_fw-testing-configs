@@ -67,7 +67,7 @@ When submitting multiple CL’s like that, please use the [Cq-Depend](https://ch
 
 Run the unit tests inside the chroot by running
 ```
-cd ~/chromiumos/src/platform/tast-tests/src/go.chromium.org/tast-tests/cros/remote/firmware/data/fw-testing-configs
+cd ~/chromiumos/src/platform/fw-testing-configs
 pytest -v *_unittest.py
 ```
 
