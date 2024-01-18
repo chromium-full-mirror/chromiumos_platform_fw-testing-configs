@@ -20,6 +20,7 @@
     "lid": true,
     "x86": true
   },
+  "ec_watchdog_period": 2.1,
   "firmware_screen": 30,
   "hold_pwr_button_nopowerd_shutdown": 14,
   "minidiag_capability": {

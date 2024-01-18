@@ -25,6 +25,7 @@
     "lid": true,
     "x86": true
   },
+  "ec_watchdog_period": 2.1,
   "firmware_screen": 30,
   "max_charging_power": 45.0,
   "minidiag_enabled": false,

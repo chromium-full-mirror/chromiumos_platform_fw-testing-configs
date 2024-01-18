@@ -8,6 +8,7 @@
     "lid": true,
     "x86": true
   },
+  "ec_watchdog_period": 2.1,
   "gsc_can_wake_ec_with_reset": false,
   "hold_pwr_button_poweroff": 6,
   "max_charging_power": 45.0,

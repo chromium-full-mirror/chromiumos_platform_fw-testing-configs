@@ -21,6 +21,7 @@
     "lid": true,
     "x86": true
   },
+  "ec_watchdog_period": 2.1,
   "firmware_screen": 30,
   "gsc_off_in_ulp": true,
   "hold_pwr_button_nopowerd_shutdown": 14,
