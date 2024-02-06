@@ -189,6 +189,43 @@
       "hold_pwr_button_poweron": 3,
       "rec_button_dev_switch": true
     },
+    "dita": {
+      "custom_usb_enable_pins": [
+        {
+          "ioex": false,
+          "name": "EN_USB_A0_VBUS"
+        },
+        {
+          "ioex": false,
+          "name": "EN_USB_A1_VBUS"
+        },
+        {
+          "ioex": false,
+          "name": "EN_USB_A2_VBUS"
+        },
+        {
+          "ioex": false,
+          "name": "EN_USB_A3_VBUS"
+        },
+        {
+          "ioex": false,
+          "name": "EN_USB_A4_VBUS"
+        }
+      ],
+      "ec_capability": {
+        "arm": false,
+        "battery": false,
+        "cbi": true,
+        "charging": false,
+        "keyboard": false,
+        "lid": false
+      },
+      "has_keyboard": false,
+      "has_lid": false,
+      "hibernate": false,
+      "hold_pwr_button_poweron": 3,
+      "rec_button_dev_switch": true
+    },
     "drawcia": {
       "custom_usb_enable_pins": [
         {
