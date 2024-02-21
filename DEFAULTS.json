@@ -167,7 +167,7 @@
   "usb_unplug": 2,
   "usb_unplug.DOC": "Delay between USB power-off and detected by the system",
   "usbc_input_voltage_limit": 20,
-  "usbc_input_voltage_limit.DOC": "The max input voltage for USB Type-C port",
+  "usbc_input_voltage_limit.DOC": "The max input voltage for USB Type-C port (from PD_MAX_VOLTAGE_MV or CONFIG_PLATFORM_EC_PD_MAX_VOLTAGE_MV)",
   "usbc_voltage_on_shutdown_and_full_batt": 20,
   "usbc_voltage_on_shutdown_and_full_batt.DOC": "Input voltage limit applied by DUT when it is in G3/S5 and battery is full. 20 volts means there is no limit"
 }
