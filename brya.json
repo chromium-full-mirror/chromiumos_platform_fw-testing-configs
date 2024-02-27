@@ -36,6 +36,9 @@
     "kano": {
       "firmware_screen_rec_mode": 85
     },
+    "taniks": {
+      "firmware_screen_rec_mode": 90
+    },
     "vell": {
       "custom_usb_enable_pins": [],
       "firmware_screen_rec_mode": 70,

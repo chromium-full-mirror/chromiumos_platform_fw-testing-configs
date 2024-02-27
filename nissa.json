@@ -16,6 +16,7 @@
     "x86": true
   },
   "firmware_screen": 30,
+  "firmware_screen_rec_mode": 90,
   "fw_update_build": "nissa-release/R109-15213.0.0",
   "hold_pwr_button_nopowerd_shutdown": 14,
   "hold_pwr_button_poweron": 1.2,
