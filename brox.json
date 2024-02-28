@@ -1,0 +1,25 @@
+{
+  "ac_on_can_wake_ap_from_ulp": true,
+  "custom_usb_enable_pins": [
+    {
+      "activelow": false,
+      "ioex": false,
+      "name": "en_pp5000_usba"
+    }
+  ],
+  "delay_reboot_to_ping": 90,
+  "ec_capability": {
+    "arm": false,
+    "battery": true,
+    "cbi": true,
+    "charging": true,
+    "keyboard": true,
+    "lid": true,
+    "x86": true
+  },
+  "firmware_screen": 20,
+  "hold_pwr_button_nopowerd_shutdown": 14,
+  "platform": "brox",
+  "smm_store": false,
+  "spi_voltage": "off"
+}
