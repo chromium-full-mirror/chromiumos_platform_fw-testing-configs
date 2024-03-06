@@ -6946,6 +6946,7 @@
     "software_sync_update": 15,
     "spi_voltage": "pp1800",
     "suspend_cbmem": true,
+    "usb_a_port_count": 0,
     "usb_hid_wake_enabled": true,
     "usb_image_boot_timeout": 180,
     "usb_plug": 10,
