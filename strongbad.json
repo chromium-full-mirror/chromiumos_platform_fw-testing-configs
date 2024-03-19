@@ -27,6 +27,9 @@
     },
     "quackingstick": {
       "delay_reboot_to_ping": 70
+    },
+    "wormdingler": {
+      "delay_reboot_to_ping": 70
     }
   },
   "platform": "strongbad",
