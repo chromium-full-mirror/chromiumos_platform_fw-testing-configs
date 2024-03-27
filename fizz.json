@@ -35,6 +35,7 @@
   "no_broken_screen_in_dev": true,
   "platform": "fizz",
   "rec_button_dev_switch": true,
+  "s3_override_to_unsupported": true,
   "smm_store": false,
   "spi_voltage": "pp3300",
   "usb_a_port_count": -1
