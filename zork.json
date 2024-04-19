@@ -49,6 +49,14 @@
     "dirinboz": {
       "delay_reboot_to_ping": 65
     },
+    "ezkinil": {
+      "custom_usb_enable_pins": [
+        {
+          "ioex": true,
+          "name": "EN_USB_A0_5V"
+        }
+      ]
+    },
     "gumboz": {
       "delay_reboot_to_ping": 75
     },
