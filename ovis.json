@@ -2,7 +2,7 @@
   "custom_usb_enable_pins": [
     {
       "ioex": false,
-      "name": "en_pp5000_usba_r"
+      "name": "en_usb_a_vbus"
     }
   ],
   "delay_reboot_to_ping": 90,
