@@ -13930,7 +13930,7 @@
         "has_powerbutton": true,
         "hibernate": true,
         "hold_pwr_button_nopowerd_shutdown": 14,
-        "hold_pwr_button_poweroff": 5,
+        "hold_pwr_button_poweroff": 8.0,
         "hold_pwr_button_poweron": 0.2,
         "is_detachable": false,
         "keypress_delay": 0.2,
