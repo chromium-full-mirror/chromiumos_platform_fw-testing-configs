@@ -21,6 +21,9 @@
     "event_log_test_report": true
   },
   "models": {
+    "kyogre": {
+      "usbc_input_voltage_limit": 15
+    },
     "ponyta": {
       "delay_reboot_to_ping": 65
     },
