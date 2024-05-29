@@ -13107,7 +13107,9 @@
     "chrome_ec": true,
     "chrome_usbpd": false,
     "clear_dev_on_rec": false,
-    "cr50_capability": [],
+    "cr50_capability": [
+      "ec_hibernate_breaks_rdd"
+    ],
     "custom_max_tpm_init_us": 0,
     "custom_usb_enable_pins": [],
     "delay_powerinfo_stable": 0,
@@ -13158,7 +13160,9 @@
         "chrome_ec": true,
         "chrome_usbpd": false,
         "clear_dev_on_rec": false,
-        "cr50_capability": [],
+        "cr50_capability": [
+          "ec_hibernate_breaks_rdd"
+        ],
         "custom_max_tpm_init_us": 0,
         "custom_usb_enable_pins": [],
         "delay_powerinfo_stable": 0,
@@ -13235,7 +13239,9 @@
         "chrome_ec": true,
         "chrome_usbpd": false,
         "clear_dev_on_rec": false,
-        "cr50_capability": [],
+        "cr50_capability": [
+          "ec_hibernate_breaks_rdd"
+        ],
         "custom_max_tpm_init_us": 0,
         "custom_usb_enable_pins": [],
         "delay_powerinfo_stable": 0,
@@ -13312,7 +13318,9 @@
         "chrome_ec": true,
         "chrome_usbpd": false,
         "clear_dev_on_rec": false,
-        "cr50_capability": [],
+        "cr50_capability": [
+          "ec_hibernate_breaks_rdd"
+        ],
         "custom_max_tpm_init_us": 0,
         "custom_usb_enable_pins": [],
         "delay_powerinfo_stable": 0,
@@ -13389,7 +13397,9 @@
         "chrome_ec": true,
         "chrome_usbpd": false,
         "clear_dev_on_rec": false,
-        "cr50_capability": [],
+        "cr50_capability": [
+          "ec_hibernate_breaks_rdd"
+        ],
         "custom_max_tpm_init_us": 0,
         "custom_usb_enable_pins": [],
         "delay_powerinfo_stable": 0,
