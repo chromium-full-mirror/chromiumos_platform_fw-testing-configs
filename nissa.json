@@ -34,6 +34,10 @@
     "pujjoteen": {
       "delay_reboot_to_ping": 70
     },
+    "sundance": {
+      "custom_usb_enable_pins": [],
+      "usb_a_port_count": 0
+    },
     "xivu360": {
       "delay_reboot_to_ping": 70
     },
