@@ -72,7 +72,7 @@
   "gsc_can_wake_ec_with_reset.DOC": "True if the GSC can wake the EC with its reset GPIO",
   "gsc_off_in_ulp": false,
   "gsc_off_in_ulp.DOC": "True if the GSC is unpowered in ULP",
-  "gsc_update_wait_for_reboot": 10,
+  "gsc_update_wait_for_reboot": 20,
   "gsc_update_wait_for_reboot.DOC": "Number of seconds to wait for a gsc reboot after update",
   "has_diagnostics_image": false,
   "has_diagnostics_image.DOC": "True if altfw/diag is build into RW_LEGACY",
