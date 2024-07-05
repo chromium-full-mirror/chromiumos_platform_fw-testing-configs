@@ -10543,7 +10543,12 @@
         "clear_dev_on_rec": false,
         "cr50_capability": [],
         "custom_max_tpm_init_us": 0,
-        "custom_usb_enable_pins": [],
+        "custom_usb_enable_pins": [
+          {
+            "ioex": false,
+            "name": "en_sub_usb_a1_vbus"
+          }
+        ],
         "delay_powerinfo_stable": 0,
         "delay_reboot_to_ping": 260,
         "dut_can_source_power_in_suspend": true,

@@ -36,7 +36,12 @@
       "white_screen_power_press_time": 1.666
     },
     "pujjoga": {
-      "custom_usb_enable_pins": [],
+      "custom_usb_enable_pins": [
+        {
+          "ioex": false,
+          "name": "en_sub_usb_a1_vbus"
+        }
+      ],
       "ec_cold_boot_time": 1.6
     },
     "sundance": {
