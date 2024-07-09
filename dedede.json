@@ -11,7 +11,7 @@
       "name": "EN_USB_A1_VBUS"
     }
   ],
-  "delay_reboot_to_ping": 120,
+  "delay_reboot_to_ping": 190,
   "ec_capability": {
     "arm": false,
     "battery": true,
@@ -336,8 +336,7 @@
           "ioex": false,
           "name": "EN_USB_A_5V"
         }
-      ],
-      "delay_reboot_to_ping": 80
+      ]
     },
     "landia": {
       "custom_usb_enable_pins": [

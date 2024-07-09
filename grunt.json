@@ -1,4 +1,5 @@
 {
+  "delay_reboot_to_ping": 80,
   "ec_capability": {
     "arm": false,
     "battery": true,
@@ -16,14 +17,8 @@
   "minios_enabled": false,
   "mode_switcher_type": "keyboard_dev_switcher",
   "models": {
-    "careena": {
-      "delay_reboot_to_ping": 80
-    },
     "liara": {
       "usbc_voltage_on_shutdown_and_full_batt": 5
-    },
-    "treeya": {
-      "delay_reboot_to_ping": 70
     }
   },
   "platform": "grunt",

@@ -14,7 +14,7 @@
       "name": "EN_USB_A1_5V"
     }
   ],
-  "delay_reboot_to_ping": 120,
+  "delay_reboot_to_ping": 260,
   "ec_boot_to_console": 0.3,
   "ec_capability": {
     "arm": false,
@@ -34,9 +34,6 @@
   "models": {
     "ampton": {
       "usbc_voltage_on_shutdown_and_full_batt": 5
-    },
-    "bloog": {
-      "delay_reboot_to_ping": 60
     },
     "bluebird": {
       "custom_usb_enable_pins": [

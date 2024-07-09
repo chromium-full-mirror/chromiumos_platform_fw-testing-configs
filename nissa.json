@@ -6,6 +6,7 @@
       "name": "en_usb_a0_vbus"
     }
   ],
+  "delay_reboot_to_ping": 260,
   "ec_capability": {
     "arm": false,
     "battery": true,
@@ -25,27 +26,9 @@
     "cbmem_preserved_by_ap_reset": false
   },
   "models": {
-    "craaskvin": {
-      "delay_reboot_to_ping": 65
-    },
-    "craasneto": {
-      "delay_reboot_to_ping": 70
-    },
-    "pujjoteen": {
-      "delay_reboot_to_ping": 70
-    },
     "sundance": {
       "custom_usb_enable_pins": [],
       "usb_a_port_count": 0
-    },
-    "xivu360": {
-      "delay_reboot_to_ping": 70
-    },
-    "yavijo": {
-      "delay_reboot_to_ping": 70
-    },
-    "yavilla": {
-      "delay_reboot_to_ping": 70
     }
   },
   "platform": "nissa",
