@@ -169,5 +169,7 @@
   "usbc_input_voltage_limit": 20,
   "usbc_input_voltage_limit.DOC": "The max input voltage for USB Type-C port (from PD_MAX_VOLTAGE_MV or CONFIG_PLATFORM_EC_PD_MAX_VOLTAGE_MV)",
   "usbc_voltage_on_shutdown_and_full_batt": 20,
-  "usbc_voltage_on_shutdown_and_full_batt.DOC": "Input voltage limit applied by DUT when it is in G3/S5 and battery is full. 20 volts means there is no limit"
+  "usbc_voltage_on_shutdown_and_full_batt.DOC": "Input voltage limit applied by DUT when it is in G3/S5 and battery is full. 20 volts means there is no limit",
+  "white_screen_power_press_time": 2,
+  "white_screen_power_press_time.DOC": "Power button press duration for triggering white screen that comes after the power menu, before the machine turns off. System should remain in S0"
 }
