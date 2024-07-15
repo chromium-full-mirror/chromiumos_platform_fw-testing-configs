@@ -54,6 +54,8 @@
     "x86.DOC": "AP cpu is an X86 processor"
   },
   "ec_capability.DOC": "Map of capabilities of the Chrome EC",
+  "ec_cold_boot_time": 1.2,
+  "ec_cold_boot_time.DOC": "Max time allowed for EC cold boot in tests tast.firmware.BootTime.*",
   "ec_forwards_short_pp_press": false,
   "ec_forwards_short_pp_press.DOC": "True if the EC will send short power button presses, such as those expected during CCD open, to the AP",
   "ec_ro_vbus_bug": false,
