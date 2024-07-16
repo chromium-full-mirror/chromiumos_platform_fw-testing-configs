@@ -2867,7 +2867,7 @@
         "usb_unplug": 2,
         "usbc_input_voltage_limit": 15,
         "usbc_voltage_on_shutdown_and_full_batt": 20,
-        "white_screen_power_press_time": 2
+        "white_screen_power_press_time": 1.666
       },
       "blipper": {
         "ac_on_can_wake_ap_from_ulp": true,
@@ -2955,7 +2955,7 @@
         "usb_unplug": 2,
         "usbc_input_voltage_limit": 15,
         "usbc_voltage_on_shutdown_and_full_batt": 20,
-        "white_screen_power_press_time": 2
+        "white_screen_power_press_time": 1.666
       },
       "bookem": {
         "ac_on_can_wake_ap_from_ulp": true,
@@ -3043,7 +3043,7 @@
         "usb_unplug": 2,
         "usbc_input_voltage_limit": 15,
         "usbc_voltage_on_shutdown_and_full_batt": 20,
-        "white_screen_power_press_time": 2
+        "white_screen_power_press_time": 1.666
       },
       "boten": {
         "ac_on_can_wake_ap_from_ulp": true,
@@ -3131,7 +3131,7 @@
         "usb_unplug": 2,
         "usbc_input_voltage_limit": 15,
         "usbc_voltage_on_shutdown_and_full_batt": 20,
-        "white_screen_power_press_time": 2
+        "white_screen_power_press_time": 1.666
       },
       "boxy": {
         "ac_on_can_wake_ap_from_ulp": true,
@@ -3215,7 +3215,7 @@
         "usb_unplug": 2,
         "usbc_input_voltage_limit": 15,
         "usbc_voltage_on_shutdown_and_full_batt": 20,
-        "white_screen_power_press_time": 2
+        "white_screen_power_press_time": 1.666
       },
       "bugzzy": {
         "ac_on_can_wake_ap_from_ulp": true,
@@ -3299,7 +3299,7 @@
         "usb_unplug": 2,
         "usbc_input_voltage_limit": 15,
         "usbc_voltage_on_shutdown_and_full_batt": 20,
-        "white_screen_power_press_time": 2
+        "white_screen_power_press_time": 1.666
       },
       "cret": {
         "ac_on_can_wake_ap_from_ulp": true,
@@ -3383,7 +3383,7 @@
         "usb_unplug": 2,
         "usbc_input_voltage_limit": 15,
         "usbc_voltage_on_shutdown_and_full_batt": 20,
-        "white_screen_power_press_time": 2
+        "white_screen_power_press_time": 1.666
       },
       "cret360": {
         "ac_on_can_wake_ap_from_ulp": true,
@@ -3467,7 +3467,7 @@
         "usb_unplug": 2,
         "usbc_input_voltage_limit": 15,
         "usbc_voltage_on_shutdown_and_full_batt": 20,
-        "white_screen_power_press_time": 2
+        "white_screen_power_press_time": 1.666
       },
       "dexi": {
         "ac_on_can_wake_ap_from_ulp": true,
@@ -3563,7 +3563,7 @@
         "usb_unplug": 2,
         "usbc_input_voltage_limit": 15,
         "usbc_voltage_on_shutdown_and_full_batt": 20,
-        "white_screen_power_press_time": 2
+        "white_screen_power_press_time": 1.666
       },
       "dibbi": {
         "ac_on_can_wake_ap_from_ulp": true,
@@ -3655,7 +3655,7 @@
         "usb_unplug": 2,
         "usbc_input_voltage_limit": 15,
         "usbc_voltage_on_shutdown_and_full_batt": 20,
-        "white_screen_power_press_time": 2
+        "white_screen_power_press_time": 1.666
       },
       "dita": {
         "ac_on_can_wake_ap_from_ulp": true,
@@ -3751,7 +3751,7 @@
         "usb_unplug": 2,
         "usbc_input_voltage_limit": 15,
         "usbc_voltage_on_shutdown_and_full_batt": 20,
-        "white_screen_power_press_time": 2
+        "white_screen_power_press_time": 1.666
       },
       "drawcia": {
         "ac_on_can_wake_ap_from_ulp": true,
@@ -3835,7 +3835,7 @@
         "usb_unplug": 2,
         "usbc_input_voltage_limit": 15,
         "usbc_voltage_on_shutdown_and_full_batt": 20,
-        "white_screen_power_press_time": 2
+        "white_screen_power_press_time": 1.666
       },
       "drawlat": {
         "ac_on_can_wake_ap_from_ulp": true,
@@ -3919,7 +3919,7 @@
         "usb_unplug": 2,
         "usbc_input_voltage_limit": 15,
         "usbc_voltage_on_shutdown_and_full_batt": 20,
-        "white_screen_power_press_time": 2
+        "white_screen_power_press_time": 1.666
       },
       "drawman": {
         "ac_on_can_wake_ap_from_ulp": true,
@@ -4003,7 +4003,7 @@
         "usb_unplug": 2,
         "usbc_input_voltage_limit": 15,
         "usbc_voltage_on_shutdown_and_full_batt": 20,
-        "white_screen_power_press_time": 2
+        "white_screen_power_press_time": 1.666
       },
       "drawper": {
         "ac_on_can_wake_ap_from_ulp": true,
@@ -4087,7 +4087,7 @@
         "usb_unplug": 2,
         "usbc_input_voltage_limit": 15,
         "usbc_voltage_on_shutdown_and_full_batt": 20,
-        "white_screen_power_press_time": 2
+        "white_screen_power_press_time": 1.666
       },
       "galith": {
         "ac_on_can_wake_ap_from_ulp": true,
@@ -4171,7 +4171,7 @@
         "usb_unplug": 2,
         "usbc_input_voltage_limit": 15,
         "usbc_voltage_on_shutdown_and_full_batt": 20,
-        "white_screen_power_press_time": 2
+        "white_screen_power_press_time": 1.666
       },
       "galith360": {
         "ac_on_can_wake_ap_from_ulp": true,
@@ -4255,7 +4255,7 @@
         "usb_unplug": 2,
         "usbc_input_voltage_limit": 15,
         "usbc_voltage_on_shutdown_and_full_batt": 20,
-        "white_screen_power_press_time": 2
+        "white_screen_power_press_time": 1.666
       },
       "gallop": {
         "ac_on_can_wake_ap_from_ulp": true,
@@ -4343,7 +4343,7 @@
         "usb_unplug": 2,
         "usbc_input_voltage_limit": 15,
         "usbc_voltage_on_shutdown_and_full_batt": 20,
-        "white_screen_power_press_time": 2
+        "white_screen_power_press_time": 1.666
       },
       "galnat": {
         "ac_on_can_wake_ap_from_ulp": true,
@@ -4427,7 +4427,7 @@
         "usb_unplug": 2,
         "usbc_input_voltage_limit": 15,
         "usbc_voltage_on_shutdown_and_full_batt": 20,
-        "white_screen_power_press_time": 2
+        "white_screen_power_press_time": 1.666
       },
       "galnat360": {
         "ac_on_can_wake_ap_from_ulp": true,
@@ -4511,7 +4511,7 @@
         "usb_unplug": 2,
         "usbc_input_voltage_limit": 15,
         "usbc_voltage_on_shutdown_and_full_batt": 20,
-        "white_screen_power_press_time": 2
+        "white_screen_power_press_time": 1.666
       },
       "galtic": {
         "ac_on_can_wake_ap_from_ulp": true,
@@ -4599,7 +4599,7 @@
         "usb_unplug": 2,
         "usbc_input_voltage_limit": 15,
         "usbc_voltage_on_shutdown_and_full_batt": 20,
-        "white_screen_power_press_time": 2
+        "white_screen_power_press_time": 1.666
       },
       "galtic360": {
         "ac_on_can_wake_ap_from_ulp": true,
@@ -4683,7 +4683,7 @@
         "usb_unplug": 2,
         "usbc_input_voltage_limit": 15,
         "usbc_voltage_on_shutdown_and_full_batt": 20,
-        "white_screen_power_press_time": 2
+        "white_screen_power_press_time": 1.666
       },
       "kracko": {
         "ac_on_can_wake_ap_from_ulp": true,
@@ -4767,7 +4767,7 @@
         "usb_unplug": 2,
         "usbc_input_voltage_limit": 15,
         "usbc_voltage_on_shutdown_and_full_batt": 20,
-        "white_screen_power_press_time": 2
+        "white_screen_power_press_time": 1.666
       },
       "kracko360": {
         "ac_on_can_wake_ap_from_ulp": true,
@@ -4851,7 +4851,7 @@
         "usb_unplug": 2,
         "usbc_input_voltage_limit": 15,
         "usbc_voltage_on_shutdown_and_full_batt": 20,
-        "white_screen_power_press_time": 2
+        "white_screen_power_press_time": 1.666
       },
       "landia": {
         "ac_on_can_wake_ap_from_ulp": true,
@@ -4935,7 +4935,7 @@
         "usb_unplug": 2,
         "usbc_input_voltage_limit": 15,
         "usbc_voltage_on_shutdown_and_full_batt": 20,
-        "white_screen_power_press_time": 2
+        "white_screen_power_press_time": 1.666
       },
       "landrid": {
         "ac_on_can_wake_ap_from_ulp": true,
@@ -5019,7 +5019,7 @@
         "usb_unplug": 2,
         "usbc_input_voltage_limit": 15,
         "usbc_voltage_on_shutdown_and_full_batt": 20,
-        "white_screen_power_press_time": 2
+        "white_screen_power_press_time": 1.666
       },
       "lantis": {
         "ac_on_can_wake_ap_from_ulp": true,
@@ -5103,7 +5103,7 @@
         "usb_unplug": 2,
         "usbc_input_voltage_limit": 15,
         "usbc_voltage_on_shutdown_and_full_batt": 20,
-        "white_screen_power_press_time": 2
+        "white_screen_power_press_time": 1.666
       },
       "madoo": {
         "ac_on_can_wake_ap_from_ulp": true,
@@ -5188,7 +5188,7 @@
         "usb_unplug": 2,
         "usbc_input_voltage_limit": 15,
         "usbc_voltage_on_shutdown_and_full_batt": 20,
-        "white_screen_power_press_time": 2
+        "white_screen_power_press_time": 1.666
       },
       "palutena": {
         "ac_on_can_wake_ap_from_ulp": true,
@@ -5272,7 +5272,7 @@
         "usb_unplug": 2,
         "usbc_input_voltage_limit": 15,
         "usbc_voltage_on_shutdown_and_full_batt": 20,
-        "white_screen_power_press_time": 2
+        "white_screen_power_press_time": 1.666
       },
       "pasara": {
         "ac_on_can_wake_ap_from_ulp": true,
@@ -5356,7 +5356,7 @@
         "usb_unplug": 2,
         "usbc_input_voltage_limit": 15,
         "usbc_voltage_on_shutdown_and_full_batt": 20,
-        "white_screen_power_press_time": 2
+        "white_screen_power_press_time": 1.666
       },
       "peezer": {
         "ac_on_can_wake_ap_from_ulp": true,
@@ -5440,7 +5440,7 @@
         "usb_unplug": 2,
         "usbc_input_voltage_limit": 15,
         "usbc_voltage_on_shutdown_and_full_batt": 20,
-        "white_screen_power_press_time": 2
+        "white_screen_power_press_time": 1.666
       },
       "pirette": {
         "ac_on_can_wake_ap_from_ulp": true,
@@ -5524,7 +5524,7 @@
         "usb_unplug": 2,
         "usbc_input_voltage_limit": 15,
         "usbc_voltage_on_shutdown_and_full_batt": 20,
-        "white_screen_power_press_time": 2
+        "white_screen_power_press_time": 1.666
       },
       "pirika": {
         "ac_on_can_wake_ap_from_ulp": true,
@@ -5608,7 +5608,7 @@
         "usb_unplug": 2,
         "usbc_input_voltage_limit": 15,
         "usbc_voltage_on_shutdown_and_full_batt": 20,
-        "white_screen_power_press_time": 2
+        "white_screen_power_press_time": 1.666
       },
       "sasuke": {
         "ac_on_can_wake_ap_from_ulp": true,
@@ -5692,7 +5692,7 @@
         "usb_unplug": 2,
         "usbc_input_voltage_limit": 15,
         "usbc_voltage_on_shutdown_and_full_batt": 20,
-        "white_screen_power_press_time": 2
+        "white_screen_power_press_time": 1.666
       },
       "sasukette": {
         "ac_on_can_wake_ap_from_ulp": true,
@@ -5776,7 +5776,7 @@
         "usb_unplug": 2,
         "usbc_input_voltage_limit": 15,
         "usbc_voltage_on_shutdown_and_full_batt": 20,
-        "white_screen_power_press_time": 2
+        "white_screen_power_press_time": 1.666
       },
       "storo": {
         "ac_on_can_wake_ap_from_ulp": true,
@@ -5860,7 +5860,7 @@
         "usb_unplug": 2,
         "usbc_input_voltage_limit": 15,
         "usbc_voltage_on_shutdown_and_full_batt": 20,
-        "white_screen_power_press_time": 2
+        "white_screen_power_press_time": 1.666
       },
       "storo360": {
         "ac_on_can_wake_ap_from_ulp": true,
@@ -5944,7 +5944,7 @@
         "usb_unplug": 2,
         "usbc_input_voltage_limit": 15,
         "usbc_voltage_on_shutdown_and_full_batt": 20,
-        "white_screen_power_press_time": 2
+        "white_screen_power_press_time": 1.666
       },
       "taranza": {
         "ac_on_can_wake_ap_from_ulp": true,
@@ -6040,7 +6040,7 @@
         "usb_unplug": 2,
         "usbc_input_voltage_limit": 15,
         "usbc_voltage_on_shutdown_and_full_batt": 20,
-        "white_screen_power_press_time": 2
+        "white_screen_power_press_time": 1.666
       }
     },
     "no_broken_screen_in_dev": false,
@@ -6068,7 +6068,7 @@
     "usb_unplug": 2,
     "usbc_input_voltage_limit": 15,
     "usbc_voltage_on_shutdown_and_full_batt": 20,
-    "white_screen_power_press_time": 2
+    "white_screen_power_press_time": 1.666
   },
   "draco": {
     "ac_on_can_wake_ap_from_ulp": true,

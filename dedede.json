@@ -484,5 +484,6 @@
   "platform": "dedede",
   "smm_store": false,
   "spi_voltage": "pp3300",
-  "usbc_input_voltage_limit": 15
+  "usbc_input_voltage_limit": 15,
+  "white_screen_power_press_time": 1.666
 }
