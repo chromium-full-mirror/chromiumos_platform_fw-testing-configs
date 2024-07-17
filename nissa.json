@@ -37,7 +37,7 @@
     },
     "sundance": {
       "custom_usb_enable_pins": [],
-      "ec_cold_boot_time": 1.4,
+      "ec_cold_boot_time": 1.6,
       "usb_a_port_count": 0
     }
   },
