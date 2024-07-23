@@ -82,6 +82,7 @@
     "lid_wake_from_power_off.DOC": "True if the lid can wake the system from a powered off state",
     "max_charging_power": 60.0,
     "max_charging_power.DOC": "Max charging power for DUT in watts",
+    "memory_retrain_timeout": 120,
     "minidiag_capability": [
       "cbmem_preserved_by_ap_reset",
       "event_log_launch_count"
