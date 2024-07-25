@@ -12,8 +12,8 @@
     "lid": true,
     "x86": false
   },
-  "firmware_screen": 20,
-  "firmware_screen_rec_mode": 20,
+  "firmware_screen": 30,
+  "firmware_screen_rec_mode": 30,
   "has_keyboard": false,
   "hibernate": false,
   "hold_pwr_button_poweroff": 6,
