@@ -27,6 +27,11 @@
   },
   "models": {
     "anraggar": {
+      "ec_cold_boot_time": 1.6,
+      "white_screen_power_press_time": 1.666
+    },
+    "anraggar360": {
+      "ec_cold_boot_time": 1.6,
       "white_screen_power_press_time": 1.666
     },
     "craaskino": {
