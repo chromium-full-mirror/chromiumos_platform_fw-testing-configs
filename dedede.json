@@ -42,7 +42,8 @@
           "ioex": false,
           "name": "EN_PP5000_U"
         }
-      ]
+      ],
+      "firmware_screen": 25
     },
     "blipper": {
       "custom_usb_enable_pins": [
@@ -54,7 +55,8 @@
           "ioex": false,
           "name": "EN_PP5000_U"
         }
-      ]
+      ],
+      "firmware_screen": 25
     },
     "bookem": {
       "custom_usb_enable_pins": [
