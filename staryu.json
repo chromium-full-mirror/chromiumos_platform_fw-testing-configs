@@ -2,6 +2,11 @@
   "custom_usb_enable_pins": [],
   "is_detachable": true,
   "mode_switcher_type": "menu_switcher",
+  "models": {
+    "starmie": {
+      "max_charging_power": 45.0
+    }
+  },
   "parent": "corsola",
   "platform": "staryu",
   "usb_a_port_count": 0
