@@ -10,6 +10,7 @@
     "x86": true
   },
   "ec_watchdog_period": 2.1,
+  "firmware_screen_rec_mode": 75,
   "gsc_can_wake_ec_with_reset": false,
   "hold_pwr_button_poweroff": 6,
   "max_charging_power": 45.0,
