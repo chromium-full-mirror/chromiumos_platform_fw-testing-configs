@@ -32,6 +32,14 @@
   },
   "minios_enabled": false,
   "models": {
+    "awasuki": {
+      "custom_usb_enable_pins": [
+        {
+          "ioex": false,
+          "name": "EN_USB_A0_VBUS"
+        }
+      ]
+    },
     "beetley": {
       "custom_usb_enable_pins": [
         {
