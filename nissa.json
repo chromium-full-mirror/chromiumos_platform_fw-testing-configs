@@ -54,6 +54,9 @@
       ],
       "ec_cold_boot_time": 1.6
     },
+    "rynax": {
+      "white_screen_power_press_time": 1.666
+    },
     "sundance": {
       "custom_usb_enable_pins": [],
       "ec_cold_boot_time": 1.6,
