@@ -36,6 +36,9 @@
       "firmware_screen": 25,
       "white_screen_power_press_time": 1.666
     },
+    "craaskana": {
+      "white_screen_power_press_time": 1.666
+    },
     "craaskino": {
       "white_screen_power_press_time": 1.666
     },
