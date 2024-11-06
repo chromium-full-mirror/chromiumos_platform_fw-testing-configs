@@ -48,6 +48,12 @@
     "craasneto": {
       "white_screen_power_press_time": 1.666
     },
+    "domika": {
+      "white_screen_power_press_time": 1.666
+    },
+    "domiso": {
+      "white_screen_power_press_time": 1.666
+    },
     "pujjoteen": {
       "white_screen_power_press_time": 1.666
     },
@@ -59,6 +65,9 @@
         }
       ],
       "ec_cold_boot_time": 1.6
+    },
+    "quandiso": {
+      "white_screen_power_press_time": 1.666
     },
     "rynax": {
       "white_screen_power_press_time": 1.666
@@ -76,6 +85,21 @@
     "teliks360": {
       "ec_cold_boot_time": 1.6,
       "firmware_screen": 25,
+      "white_screen_power_press_time": 1.666
+    },
+    "yahiko": {
+      "white_screen_power_press_time": 1.666
+    },
+    "yavijo": {
+      "white_screen_power_press_time": 1.666
+    },
+    "yaviks": {
+      "white_screen_power_press_time": 1.666
+    },
+    "yavikso": {
+      "white_screen_power_press_time": 1.666
+    },
+    "yavilla": {
       "white_screen_power_press_time": 1.666
     }
   },
