@@ -1,4 +1,10 @@
 {
+  "custom_usb_enable_pins": [
+    {
+      "ioex": false,
+      "name": "en_pp5000_usba_vbus"
+    }
+  ],
   "ec_capability": {
     "arm": true,
     "battery": true,
