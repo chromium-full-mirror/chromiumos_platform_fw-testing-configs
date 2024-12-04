@@ -99,6 +99,16 @@
       "firmware_screen": 25,
       "white_screen_power_press_time": 1.666
     },
+    "telith": {
+      "ec_cold_boot_time": 1.6,
+      "firmware_screen": 25,
+      "white_screen_power_press_time": 1.666
+    },
+    "teltic": {
+      "ec_cold_boot_time": 1.6,
+      "firmware_screen": 25,
+      "white_screen_power_press_time": 1.666
+    },
     "yahiko": {
       "white_screen_power_press_time": 1.666
     },
