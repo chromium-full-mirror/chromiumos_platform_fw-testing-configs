@@ -60,6 +60,15 @@
     "gumboz": {
       "delay_reboot_to_ping": 75
     },
+    "jelboz": {
+      "max_charging_power": 45.0
+    },
+    "jelboz360": {
+      "max_charging_power": 45.0
+    },
+    "shuboz": {
+      "max_charging_power": 45.0
+    },
     "vilboz": {
       "custom_usb_enable_pins": [
         {
