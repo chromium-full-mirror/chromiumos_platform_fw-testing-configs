@@ -5,6 +5,9 @@
   "models": {
     "starmie": {
       "max_charging_power": 45.0
+    },
+    "wyrdeer": {
+      "max_charging_power": 45.0
     }
   },
   "parent": "corsola",
