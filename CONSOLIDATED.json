@@ -12411,7 +12411,7 @@
         "rec_invalid_screen": 2,
         "rma_entered_automatically": true,
         "s0ix_override_to_unsupported": false,
-        "s3_override_to_unsupported": false,
+        "s3_override_to_unsupported": true,
         "serial_number_length": 0,
         "servo_prog_state_delay": 0,
         "shutdown": 30,

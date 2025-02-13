@@ -104,6 +104,7 @@
     "teliks": {
       "ec_cold_boot_time": 1.6,
       "firmware_screen": 25,
+      "s3_override_to_unsupported": true,
       "white_screen_power_press_time": 1.666
     },
     "teliks360": {
