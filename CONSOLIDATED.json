@@ -7084,13 +7084,7 @@
     "clear_dev_on_rec": false,
     "cr50_capability": [],
     "custom_max_tpm_init_us": 0,
-    "custom_usb_enable_pins": [
-      {
-        "activelow": false,
-        "ioex": false,
-        "name": "en_pp5000_usba_r"
-      }
-    ],
+    "custom_usb_enable_pins": [],
     "delay_powerinfo_stable": 0,
     "delay_reboot_to_ping": 90,
     "dut_can_source_power_in_suspend": true,
@@ -7154,6 +7148,7 @@
     "software_sync_update": 15,
     "spi_voltage": "pp3300",
     "suspend_cbmem": true,
+    "usb_a_port_count": 0,
     "usb_hid_wake_enabled": true,
     "usb_image_boot_timeout": 180,
     "usb_plug": 10,

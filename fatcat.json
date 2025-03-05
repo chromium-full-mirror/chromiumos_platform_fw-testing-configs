@@ -1,12 +1,5 @@
 {
   "ac_on_can_wake_ap_from_ulp": true,
-  "custom_usb_enable_pins": [
-    {
-      "activelow": false,
-      "ioex": false,
-      "name": "en_pp5000_usba_r"
-    }
-  ],
   "delay_reboot_to_ping": 90,
   "ec_capability": {
     "arm": false,
@@ -21,5 +14,6 @@
   "hold_pwr_button_nopowerd_shutdown": 14,
   "platform": "fatcat",
   "smm_store": false,
-  "spi_voltage": "pp3300"
+  "spi_voltage": "pp3300",
+  "usb_a_port_count": 0
 }
