@@ -1,6 +1,6 @@
 {
   "ac_on_can_wake_ap_from_ulp": true,
-  "custom_max_tpm_init_us": 140000,
+  "custom_max_tpm_init_us": 170000,
   "custom_usb_enable_pins": [
     {
       "ioex": false,
