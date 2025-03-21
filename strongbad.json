@@ -36,6 +36,5 @@
     }
   },
   "platform": "strongbad",
-  "s0ix_override_to_unsupported": true,
   "usb_a_port_count": -1
 }
