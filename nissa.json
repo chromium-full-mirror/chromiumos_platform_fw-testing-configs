@@ -71,6 +71,7 @@
           "name": "en_usb_a4_vbus"
         }
       ],
+      "delay_reboot_to_ping": 200,
       "ec_capability": {
         "arm": false,
         "battery": false,
@@ -79,6 +80,7 @@
         "keyboard": false,
         "lid": false
       },
+      "firmware_screen": 25,
       "has_keyboard": false,
       "has_lid": false,
       "hibernate": false,
