@@ -12,6 +12,11 @@
   },
   "firmware_screen": 20,
   "hold_pwr_button_nopowerd_shutdown": 14,
+  "models": {
+    "francka": {
+      "white_screen_power_press_time": 1.666
+    }
+  },
   "platform": "fatcat",
   "smm_store": false,
   "spi_voltage": "pp3300",
