@@ -103,6 +103,11 @@
         }
       ]
     },
+    "pujjocento": {
+      "ec_cold_boot_time": 1.6,
+      "firmware_screen": 25,
+      "white_screen_power_press_time": 1.666
+    },
     "pujjoga": {
       "custom_usb_enable_pins": [
         {
@@ -127,6 +132,11 @@
       "white_screen_power_press_time": 1.666
     },
     "pujjoteen": {
+      "white_screen_power_press_time": 1.666
+    },
+    "pujjoteenlo": {
+      "ec_cold_boot_time": 1.6,
+      "firmware_screen": 25,
       "white_screen_power_press_time": 1.666
     },
     "quandiso": {
