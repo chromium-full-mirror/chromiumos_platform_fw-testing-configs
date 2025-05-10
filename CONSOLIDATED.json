@@ -7335,6 +7335,7 @@
     "ec_boot_to_pwr_button": 0.5,
     "ec_boot_to_wp_en": 0,
     "ec_capability": [
+      "battery",
       "cbi",
       "charging",
       "keyboard",

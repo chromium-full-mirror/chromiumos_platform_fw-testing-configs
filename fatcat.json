@@ -3,7 +3,7 @@
   "delay_reboot_to_ping": 90,
   "ec_capability": {
     "arm": false,
-    "battery": false,
+    "battery": true,
     "cbi": true,
     "charging": true,
     "keyboard": true,
