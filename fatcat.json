@@ -20,5 +20,6 @@
   "platform": "fatcat",
   "smm_store": false,
   "spi_voltage": "pp3300",
-  "usb_a_port_count": 0
+  "usb_a_port_count": 0,
+  "white_screen_power_press_time": 1.1
 }
