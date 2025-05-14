@@ -7392,6 +7392,7 @@
         "ec_boot_to_pwr_button": 0.5,
         "ec_boot_to_wp_en": 0,
         "ec_capability": [
+          "battery",
           "cbi",
           "charging",
           "keyboard",
@@ -7447,6 +7448,9 @@
         "software_sync": 6,
         "software_sync_update": 15,
         "spi_voltage": "pp3300",
+        "storage_init_time_emmc": 33,
+        "storage_init_time_nvme": 27,
+        "storage_init_time_ufs": 37,
         "suspend_cbmem": true,
         "usb_a_port_count": 0,
         "usb_hid_wake_enabled": true,
