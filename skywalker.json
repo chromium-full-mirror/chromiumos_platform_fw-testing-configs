@@ -1,0 +1,19 @@
+{
+  "ec_capability": {
+    "arm": true,
+    "battery": true,
+    "cbi": true,
+    "charging": true,
+    "keyboard": true,
+    "lid": true,
+    "x86": false
+  },
+  "firmware_screen": 20,
+  "firmware_screen_rec_mode": 20,
+  "minidiag_capability": {
+    "cbmem_preserved_by_ap_reset": false,
+    "event_log_test_report": true
+  },
+  "platform": "skywalker",
+  "usbc_voltage_on_shutdown_and_full_batt": 9
+}
