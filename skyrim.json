@@ -27,6 +27,14 @@
   "minidiag_capability": {
     "cbmem_preserved_by_ap_reset": false
   },
+  "models": {
+    "frostflow": {
+      "max_charging_power": 45
+    },
+    "markarth": {
+      "max_charging_power": 65
+    }
+  },
   "platform": "skyrim",
   "rec_force_mrc": false,
   "s3_override_to_unsupported": true,
