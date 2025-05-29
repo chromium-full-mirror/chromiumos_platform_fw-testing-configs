@@ -1,1 +1,3 @@
-*
+# The firmware teams own the code in this dir.
+include chromiumos/owners:v1:/firmware/OWNERS.cros_ap
+include chromiumos/owners:v1:/firmware/OWNERS.cros_ec
