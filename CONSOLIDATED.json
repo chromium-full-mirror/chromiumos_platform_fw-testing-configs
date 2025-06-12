@@ -8541,9 +8541,7 @@
     "chrome_ec": true,
     "chrome_usbpd": false,
     "clear_dev_on_rec": false,
-    "cr50_capability": [
-      "deep_sleep_in_s0i3"
-    ],
+    "cr50_capability": [],
     "custom_max_tpm_init_us": 0,
     "custom_usb_enable_pins": [
       {
