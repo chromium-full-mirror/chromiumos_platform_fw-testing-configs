@@ -95,6 +95,14 @@
     "guren": {
       "white_screen_power_press_time": 1.666
     },
+    "meliks": {
+      "custom_usb_enable_pins": [
+        {
+          "ioex": false,
+          "name": "en_sub_usb_a1_vbus"
+        }
+      ]
+    },
     "pujjoga": {
       "custom_usb_enable_pins": [
         {
