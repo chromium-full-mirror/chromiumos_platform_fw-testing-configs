@@ -18702,7 +18702,7 @@
     "cr50_capability": [
       "rdd_off_in_g3"
     ],
-    "custom_max_tpm_init_us": 0,
+    "custom_max_tpm_init_us": 150000,
     "custom_usb_enable_pins": [
       {
         "ioex": true,
@@ -18770,7 +18770,7 @@
         "cr50_capability": [
           "rdd_off_in_g3"
         ],
-        "custom_max_tpm_init_us": 0,
+        "custom_max_tpm_init_us": 150000,
         "custom_usb_enable_pins": [
           {
             "ioex": true,
@@ -18867,7 +18867,7 @@
         "cr50_capability": [
           "rdd_off_in_g3"
         ],
-        "custom_max_tpm_init_us": 0,
+        "custom_max_tpm_init_us": 150000,
         "custom_usb_enable_pins": [
           {
             "ioex": true,
@@ -18964,7 +18964,7 @@
         "cr50_capability": [
           "rdd_off_in_g3"
         ],
-        "custom_max_tpm_init_us": 0,
+        "custom_max_tpm_init_us": 150000,
         "custom_usb_enable_pins": [
           {
             "ioex": true,
@@ -19061,7 +19061,7 @@
         "cr50_capability": [
           "rdd_off_in_g3"
         ],
-        "custom_max_tpm_init_us": 0,
+        "custom_max_tpm_init_us": 150000,
         "custom_usb_enable_pins": [
           {
             "ioex": true,
@@ -19154,7 +19154,7 @@
         "cr50_capability": [
           "rdd_off_in_g3"
         ],
-        "custom_max_tpm_init_us": 0,
+        "custom_max_tpm_init_us": 150000,
         "custom_usb_enable_pins": [
           {
             "ioex": true,
@@ -19251,7 +19251,7 @@
         "cr50_capability": [
           "rdd_off_in_g3"
         ],
-        "custom_max_tpm_init_us": 0,
+        "custom_max_tpm_init_us": 150000,
         "custom_usb_enable_pins": [
           {
             "ioex": true,
@@ -19348,7 +19348,7 @@
         "cr50_capability": [
           "rdd_off_in_g3"
         ],
-        "custom_max_tpm_init_us": 0,
+        "custom_max_tpm_init_us": 150000,
         "custom_usb_enable_pins": [
           {
             "ioex": true,
@@ -19445,7 +19445,7 @@
         "cr50_capability": [
           "rdd_off_in_g3"
         ],
-        "custom_max_tpm_init_us": 0,
+        "custom_max_tpm_init_us": 150000,
         "custom_usb_enable_pins": [
           {
             "ioex": true,
@@ -19542,7 +19542,7 @@
         "cr50_capability": [
           "rdd_off_in_g3"
         ],
-        "custom_max_tpm_init_us": 0,
+        "custom_max_tpm_init_us": 150000,
         "custom_usb_enable_pins": [
           {
             "ioex": true,
@@ -19639,7 +19639,7 @@
         "cr50_capability": [
           "rdd_off_in_g3"
         ],
-        "custom_max_tpm_init_us": 0,
+        "custom_max_tpm_init_us": 150000,
         "custom_usb_enable_pins": [
           {
             "ioex": true,
@@ -19736,7 +19736,7 @@
         "cr50_capability": [
           "rdd_off_in_g3"
         ],
-        "custom_max_tpm_init_us": 0,
+        "custom_max_tpm_init_us": 150000,
         "custom_usb_enable_pins": [
           {
             "ioex": true,
@@ -19833,7 +19833,7 @@
         "cr50_capability": [
           "rdd_off_in_g3"
         ],
-        "custom_max_tpm_init_us": 0,
+        "custom_max_tpm_init_us": 150000,
         "custom_usb_enable_pins": [
           {
             "ioex": true,
