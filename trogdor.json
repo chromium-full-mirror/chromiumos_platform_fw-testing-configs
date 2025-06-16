@@ -4,6 +4,7 @@
   "cr50_capability": {
     "ec_hibernate_breaks_rdd": true
   },
+  "custom_max_tpm_init_us": 150000,
   "custom_usb_enable_pins": [
     {
       "ioex": false,
