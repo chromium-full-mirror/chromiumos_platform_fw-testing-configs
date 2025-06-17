@@ -16649,7 +16649,7 @@
     "custom_max_tpm_init_us": 0,
     "custom_usb_enable_pins": [],
     "delay_powerinfo_stable": 0,
-    "delay_reboot_to_ping": 60,
+    "delay_reboot_to_ping": 80,
     "dut_can_source_power_in_suspend": true,
     "ec_boot_to_console": 1.2,
     "ec_boot_to_pwr_button": 0.5,
