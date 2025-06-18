@@ -1,4 +1,10 @@
 {
+  "custom_usb_enable_pins": [
+    {
+      "ioex": false,
+      "name": "en_pp5000_usba_vbus"
+    }
+  ],
   "delay_reboot_to_ping": 80,
   "ec_capability": {
     "arm": true,
