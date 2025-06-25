@@ -38,7 +38,8 @@
           "ioex": false,
           "name": "EN_USB_A0_VBUS"
         }
-      ]
+      ],
+      "ec_watchdog_period": 1.6
     },
     "awasuki": {
       "custom_usb_enable_pins": [

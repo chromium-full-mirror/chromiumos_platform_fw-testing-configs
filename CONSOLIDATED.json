@@ -3163,7 +3163,7 @@
         "ec_cold_boot_time": 1.2,
         "ec_forwards_short_pp_press": false,
         "ec_ro_vbus_bug": false,
-        "ec_watchdog_period": 2.1,
+        "ec_watchdog_period": 1.6,
         "ec_watchdog_warning_leading_time": 0.5,
         "firmware_screen": 30,
         "firmware_screen_rec_mode": 60,
