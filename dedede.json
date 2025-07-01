@@ -280,7 +280,8 @@
           "ioex": false,
           "name": "EN_USB_A_5V"
         }
-      ]
+      ],
+      "s0ix_override_to_unsupported": true
     },
     "drawper": {
       "custom_usb_enable_pins": [

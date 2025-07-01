@@ -4673,7 +4673,7 @@
         "rec_force_mrc": true,
         "rec_invalid_screen": 2,
         "rma_entered_automatically": true,
-        "s0ix_override_to_unsupported": false,
+        "s0ix_override_to_unsupported": true,
         "s3_override_to_unsupported": false,
         "serial_number_length": 0,
         "servo_prog_state_delay": 0,
