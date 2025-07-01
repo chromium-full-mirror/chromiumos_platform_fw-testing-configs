@@ -17465,7 +17465,7 @@
     "cr50_capability": [
       "ec_hibernate_breaks_rdd"
     ],
-    "custom_max_tpm_init_us": 0,
+    "custom_max_tpm_init_us": 150000,
     "custom_usb_enable_pins": [],
     "delay_powerinfo_stable": 0,
     "delay_reboot_to_ping": 60,
@@ -17520,7 +17520,7 @@
         "cr50_capability": [
           "ec_hibernate_breaks_rdd"
         ],
-        "custom_max_tpm_init_us": 0,
+        "custom_max_tpm_init_us": 150000,
         "custom_usb_enable_pins": [],
         "delay_powerinfo_stable": 0,
         "delay_reboot_to_ping": 60,
@@ -17605,7 +17605,7 @@
         "cr50_capability": [
           "ec_hibernate_breaks_rdd"
         ],
-        "custom_max_tpm_init_us": 0,
+        "custom_max_tpm_init_us": 150000,
         "custom_usb_enable_pins": [],
         "delay_powerinfo_stable": 0,
         "delay_reboot_to_ping": 65,
@@ -17690,7 +17690,7 @@
         "cr50_capability": [
           "ec_hibernate_breaks_rdd"
         ],
-        "custom_max_tpm_init_us": 0,
+        "custom_max_tpm_init_us": 150000,
         "custom_usb_enable_pins": [],
         "delay_powerinfo_stable": 0,
         "delay_reboot_to_ping": 70,
@@ -17775,7 +17775,7 @@
         "cr50_capability": [
           "ec_hibernate_breaks_rdd"
         ],
-        "custom_max_tpm_init_us": 0,
+        "custom_max_tpm_init_us": 150000,
         "custom_usb_enable_pins": [],
         "delay_powerinfo_stable": 0,
         "delay_reboot_to_ping": 70,
