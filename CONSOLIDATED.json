@@ -8053,6 +8053,7 @@
     "max_charging_power": 60.0,
     "memory_retrain_timeout": 120,
     "minidiag_capability": [
+      "cbmem_preserved_by_ap_reset",
       "event_log_launch_count",
       "event_log_test_report"
     ],
@@ -8111,6 +8112,7 @@
         "max_charging_power": 45.0,
         "memory_retrain_timeout": 120,
         "minidiag_capability": [
+          "cbmem_preserved_by_ap_reset",
           "event_log_launch_count",
           "event_log_test_report"
         ],
@@ -15607,6 +15609,7 @@
     "max_charging_power": 60.0,
     "memory_retrain_timeout": 120,
     "minidiag_capability": [
+      "cbmem_preserved_by_ap_reset",
       "event_log_launch_count",
       "event_log_test_report"
     ],
@@ -16969,6 +16972,7 @@
     "max_charging_power": 60.0,
     "memory_retrain_timeout": 120,
     "minidiag_capability": [
+      "cbmem_preserved_by_ap_reset",
       "event_log_launch_count",
       "event_log_test_report"
     ],

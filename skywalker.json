@@ -18,7 +18,6 @@
   "firmware_screen": 30,
   "firmware_screen_rec_mode": 30,
   "minidiag_capability": {
-    "cbmem_preserved_by_ap_reset": false,
     "event_log_test_report": true
   },
   "platform": "skywalker",
