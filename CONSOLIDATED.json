@@ -12606,7 +12606,7 @@
         "custom_usb_enable_pins": [
           {
             "ioex": false,
-            "name": "en_usb_a0_vbus"
+            "name": "en_pp5000_vbus"
           }
         ],
         "delay_powerinfo_stable": 0,
@@ -13066,7 +13066,7 @@
         "custom_usb_enable_pins": [
           {
             "ioex": false,
-            "name": "en_usb_a0_vbus"
+            "name": "en_pp5000_vbus"
           }
         ],
         "delay_powerinfo_stable": 0,
