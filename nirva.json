@@ -1,0 +1,32 @@
+{
+  "ac_on_can_wake_ap_from_ulp": true,
+  "custom_usb_enable_pins": [
+    {
+      "ioex": false,
+      "name": "en_usb_a0_vbus"
+    }
+  ],
+  "delay_reboot_to_ping": 260,
+  "ec_capability": {
+    "arm": false,
+    "battery": true,
+    "cbi": true,
+    "charging": true,
+    "keyboard": true,
+    "lid": true,
+    "x86": true
+  },
+  "firmware_screen": 30,
+  "firmware_screen_rec_mode": 90,
+  "fw_update_build": "nirva-release/R109-15217.892.0",
+  "hold_pwr_button_nopowerd_shutdown": 14,
+  "hold_pwr_button_poweron": 1.2,
+  "max_charging_power": 45.0,
+  "minidiag_capability": {
+    "cbmem_preserved_by_ap_reset": false
+  },
+  "platform": "nirva",
+  "smm_store": false,
+  "spi_voltage": "pp3300",
+  "usbc_input_voltage_limit": 15
+}
