@@ -12646,7 +12646,7 @@
         "is_detachable": false,
         "keypress_delay": 0.2,
         "lid_wake_from_power_off": true,
-        "max_charging_power": 45.0,
+        "max_charging_power": 65.0,
         "memory_retrain_timeout": 120,
         "minidiag_capability": [
           "event_log_launch_count"
@@ -12681,7 +12681,7 @@
         "usb_image_boot_timeout": 180,
         "usb_plug": 10,
         "usb_unplug": 2,
-        "usbc_input_voltage_limit": 15,
+        "usbc_input_voltage_limit": 20,
         "usbc_voltage_on_shutdown_and_full_batt": 20,
         "white_screen_power_press_time": 1.666
       },
@@ -13106,7 +13106,7 @@
         "is_detachable": false,
         "keypress_delay": 0.2,
         "lid_wake_from_power_off": true,
-        "max_charging_power": 45.0,
+        "max_charging_power": 65.0,
         "memory_retrain_timeout": 120,
         "minidiag_capability": [
           "event_log_launch_count"
@@ -13141,7 +13141,7 @@
         "usb_image_boot_timeout": 180,
         "usb_plug": 10,
         "usb_unplug": 2,
-        "usbc_input_voltage_limit": 15,
+        "usbc_input_voltage_limit": 20,
         "usbc_voltage_on_shutdown_and_full_batt": 20,
         "white_screen_power_press_time": 1.666
       },
