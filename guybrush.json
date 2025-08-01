@@ -21,6 +21,7 @@
     "x86": true
   },
   "firmware_screen": 15,
+  "gsc_update_wait_for_reboot": 60,
   "hold_pwr_button_poweroff": 4,
   "max_charging_power": 100.0,
   "minidiag_capability": {

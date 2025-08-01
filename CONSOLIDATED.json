@@ -8576,7 +8576,7 @@
     "firmware_screen_rec_mode": 60,
     "gsc_can_wake_ec_with_reset": true,
     "gsc_off_in_ulp": false,
-    "gsc_update_wait_for_reboot": 20,
+    "gsc_update_wait_for_reboot": 60,
     "has_diagnostics_image": false,
     "has_eventlog": true,
     "has_keyboard": true,
