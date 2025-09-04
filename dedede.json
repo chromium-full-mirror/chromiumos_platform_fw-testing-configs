@@ -282,6 +282,7 @@
           "name": "EN_USB_A_5V"
         }
       ],
+      "ec_watchdog_period": 1.6,
       "s0ix_override_to_unsupported": true
     },
     "drawper": {
