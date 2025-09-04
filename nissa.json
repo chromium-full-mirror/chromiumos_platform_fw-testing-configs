@@ -92,6 +92,9 @@
     "domiso": {
       "white_screen_power_press_time": 1.666
     },
+    "epiccs": {
+      "white_screen_power_press_time": 1.666
+    },
     "guren": {
       "white_screen_power_press_time": 1.666
     },
