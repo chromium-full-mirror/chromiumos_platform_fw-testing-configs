@@ -98,6 +98,9 @@
     "guren": {
       "white_screen_power_press_time": 1.666
     },
+    "kaladin": {
+      "has_ISHMotionsense": true
+    },
     "meliks": {
       "custom_usb_enable_pins": [
         {
