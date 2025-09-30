@@ -1,0 +1,7 @@
+{
+  "custom_usb_enable_pins": [],
+  "is_detachable": true,
+  "parent": "skywalker",
+  "platform": "jedi",
+  "usb_a_port_count": 0
+}
