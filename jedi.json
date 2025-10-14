@@ -1,6 +1,12 @@
 {
   "custom_usb_enable_pins": [],
   "is_detachable": true,
+  "models": {
+    "padme": {
+      "max_charging_power": 45.0,
+      "usbc_input_voltage_limit": 15
+    }
+  },
   "parent": "skywalker",
   "platform": "jedi",
   "usb_a_port_count": 0
