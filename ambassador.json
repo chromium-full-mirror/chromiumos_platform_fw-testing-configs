@@ -1,0 +1,35 @@
+{
+  "custom_max_tpm_init_us": 170000,
+  "custom_usb_enable_pins": [
+    {
+      "ioex": false,
+      "name": "EN_PP5000_USB_VBUS"
+    }
+  ],
+  "delay_powerinfo_stable": 6,
+  "delay_reboot_to_ping": 200,
+  "ec_capability": {
+    "arm": false,
+    "battery": false,
+    "cbi": true,
+    "charging": false,
+    "keyboard": false,
+    "lid": false,
+    "x86": true
+  },
+  "ec_forwards_short_pp_press": true,
+  "firmware_screen": 15,
+  "firmware_screen_rec_mode": 40,
+  "has_keyboard": false,
+  "has_lid": false,
+  "hibernate": false,
+  "max_charging_power": 100.0,
+  "minidiag_enabled": false,
+  "minios_enabled": false,
+  "platform": "ambassador",
+  "rec_button_dev_switch": true,
+  "s0ix_override_to_unsupported": true,
+  "s3_override_to_unsupported": true,
+  "smm_store": false,
+  "spi_voltage": "pp3300"
+}
