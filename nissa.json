@@ -214,6 +214,11 @@
     "uldrenite": {
       "white_screen_power_press_time": 1.666
     },
+    "uldrenite360": {
+      "cr50_capability": {
+        "rdd_use_ccd_mode": true
+      }
+    },
     "yahiko": {
       "white_screen_power_press_time": 1.666
     },

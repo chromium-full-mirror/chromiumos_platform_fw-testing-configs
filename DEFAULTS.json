@@ -18,6 +18,7 @@
     "ec_hibernate_breaks_rdd": false,
     "rdd_leakage": false,
     "rdd_off_in_g3": false,
+    "rdd_use_ccd_mode": false,
     "wp_on_in_g3": false
   },
   "cr50_capability.DOC": "List of capabilities of the CR50",
