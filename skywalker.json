@@ -20,6 +20,14 @@
   "minidiag_capability": {
     "event_log_test_report": true
   },
+  "models": {
+    "anakin": {
+      "max_charging_power": 45.0
+    },
+    "anakin360": {
+      "max_charging_power": 45.0
+    }
+  },
   "platform": "skywalker",
   "usbc_voltage_on_shutdown_and_full_batt": 9
 }
