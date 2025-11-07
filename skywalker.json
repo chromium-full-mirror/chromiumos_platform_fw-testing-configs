@@ -26,6 +26,9 @@
     },
     "anakin360": {
       "max_charging_power": 45.0
+    },
+    "tarkin": {
+      "max_charging_power": 45.0
     }
   },
   "platform": "skywalker",
