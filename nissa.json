@@ -223,6 +223,9 @@
         "rdd_use_ccd_mode": true
       }
     },
+    "uldrino": {
+      "white_screen_power_press_time": 1.666
+    },
     "yahiko": {
       "white_screen_power_press_time": 1.666
     },
