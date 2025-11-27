@@ -1,4 +1,5 @@
 {
+  "delay_reboot_to_ping": 260,
   "parent": "fizz",
   "platform": "endeavour"
 }
