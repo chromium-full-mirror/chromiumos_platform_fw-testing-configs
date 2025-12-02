@@ -28,11 +28,13 @@
   "models": {
     "anraggar": {
       "ec_cold_boot_time": 1.6,
+      "ec_watchdog_period": 6.5,
       "firmware_screen": 25,
       "white_screen_power_press_time": 1.666
     },
     "anraggar360": {
       "ec_cold_boot_time": 1.6,
+      "ec_watchdog_period": 6.5,
       "firmware_screen": 25,
       "white_screen_power_press_time": 1.666
     },
@@ -80,6 +82,7 @@
         "keyboard": false,
         "lid": false
       },
+      "ec_watchdog_period": 6.5,
       "firmware_screen": 25,
       "has_keyboard": false,
       "has_lid": false,
@@ -87,16 +90,28 @@
       "rec_button_dev_switch": true
     },
     "domika": {
+      "ec_watchdog_period": 6.5,
       "white_screen_power_press_time": 1.666
     },
+    "domilly": {
+      "ec_watchdog_period": 6.5
+    },
     "domiso": {
+      "ec_watchdog_period": 6.5,
       "white_screen_power_press_time": 1.666
     },
     "epiccs": {
+      "ec_watchdog_period": 6.5,
       "white_screen_power_press_time": 1.666
+    },
+    "gothrax": {
+      "ec_watchdog_period": 6.5
     },
     "guren": {
       "white_screen_power_press_time": 1.666
+    },
+    "joxer": {
+      "ec_watchdog_period": 6.5
     },
     "kaladin": {
       "has_ISHMotionsense": true,
@@ -112,6 +127,15 @@
           "name": "en_sub_usb_a1_vbus"
         }
       ]
+    },
+    "naktal": {
+      "ec_watchdog_period": 6.5
+    },
+    "nereid": {
+      "ec_watchdog_period": 6.5
+    },
+    "pirrha": {
+      "ec_watchdog_period": 6.5
     },
     "pujjocento": {
       "custom_usb_enable_pins": [
@@ -146,6 +170,7 @@
     },
     "pujjoniru": {
       "ec_cold_boot_time": 1.6,
+      "ec_watchdog_period": 6.5,
       "firmware_screen": 25,
       "white_screen_power_press_time": 1.666
     },
@@ -166,10 +191,18 @@
       "white_screen_power_press_time": 1.666
     },
     "quandiso": {
+      "ec_watchdog_period": 6.5,
       "white_screen_power_press_time": 1.666
     },
     "quandiso2": {
+      "ec_watchdog_period": 6.5,
       "white_screen_power_press_time": 1.666
+    },
+    "quandiso360": {
+      "ec_watchdog_period": 6.5
+    },
+    "quandiso3602": {
+      "ec_watchdog_period": 6.5
     },
     "roric": {
       "ec_cold_boot_time": 1.6,
@@ -183,6 +216,7 @@
     },
     "rull": {
       "ec_cold_boot_time": 1.6,
+      "ec_watchdog_period": 6.5,
       "hold_pwr_button_poweron": 0.2,
       "white_screen_power_press_time": 1.666
     },
@@ -196,17 +230,20 @@
     },
     "teliks": {
       "ec_cold_boot_time": 1.6,
+      "ec_watchdog_period": 6.5,
       "firmware_screen": 25,
       "s3_override_to_unsupported": true,
       "white_screen_power_press_time": 1.666
     },
     "teliks360": {
       "ec_cold_boot_time": 1.6,
+      "ec_watchdog_period": 6.5,
       "firmware_screen": 25,
       "white_screen_power_press_time": 1.666
     },
     "telith": {
       "ec_cold_boot_time": 1.6,
+      "ec_watchdog_period": 6.5,
       "firmware_screen": 25,
       "white_screen_power_press_time": 1.666
     },
@@ -227,19 +264,30 @@
       "white_screen_power_press_time": 1.666
     },
     "yahiko": {
+      "ec_watchdog_period": 6.5,
       "white_screen_power_press_time": 1.666
     },
     "yavijo": {
+      "ec_watchdog_period": 6.5,
       "white_screen_power_press_time": 1.666
     },
     "yaviks": {
+      "ec_watchdog_period": 6.5,
       "white_screen_power_press_time": 1.666
     },
     "yavikso": {
+      "ec_watchdog_period": 6.5,
       "white_screen_power_press_time": 1.666
     },
     "yavilla": {
+      "ec_watchdog_period": 6.5,
       "white_screen_power_press_time": 1.666
+    },
+    "yavilly": {
+      "ec_watchdog_period": 6.5
+    },
+    "yavista": {
+      "ec_watchdog_period": 6.5
     }
   },
   "platform": "nissa",
