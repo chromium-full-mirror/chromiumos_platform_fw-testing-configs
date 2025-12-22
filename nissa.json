@@ -252,6 +252,9 @@
       "firmware_screen": 25,
       "white_screen_power_press_time": 1.666
     },
+    "uldren": {
+      "white_screen_power_press_time": 1.666
+    },
     "uldrenite": {
       "white_screen_power_press_time": 1.666
     },
