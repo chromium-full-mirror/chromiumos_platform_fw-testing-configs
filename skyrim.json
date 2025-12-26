@@ -39,5 +39,6 @@
   "rec_force_mrc": false,
   "s3_override_to_unsupported": true,
   "servo_prog_state_delay": 1.0,
-  "smm_store": false
+  "smm_store": false,
+  "white_screen_power_press_time": 1.5
 }

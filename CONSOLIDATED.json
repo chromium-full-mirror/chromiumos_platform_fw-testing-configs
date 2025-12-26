@@ -19107,7 +19107,7 @@
         "usb_unplug": 2,
         "usbc_input_voltage_limit": 20,
         "usbc_voltage_on_shutdown_and_full_batt": 20,
-        "white_screen_power_press_time": 2
+        "white_screen_power_press_time": 1.5
       },
       "markarth": {
         "ac_on_can_wake_ap_from_ulp": true,
@@ -19204,7 +19204,7 @@
         "usb_unplug": 2,
         "usbc_input_voltage_limit": 20,
         "usbc_voltage_on_shutdown_and_full_batt": 20,
-        "white_screen_power_press_time": 2
+        "white_screen_power_press_time": 1.5
       }
     },
     "no_broken_screen_in_dev": false,
@@ -19235,7 +19235,7 @@
     "usb_unplug": 2,
     "usbc_input_voltage_limit": 20,
     "usbc_voltage_on_shutdown_and_full_batt": 20,
-    "white_screen_power_press_time": 2
+    "white_screen_power_press_time": 1.5
   },
   "skywalker": {
     "ac_on_can_wake_ap_from_ulp": false,
