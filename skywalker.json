@@ -27,7 +27,13 @@
     "anakin360": {
       "max_charging_power": 45.0
     },
+    "grogu": {
+      "max_charging_power": 45.0
+    },
     "phasma": {
+      "max_charging_power": 45.0
+    },
+    "starros": {
       "max_charging_power": 45.0
     },
     "tarkin": {
