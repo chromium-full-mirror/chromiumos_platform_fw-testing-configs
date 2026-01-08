@@ -206,11 +206,13 @@
     },
     "roric": {
       "ec_cold_boot_time": 1.6,
+      "ec_watchdog_period": 6.5,
       "hold_pwr_button_poweron": 0.2,
       "white_screen_power_press_time": 1.666
     },
     "ruke": {
       "ec_cold_boot_time": 1.6,
+      "ec_watchdog_period": 6.5,
       "hold_pwr_button_poweron": 0.2,
       "white_screen_power_press_time": 1.666
     },
