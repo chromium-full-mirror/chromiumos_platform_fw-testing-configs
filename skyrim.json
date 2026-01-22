@@ -11,6 +11,7 @@
     }
   ],
   "delay_powerinfo_stable": 5,
+  "delay_reboot_to_ping": 90,
   "ec_capability": {
     "arm": false,
     "battery": true,

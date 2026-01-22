@@ -18965,7 +18965,7 @@
       }
     ],
     "delay_powerinfo_stable": 5,
-    "delay_reboot_to_ping": 60,
+    "delay_reboot_to_ping": 90,
     "dut_can_source_power_in_suspend": true,
     "ec_boot_to_console": 1.2,
     "ec_boot_to_pwr_button": 0.5,
@@ -19033,7 +19033,7 @@
           }
         ],
         "delay_powerinfo_stable": 5,
-        "delay_reboot_to_ping": 60,
+        "delay_reboot_to_ping": 90,
         "dut_can_source_power_in_suspend": true,
         "ec_boot_to_console": 1.2,
         "ec_boot_to_pwr_button": 0.5,
@@ -19130,7 +19130,7 @@
           }
         ],
         "delay_powerinfo_stable": 5,
-        "delay_reboot_to_ping": 60,
+        "delay_reboot_to_ping": 90,
         "dut_can_source_power_in_suspend": true,
         "ec_boot_to_console": 1.2,
         "ec_boot_to_pwr_button": 0.5,
