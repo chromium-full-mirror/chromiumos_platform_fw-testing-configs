@@ -27,6 +27,9 @@
     "anakin360": {
       "max_charging_power": 45.0
     },
+    "dooku": {
+      "max_charging_power": 45.0
+    },
     "grogu": {
       "max_charging_power": 45.0
     },
