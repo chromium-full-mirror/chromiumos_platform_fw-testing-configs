@@ -33,6 +33,9 @@
       "hold_pwr_button_poweron": 0.2,
       "white_screen_power_press_time": 1.666
     },
+    "rynar": {
+      "white_screen_power_press_time": 1.666
+    },
     "telithn50": {
       "ec_cold_boot_time": 1.6,
       "firmware_screen": 25,
