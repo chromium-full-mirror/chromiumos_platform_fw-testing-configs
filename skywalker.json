@@ -36,6 +36,9 @@
     "phasma": {
       "max_charging_power": 45.0
     },
+    "quigon": {
+      "custom_max_tpm_init_us": 80000
+    },
     "starros": {
       "max_charging_power": 45.0
     },
