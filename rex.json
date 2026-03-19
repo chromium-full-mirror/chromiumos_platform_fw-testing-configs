@@ -49,7 +49,6 @@
     }
   },
   "platform": "rex",
-  "s3_override_to_unsupported": true,
   "smm_store": false,
   "spi_voltage": "pp3300"
 }
