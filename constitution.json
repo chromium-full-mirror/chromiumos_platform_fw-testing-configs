@@ -5,6 +5,7 @@
       "name": "EN_PP5000_USBA"
     }
   ],
+  "delay_reboot_to_ping": 260,
   "ec_capability": {
     "arm": false,
     "battery": false,
