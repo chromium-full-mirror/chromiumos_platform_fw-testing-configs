@@ -24,6 +24,47 @@
   "minidiag_capability": {
     "cbmem_preserved_by_ap_reset": false
   },
+  "models": {
+    "dirkson": {
+      "custom_usb_enable_pins": [
+        {
+          "ioex": false,
+          "name": "en_usb_a0_vbus"
+        },
+        {
+          "ioex": false,
+          "name": "en_usb_a1_vbus"
+        },
+        {
+          "ioex": false,
+          "name": "en_usb_a2_vbus"
+        },
+        {
+          "ioex": false,
+          "name": "en_usb_a3_vbus"
+        },
+        {
+          "ioex": false,
+          "name": "en_usb_a4_vbus"
+        }
+      ],
+      "delay_reboot_to_ping": 200,
+      "ec_capability": {
+        "arm": false,
+        "battery": false,
+        "cbi": true,
+        "charging": false,
+        "keyboard": false,
+        "lid": false
+      },
+      "ec_watchdog_period": 6.5,
+      "firmware_screen": 25,
+      "has_keyboard": false,
+      "has_lid": false,
+      "hibernate": false,
+      "rec_button_dev_switch": true
+    }
+  },
   "platform": "nissa2",
   "smm_store": false,
   "spi_voltage": "pp3300",
