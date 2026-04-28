@@ -22,7 +22,6 @@
     "x86": true
   },
   "firmware_screen": 15,
-  "fw_update_build": "skyrim-release/R110-15268.0.0",
   "hold_pwr_button_poweroff": 3,
   "max_charging_power": 100.0,
   "minidiag_capability": {

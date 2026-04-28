@@ -16,7 +16,6 @@
   },
   "firmware_screen": 20,
   "firmware_screen_rec_mode": 20,
-  "fw_update_build": "corsola-release/R109-15190.0.0",
   "minidiag_capability": {
     "event_log_test_report": true
   },
