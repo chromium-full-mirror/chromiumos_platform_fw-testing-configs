@@ -103,6 +103,9 @@
       "ec_watchdog_period": 6.5,
       "white_screen_power_press_time": 1.666
     },
+    "glassway": {
+      "white_screen_power_press_time": 1.666
+    },
     "gothrax": {
       "ec_watchdog_period": 6.5
     },
