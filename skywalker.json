@@ -33,6 +33,9 @@
     "grogu": {
       "max_charging_power": 45.0
     },
+    "palpatine": {
+      "max_charging_power": 45.0
+    },
     "phasma": {
       "max_charging_power": 45.0
     },
@@ -40,6 +43,9 @@
       "custom_max_tpm_init_us": 80000
     },
     "r2d2": {
+      "max_charging_power": 45.0
+    },
+    "sheev": {
       "max_charging_power": 45.0
     },
     "starros": {
