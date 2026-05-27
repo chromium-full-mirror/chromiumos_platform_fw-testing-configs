@@ -37,7 +37,8 @@
       "firmware_screen_rec_mode": 85
     },
     "taniks": {
-      "firmware_screen_rec_mode": 90
+      "firmware_screen_rec_mode": 90,
+      "max_charging_power": 45.0
     },
     "vell": {
       "custom_usb_enable_pins": [],

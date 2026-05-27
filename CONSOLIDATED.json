@@ -1543,7 +1543,7 @@
         "is_detachable": false,
         "keypress_delay": 0.2,
         "lid_wake_from_power_off": true,
-        "max_charging_power": 60.0,
+        "max_charging_power": 45.0,
         "memory_retrain_timeout": 120,
         "minidiag_capability": [
           "event_log_launch_count"
