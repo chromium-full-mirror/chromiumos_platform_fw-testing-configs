@@ -17,7 +17,7 @@
     "lid": true,
     "x86": true
   },
-  "firmware_screen": 20,
+  "firmware_screen": 30,
   "hold_pwr_button_nopowerd_shutdown": 14,
   "models": {
     "kanix": {
