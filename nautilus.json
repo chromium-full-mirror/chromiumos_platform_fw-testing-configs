@@ -1,4 +1,5 @@
 {
+  "ac_on_can_wake_ap_from_ulp": false,
   "delay_reboot_to_ping": 40,
   "ec_capability": {
     "arm": false,

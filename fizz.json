@@ -1,4 +1,5 @@
 {
+  "ac_on_can_wake_ap_from_ulp": false,
   "ec_capability": {
     "arm": false,
     "battery": false,

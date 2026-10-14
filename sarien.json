@@ -1,4 +1,5 @@
 {
+  "ac_on_can_wake_ap_from_ulp": false,
   "ap_access_ec_flash": false,
   "ap_up_after_cr50_reboot": false,
   "chrome_ec": false,

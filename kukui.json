@@ -1,4 +1,5 @@
 {
+  "ac_on_can_wake_ap_from_ulp": false,
   "charger_profile_override": true,
   "delay_reboot_to_ping": 120,
   "ec_boot_to_console": 2,

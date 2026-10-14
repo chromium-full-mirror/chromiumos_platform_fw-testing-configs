@@ -1,4 +1,5 @@
 {
+  "ac_on_can_wake_ap_from_ulp": false,
   "custom_max_tpm_init_us": 240000,
   "ec_capability": {
     "arm": true,

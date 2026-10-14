@@ -1,5 +1,4 @@
 {
-  "ac_on_can_wake_ap_from_ulp": true,
   "charger_profile_override": true,
   "cr50_capability": {
     "ec_hibernate_breaks_rdd": true
