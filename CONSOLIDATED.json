@@ -609,7 +609,7 @@
     "white_screen_power_press_time": 2
   },
   "atlas": {
-    "ac_on_can_wake_ap_from_ulp": false,
+    "ac_on_can_wake_ap_from_ulp": true,
     "ap_access_ec_flash": true,
     "ap_up_after_cr50_reboot": true,
     "charger_profile_override": false,
@@ -670,7 +670,7 @@
     "mode_switcher_type": "keyboard_dev_switcher",
     "models": {
       "atlas": {
-        "ac_on_can_wake_ap_from_ulp": false,
+        "ac_on_can_wake_ap_from_ulp": true,
         "ap_access_ec_flash": true,
         "ap_up_after_cr50_reboot": true,
         "charger_profile_override": false,
@@ -2520,7 +2520,7 @@
     "white_screen_power_press_time": 2
   },
   "corsola": {
-    "ac_on_can_wake_ap_from_ulp": false,
+    "ac_on_can_wake_ap_from_ulp": true,
     "ap_access_ec_flash": true,
     "ap_up_after_cr50_reboot": true,
     "charger_profile_override": false,
@@ -2585,7 +2585,7 @@
     "mode_switcher_type": "menu_switcher",
     "models": {
       "kyogre": {
-        "ac_on_can_wake_ap_from_ulp": false,
+        "ac_on_can_wake_ap_from_ulp": true,
         "ap_access_ec_flash": true,
         "ap_up_after_cr50_reboot": true,
         "charger_profile_override": false,
@@ -2679,7 +2679,7 @@
         "white_screen_power_press_time": 2
       },
       "ponyta": {
-        "ac_on_can_wake_ap_from_ulp": false,
+        "ac_on_can_wake_ap_from_ulp": true,
         "ap_access_ec_flash": true,
         "ap_up_after_cr50_reboot": true,
         "charger_profile_override": false,
@@ -2773,7 +2773,7 @@
         "white_screen_power_press_time": 2
       },
       "ponyta360": {
-        "ac_on_can_wake_ap_from_ulp": false,
+        "ac_on_can_wake_ap_from_ulp": true,
         "ap_access_ec_flash": true,
         "ap_up_after_cr50_reboot": true,
         "charger_profile_override": false,
@@ -2867,7 +2867,7 @@
         "white_screen_power_press_time": 2
       },
       "squirtle": {
-        "ac_on_can_wake_ap_from_ulp": false,
+        "ac_on_can_wake_ap_from_ulp": true,
         "ap_access_ec_flash": true,
         "ap_up_after_cr50_reboot": true,
         "charger_profile_override": false,
@@ -2961,7 +2961,7 @@
         "white_screen_power_press_time": 2
       },
       "tentacruel": {
-        "ac_on_can_wake_ap_from_ulp": false,
+        "ac_on_can_wake_ap_from_ulp": true,
         "ap_access_ec_flash": true,
         "ap_up_after_cr50_reboot": true,
         "charger_profile_override": false,
@@ -3055,7 +3055,7 @@
         "white_screen_power_press_time": 2
       },
       "voltorb": {
-        "ac_on_can_wake_ap_from_ulp": false,
+        "ac_on_can_wake_ap_from_ulp": true,
         "ap_access_ec_flash": true,
         "ap_up_after_cr50_reboot": true,
         "charger_profile_override": false,
@@ -7388,7 +7388,7 @@
     "white_screen_power_press_time": 2
   },
   "eve": {
-    "ac_on_can_wake_ap_from_ulp": false,
+    "ac_on_can_wake_ap_from_ulp": true,
     "ap_access_ec_flash": true,
     "ap_up_after_cr50_reboot": true,
     "charger_profile_override": false,
@@ -7449,7 +7449,7 @@
     "mode_switcher_type": "keyboard_dev_switcher",
     "models": {
       "eve": {
-        "ac_on_can_wake_ap_from_ulp": false,
+        "ac_on_can_wake_ap_from_ulp": true,
         "ap_access_ec_flash": true,
         "ap_up_after_cr50_reboot": true,
         "charger_profile_override": false,
@@ -8172,7 +8172,7 @@
     "white_screen_power_press_time": 2
   },
   "geralt": {
-    "ac_on_can_wake_ap_from_ulp": false,
+    "ac_on_can_wake_ap_from_ulp": true,
     "ap_access_ec_flash": true,
     "ap_up_after_cr50_reboot": true,
     "charger_profile_override": false,
@@ -8232,7 +8232,7 @@
     "mode_switcher_type": "menu_switcher",
     "models": {
       "ciri": {
-        "ac_on_can_wake_ap_from_ulp": false,
+        "ac_on_can_wake_ap_from_ulp": true,
         "ap_access_ec_flash": true,
         "ap_up_after_cr50_reboot": true,
         "charger_profile_override": false,
@@ -8530,7 +8530,7 @@
     "white_screen_power_press_time": 2
   },
   "grunt": {
-    "ac_on_can_wake_ap_from_ulp": false,
+    "ac_on_can_wake_ap_from_ulp": true,
     "ap_access_ec_flash": true,
     "ap_up_after_cr50_reboot": true,
     "charger_profile_override": false,
@@ -8588,7 +8588,7 @@
     "mode_switcher_type": "keyboard_dev_switcher",
     "models": {
       "liara": {
-        "ac_on_can_wake_ap_from_ulp": false,
+        "ac_on_can_wake_ap_from_ulp": true,
         "ap_access_ec_flash": true,
         "ap_up_after_cr50_reboot": true,
         "charger_profile_override": false,
@@ -9916,7 +9916,7 @@
     "white_screen_power_press_time": 2
   },
   "jedi": {
-    "ac_on_can_wake_ap_from_ulp": false,
+    "ac_on_can_wake_ap_from_ulp": true,
     "ap_access_ec_flash": true,
     "ap_up_after_cr50_reboot": true,
     "charger_profile_override": false,
@@ -9976,7 +9976,7 @@
     "mode_switcher_type": "menu_switcher",
     "models": {
       "padme": {
-        "ac_on_can_wake_ap_from_ulp": false,
+        "ac_on_can_wake_ap_from_ulp": true,
         "ap_access_ec_flash": true,
         "ap_up_after_cr50_reboot": true,
         "charger_profile_override": false,
@@ -11436,7 +11436,7 @@
     "white_screen_power_press_time": 2
   },
   "nautilus": {
-    "ac_on_can_wake_ap_from_ulp": false,
+    "ac_on_can_wake_ap_from_ulp": true,
     "ap_access_ec_flash": true,
     "ap_up_after_cr50_reboot": true,
     "charger_profile_override": false,
@@ -11494,7 +11494,7 @@
     "mode_switcher_type": "keyboard_dev_switcher",
     "models": {
       "nautilus": {
-        "ac_on_can_wake_ap_from_ulp": false,
+        "ac_on_can_wake_ap_from_ulp": true,
         "ap_access_ec_flash": true,
         "ap_up_after_cr50_reboot": true,
         "charger_profile_override": false,
@@ -17070,7 +17070,7 @@
     "white_screen_power_press_time": 2
   },
   "nocturne": {
-    "ac_on_can_wake_ap_from_ulp": false,
+    "ac_on_can_wake_ap_from_ulp": true,
     "ap_access_ec_flash": true,
     "ap_up_after_cr50_reboot": true,
     "charger_profile_override": false,
@@ -17924,7 +17924,7 @@
     "white_screen_power_press_time": 2
   },
   "poppy": {
-    "ac_on_can_wake_ap_from_ulp": false,
+    "ac_on_can_wake_ap_from_ulp": true,
     "ap_access_ec_flash": true,
     "ap_up_after_cr50_reboot": true,
     "charger_profile_override": false,
@@ -18277,7 +18277,7 @@
     "white_screen_power_press_time": 2
   },
   "rauru": {
-    "ac_on_can_wake_ap_from_ulp": false,
+    "ac_on_can_wake_ap_from_ulp": true,
     "ap_access_ec_flash": true,
     "ap_up_after_cr50_reboot": true,
     "charger_profile_override": false,
@@ -19652,7 +19652,7 @@
     "white_screen_power_press_time": 1.5
   },
   "skywalker": {
-    "ac_on_can_wake_ap_from_ulp": false,
+    "ac_on_can_wake_ap_from_ulp": true,
     "ap_access_ec_flash": true,
     "ap_up_after_cr50_reboot": true,
     "charger_profile_override": false,
@@ -19717,7 +19717,7 @@
     "mode_switcher_type": "menu_switcher",
     "models": {
       "anakin": {
-        "ac_on_can_wake_ap_from_ulp": false,
+        "ac_on_can_wake_ap_from_ulp": true,
         "ap_access_ec_flash": true,
         "ap_up_after_cr50_reboot": true,
         "charger_profile_override": false,
@@ -19811,7 +19811,7 @@
         "white_screen_power_press_time": 2
       },
       "anakin360": {
-        "ac_on_can_wake_ap_from_ulp": false,
+        "ac_on_can_wake_ap_from_ulp": true,
         "ap_access_ec_flash": true,
         "ap_up_after_cr50_reboot": true,
         "charger_profile_override": false,
@@ -19905,7 +19905,7 @@
         "white_screen_power_press_time": 2
       },
       "dooku": {
-        "ac_on_can_wake_ap_from_ulp": false,
+        "ac_on_can_wake_ap_from_ulp": true,
         "ap_access_ec_flash": true,
         "ap_up_after_cr50_reboot": true,
         "charger_profile_override": false,
@@ -19999,7 +19999,7 @@
         "white_screen_power_press_time": 2
       },
       "grogu": {
-        "ac_on_can_wake_ap_from_ulp": false,
+        "ac_on_can_wake_ap_from_ulp": true,
         "ap_access_ec_flash": true,
         "ap_up_after_cr50_reboot": true,
         "charger_profile_override": false,
@@ -20093,7 +20093,7 @@
         "white_screen_power_press_time": 2
       },
       "palpatine": {
-        "ac_on_can_wake_ap_from_ulp": false,
+        "ac_on_can_wake_ap_from_ulp": true,
         "ap_access_ec_flash": true,
         "ap_up_after_cr50_reboot": true,
         "charger_profile_override": false,
@@ -20187,7 +20187,7 @@
         "white_screen_power_press_time": 2
       },
       "phasma": {
-        "ac_on_can_wake_ap_from_ulp": false,
+        "ac_on_can_wake_ap_from_ulp": true,
         "ap_access_ec_flash": true,
         "ap_up_after_cr50_reboot": true,
         "charger_profile_override": false,
@@ -20281,7 +20281,7 @@
         "white_screen_power_press_time": 2
       },
       "quigon": {
-        "ac_on_can_wake_ap_from_ulp": false,
+        "ac_on_can_wake_ap_from_ulp": true,
         "ap_access_ec_flash": true,
         "ap_up_after_cr50_reboot": true,
         "charger_profile_override": false,
@@ -20375,7 +20375,7 @@
         "white_screen_power_press_time": 2
       },
       "r2d2": {
-        "ac_on_can_wake_ap_from_ulp": false,
+        "ac_on_can_wake_ap_from_ulp": true,
         "ap_access_ec_flash": true,
         "ap_up_after_cr50_reboot": true,
         "charger_profile_override": false,
@@ -20469,7 +20469,7 @@
         "white_screen_power_press_time": 2
       },
       "sheev": {
-        "ac_on_can_wake_ap_from_ulp": false,
+        "ac_on_can_wake_ap_from_ulp": true,
         "ap_access_ec_flash": true,
         "ap_up_after_cr50_reboot": true,
         "charger_profile_override": false,
@@ -20563,7 +20563,7 @@
         "white_screen_power_press_time": 2
       },
       "starros": {
-        "ac_on_can_wake_ap_from_ulp": false,
+        "ac_on_can_wake_ap_from_ulp": true,
         "ap_access_ec_flash": true,
         "ap_up_after_cr50_reboot": true,
         "charger_profile_override": false,
@@ -20657,7 +20657,7 @@
         "white_screen_power_press_time": 2
       },
       "tarkin": {
-        "ac_on_can_wake_ap_from_ulp": false,
+        "ac_on_can_wake_ap_from_ulp": true,
         "ap_access_ec_flash": true,
         "ap_up_after_cr50_reboot": true,
         "charger_profile_override": false,
@@ -20871,7 +20871,7 @@
     "white_screen_power_press_time": 2
   },
   "soraka": {
-    "ac_on_can_wake_ap_from_ulp": false,
+    "ac_on_can_wake_ap_from_ulp": true,
     "ap_access_ec_flash": true,
     "ap_up_after_cr50_reboot": true,
     "charger_profile_override": false,
@@ -20959,7 +20959,7 @@
     "white_screen_power_press_time": 2
   },
   "staryu": {
-    "ac_on_can_wake_ap_from_ulp": false,
+    "ac_on_can_wake_ap_from_ulp": true,
     "ap_access_ec_flash": true,
     "ap_up_after_cr50_reboot": true,
     "charger_profile_override": false,
@@ -21019,7 +21019,7 @@
     "mode_switcher_type": "menu_switcher",
     "models": {
       "starmie": {
-        "ac_on_can_wake_ap_from_ulp": false,
+        "ac_on_can_wake_ap_from_ulp": true,
         "ap_access_ec_flash": true,
         "ap_up_after_cr50_reboot": true,
         "charger_profile_override": false,
@@ -21109,7 +21109,7 @@
         "white_screen_power_press_time": 2
       },
       "wyrdeer": {
-        "ac_on_can_wake_ap_from_ulp": false,
+        "ac_on_can_wake_ap_from_ulp": true,
         "ap_access_ec_flash": true,
         "ap_up_after_cr50_reboot": true,
         "charger_profile_override": false,

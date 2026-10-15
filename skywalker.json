@@ -1,5 +1,4 @@
 {
-  "ac_on_can_wake_ap_from_ulp": false,
   "custom_usb_enable_pins": [
     {
       "ioex": false,

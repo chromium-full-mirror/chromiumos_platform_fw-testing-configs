@@ -1,5 +1,4 @@
 {
-  "ac_on_can_wake_ap_from_ulp": false,
   "cr50_capability": {
     "rdd_leakage": true,
     "wp_on_in_g3": true

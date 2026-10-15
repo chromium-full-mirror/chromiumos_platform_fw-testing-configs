@@ -1,4 +1,5 @@
 {
+  "ac_on_can_wake_ap_from_ulp": true,
   "custom_usb_enable_pins": [],
   "is_detachable": true,
   "mode_switcher_type": "menu_switcher",
