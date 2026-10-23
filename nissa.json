@@ -288,6 +288,7 @@
     },
     "yavilla": {
       "ec_watchdog_period": 6.5,
+      "firmware_screen": 25,
       "white_screen_power_press_time": 1.666
     },
     "yavilly": {
