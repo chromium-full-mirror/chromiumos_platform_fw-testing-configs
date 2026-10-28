@@ -3,6 +3,7 @@
     "rdd_leakage": true
   },
   "custom_max_tpm_init_us": 240000,
+  "delay_reboot_to_ping": 90,
   "ec_capability": {
     "arm": false,
     "battery": true,
