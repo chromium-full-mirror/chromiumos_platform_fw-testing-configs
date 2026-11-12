@@ -17,8 +17,7 @@
   "has_keyboard": false,
   "is_detachable": true,
   "minidiag_capability": {
-    "cbmem_preserved_by_ap_reset": false,
-    "event_log_launch_count": false
+    "cbmem_preserved_by_ap_reset": false
   },
   "minios_enabled": false,
   "models": {

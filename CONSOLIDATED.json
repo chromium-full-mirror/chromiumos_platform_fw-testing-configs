@@ -83,8 +83,7 @@
     "max_charging_power.DOC": "Max charging power for DUT in watts",
     "memory_retrain_timeout": 120,
     "minidiag_capability": [
-      "cbmem_preserved_by_ap_reset",
-      "event_log_launch_count"
+      "cbmem_preserved_by_ap_reset"
     ],
     "minidiag_capability.DOC": "List of capabilities of the minidiag, do not use these for devices which does not enable minidiag",
     "minidiag_enabled": true,
@@ -212,8 +211,7 @@
     "max_charging_power": 100.0,
     "memory_retrain_timeout": 120,
     "minidiag_capability": [
-      "cbmem_preserved_by_ap_reset",
-      "event_log_launch_count"
+      "cbmem_preserved_by_ap_reset"
     ],
     "minidiag_enabled": false,
     "minios_enabled": false,
@@ -299,8 +297,7 @@
     "max_charging_power": 60.0,
     "memory_retrain_timeout": 120,
     "minidiag_capability": [
-      "cbmem_preserved_by_ap_reset",
-      "event_log_launch_count"
+      "cbmem_preserved_by_ap_reset"
     ],
     "minidiag_enabled": false,
     "minios_enabled": false,
@@ -661,8 +658,7 @@
     "max_charging_power": 60.0,
     "memory_retrain_timeout": 120,
     "minidiag_capability": [
-      "cbmem_preserved_by_ap_reset",
-      "event_log_launch_count"
+      "cbmem_preserved_by_ap_reset"
     ],
     "minidiag_enabled": false,
     "minios_enabled": false,
@@ -722,8 +718,7 @@
         "max_charging_power": 60.0,
         "memory_retrain_timeout": 120,
         "minidiag_capability": [
-          "cbmem_preserved_by_ap_reset",
-          "event_log_launch_count"
+          "cbmem_preserved_by_ap_reset"
         ],
         "minidiag_enabled": false,
         "minios_enabled": false,
@@ -842,8 +837,7 @@
     "max_charging_power": 60.0,
     "memory_retrain_timeout": 120,
     "minidiag_capability": [
-      "cbmem_preserved_by_ap_reset",
-      "event_log_launch_count"
+      "cbmem_preserved_by_ap_reset"
     ],
     "minidiag_enabled": false,
     "minios_enabled": false,
@@ -932,9 +926,7 @@
     "lid_wake_from_power_off": true,
     "max_charging_power": 60.0,
     "memory_retrain_timeout": 120,
-    "minidiag_capability": [
-      "event_log_launch_count"
-    ],
+    "minidiag_capability": [],
     "minidiag_enabled": true,
     "minios_enabled": true,
     "minios_screen": 20,
@@ -1026,8 +1018,7 @@
     "max_charging_power": 60.0,
     "memory_retrain_timeout": 120,
     "minidiag_capability": [
-      "cbmem_preserved_by_ap_reset",
-      "event_log_launch_count"
+      "cbmem_preserved_by_ap_reset"
     ],
     "minidiag_enabled": true,
     "minios_enabled": true,
@@ -1118,9 +1109,7 @@
     "lid_wake_from_power_off": true,
     "max_charging_power": 60.0,
     "memory_retrain_timeout": 120,
-    "minidiag_capability": [
-      "event_log_launch_count"
-    ],
+    "minidiag_capability": [],
     "minidiag_enabled": true,
     "minios_enabled": true,
     "minios_screen": 20,
@@ -1176,9 +1165,7 @@
         "lid_wake_from_power_off": true,
         "max_charging_power": 60.0,
         "memory_retrain_timeout": 120,
-        "minidiag_capability": [
-          "event_log_launch_count"
-        ],
+        "minidiag_capability": [],
         "minidiag_enabled": true,
         "minios_enabled": true,
         "minios_screen": 20,
@@ -1269,9 +1256,7 @@
         "lid_wake_from_power_off": true,
         "max_charging_power": 60.0,
         "memory_retrain_timeout": 120,
-        "minidiag_capability": [
-          "event_log_launch_count"
-        ],
+        "minidiag_capability": [],
         "minidiag_enabled": true,
         "minios_enabled": true,
         "minios_screen": 20,
@@ -1361,9 +1346,7 @@
         "lid_wake_from_power_off": true,
         "max_charging_power": 60.0,
         "memory_retrain_timeout": 120,
-        "minidiag_capability": [
-          "event_log_launch_count"
-        ],
+        "minidiag_capability": [],
         "minidiag_enabled": true,
         "minios_enabled": true,
         "minios_screen": 20,
@@ -1453,9 +1436,7 @@
         "lid_wake_from_power_off": true,
         "max_charging_power": 60.0,
         "memory_retrain_timeout": 120,
-        "minidiag_capability": [
-          "event_log_launch_count"
-        ],
+        "minidiag_capability": [],
         "minidiag_enabled": true,
         "minios_enabled": true,
         "minios_screen": 20,
@@ -1545,9 +1526,7 @@
         "lid_wake_from_power_off": true,
         "max_charging_power": 45.0,
         "memory_retrain_timeout": 120,
-        "minidiag_capability": [
-          "event_log_launch_count"
-        ],
+        "minidiag_capability": [],
         "minidiag_enabled": true,
         "minios_enabled": true,
         "minios_screen": 20,
@@ -1632,9 +1611,7 @@
         "lid_wake_from_power_off": true,
         "max_charging_power": 60.0,
         "memory_retrain_timeout": 120,
-        "minidiag_capability": [
-          "event_log_launch_count"
-        ],
+        "minidiag_capability": [],
         "minidiag_enabled": true,
         "minios_enabled": true,
         "minios_screen": 20,
@@ -1725,9 +1702,7 @@
         "lid_wake_from_power_off": true,
         "max_charging_power": 60.0,
         "memory_retrain_timeout": 120,
-        "minidiag_capability": [
-          "event_log_launch_count"
-        ],
+        "minidiag_capability": [],
         "minidiag_enabled": true,
         "minios_enabled": true,
         "minios_screen": 20,
@@ -1843,8 +1818,7 @@
     "max_charging_power": 60.0,
     "memory_retrain_timeout": 120,
     "minidiag_capability": [
-      "cbmem_preserved_by_ap_reset",
-      "event_log_launch_count"
+      "cbmem_preserved_by_ap_reset"
     ],
     "minidiag_enabled": false,
     "minios_enabled": false,
@@ -1932,8 +1906,7 @@
     "max_charging_power": 60.0,
     "memory_retrain_timeout": 120,
     "minidiag_capability": [
-      "cbmem_preserved_by_ap_reset",
-      "event_log_launch_count"
+      "cbmem_preserved_by_ap_reset"
     ],
     "minidiag_enabled": false,
     "minios_enabled": false,
@@ -2021,8 +1994,7 @@
     "max_charging_power": 60.0,
     "memory_retrain_timeout": 120,
     "minidiag_capability": [
-      "cbmem_preserved_by_ap_reset",
-      "event_log_launch_count"
+      "cbmem_preserved_by_ap_reset"
     ],
     "minidiag_enabled": false,
     "minios_enabled": false,
@@ -2116,8 +2088,7 @@
     "max_charging_power": 60.0,
     "memory_retrain_timeout": 120,
     "minidiag_capability": [
-      "cbmem_preserved_by_ap_reset",
-      "event_log_launch_count"
+      "cbmem_preserved_by_ap_reset"
     ],
     "minidiag_enabled": true,
     "minios_enabled": true,
@@ -2180,8 +2151,7 @@
         "max_charging_power": 60.0,
         "memory_retrain_timeout": 120,
         "minidiag_capability": [
-          "cbmem_preserved_by_ap_reset",
-          "event_log_launch_count"
+          "cbmem_preserved_by_ap_reset"
         ],
         "minidiag_enabled": true,
         "minios_enabled": true,
@@ -2304,8 +2274,7 @@
     "max_charging_power": 60.0,
     "memory_retrain_timeout": 120,
     "minidiag_capability": [
-      "cbmem_preserved_by_ap_reset",
-      "event_log_launch_count"
+      "cbmem_preserved_by_ap_reset"
     ],
     "minidiag_enabled": true,
     "minios_enabled": true,
@@ -2393,9 +2362,7 @@
     "lid_wake_from_power_off": true,
     "max_charging_power": 60.0,
     "memory_retrain_timeout": 120,
-    "minidiag_capability": [
-      "event_log_launch_count"
-    ],
+    "minidiag_capability": [],
     "minidiag_enabled": true,
     "minios_enabled": true,
     "minios_screen": 20,
@@ -2480,8 +2447,7 @@
     "max_charging_power": 45.0,
     "memory_retrain_timeout": 120,
     "minidiag_capability": [
-      "cbmem_preserved_by_ap_reset",
-      "event_log_launch_count"
+      "cbmem_preserved_by_ap_reset"
     ],
     "minidiag_enabled": false,
     "minios_enabled": false,
@@ -2576,7 +2542,6 @@
     "memory_retrain_timeout": 120,
     "minidiag_capability": [
       "cbmem_preserved_by_ap_reset",
-      "event_log_launch_count",
       "event_log_test_report"
     ],
     "minidiag_enabled": true,
@@ -2641,7 +2606,6 @@
         "memory_retrain_timeout": 120,
         "minidiag_capability": [
           "cbmem_preserved_by_ap_reset",
-          "event_log_launch_count",
           "event_log_test_report"
         ],
         "minidiag_enabled": true,
@@ -2735,7 +2699,6 @@
         "memory_retrain_timeout": 120,
         "minidiag_capability": [
           "cbmem_preserved_by_ap_reset",
-          "event_log_launch_count",
           "event_log_test_report"
         ],
         "minidiag_enabled": true,
@@ -2829,7 +2792,6 @@
         "memory_retrain_timeout": 120,
         "minidiag_capability": [
           "cbmem_preserved_by_ap_reset",
-          "event_log_launch_count",
           "event_log_test_report"
         ],
         "minidiag_enabled": true,
@@ -2923,7 +2885,6 @@
         "memory_retrain_timeout": 120,
         "minidiag_capability": [
           "cbmem_preserved_by_ap_reset",
-          "event_log_launch_count",
           "event_log_test_report"
         ],
         "minidiag_enabled": true,
@@ -3017,7 +2978,6 @@
         "memory_retrain_timeout": 120,
         "minidiag_capability": [
           "cbmem_preserved_by_ap_reset",
-          "event_log_launch_count",
           "event_log_test_report"
         ],
         "minidiag_enabled": true,
@@ -3111,7 +3071,6 @@
         "memory_retrain_timeout": 120,
         "minidiag_capability": [
           "cbmem_preserved_by_ap_reset",
-          "event_log_launch_count",
           "event_log_test_report"
         ],
         "minidiag_enabled": true,
@@ -7094,8 +7053,7 @@
     "max_charging_power": 60.0,
     "memory_retrain_timeout": 120,
     "minidiag_capability": [
-      "cbmem_preserved_by_ap_reset",
-      "event_log_launch_count"
+      "cbmem_preserved_by_ap_reset"
     ],
     "minidiag_enabled": true,
     "minios_enabled": true,
@@ -7175,8 +7133,7 @@
     "max_charging_power": 60.0,
     "memory_retrain_timeout": 120,
     "minidiag_capability": [
-      "cbmem_preserved_by_ap_reset",
-      "event_log_launch_count"
+      "cbmem_preserved_by_ap_reset"
     ],
     "minidiag_enabled": false,
     "minios_enabled": false,
@@ -7263,8 +7220,7 @@
     "max_charging_power": 45.0,
     "memory_retrain_timeout": 120,
     "minidiag_capability": [
-      "cbmem_preserved_by_ap_reset",
-      "event_log_launch_count"
+      "cbmem_preserved_by_ap_reset"
     ],
     "minidiag_enabled": false,
     "minios_enabled": false,
@@ -7348,8 +7304,7 @@
     "max_charging_power": 100.0,
     "memory_retrain_timeout": 120,
     "minidiag_capability": [
-      "cbmem_preserved_by_ap_reset",
-      "event_log_launch_count"
+      "cbmem_preserved_by_ap_reset"
     ],
     "minidiag_enabled": false,
     "minios_enabled": false,
@@ -7440,8 +7395,7 @@
     "max_charging_power": 45.0,
     "memory_retrain_timeout": 120,
     "minidiag_capability": [
-      "cbmem_preserved_by_ap_reset",
-      "event_log_launch_count"
+      "cbmem_preserved_by_ap_reset"
     ],
     "minidiag_enabled": false,
     "minios_enabled": false,
@@ -7501,8 +7455,7 @@
         "max_charging_power": 45.0,
         "memory_retrain_timeout": 120,
         "minidiag_capability": [
-          "cbmem_preserved_by_ap_reset",
-          "event_log_launch_count"
+          "cbmem_preserved_by_ap_reset"
         ],
         "minidiag_enabled": false,
         "minios_enabled": false,
@@ -7621,8 +7574,7 @@
     "max_charging_power": 60.0,
     "memory_retrain_timeout": 120,
     "minidiag_capability": [
-      "cbmem_preserved_by_ap_reset",
-      "event_log_launch_count"
+      "cbmem_preserved_by_ap_reset"
     ],
     "minidiag_enabled": true,
     "minios_enabled": true,
@@ -7679,8 +7631,7 @@
         "max_charging_power": 60.0,
         "memory_retrain_timeout": 120,
         "minidiag_capability": [
-          "cbmem_preserved_by_ap_reset",
-          "event_log_launch_count"
+          "cbmem_preserved_by_ap_reset"
         ],
         "minidiag_enabled": true,
         "minios_enabled": true,
@@ -7795,8 +7746,7 @@
     "max_charging_power": 100.0,
     "memory_retrain_timeout": 120,
     "minidiag_capability": [
-      "cbmem_preserved_by_ap_reset",
-      "event_log_launch_count"
+      "cbmem_preserved_by_ap_reset"
     ],
     "minidiag_enabled": false,
     "minios_enabled": false,
@@ -7849,8 +7799,7 @@
         "max_charging_power": 100.0,
         "memory_retrain_timeout": 120,
         "minidiag_capability": [
-          "cbmem_preserved_by_ap_reset",
-          "event_log_launch_count"
+          "cbmem_preserved_by_ap_reset"
         ],
         "minidiag_enabled": false,
         "minios_enabled": false,
@@ -7933,8 +7882,7 @@
         "max_charging_power": 100.0,
         "memory_retrain_timeout": 120,
         "minidiag_capability": [
-          "cbmem_preserved_by_ap_reset",
-          "event_log_launch_count"
+          "cbmem_preserved_by_ap_reset"
         ],
         "minidiag_enabled": false,
         "minios_enabled": false,
@@ -8017,8 +7965,7 @@
         "max_charging_power": 100.0,
         "memory_retrain_timeout": 120,
         "minidiag_capability": [
-          "cbmem_preserved_by_ap_reset",
-          "event_log_launch_count"
+          "cbmem_preserved_by_ap_reset"
         ],
         "minidiag_enabled": false,
         "minios_enabled": false,
@@ -8101,8 +8048,7 @@
         "max_charging_power": 100.0,
         "memory_retrain_timeout": 120,
         "minidiag_capability": [
-          "cbmem_preserved_by_ap_reset",
-          "event_log_launch_count"
+          "cbmem_preserved_by_ap_reset"
         ],
         "minidiag_enabled": false,
         "minios_enabled": false,
@@ -8223,7 +8169,6 @@
     "memory_retrain_timeout": 120,
     "minidiag_capability": [
       "cbmem_preserved_by_ap_reset",
-      "event_log_launch_count",
       "event_log_test_report"
     ],
     "minidiag_enabled": true,
@@ -8283,7 +8228,6 @@
         "memory_retrain_timeout": 120,
         "minidiag_capability": [
           "cbmem_preserved_by_ap_reset",
-          "event_log_launch_count",
           "event_log_test_report"
         ],
         "minidiag_enabled": true,
@@ -8403,8 +8347,7 @@
     "max_charging_power": 60.0,
     "memory_retrain_timeout": 120,
     "minidiag_capability": [
-      "cbmem_preserved_by_ap_reset",
-      "event_log_launch_count"
+      "cbmem_preserved_by_ap_reset"
     ],
     "minidiag_enabled": false,
     "minios_enabled": false,
@@ -8491,8 +8434,7 @@
     "max_charging_power": 60.0,
     "memory_retrain_timeout": 120,
     "minidiag_capability": [
-      "cbmem_preserved_by_ap_reset",
-      "event_log_launch_count"
+      "cbmem_preserved_by_ap_reset"
     ],
     "minidiag_enabled": false,
     "minios_enabled": false,
@@ -8579,8 +8521,7 @@
     "max_charging_power": 45.0,
     "memory_retrain_timeout": 120,
     "minidiag_capability": [
-      "cbmem_preserved_by_ap_reset",
-      "event_log_launch_count"
+      "cbmem_preserved_by_ap_reset"
     ],
     "minidiag_enabled": false,
     "minios_enabled": false,
@@ -8637,8 +8578,7 @@
         "max_charging_power": 45.0,
         "memory_retrain_timeout": 120,
         "minidiag_capability": [
-          "cbmem_preserved_by_ap_reset",
-          "event_log_launch_count"
+          "cbmem_preserved_by_ap_reset"
         ],
         "minidiag_enabled": false,
         "minios_enabled": false,
@@ -8766,9 +8706,7 @@
     "lid_wake_from_power_off": true,
     "max_charging_power": 100.0,
     "memory_retrain_timeout": 120,
-    "minidiag_capability": [
-      "event_log_launch_count"
-    ],
+    "minidiag_capability": [],
     "minidiag_enabled": true,
     "minios_enabled": true,
     "minios_screen": 20,
@@ -8853,8 +8791,7 @@
     "max_charging_power": 60.0,
     "memory_retrain_timeout": 120,
     "minidiag_capability": [
-      "cbmem_preserved_by_ap_reset",
-      "event_log_launch_count"
+      "cbmem_preserved_by_ap_reset"
     ],
     "minidiag_enabled": false,
     "minios_enabled": false,
@@ -8942,8 +8879,7 @@
     "max_charging_power": 60.0,
     "memory_retrain_timeout": 120,
     "minidiag_capability": [
-      "cbmem_preserved_by_ap_reset",
-      "event_log_launch_count"
+      "cbmem_preserved_by_ap_reset"
     ],
     "minidiag_enabled": false,
     "minios_enabled": false,
@@ -9039,8 +8975,7 @@
     "max_charging_power": 60.0,
     "memory_retrain_timeout": 120,
     "minidiag_capability": [
-      "cbmem_preserved_by_ap_reset",
-      "event_log_launch_count"
+      "cbmem_preserved_by_ap_reset"
     ],
     "minidiag_enabled": false,
     "minios_enabled": false,
@@ -9105,8 +9040,7 @@
         "max_charging_power": 60.0,
         "memory_retrain_timeout": 120,
         "minidiag_capability": [
-          "cbmem_preserved_by_ap_reset",
-          "event_log_launch_count"
+          "cbmem_preserved_by_ap_reset"
         ],
         "minidiag_enabled": false,
         "minios_enabled": false,
@@ -9195,8 +9129,7 @@
         "max_charging_power": 60.0,
         "memory_retrain_timeout": 120,
         "minidiag_capability": [
-          "cbmem_preserved_by_ap_reset",
-          "event_log_launch_count"
+          "cbmem_preserved_by_ap_reset"
         ],
         "minidiag_enabled": false,
         "minios_enabled": false,
@@ -9291,8 +9224,7 @@
         "max_charging_power": 60.0,
         "memory_retrain_timeout": 120,
         "minidiag_capability": [
-          "cbmem_preserved_by_ap_reset",
-          "event_log_launch_count"
+          "cbmem_preserved_by_ap_reset"
         ],
         "minidiag_enabled": false,
         "minios_enabled": false,
@@ -9386,8 +9318,7 @@
         "max_charging_power": 60.0,
         "memory_retrain_timeout": 120,
         "minidiag_capability": [
-          "cbmem_preserved_by_ap_reset",
-          "event_log_launch_count"
+          "cbmem_preserved_by_ap_reset"
         ],
         "minidiag_enabled": false,
         "minios_enabled": false,
@@ -9481,8 +9412,7 @@
         "max_charging_power": 60.0,
         "memory_retrain_timeout": 120,
         "minidiag_capability": [
-          "cbmem_preserved_by_ap_reset",
-          "event_log_launch_count"
+          "cbmem_preserved_by_ap_reset"
         ],
         "minidiag_enabled": false,
         "minios_enabled": false,
@@ -9571,8 +9501,7 @@
         "max_charging_power": 60.0,
         "memory_retrain_timeout": 120,
         "minidiag_capability": [
-          "cbmem_preserved_by_ap_reset",
-          "event_log_launch_count"
+          "cbmem_preserved_by_ap_reset"
         ],
         "minidiag_enabled": false,
         "minios_enabled": false,
@@ -9667,8 +9596,7 @@
         "max_charging_power": 100.0,
         "memory_retrain_timeout": 120,
         "minidiag_capability": [
-          "cbmem_preserved_by_ap_reset",
-          "event_log_launch_count"
+          "cbmem_preserved_by_ap_reset"
         ],
         "minidiag_enabled": false,
         "minios_enabled": false,
@@ -9757,8 +9685,7 @@
         "max_charging_power": 60.0,
         "memory_retrain_timeout": 120,
         "minidiag_capability": [
-          "cbmem_preserved_by_ap_reset",
-          "event_log_launch_count"
+          "cbmem_preserved_by_ap_reset"
         ],
         "minidiag_enabled": false,
         "minios_enabled": false,
@@ -9876,8 +9803,7 @@
     "max_charging_power": 45.0,
     "memory_retrain_timeout": 120,
     "minidiag_capability": [
-      "cbmem_preserved_by_ap_reset",
-      "event_log_launch_count"
+      "cbmem_preserved_by_ap_reset"
     ],
     "minidiag_enabled": false,
     "minios_enabled": false,
@@ -9967,7 +9893,6 @@
     "memory_retrain_timeout": 120,
     "minidiag_capability": [
       "cbmem_preserved_by_ap_reset",
-      "event_log_launch_count",
       "event_log_test_report"
     ],
     "minidiag_enabled": true,
@@ -10027,7 +9952,6 @@
         "memory_retrain_timeout": 120,
         "minidiag_capability": [
           "cbmem_preserved_by_ap_reset",
-          "event_log_launch_count",
           "event_log_test_report"
         ],
         "minidiag_enabled": true,
@@ -10144,8 +10068,7 @@
     "max_charging_power": 100.0,
     "memory_retrain_timeout": 120,
     "minidiag_capability": [
-      "cbmem_preserved_by_ap_reset",
-      "event_log_launch_count"
+      "cbmem_preserved_by_ap_reset"
     ],
     "minidiag_enabled": false,
     "minios_enabled": false,
@@ -10599,8 +10522,7 @@
     "max_charging_power": 60.0,
     "memory_retrain_timeout": 120,
     "minidiag_capability": [
-      "cbmem_preserved_by_ap_reset",
-      "event_log_launch_count"
+      "cbmem_preserved_by_ap_reset"
     ],
     "minidiag_enabled": false,
     "minios_enabled": false,
@@ -10688,8 +10610,7 @@
     "max_charging_power": 60.0,
     "memory_retrain_timeout": 120,
     "minidiag_capability": [
-      "cbmem_preserved_by_ap_reset",
-      "event_log_launch_count"
+      "cbmem_preserved_by_ap_reset"
     ],
     "minidiag_enabled": false,
     "minios_enabled": false,
@@ -10777,8 +10698,7 @@
     "max_charging_power": 60.0,
     "memory_retrain_timeout": 120,
     "minidiag_capability": [
-      "cbmem_preserved_by_ap_reset",
-      "event_log_launch_count"
+      "cbmem_preserved_by_ap_reset"
     ],
     "minidiag_enabled": false,
     "minios_enabled": false,
@@ -10865,8 +10785,7 @@
     "max_charging_power": 45.0,
     "memory_retrain_timeout": 120,
     "minidiag_capability": [
-      "cbmem_preserved_by_ap_reset",
-      "event_log_launch_count"
+      "cbmem_preserved_by_ap_reset"
     ],
     "minidiag_enabled": false,
     "minios_enabled": false,
@@ -10922,8 +10841,7 @@
         "max_charging_power": 45.0,
         "memory_retrain_timeout": 120,
         "minidiag_capability": [
-          "cbmem_preserved_by_ap_reset",
-          "event_log_launch_count"
+          "cbmem_preserved_by_ap_reset"
         ],
         "minidiag_enabled": false,
         "minios_enabled": false,
@@ -11009,8 +10927,7 @@
         "max_charging_power": 45.0,
         "memory_retrain_timeout": 120,
         "minidiag_capability": [
-          "cbmem_preserved_by_ap_reset",
-          "event_log_launch_count"
+          "cbmem_preserved_by_ap_reset"
         ],
         "minidiag_enabled": false,
         "minios_enabled": false,
@@ -11129,8 +11046,7 @@
     "max_charging_power": 60.0,
     "memory_retrain_timeout": 120,
     "minidiag_capability": [
-      "cbmem_preserved_by_ap_reset",
-      "event_log_launch_count"
+      "cbmem_preserved_by_ap_reset"
     ],
     "minidiag_enabled": false,
     "minios_enabled": false,
@@ -11217,8 +11133,7 @@
     "max_charging_power": 60.0,
     "memory_retrain_timeout": 120,
     "minidiag_capability": [
-      "cbmem_preserved_by_ap_reset",
-      "event_log_launch_count"
+      "cbmem_preserved_by_ap_reset"
     ],
     "minidiag_enabled": false,
     "minios_enabled": false,
@@ -11308,8 +11223,7 @@
     "max_charging_power": 70.0,
     "memory_retrain_timeout": 120,
     "minidiag_capability": [
-      "cbmem_preserved_by_ap_reset",
-      "event_log_launch_count"
+      "cbmem_preserved_by_ap_reset"
     ],
     "minidiag_enabled": false,
     "minios_enabled": false,
@@ -11396,8 +11310,7 @@
     "max_charging_power": 45.0,
     "memory_retrain_timeout": 120,
     "minidiag_capability": [
-      "cbmem_preserved_by_ap_reset",
-      "event_log_launch_count"
+      "cbmem_preserved_by_ap_reset"
     ],
     "minidiag_enabled": false,
     "minios_enabled": false,
@@ -11485,8 +11398,7 @@
     "max_charging_power": 45.0,
     "memory_retrain_timeout": 120,
     "minidiag_capability": [
-      "cbmem_preserved_by_ap_reset",
-      "event_log_launch_count"
+      "cbmem_preserved_by_ap_reset"
     ],
     "minidiag_enabled": false,
     "minios_enabled": false,
@@ -11543,8 +11455,7 @@
         "max_charging_power": 45.0,
         "memory_retrain_timeout": 120,
         "minidiag_capability": [
-          "cbmem_preserved_by_ap_reset",
-          "event_log_launch_count"
+          "cbmem_preserved_by_ap_reset"
         ],
         "minidiag_enabled": false,
         "minios_enabled": false,
@@ -11668,9 +11579,7 @@
     "lid_wake_from_power_off": true,
     "max_charging_power": 45.0,
     "memory_retrain_timeout": 120,
-    "minidiag_capability": [
-      "event_log_launch_count"
-    ],
+    "minidiag_capability": [],
     "minidiag_enabled": true,
     "minios_enabled": true,
     "minios_screen": 20,
@@ -11731,9 +11640,7 @@
         "lid_wake_from_power_off": true,
         "max_charging_power": 45.0,
         "memory_retrain_timeout": 120,
-        "minidiag_capability": [
-          "event_log_launch_count"
-        ],
+        "minidiag_capability": [],
         "minidiag_enabled": true,
         "minios_enabled": true,
         "minios_screen": 20,
@@ -11823,9 +11730,7 @@
         "lid_wake_from_power_off": true,
         "max_charging_power": 45.0,
         "memory_retrain_timeout": 120,
-        "minidiag_capability": [
-          "event_log_launch_count"
-        ],
+        "minidiag_capability": [],
         "minidiag_enabled": true,
         "minios_enabled": true,
         "minios_screen": 20,
@@ -11915,9 +11820,7 @@
         "lid_wake_from_power_off": true,
         "max_charging_power": 45.0,
         "memory_retrain_timeout": 120,
-        "minidiag_capability": [
-          "event_log_launch_count"
-        ],
+        "minidiag_capability": [],
         "minidiag_enabled": true,
         "minios_enabled": true,
         "minios_screen": 20,
@@ -12007,9 +11910,7 @@
         "lid_wake_from_power_off": true,
         "max_charging_power": 45.0,
         "memory_retrain_timeout": 120,
-        "minidiag_capability": [
-          "event_log_launch_count"
-        ],
+        "minidiag_capability": [],
         "minidiag_enabled": true,
         "minios_enabled": true,
         "minios_screen": 20,
@@ -12130,9 +12031,7 @@
     "lid_wake_from_power_off": true,
     "max_charging_power": 45.0,
     "memory_retrain_timeout": 120,
-    "minidiag_capability": [
-      "event_log_launch_count"
-    ],
+    "minidiag_capability": [],
     "minidiag_enabled": true,
     "minios_enabled": true,
     "minios_screen": 20,
@@ -12193,9 +12092,7 @@
         "lid_wake_from_power_off": true,
         "max_charging_power": 45.0,
         "memory_retrain_timeout": 120,
-        "minidiag_capability": [
-          "event_log_launch_count"
-        ],
+        "minidiag_capability": [],
         "minidiag_enabled": true,
         "minios_enabled": true,
         "minios_screen": 20,
@@ -12285,9 +12182,7 @@
         "lid_wake_from_power_off": true,
         "max_charging_power": 45.0,
         "memory_retrain_timeout": 120,
-        "minidiag_capability": [
-          "event_log_launch_count"
-        ],
+        "minidiag_capability": [],
         "minidiag_enabled": true,
         "minios_enabled": true,
         "minios_screen": 20,
@@ -12377,9 +12272,7 @@
         "lid_wake_from_power_off": true,
         "max_charging_power": 45.0,
         "memory_retrain_timeout": 120,
-        "minidiag_capability": [
-          "event_log_launch_count"
-        ],
+        "minidiag_capability": [],
         "minidiag_enabled": true,
         "minios_enabled": true,
         "minios_screen": 20,
@@ -12469,9 +12362,7 @@
         "lid_wake_from_power_off": true,
         "max_charging_power": 45.0,
         "memory_retrain_timeout": 120,
-        "minidiag_capability": [
-          "event_log_launch_count"
-        ],
+        "minidiag_capability": [],
         "minidiag_enabled": true,
         "minios_enabled": true,
         "minios_screen": 20,
@@ -12561,9 +12452,7 @@
         "lid_wake_from_power_off": true,
         "max_charging_power": 45.0,
         "memory_retrain_timeout": 120,
-        "minidiag_capability": [
-          "event_log_launch_count"
-        ],
+        "minidiag_capability": [],
         "minidiag_enabled": true,
         "minios_enabled": true,
         "minios_screen": 20,
@@ -12653,9 +12542,7 @@
         "lid_wake_from_power_off": true,
         "max_charging_power": 45.0,
         "memory_retrain_timeout": 120,
-        "minidiag_capability": [
-          "event_log_launch_count"
-        ],
+        "minidiag_capability": [],
         "minidiag_enabled": true,
         "minios_enabled": true,
         "minios_screen": 20,
@@ -12757,9 +12644,7 @@
         "lid_wake_from_power_off": true,
         "max_charging_power": 45.0,
         "memory_retrain_timeout": 120,
-        "minidiag_capability": [
-          "event_log_launch_count"
-        ],
+        "minidiag_capability": [],
         "minidiag_enabled": true,
         "minios_enabled": true,
         "minios_screen": 20,
@@ -12849,9 +12734,7 @@
         "lid_wake_from_power_off": true,
         "max_charging_power": 45.0,
         "memory_retrain_timeout": 120,
-        "minidiag_capability": [
-          "event_log_launch_count"
-        ],
+        "minidiag_capability": [],
         "minidiag_enabled": true,
         "minios_enabled": true,
         "minios_screen": 20,
@@ -12941,9 +12824,7 @@
         "lid_wake_from_power_off": true,
         "max_charging_power": 45.0,
         "memory_retrain_timeout": 120,
-        "minidiag_capability": [
-          "event_log_launch_count"
-        ],
+        "minidiag_capability": [],
         "minidiag_enabled": true,
         "minios_enabled": true,
         "minios_screen": 20,
@@ -13033,9 +12914,7 @@
         "lid_wake_from_power_off": true,
         "max_charging_power": 45.0,
         "memory_retrain_timeout": 120,
-        "minidiag_capability": [
-          "event_log_launch_count"
-        ],
+        "minidiag_capability": [],
         "minidiag_enabled": true,
         "minios_enabled": true,
         "minios_screen": 20,
@@ -13125,9 +13004,7 @@
         "lid_wake_from_power_off": true,
         "max_charging_power": 45.0,
         "memory_retrain_timeout": 120,
-        "minidiag_capability": [
-          "event_log_launch_count"
-        ],
+        "minidiag_capability": [],
         "minidiag_enabled": true,
         "minios_enabled": true,
         "minios_screen": 20,
@@ -13217,9 +13094,7 @@
         "lid_wake_from_power_off": true,
         "max_charging_power": 45.0,
         "memory_retrain_timeout": 120,
-        "minidiag_capability": [
-          "event_log_launch_count"
-        ],
+        "minidiag_capability": [],
         "minidiag_enabled": true,
         "minios_enabled": true,
         "minios_screen": 20,
@@ -13309,9 +13184,7 @@
         "lid_wake_from_power_off": true,
         "max_charging_power": 45.0,
         "memory_retrain_timeout": 120,
-        "minidiag_capability": [
-          "event_log_launch_count"
-        ],
+        "minidiag_capability": [],
         "minidiag_enabled": true,
         "minios_enabled": true,
         "minios_screen": 20,
@@ -13401,9 +13274,7 @@
         "lid_wake_from_power_off": true,
         "max_charging_power": 45.0,
         "memory_retrain_timeout": 120,
-        "minidiag_capability": [
-          "event_log_launch_count"
-        ],
+        "minidiag_capability": [],
         "minidiag_enabled": true,
         "minios_enabled": true,
         "minios_screen": 20,
@@ -13493,9 +13364,7 @@
         "lid_wake_from_power_off": true,
         "max_charging_power": 45.0,
         "memory_retrain_timeout": 120,
-        "minidiag_capability": [
-          "event_log_launch_count"
-        ],
+        "minidiag_capability": [],
         "minidiag_enabled": true,
         "minios_enabled": true,
         "minios_screen": 20,
@@ -13585,9 +13454,7 @@
         "lid_wake_from_power_off": true,
         "max_charging_power": 45.0,
         "memory_retrain_timeout": 120,
-        "minidiag_capability": [
-          "event_log_launch_count"
-        ],
+        "minidiag_capability": [],
         "minidiag_enabled": true,
         "minios_enabled": true,
         "minios_screen": 20,
@@ -13677,9 +13544,7 @@
         "lid_wake_from_power_off": true,
         "max_charging_power": 45.0,
         "memory_retrain_timeout": 120,
-        "minidiag_capability": [
-          "event_log_launch_count"
-        ],
+        "minidiag_capability": [],
         "minidiag_enabled": true,
         "minios_enabled": true,
         "minios_screen": 20,
@@ -13769,9 +13634,7 @@
         "lid_wake_from_power_off": true,
         "max_charging_power": 45.0,
         "memory_retrain_timeout": 120,
-        "minidiag_capability": [
-          "event_log_launch_count"
-        ],
+        "minidiag_capability": [],
         "minidiag_enabled": true,
         "minios_enabled": true,
         "minios_screen": 20,
@@ -13861,9 +13724,7 @@
         "lid_wake_from_power_off": true,
         "max_charging_power": 45.0,
         "memory_retrain_timeout": 120,
-        "minidiag_capability": [
-          "event_log_launch_count"
-        ],
+        "minidiag_capability": [],
         "minidiag_enabled": true,
         "minios_enabled": true,
         "minios_screen": 20,
@@ -13953,9 +13814,7 @@
         "lid_wake_from_power_off": true,
         "max_charging_power": 45.0,
         "memory_retrain_timeout": 120,
-        "minidiag_capability": [
-          "event_log_launch_count"
-        ],
+        "minidiag_capability": [],
         "minidiag_enabled": true,
         "minios_enabled": true,
         "minios_screen": 20,
@@ -14045,9 +13904,7 @@
         "lid_wake_from_power_off": true,
         "max_charging_power": 45.0,
         "memory_retrain_timeout": 120,
-        "minidiag_capability": [
-          "event_log_launch_count"
-        ],
+        "minidiag_capability": [],
         "minidiag_enabled": true,
         "minios_enabled": true,
         "minios_screen": 20,
@@ -14137,9 +13994,7 @@
         "lid_wake_from_power_off": true,
         "max_charging_power": 65.0,
         "memory_retrain_timeout": 120,
-        "minidiag_capability": [
-          "event_log_launch_count"
-        ],
+        "minidiag_capability": [],
         "minidiag_enabled": true,
         "minios_enabled": true,
         "minios_screen": 20,
@@ -14229,9 +14084,7 @@
         "lid_wake_from_power_off": true,
         "max_charging_power": 45.0,
         "memory_retrain_timeout": 120,
-        "minidiag_capability": [
-          "event_log_launch_count"
-        ],
+        "minidiag_capability": [],
         "minidiag_enabled": true,
         "minios_enabled": true,
         "minios_screen": 20,
@@ -14321,9 +14174,7 @@
         "lid_wake_from_power_off": true,
         "max_charging_power": 45.0,
         "memory_retrain_timeout": 120,
-        "minidiag_capability": [
-          "event_log_launch_count"
-        ],
+        "minidiag_capability": [],
         "minidiag_enabled": true,
         "minios_enabled": true,
         "minios_screen": 20,
@@ -14413,9 +14264,7 @@
         "lid_wake_from_power_off": true,
         "max_charging_power": 45.0,
         "memory_retrain_timeout": 120,
-        "minidiag_capability": [
-          "event_log_launch_count"
-        ],
+        "minidiag_capability": [],
         "minidiag_enabled": true,
         "minios_enabled": true,
         "minios_screen": 20,
@@ -14505,9 +14354,7 @@
         "lid_wake_from_power_off": true,
         "max_charging_power": 45.0,
         "memory_retrain_timeout": 120,
-        "minidiag_capability": [
-          "event_log_launch_count"
-        ],
+        "minidiag_capability": [],
         "minidiag_enabled": true,
         "minios_enabled": true,
         "minios_screen": 20,
@@ -14597,9 +14444,7 @@
         "lid_wake_from_power_off": true,
         "max_charging_power": 65.0,
         "memory_retrain_timeout": 120,
-        "minidiag_capability": [
-          "event_log_launch_count"
-        ],
+        "minidiag_capability": [],
         "minidiag_enabled": true,
         "minios_enabled": true,
         "minios_screen": 20,
@@ -14689,9 +14534,7 @@
         "lid_wake_from_power_off": true,
         "max_charging_power": 45.0,
         "memory_retrain_timeout": 120,
-        "minidiag_capability": [
-          "event_log_launch_count"
-        ],
+        "minidiag_capability": [],
         "minidiag_enabled": true,
         "minios_enabled": true,
         "minios_screen": 20,
@@ -14781,9 +14624,7 @@
         "lid_wake_from_power_off": true,
         "max_charging_power": 45.0,
         "memory_retrain_timeout": 120,
-        "minidiag_capability": [
-          "event_log_launch_count"
-        ],
+        "minidiag_capability": [],
         "minidiag_enabled": true,
         "minios_enabled": true,
         "minios_screen": 20,
@@ -14873,9 +14714,7 @@
         "lid_wake_from_power_off": true,
         "max_charging_power": 45.0,
         "memory_retrain_timeout": 120,
-        "minidiag_capability": [
-          "event_log_launch_count"
-        ],
+        "minidiag_capability": [],
         "minidiag_enabled": true,
         "minios_enabled": true,
         "minios_screen": 20,
@@ -14965,9 +14804,7 @@
         "lid_wake_from_power_off": true,
         "max_charging_power": 45.0,
         "memory_retrain_timeout": 120,
-        "minidiag_capability": [
-          "event_log_launch_count"
-        ],
+        "minidiag_capability": [],
         "minidiag_enabled": true,
         "minios_enabled": true,
         "minios_screen": 20,
@@ -15057,9 +14894,7 @@
         "lid_wake_from_power_off": true,
         "max_charging_power": 45.0,
         "memory_retrain_timeout": 120,
-        "minidiag_capability": [
-          "event_log_launch_count"
-        ],
+        "minidiag_capability": [],
         "minidiag_enabled": true,
         "minios_enabled": true,
         "minios_screen": 20,
@@ -15149,9 +14984,7 @@
         "lid_wake_from_power_off": true,
         "max_charging_power": 45.0,
         "memory_retrain_timeout": 120,
-        "minidiag_capability": [
-          "event_log_launch_count"
-        ],
+        "minidiag_capability": [],
         "minidiag_enabled": true,
         "minios_enabled": true,
         "minios_screen": 20,
@@ -15241,9 +15074,7 @@
         "lid_wake_from_power_off": true,
         "max_charging_power": 45.0,
         "memory_retrain_timeout": 120,
-        "minidiag_capability": [
-          "event_log_launch_count"
-        ],
+        "minidiag_capability": [],
         "minidiag_enabled": true,
         "minios_enabled": true,
         "minios_screen": 20,
@@ -15333,9 +15164,7 @@
         "lid_wake_from_power_off": true,
         "max_charging_power": 45.0,
         "memory_retrain_timeout": 120,
-        "minidiag_capability": [
-          "event_log_launch_count"
-        ],
+        "minidiag_capability": [],
         "minidiag_enabled": true,
         "minios_enabled": true,
         "minios_screen": 20,
@@ -15420,9 +15249,7 @@
         "lid_wake_from_power_off": true,
         "max_charging_power": 45.0,
         "memory_retrain_timeout": 120,
-        "minidiag_capability": [
-          "event_log_launch_count"
-        ],
+        "minidiag_capability": [],
         "minidiag_enabled": true,
         "minios_enabled": true,
         "minios_screen": 20,
@@ -15513,9 +15340,7 @@
         "lid_wake_from_power_off": true,
         "max_charging_power": 45.0,
         "memory_retrain_timeout": 120,
-        "minidiag_capability": [
-          "event_log_launch_count"
-        ],
+        "minidiag_capability": [],
         "minidiag_enabled": true,
         "minios_enabled": true,
         "minios_screen": 20,
@@ -15605,9 +15430,7 @@
         "lid_wake_from_power_off": true,
         "max_charging_power": 45.0,
         "memory_retrain_timeout": 120,
-        "minidiag_capability": [
-          "event_log_launch_count"
-        ],
+        "minidiag_capability": [],
         "minidiag_enabled": true,
         "minios_enabled": true,
         "minios_screen": 20,
@@ -15697,9 +15520,7 @@
         "lid_wake_from_power_off": true,
         "max_charging_power": 45.0,
         "memory_retrain_timeout": 120,
-        "minidiag_capability": [
-          "event_log_launch_count"
-        ],
+        "minidiag_capability": [],
         "minidiag_enabled": true,
         "minios_enabled": true,
         "minios_screen": 20,
@@ -15789,9 +15610,7 @@
         "lid_wake_from_power_off": true,
         "max_charging_power": 45.0,
         "memory_retrain_timeout": 120,
-        "minidiag_capability": [
-          "event_log_launch_count"
-        ],
+        "minidiag_capability": [],
         "minidiag_enabled": true,
         "minios_enabled": true,
         "minios_screen": 20,
@@ -15881,9 +15700,7 @@
         "lid_wake_from_power_off": true,
         "max_charging_power": 45.0,
         "memory_retrain_timeout": 120,
-        "minidiag_capability": [
-          "event_log_launch_count"
-        ],
+        "minidiag_capability": [],
         "minidiag_enabled": true,
         "minios_enabled": true,
         "minios_screen": 20,
@@ -15973,9 +15790,7 @@
         "lid_wake_from_power_off": true,
         "max_charging_power": 45.0,
         "memory_retrain_timeout": 120,
-        "minidiag_capability": [
-          "event_log_launch_count"
-        ],
+        "minidiag_capability": [],
         "minidiag_enabled": true,
         "minios_enabled": true,
         "minios_screen": 20,
@@ -16067,9 +15882,7 @@
         "lid_wake_from_power_off": true,
         "max_charging_power": 45.0,
         "memory_retrain_timeout": 120,
-        "minidiag_capability": [
-          "event_log_launch_count"
-        ],
+        "minidiag_capability": [],
         "minidiag_enabled": true,
         "minios_enabled": true,
         "minios_screen": 20,
@@ -16159,9 +15972,7 @@
         "lid_wake_from_power_off": true,
         "max_charging_power": 45.0,
         "memory_retrain_timeout": 120,
-        "minidiag_capability": [
-          "event_log_launch_count"
-        ],
+        "minidiag_capability": [],
         "minidiag_enabled": true,
         "minios_enabled": true,
         "minios_screen": 20,
@@ -16251,9 +16062,7 @@
         "lid_wake_from_power_off": true,
         "max_charging_power": 45.0,
         "memory_retrain_timeout": 120,
-        "minidiag_capability": [
-          "event_log_launch_count"
-        ],
+        "minidiag_capability": [],
         "minidiag_enabled": true,
         "minios_enabled": true,
         "minios_screen": 20,
@@ -16343,9 +16152,7 @@
         "lid_wake_from_power_off": true,
         "max_charging_power": 45.0,
         "memory_retrain_timeout": 120,
-        "minidiag_capability": [
-          "event_log_launch_count"
-        ],
+        "minidiag_capability": [],
         "minidiag_enabled": true,
         "minios_enabled": true,
         "minios_screen": 20,
@@ -16435,9 +16242,7 @@
         "lid_wake_from_power_off": true,
         "max_charging_power": 45.0,
         "memory_retrain_timeout": 120,
-        "minidiag_capability": [
-          "event_log_launch_count"
-        ],
+        "minidiag_capability": [],
         "minidiag_enabled": true,
         "minios_enabled": true,
         "minios_screen": 20,
@@ -16527,9 +16332,7 @@
         "lid_wake_from_power_off": true,
         "max_charging_power": 45.0,
         "memory_retrain_timeout": 120,
-        "minidiag_capability": [
-          "event_log_launch_count"
-        ],
+        "minidiag_capability": [],
         "minidiag_enabled": true,
         "minios_enabled": true,
         "minios_screen": 20,
@@ -16619,9 +16422,7 @@
         "lid_wake_from_power_off": true,
         "max_charging_power": 45.0,
         "memory_retrain_timeout": 120,
-        "minidiag_capability": [
-          "event_log_launch_count"
-        ],
+        "minidiag_capability": [],
         "minidiag_enabled": true,
         "minios_enabled": true,
         "minios_screen": 20,
@@ -16711,9 +16512,7 @@
         "lid_wake_from_power_off": true,
         "max_charging_power": 45.0,
         "memory_retrain_timeout": 120,
-        "minidiag_capability": [
-          "event_log_launch_count"
-        ],
+        "minidiag_capability": [],
         "minidiag_enabled": true,
         "minios_enabled": true,
         "minios_screen": 20,
@@ -16803,9 +16602,7 @@
         "lid_wake_from_power_off": true,
         "max_charging_power": 45.0,
         "memory_retrain_timeout": 120,
-        "minidiag_capability": [
-          "event_log_launch_count"
-        ],
+        "minidiag_capability": [],
         "minidiag_enabled": true,
         "minios_enabled": true,
         "minios_screen": 20,
@@ -16926,9 +16723,7 @@
     "lid_wake_from_power_off": true,
     "max_charging_power": 45.0,
     "memory_retrain_timeout": 120,
-    "minidiag_capability": [
-      "event_log_launch_count"
-    ],
+    "minidiag_capability": [],
     "minidiag_enabled": true,
     "minios_enabled": true,
     "minios_screen": 20,
@@ -17001,9 +16796,7 @@
         "lid_wake_from_power_off": true,
         "max_charging_power": 45.0,
         "memory_retrain_timeout": 120,
-        "minidiag_capability": [
-          "event_log_launch_count"
-        ],
+        "minidiag_capability": [],
         "minidiag_enabled": true,
         "minios_enabled": true,
         "minios_screen": 20,
@@ -17121,8 +16914,7 @@
     "max_charging_power": 45.0,
     "memory_retrain_timeout": 120,
     "minidiag_capability": [
-      "cbmem_preserved_by_ap_reset",
-      "event_log_launch_count"
+      "cbmem_preserved_by_ap_reset"
     ],
     "minidiag_enabled": false,
     "minios_enabled": false,
@@ -17209,8 +17001,7 @@
     "max_charging_power": 60.0,
     "memory_retrain_timeout": 120,
     "minidiag_capability": [
-      "cbmem_preserved_by_ap_reset",
-      "event_log_launch_count"
+      "cbmem_preserved_by_ap_reset"
     ],
     "minidiag_enabled": false,
     "minios_enabled": false,
@@ -17309,8 +17100,7 @@
     "max_charging_power": 45.0,
     "memory_retrain_timeout": 120,
     "minidiag_capability": [
-      "cbmem_preserved_by_ap_reset",
-      "event_log_launch_count"
+      "cbmem_preserved_by_ap_reset"
     ],
     "minidiag_enabled": false,
     "minios_enabled": false,
@@ -17379,8 +17169,7 @@
         "max_charging_power": 45.0,
         "memory_retrain_timeout": 120,
         "minidiag_capability": [
-          "cbmem_preserved_by_ap_reset",
-          "event_log_launch_count"
+          "cbmem_preserved_by_ap_reset"
         ],
         "minidiag_enabled": false,
         "minios_enabled": false,
@@ -17478,8 +17267,7 @@
         "max_charging_power": 45.0,
         "memory_retrain_timeout": 120,
         "minidiag_capability": [
-          "cbmem_preserved_by_ap_reset",
-          "event_log_launch_count"
+          "cbmem_preserved_by_ap_reset"
         ],
         "minidiag_enabled": false,
         "minios_enabled": false,
@@ -17573,8 +17361,7 @@
         "max_charging_power": 45.0,
         "memory_retrain_timeout": 120,
         "minidiag_capability": [
-          "cbmem_preserved_by_ap_reset",
-          "event_log_launch_count"
+          "cbmem_preserved_by_ap_reset"
         ],
         "minidiag_enabled": false,
         "minios_enabled": false,
@@ -17672,8 +17459,7 @@
         "max_charging_power": 45.0,
         "memory_retrain_timeout": 120,
         "minidiag_capability": [
-          "cbmem_preserved_by_ap_reset",
-          "event_log_launch_count"
+          "cbmem_preserved_by_ap_reset"
         ],
         "minidiag_enabled": false,
         "minios_enabled": false,
@@ -17767,8 +17553,7 @@
         "max_charging_power": 45.0,
         "memory_retrain_timeout": 120,
         "minidiag_capability": [
-          "cbmem_preserved_by_ap_reset",
-          "event_log_launch_count"
+          "cbmem_preserved_by_ap_reset"
         ],
         "minidiag_enabled": false,
         "minios_enabled": false,
@@ -17886,9 +17671,7 @@
     "lid_wake_from_power_off": true,
     "max_charging_power": 120.0,
     "memory_retrain_timeout": 120,
-    "minidiag_capability": [
-      "event_log_launch_count"
-    ],
+    "minidiag_capability": [],
     "minidiag_enabled": true,
     "minios_enabled": true,
     "minios_screen": 20,
@@ -17972,8 +17755,7 @@
     "max_charging_power": 45.0,
     "memory_retrain_timeout": 120,
     "minidiag_capability": [
-      "cbmem_preserved_by_ap_reset",
-      "event_log_launch_count"
+      "cbmem_preserved_by_ap_reset"
     ],
     "minidiag_enabled": false,
     "minios_enabled": false,
@@ -18062,8 +17844,7 @@
     "max_charging_power": 100.0,
     "memory_retrain_timeout": 120,
     "minidiag_capability": [
-      "cbmem_preserved_by_ap_reset",
-      "event_log_launch_count"
+      "cbmem_preserved_by_ap_reset"
     ],
     "minidiag_enabled": false,
     "minios_enabled": false,
@@ -18149,8 +17930,7 @@
     "max_charging_power": 45.0,
     "memory_retrain_timeout": 120,
     "minidiag_capability": [
-      "cbmem_preserved_by_ap_reset",
-      "event_log_launch_count"
+      "cbmem_preserved_by_ap_reset"
     ],
     "minidiag_enabled": false,
     "minios_enabled": false,
@@ -18238,8 +18018,7 @@
     "max_charging_power": 45.0,
     "memory_retrain_timeout": 120,
     "minidiag_capability": [
-      "cbmem_preserved_by_ap_reset",
-      "event_log_launch_count"
+      "cbmem_preserved_by_ap_reset"
     ],
     "minidiag_enabled": false,
     "minios_enabled": false,
@@ -18333,7 +18112,6 @@
     "memory_retrain_timeout": 120,
     "minidiag_capability": [
       "cbmem_preserved_by_ap_reset",
-      "event_log_launch_count",
       "event_log_test_report"
     ],
     "minidiag_enabled": true,
@@ -18420,8 +18198,7 @@
     "max_charging_power": 45.0,
     "memory_retrain_timeout": 120,
     "minidiag_capability": [
-      "cbmem_preserved_by_ap_reset",
-      "event_log_launch_count"
+      "cbmem_preserved_by_ap_reset"
     ],
     "minidiag_enabled": false,
     "minios_enabled": false,
@@ -18508,8 +18285,7 @@
     "max_charging_power": 45.0,
     "memory_retrain_timeout": 120,
     "minidiag_capability": [
-      "cbmem_preserved_by_ap_reset",
-      "event_log_launch_count"
+      "cbmem_preserved_by_ap_reset"
     ],
     "minidiag_enabled": false,
     "minios_enabled": false,
@@ -18604,8 +18380,7 @@
     "max_charging_power": 60.0,
     "memory_retrain_timeout": 120,
     "minidiag_capability": [
-      "cbmem_preserved_by_ap_reset",
-      "event_log_launch_count"
+      "cbmem_preserved_by_ap_reset"
     ],
     "minidiag_enabled": true,
     "minios_enabled": true,
@@ -18669,8 +18444,7 @@
         "max_charging_power": 60.0,
         "memory_retrain_timeout": 120,
         "minidiag_capability": [
-          "cbmem_preserved_by_ap_reset",
-          "event_log_launch_count"
+          "cbmem_preserved_by_ap_reset"
         ],
         "minidiag_enabled": true,
         "minios_enabled": true,
@@ -18763,8 +18537,7 @@
         "max_charging_power": 60.0,
         "memory_retrain_timeout": 120,
         "minidiag_capability": [
-          "cbmem_preserved_by_ap_reset",
-          "event_log_launch_count"
+          "cbmem_preserved_by_ap_reset"
         ],
         "minidiag_enabled": true,
         "minios_enabled": true,
@@ -18857,8 +18630,7 @@
         "max_charging_power": 60.0,
         "memory_retrain_timeout": 120,
         "minidiag_capability": [
-          "cbmem_preserved_by_ap_reset",
-          "event_log_launch_count"
+          "cbmem_preserved_by_ap_reset"
         ],
         "minidiag_enabled": true,
         "minios_enabled": true,
@@ -18975,8 +18747,7 @@
     "max_charging_power": 45.0,
     "memory_retrain_timeout": 120,
     "minidiag_capability": [
-      "cbmem_preserved_by_ap_reset",
-      "event_log_launch_count"
+      "cbmem_preserved_by_ap_reset"
     ],
     "minidiag_enabled": false,
     "minios_enabled": false,
@@ -19058,8 +18829,7 @@
     "max_charging_power": 60.0,
     "memory_retrain_timeout": 120,
     "minidiag_capability": [
-      "cbmem_preserved_by_ap_reset",
-      "event_log_launch_count"
+      "cbmem_preserved_by_ap_reset"
     ],
     "minidiag_enabled": false,
     "minios_enabled": false,
@@ -19144,8 +18914,7 @@
     "max_charging_power": 38.55,
     "memory_retrain_timeout": 120,
     "minidiag_capability": [
-      "cbmem_preserved_by_ap_reset",
-      "event_log_launch_count"
+      "cbmem_preserved_by_ap_reset"
     ],
     "minidiag_enabled": false,
     "minios_enabled": false,
@@ -19233,8 +19002,7 @@
     "max_charging_power": 60.0,
     "memory_retrain_timeout": 120,
     "minidiag_capability": [
-      "cbmem_preserved_by_ap_reset",
-      "event_log_launch_count"
+      "cbmem_preserved_by_ap_reset"
     ],
     "minidiag_enabled": false,
     "minios_enabled": false,
@@ -19324,8 +19092,7 @@
     "max_charging_power": 45.0,
     "memory_retrain_timeout": 120,
     "minidiag_capability": [
-      "cbmem_preserved_by_ap_reset",
-      "event_log_launch_count"
+      "cbmem_preserved_by_ap_reset"
     ],
     "minidiag_enabled": true,
     "minios_enabled": false,
@@ -19420,9 +19187,7 @@
     "lid_wake_from_power_off": true,
     "max_charging_power": 100.0,
     "memory_retrain_timeout": 120,
-    "minidiag_capability": [
-      "event_log_launch_count"
-    ],
+    "minidiag_capability": [],
     "minidiag_enabled": true,
     "minios_enabled": true,
     "minios_screen": 20,
@@ -19487,9 +19252,7 @@
         "lid_wake_from_power_off": true,
         "max_charging_power": 45,
         "memory_retrain_timeout": 120,
-        "minidiag_capability": [
-          "event_log_launch_count"
-        ],
+        "minidiag_capability": [],
         "minidiag_enabled": true,
         "minios_enabled": true,
         "minios_screen": 20,
@@ -19583,9 +19346,7 @@
         "lid_wake_from_power_off": true,
         "max_charging_power": 65,
         "memory_retrain_timeout": 120,
-        "minidiag_capability": [
-          "event_log_launch_count"
-        ],
+        "minidiag_capability": [],
         "minidiag_enabled": true,
         "minios_enabled": true,
         "minios_screen": 20,
@@ -19708,7 +19469,6 @@
     "memory_retrain_timeout": 120,
     "minidiag_capability": [
       "cbmem_preserved_by_ap_reset",
-      "event_log_launch_count",
       "event_log_test_report"
     ],
     "minidiag_enabled": true,
@@ -19773,7 +19533,6 @@
         "memory_retrain_timeout": 120,
         "minidiag_capability": [
           "cbmem_preserved_by_ap_reset",
-          "event_log_launch_count",
           "event_log_test_report"
         ],
         "minidiag_enabled": true,
@@ -19867,7 +19626,6 @@
         "memory_retrain_timeout": 120,
         "minidiag_capability": [
           "cbmem_preserved_by_ap_reset",
-          "event_log_launch_count",
           "event_log_test_report"
         ],
         "minidiag_enabled": true,
@@ -19961,7 +19719,6 @@
         "memory_retrain_timeout": 120,
         "minidiag_capability": [
           "cbmem_preserved_by_ap_reset",
-          "event_log_launch_count",
           "event_log_test_report"
         ],
         "minidiag_enabled": true,
@@ -20055,7 +19812,6 @@
         "memory_retrain_timeout": 120,
         "minidiag_capability": [
           "cbmem_preserved_by_ap_reset",
-          "event_log_launch_count",
           "event_log_test_report"
         ],
         "minidiag_enabled": true,
@@ -20149,7 +19905,6 @@
         "memory_retrain_timeout": 120,
         "minidiag_capability": [
           "cbmem_preserved_by_ap_reset",
-          "event_log_launch_count",
           "event_log_test_report"
         ],
         "minidiag_enabled": true,
@@ -20243,7 +19998,6 @@
         "memory_retrain_timeout": 120,
         "minidiag_capability": [
           "cbmem_preserved_by_ap_reset",
-          "event_log_launch_count",
           "event_log_test_report"
         ],
         "minidiag_enabled": true,
@@ -20337,7 +20091,6 @@
         "memory_retrain_timeout": 120,
         "minidiag_capability": [
           "cbmem_preserved_by_ap_reset",
-          "event_log_launch_count",
           "event_log_test_report"
         ],
         "minidiag_enabled": true,
@@ -20431,7 +20184,6 @@
         "memory_retrain_timeout": 120,
         "minidiag_capability": [
           "cbmem_preserved_by_ap_reset",
-          "event_log_launch_count",
           "event_log_test_report"
         ],
         "minidiag_enabled": true,
@@ -20525,7 +20277,6 @@
         "memory_retrain_timeout": 120,
         "minidiag_capability": [
           "cbmem_preserved_by_ap_reset",
-          "event_log_launch_count",
           "event_log_test_report"
         ],
         "minidiag_enabled": true,
@@ -20619,7 +20370,6 @@
         "memory_retrain_timeout": 120,
         "minidiag_capability": [
           "cbmem_preserved_by_ap_reset",
-          "event_log_launch_count",
           "event_log_test_report"
         ],
         "minidiag_enabled": true,
@@ -20713,7 +20463,6 @@
         "memory_retrain_timeout": 120,
         "minidiag_capability": [
           "cbmem_preserved_by_ap_reset",
-          "event_log_launch_count",
           "event_log_test_report"
         ],
         "minidiag_enabled": true,
@@ -20831,8 +20580,7 @@
     "max_charging_power": 45.0,
     "memory_retrain_timeout": 120,
     "minidiag_capability": [
-      "cbmem_preserved_by_ap_reset",
-      "event_log_launch_count"
+      "cbmem_preserved_by_ap_reset"
     ],
     "minidiag_enabled": false,
     "minios_enabled": false,
@@ -20919,8 +20667,7 @@
     "max_charging_power": 45.0,
     "memory_retrain_timeout": 120,
     "minidiag_capability": [
-      "cbmem_preserved_by_ap_reset",
-      "event_log_launch_count"
+      "cbmem_preserved_by_ap_reset"
     ],
     "minidiag_enabled": false,
     "minios_enabled": false,
@@ -21010,7 +20757,6 @@
     "memory_retrain_timeout": 120,
     "minidiag_capability": [
       "cbmem_preserved_by_ap_reset",
-      "event_log_launch_count",
       "event_log_test_report"
     ],
     "minidiag_enabled": true,
@@ -21070,7 +20816,6 @@
         "memory_retrain_timeout": 120,
         "minidiag_capability": [
           "cbmem_preserved_by_ap_reset",
-          "event_log_launch_count",
           "event_log_test_report"
         ],
         "minidiag_enabled": true,
@@ -21160,7 +20905,6 @@
         "memory_retrain_timeout": 120,
         "minidiag_capability": [
           "cbmem_preserved_by_ap_reset",
-          "event_log_launch_count",
           "event_log_test_report"
         ],
         "minidiag_enabled": true,

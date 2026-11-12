@@ -23,8 +23,7 @@
   "firmware_screen": 30,
   "hold_pwr_button_nopowerd_shutdown": 14,
   "minidiag_capability": {
-    "cbmem_preserved_by_ap_reset": false,
-    "event_log_launch_count": false
+    "cbmem_preserved_by_ap_reset": false
   },
   "minios_enabled": false,
   "models": {

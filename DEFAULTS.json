@@ -105,7 +105,6 @@
   "memory_retrain_timeout": 120,
   "minidiag_capability": {
     "cbmem_preserved_by_ap_reset": true,
-    "event_log_launch_count": true,
     "event_log_test_report": false
   },
   "minidiag_capability.DOC": "List of capabilities of the minidiag, do not use these for devices which does not enable minidiag",

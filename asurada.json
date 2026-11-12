@@ -12,9 +12,6 @@
   },
   "firmware_screen": 20,
   "firmware_screen_rec_mode": 20,
-  "minidiag_capability": {
-    "event_log_launch_count": false
-  },
   "minios_enabled": false,
   "models": {
     "hayato": {

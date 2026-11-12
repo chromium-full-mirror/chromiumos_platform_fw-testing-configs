@@ -26,9 +26,6 @@
   "firmware_screen": 15,
   "hold_pwr_button_poweroff": 10,
   "max_charging_power": 65.0,
-  "minidiag_capability": {
-    "event_log_launch_count": false
-  },
   "minios_enabled": false,
   "models": {
     "berknip": {
