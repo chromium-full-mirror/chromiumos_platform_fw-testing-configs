@@ -21,7 +21,7 @@
     "x86": true
   },
   "ec_watchdog_period": 2.1,
-  "firmware_screen": 30,
+  "firmware_screen": 20,
   "gsc_off_in_ulp": true,
   "hold_pwr_button_nopowerd_shutdown": 14,
   "max_charging_power": 45.0,
@@ -62,8 +62,7 @@
           "name": "EN_PP5000_U"
         }
       ],
-      "ec_watchdog_period": 1.6,
-      "firmware_screen": 25
+      "ec_watchdog_period": 1.6
     },
     "blipper": {
       "custom_usb_enable_pins": [
@@ -76,8 +75,7 @@
           "name": "EN_PP5000_U"
         }
       ],
-      "ec_watchdog_period": 1.6,
-      "firmware_screen": 25
+      "ec_watchdog_period": 1.6
     },
     "bookem": {
       "custom_usb_enable_pins": [
